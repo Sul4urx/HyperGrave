@@ -79,18 +79,3 @@ execute unless data storage sgrave2:common configs.value.players.blacklist_slots
 ##> If no item in the offhand or armor slot exists,
 ##> Remove the item from the grave
 data remove entity @n[tag=sgrave2.temp.grave.base] item.components.minecraft:custom_data.sgrave2:common.items[{id:0}]
-
-## Loop through all items stored in the grave
-## and if any have been blacklisted in the config,
-## remove the item from grave so that it doesn't get taken
-execute store result score .loop_count sgrave2.temp_var if data entity @n[tag=sgrave2.temp.grave.base] item.components.minecraft:custom_data.sgrave2:common.items[]
-
-##> Spawn an item, which is used to check whether
-##> an item is blacklisted or not
-execute if score .loop_count sgrave2.temp_var matches 1.. if data storage sgrave2:common configs.value.players.blacklist_items[0] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock"},Tags:["sgrave2.temp.blacklist_item_manipulator"]}
-
-##> Give back blacklisted items
-execute as @n[tag=sgrave2.temp.blacklist_item_manipulator] at @s run function sgrave2:internal/grave/generate/give_back_blacklisted_items with storage sgrave2:common configs
-
-##> Get rid of the item
-kill @e[tag=sgrave2.temp.blacklist_item_manipulator]
