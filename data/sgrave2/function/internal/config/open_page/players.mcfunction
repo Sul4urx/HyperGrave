@@ -6,42 +6,6 @@ tellraw @s ""
 ## Category: Players
 tellraw @s {"translate": "sgrave2.config_category.players","fallback": " §lPlayers:"}
 
-##> Blacklist Slots
-tellraw @s [\
-  {\
-    "translate": "sgrave2.config.blacklist_slots",\
-    "fallback": "   Blacklist Slots: ",\
-    "hover_event": {\
-      "action":"show_text",\
-      "value": {\
-        "translate": "sgrave2.config_description.blacklist_slots",\
-        "fallback": "If a player dies, items in these slots will not be collected and will instead remain in the player's inventory.\n\n§bℹ Format: §7[{slot: §6slot§7}, {slot: §6slot§7}, §8…§7]\n§6slot§f can be:\n§7- §ah1§7, §ah2§7, … , §ah9§7 → §fHotbar slots from left to right\n§7- §ait1§7, §ait2§7, … , §ait9§7 → §fInventory top row slots from left to right\n§7- §aim1§7, §aim2§7, … , §aim9§7 → §fInventory middle row slots from left to right\n§7- §aib1§7, §aib2§7, … , §aib9§7 → §fInventory bottom row slots from left to right\n§7- §aoffhand§7, §ahead§7, §achest§7, §alegs§7, §afeet§7 → §fOffhand and armor slots\n\n§7For example: {value:§a[{slot:h4},{slot:it5},{slot:'head'},{slot:offhand},{slot:\"ib9\"}]§7}\nTo clear the list, use {value:§a[]§7}.\n\n§8Default: []"\
-      }\
-    }\
-  },\
-  {\
-    "text": "§7[§b✎§7]",\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "sgrave2.config_change_description.blacklist_slots",\
-        "fallback": "Click to change the list.\n\n§8Current value: %s",\
-        "with": [\
-          {\
-            "nbt": "configs.value.players.blacklist_slots",\
-            "storage": "sgrave2:common",\
-            "color": "dark_gray"\
-          }\
-        ]\
-      }\
-    },\
-    "click_event": {\
-      "action": "suggest_command",\
-      "command": "/function sgrave2:internal/config/change/players/blacklist_slots/change_list {value:[{slot:?},{slot:'?'},…]}"\
-    }\
-  }\
-]
-
 ##> Tell Grave Mini-Info
 tellraw @s [\
   {\
