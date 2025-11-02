@@ -6,42 +6,6 @@ tellraw @s ""
 ## Category: Players
 tellraw @s {"translate": "sgrave2.config_category.players","fallback": " §lPlayers:"}
 
-##> Blacklist Items
-tellraw @s [\
-  {\
-    "translate": "sgrave2.config.blacklist_items",\
-    "fallback": "   Blacklist Items: ",\
-    "hover_event": {\
-      "action":"show_text",\
-      "value": {\
-        "translate": "sgrave2.config_description.blacklist_items",\
-        "fallback": "A list of items which will not be collected by graves after the player dies.\n\n§bℹ Format: §7{value:[§6item§7, §6item§7, §8…§7]}\n§6item§f: An item predicate in format §7{items: [\"§6id§7\", '§6id§7', §8…§7], count: §6count§7, opertaion: '§6operation§7'}\n  §6id§f: The id of the item (e.g. minecraft:diamond)\n  §6count§r: The minimum stack size of the item (minimum number of items in a stack) (e.g. 6)\n  §6operation§f: Can either be §akeep§f (Keep the item in player's inventory) or §adelete§f (Delete the item from player's inventory).\n\n§a{value:[{}]}§7 → §fNo item predicates\n§a{value:[]}§7 → §fReset value to default\n\n§aThis is just a simplified format. To learn more about this format and fields §7components§a and §7predicates§a, go to the wiki section in SGrave's github page.\n\n§8Default: [{predicates: {\"minecraft:enchantments\": [{enchantments: \"minecraft:vanishing_curse\"}]}, operation: \"delete\"}]"\
-      }\
-    }\
-  },\
-  {\
-    "text": "§7[§b✎§7]",\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "sgrave2.config_change_description.blacklist_items",\
-        "fallback": "Click to change the list.\n\n§8Current value: %s",\
-        "with": [\
-          {\
-            "nbt": "configs.value.players.blacklist_items",\
-            "storage": "sgrave2:common",\
-            "color": "dark_gray"\
-          }\
-        ]\
-      }\
-    },\
-    "click_event": {\
-      "action": "suggest_command",\
-      "command": "/function sgrave2:internal/config/change/players/blacklist_items/change_list {value:[{…}]}"\
-    }\
-  }\
-]
-
 ##> Blacklist Slots
 tellraw @s [\
   {\

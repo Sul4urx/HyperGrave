@@ -50,7 +50,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "sgrave2.config_description.mod_compatibility_mode",\
-        "fallback": "§a✔ §7→§r keepInventory game rule is set to false (can be rechanged later) and Graves collect dropped items\n§c❌ §7→§r keepInventory is set to true (can't be rechanged if Change Game Rules config is set to true) and Graves take items from player's inventory.\n\n§bPros:\n§f  §7•§f Better compatibility (especially with mods that add custom slots)\n§cCons:\n  §7•§f Increased risk of item loss\n  §7•§f Blacklist Slots and Blacklist Items configs in Players category and Items config in Costs / Grave Generation Costs / With Items category won't work.\n  §7•§f Items won't be put in appropriate slots and instead dropped.\n\n§3ℹ This is an experimental config!\n\n§8Default: ❌"\
+        "fallback": "§a✔ §7→§r keepInventory game rule is set to false (can be rechanged later) and Graves collect dropped items\n§c❌ §7→§r keepInventory is set to true (can't be rechanged if Change Game Rules config is set to true) and Graves take items from player's inventory.\n\n§bPros:\n§f  §7•§f Better compatibility (especially with mods that add custom slots)\n§cCons:\n  §7•§f Increased risk of item loss\n  §7•§f Blacklist Slots config in Players category and Items config in Costs / Grave Generation Costs / With Items category won't work.\n  §7•§f Items won't be put in appropriate slots and instead dropped.\n\n§3ℹ This is an experimental config!\n\n§8Default: ❌"\
       }\
     }\
   },\

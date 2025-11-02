@@ -66,9 +66,6 @@ execute if data storage sgrave2:common configs.value.graves{tell_grave_mini_info
 execute if data storage sgrave2:common configs.value.graves{tell_grave_mini_info:2b} run data modify storage sgrave2:common configs.text.graves.tell_grave_mini_info set value "§aE"
 
 
-## Blacklist Items
-execute unless data storage sgrave2:common configs.value.players.blacklist_items[] run data modify storage sgrave2:common configs.value.players.blacklist_items set value [{predicates: {"minecraft:enchantments": [{enchantments: "minecraft:vanishing_curse"}]}, operation: "delete"}]
-
 ## Blacklist Slots
 execute unless data storage sgrave2:common configs.value.players.blacklist_slots[] run data modify storage sgrave2:common configs.value.players.blacklist_slots set value []
 
