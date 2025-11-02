@@ -193,6 +193,35 @@ tellraw @s [\
   }\
 ]
 
+##> Slot Distribution
+tellraw @s [\
+  {\
+    "translate": "sgrave2.config.slot_distribution",\
+    "fallback": "   Slot Distribution: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "sgrave2.config_description.slot_distribution",\
+        "fallback": "The slots to remove, keep or take.\n§bℹ This config has a higher priority than the Graves / Item Distribution config."\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[§b>§7]",\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "sgrave2.config_sub_page_open_description.slot_distribution",\
+        "fallback": "Click to open the \"§lSlot Distribution§r\" sub-page."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function sgrave2:internal/config/open_page/graves/slot_distribution"\
+    }\
+  }\
+]
+
 ##> Text Display Properties
 tellraw @s [\
   {\
