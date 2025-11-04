@@ -17,9 +17,10 @@ scoreboard objectives add sgrave2.var dummy
 ##> Config score
 scoreboard objectives add sgrave2.config dummy
 
-##> ID scores
-scoreboard objectives add sgrave2.pid dummy
+##> ID scores (Backup, Grave and Player IDs, respectively)
+scoreboard objectives add sgrave2.bid dummy
 scoreboard objectives add sgrave2.gid dummy
+scoreboard objectives add sgrave2.pid dummy
 
 ##> Despawn time
 scoreboard objectives add sgrave2.despawn_time dummy
