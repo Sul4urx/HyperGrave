@@ -34,7 +34,7 @@ tellraw @s ""
 ## Menu
 $tellraw @s {\
   "translate": "sgrave2.backup_info.menu",\
-  "fallback": "§7[%s§7|%s§7]",\
+  "fallback": "§7[%s§7|%s§7|%s§7]",\
   "with": [\
     {\
       "translate": "sgrave2.backup_info.menu.back",\
@@ -49,6 +49,21 @@ $tellraw @s {\
       "click_event": {\
         "action": "run_command",\
         "command": "/function sgrave2:internal/backup/show_info/show_admin/view_previous {bid: $(bid)}"\
+      }\
+    },\
+    {\
+      "translate": "sgrave2.backup_info.menu.restore_all_items",\
+      "fallback": " §bRestore All Items ",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "sgrave2.backup_info.menu_description.restore_all_items",\
+          "fallback": "Click to drop all items from this backup.\n\n§bℹ You will need to wait 6 seconds before you can pick them up.\n\n§bℹ In case you accidently ran this command, just leave the items on the ground. They will despawn after just 45 seconds."\
+        }\
+      },\
+      "click_event": {\
+        "action": "suggest_command",\
+        "command": "/function sgrave2:run/backup/restore_all_items {bid: $(bid)}"\
       }\
     },\
     {\
