@@ -112,7 +112,7 @@ $execute unless data storage sgrave2:common graves[-1].data.status{destroyed:1b}
       },\
       "click_event": {\
         "action": "suggest_command",\
-        "command": "/function sgrave2:run/remote_open_grave {gid: $(gid)}"\
+        "command": "/function sgrave2:run/grave/admin/remote_open {gid: $(gid)}"\
       }\
     },\
     {\
