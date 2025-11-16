@@ -78,7 +78,10 @@ execute if score .grave_exists sgrave2.temp_var matches 0 run return run title @
   ]\
 }
 
-##
+
+## Bring the nessecary elements of maps to last index so that we can work with thems
+
+##> Grave
 function sgrave2:internal/map/graves/lookup with storage sgrave2:common temp.args
 
 ## Check for type:

@@ -1,5 +1,8 @@
 #<< event/player/player_died
 
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Player
 execute store result storage sgrave2:common temp.args.pid int 1 run scoreboard players get @s sgrave2.pid 
 function sgrave2:internal/map/players/lookup with storage sgrave2:common temp.args
 

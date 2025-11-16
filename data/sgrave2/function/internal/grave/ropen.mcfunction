@@ -1,12 +1,29 @@
 #<< event/player/player_tried_to_ropen_grave
 
-
+## If Grave doesn't exist, throw error
 $execute unless data storage sgrave2:common active_graves[{data:{gid:$(gid)}}] run return run title @s actionbar {\
   "translate": "sgrave2.ropen_grave.fail.grave_destroyed",\
   "fallback": "§cGrave #$(gid) either does not exist or has been destroyed.",\
 }
 
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Remove temp data
+data remove storage sgrave2:common players[].temp
+
+##> Grave
 $function sgrave2:internal/map/graves/lookup {gid:$(gid)}
+
+##> Player (Owner)
+function sgrave2:internal/map/players/lookup with storage sgrave2:common graves[-1].data.owner
+data modify storage sgrave2:common players[-1].temp.owner set value 1b
+
+$function sgrave2:internal/map/players/graves/lookup {gid:$(gid)}
+
+##> Player (Interactor)
+execute store result storage sgrave2:common temp.args1.pid int 1 run scoreboard players get @s sgrave2.pid
+function sgrave2:internal/map/players/lookup with storage sgrave2:common temp.args1
+data modify storage sgrave2:common players[-1].temp.interactor set value 1b
 
 ## Add temp tags
 tag @s add sgrave2.temp.grave.interactor
@@ -48,17 +65,10 @@ execute as @p[tag=sgrave2.temp.grave.interactor] at @s run function sgrave2:inte
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
 ## Update status
-execute store result storage sgrave2:common temp.args1.pid int 1 run scoreboard players get @s sgrave2.pid
-function sgrave2:internal/map/players/lookup with storage sgrave2:common temp.args1
-
-data modify storage sgrave2:common temp.args2.gid set from entity @n[tag=sgrave2.temp.grave.base] item.components.minecraft:custom_data.sgrave2:common.gid
 data modify storage sgrave2:common graves[-1].data.status set value {destroyed:1b,destruction_type:"ropened"}
-data modify storage sgrave2:common graves[-1].data.status.destroyer set from storage sgrave2:common players[-1].player
+data modify storage sgrave2:common graves[-1].data.status.destroyer set from storage sgrave2:common players[{temp:{interactor:1b}}].player
 
-function sgrave2:internal/map/players/lookup with entity @n[tag=sgrave2.temp.grave.base] item.components.minecraft:custom_data.sgrave2:common.owner
-
-function sgrave2:internal/map/players/graves/lookup with storage sgrave2:common temp.args2
-data modify storage sgrave2:common players[-1].graves[-1].data.status set from storage sgrave2:common graves[-1].data.status
+data modify storage sgrave2:common players[{temp:{owner:1b}}].graves[-1].data.status set from storage sgrave2:common graves[-1].data.status
 
 ## Remove temp tag
 tag @s remove sgrave2.temp.grave.interactor

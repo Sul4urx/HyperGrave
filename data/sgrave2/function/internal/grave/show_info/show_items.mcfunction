@@ -1,6 +1,9 @@
 #<< grave/show_info/show_admin
 #<< grave/show_info/show_non-admin/*
 
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Grave
 $function sgrave2:internal/map/graves/lookup {gid: $(gid)}
 
 ## The text to show for each slot

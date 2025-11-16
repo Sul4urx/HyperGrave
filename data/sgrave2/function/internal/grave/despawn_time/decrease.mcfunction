@@ -3,10 +3,15 @@
 ## Remove 1 second from despawn time
 scoreboard players remove @s sgrave2.despawn_time 1
 
-##
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Grave
+function sgrave2:internal/map/graves/lookup with storage sgrave2:common temp.args
+
+##> Player (Owner)
 function sgrave2:internal/map/players/lookup with entity @s item.components.minecraft:custom_data.sgrave2:common.owner
 data modify storage sgrave2:common temp.args.gid set from entity @s item.components.minecraft:custom_data.sgrave2:common.gid
-function sgrave2:internal/map/graves/lookup with storage sgrave2:common temp.args
+
 function sgrave2:internal/map/players/graves/lookup with storage sgrave2:common temp.args
 
 ## If despawn time reaches 0, delete grave

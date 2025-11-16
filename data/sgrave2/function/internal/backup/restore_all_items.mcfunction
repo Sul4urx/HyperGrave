@@ -1,5 +1,8 @@
 #<! backup/restore_all_items
 
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Backup
 $function sgrave2:internal/map/backups/lookup {bid: $(bid)}
 
 ## If backup doesn't exist, throw error
