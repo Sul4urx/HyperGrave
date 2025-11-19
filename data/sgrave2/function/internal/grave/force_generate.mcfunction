@@ -39,6 +39,9 @@ execute if score (graves/glowing_graves) sgrave2.config matches 0 run data modif
 ## Copy items from player to grave
 function sgrave2:internal/grave/generate/copy_items
 
+## Distribute items
+function sgrave2:internal/grave/generate/distribute_items
+
 ## Calculate total XP
 function sgrave2:internal/grave/generate/take_xp/main
 
