@@ -8,7 +8,7 @@ execute if data entity @s item.components.minecraft:custom_data.sgrave2:common.i
 data remove entity @s item.components.minecraft:custom_data.sgrave2:common.items[-1].Slot
 
 ## Make manipulator item manipulate the item
-data merge entity @n[tag=sgrave2.temp.item_manipulator] {Item:{}}
+item replace entity @n[tag=sgrave2.temp.item_manipulator] contents with minecraft:clock[minecraft:item_name="§cBug Item",minecraft:lore=["You're not supposed to have this item. If you do, please report this bug."]]
 data modify entity @n[tag=sgrave2.temp.item_manipulator] Item set from entity @s item.components.minecraft:custom_data.sgrave2:common.items[-1]
 
 ## Add the slot data back
