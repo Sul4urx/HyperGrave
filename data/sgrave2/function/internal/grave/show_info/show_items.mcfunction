@@ -58,7 +58,7 @@ data modify storage sgrave2:common temp.text_to_show.slots set value {\
 
 ## Summon an item manipulator
 ## Call it manipulator item
-summon minecraft:item ~ ~ ~ {Item: {id: "minecraft:clock"}, Tags: ["sgrave2.temp.grave_info_item_manipulator"]}
+summon minecraft:item ~ ~32767 ~ {Item: {id: "minecraft:clock"}, Tags: ["sgrave2.temp.grave_info_item_manipulator"]}
 
 ## Define an item for each slot
 function sgrave2:internal/grave/show_info/show_items/add_item_value {slot_number: 0, slot_id: "hotbar_0", slot_text: "Hotbar 1"}

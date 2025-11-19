@@ -1,7 +1,7 @@
 
 ##> Spawn an item, which is used to check whether
 ##> an item should be kept, removed or taken.
-execute if data entity @n[tag=sgrave2.temp.grave.base] item.components.minecraft:custom_data.sgrave2:common.items[0] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock"},Tags:["sgrave2.temp.item_distribution_manipulator"]}
+execute if data entity @n[tag=sgrave2.temp.grave.base] item.components.minecraft:custom_data.sgrave2:common.items[0] run summon minecraft:item ~ ~32767 ~ {Item:{id:"minecraft:clock"},Tags:["sgrave2.temp.item_distribution_manipulator"]}
 
 ##> Apply operations 'keep' and 'remove'
 ##> Operation 'take' is already applied
