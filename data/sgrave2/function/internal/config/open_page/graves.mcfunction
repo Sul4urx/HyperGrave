@@ -6,6 +6,41 @@ tellraw @s ""
 ## Category: Graves
 tellraw @s {"translate": "sgrave2.config_category.graves","fallback": " §lGraves:"}
 
+##> Drop Contents On Despawn
+tellraw @s [\
+  {\
+    "translate": "sgrave2.config.drop_grave_contents_on_despawn",\
+    "fallback": "   Drop Contents On Despawn: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "sgrave2.config_description.drop_grave_contents_on_despawn",\
+        "fallback": "Whether graves should drop their contents (i.e. items and XP) when they despawn.\n§8Default: ✔"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.graves.drop_contents_on_despawn",\
+        "storage": "sgrave2:common" \
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "sgrave2.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function sgrave2:internal/config/toggle/graves/drop_contents_on_despawn"\
+    }\
+  }\
+]
+
 ##> Glowing graves
 tellraw @s [\
   {\
