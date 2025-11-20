@@ -7,8 +7,11 @@ summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock",components:{"minecraft:c
 
 ## Apply item configs to the item
 
-##> Despawn time
+##> Dropped Contents / Item Despawn time
 scoreboard players operation @n[tag=sgrave2.temp.grave.item_to_give_back] sgrave2.despawn_time = (dropped_contents/item_despawn_time) sgrave2.config
+
+##> Dropped Contents / Invulnerable Items
+execute if score (dropped_contents/invulnerable_items) sgrave2.config matches 1 run data modify entity @n[tag=sgrave2.temp.grave.item_to_give_back] Invulnerable set value 1b
 
 ## Set item content
 data modify entity @n[tag=sgrave2.temp.grave.item_to_give_back] Item set from storage sgrave2:common temp.items_to_summon_as_entity[-1]

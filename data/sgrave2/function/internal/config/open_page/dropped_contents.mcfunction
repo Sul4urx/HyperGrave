@@ -6,6 +6,41 @@ tellraw @s ""
 ## Category: Dropped Contents
 tellraw @s {"translate": "sgrave2.config_category.dropped_contents","fallback": " §lDropped Contents:"}
 
+##> Invulnerable Items
+tellraw @s [\
+  {\
+    "translate": "sgrave2.config.invulnerable_items",\
+    "fallback": "   Invulnerable Items: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "sgrave2.config_description.invulnerable_items",\
+        "fallback": "Whether items dropped from graves should be invulnerable (except to despawning, void damage and /kill).\n§8Default: ✔"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.dropped_contents.invulnerable_items",\
+        "storage": "sgrave2:common" \
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "sgrave2.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function sgrave2:internal/config/toggle/dropped_contents/invulnerable_items"\
+    }\
+  }\
+]
+
 ##> Item Despawn Time
 tellraw @s [\
   {\
