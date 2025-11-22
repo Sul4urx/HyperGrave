@@ -41,6 +41,41 @@ tellraw @s [\
   }\
 ]
 
+##> Invulnerable XP
+tellraw @s [\
+  {\
+    "translate": "sgrave2.config.invulnerable_xp",\
+    "fallback": "   Invulnerable XP: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "sgrave2.config_description.invulnerable_xp",\
+        "fallback": "Whether XP orbs dropped from graves should be invulnerable (except to despawning, void damage and /kill).\n§8Default: ❌"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.dropped_contents.invulnerable_xp",\
+        "storage": "sgrave2:common" \
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "sgrave2.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function sgrave2:internal/config/toggle/dropped_contents/invulnerable_xp"\
+    }\
+  }\
+]
+
 ##> Item Despawn Time
 tellraw @s [\
   {\
