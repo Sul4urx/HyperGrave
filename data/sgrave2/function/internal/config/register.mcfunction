@@ -80,6 +80,14 @@ execute store result storage sgrave2:common configs.value.dropped_contents.no_gr
 execute if data storage sgrave2:common configs.value.dropped_contents{no_gravity_items:0b} run data modify storage sgrave2:common configs.text.dropped_contents.no_gravity_items set value "§c❌"
 execute if data storage sgrave2:common configs.value.dropped_contents{no_gravity_items:1b} run data modify storage sgrave2:common configs.text.dropped_contents.no_gravity_items set value "§a✔"
 
+## No Gravity XP
+execute unless score (dropped_contents/no_gravity_xp) sgrave2.config matches 0..1 run scoreboard players set (dropped_contents/no_gravity_xp) sgrave2.config 0
+
+execute store result storage sgrave2:common configs.value.dropped_contents.no_gravity_xp byte 1 run scoreboard players get (dropped_contents/no_gravity_xp) sgrave2.config
+
+execute if data storage sgrave2:common configs.value.dropped_contents{no_gravity_xp:0b} run data modify storage sgrave2:common configs.text.dropped_contents.no_gravity_xp set value "§c❌"
+execute if data storage sgrave2:common configs.value.dropped_contents{no_gravity_xp:1b} run data modify storage sgrave2:common configs.text.dropped_contents.no_gravity_xp set value "§a✔"
+
 ## Mod Compatibility Mode
 execute unless score (general/mod_compatibility_mode) sgrave2.config matches 0..1 run scoreboard players set (general/mod_compatibility_mode) sgrave2.config 0
 
