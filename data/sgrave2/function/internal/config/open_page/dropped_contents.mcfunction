@@ -76,6 +76,42 @@ tellraw @s [\
   }\
 ]
 
+
+##> No Gravity Items
+tellraw @s [\
+  {\
+    "translate": "sgrave2.config.no_gravity_items",\
+    "fallback": "   No Gravity Items: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "sgrave2.config_description.no_gravity_items",\
+        "fallback": "Whether items dropped from graves should not be affected by gravity.\n§8Default: ✔"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.dropped_contents.no_gravity_items",\
+        "storage": "sgrave2:common" \
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "sgrave2.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function sgrave2:internal/config/toggle/dropped_contents/no_gravity_items"\
+    }\
+  }\
+]
+
 ##> Item Despawn Time
 tellraw @s [\
   {\
