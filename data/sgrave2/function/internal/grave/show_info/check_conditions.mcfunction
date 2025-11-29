@@ -94,19 +94,31 @@ execute store result score .stored_pid sgrave2.temp_var run data get storage sgr
 ##> N
 execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/ao) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/ao with storage sgrave2:common temp.args
 
-execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/ao) sgrave2.config matches 0 run title @s actionbar {"translate": "sgrave2.grave_info.fail.cannot_view_contents", "fallback": "§cYou cannot view the contents of this grave."}
+execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/ao) sgrave2.config matches 0 run title @s actionbar {\
+    "translate": "sgrave2.grave_info.fail.cannot_view_contents",\
+    "fallback": "§cYou cannot view the contents of this grave."\
+  }
 
 ##> B
 execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bo) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/bo with storage sgrave2:common temp.args
 
-execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bo) sgrave2.config matches 0 run title @s actionbar {"translate": "sgrave2.grave_info.fail.cannot_view_contents", "fallback": "§cYou cannot view the contents of this grave."}
+execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bo) sgrave2.config matches 0 run title @s actionbar {\
+    "translate": "sgrave2.grave_info.fail.cannot_view_contents",\
+    "fallback": "§cYou cannot view the contents of this grave."\
+  }
 
 ##> O
 execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/an) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/an with storage sgrave2:common temp.args
 
-execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/an) sgrave2.config matches 0 run title @s actionbar {"translate": "sgrave2.grave_info.fail.cannot_view_contents", "fallback": "§cYou cannot view the contents of this grave."}
+execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/an) sgrave2.config matches 0 run title @s actionbar {\
+    "translate": "sgrave2.grave_info.fail.cannot_view_contents",\
+    "fallback": "§cYou cannot view the contents of this grave."\
+  }
 
 ##> BO
 execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bn) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/bn with storage sgrave2:common temp.args
 
-execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bn) sgrave2.config matches 0 run title @s actionbar {"translate": "sgrave2.grave_info.fail.cannot_view_contents", "fallback": "§cYou cannot view the contents of this grave."}
+execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bn) sgrave2.config matches 0 run title @s actionbar {\
+    "translate": "sgrave2.grave_info.fail.cannot_view_contents",\
+    "fallback": "§cYou cannot view the contents of this grave."\
+  }
