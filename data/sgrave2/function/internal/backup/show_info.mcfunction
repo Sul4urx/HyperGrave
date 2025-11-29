@@ -26,6 +26,9 @@ tellraw @s [{"translate": "sgrave2.backup_info.title", "fallback": "\nBackup §6
 ## Owner
 tellraw @s {"translate": "sgrave2.backup_info.owner", "fallback": "  §bOwner: %s", "with": [{"nbt": "backups[-1].data.owner.name", "color": "green", "storage": "sgrave2:common"}]}
 
+## Relevant grave
+execute if data storage sgrave2:common backups[-1].data.relevant_grave run tellraw @s {"translate": "sgrave2.backup_info.relevant_grave", "fallback": "  §bRelevant grave: §6#%s", "with": [{"nbt": "backups[-1].data.relevant_grave.data.gid", "color": "gold", "storage": "sgrave2:common"}]}
+
 ## Creation time
 tellraw @s {"translate": "sgrave2.backup_info.creation_time", "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes", "with": [{"nbt": "backups[-1].data.creation_time.day", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "backups[-1].data.creation_time.hours", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "backups[-1].data.creation_time.minutes", "color": "gold", "storage": "sgrave2:common"}]}
 
