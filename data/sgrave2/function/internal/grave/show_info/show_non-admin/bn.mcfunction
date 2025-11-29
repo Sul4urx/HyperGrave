@@ -256,6 +256,23 @@ execute unless score (graves/show_grave_info/bn/destruction_type) sgrave2.config
     "fallback": "  §bStatus: §cOpened"\
   }
 
+execute unless score (graves/show_grave_info/bn/destruction_type) sgrave2.config matches 0 if data storage sgrave2:common graves[-1].data.status{destruction_type:"ropened"} unless score (graves/show_grave_info/bn/destroyer) sgrave2.config matches 0 run tellraw @s {\
+    "translate": "sgrave2.grave_info.status.opened_by",\
+    "fallback": "  §bStatus: §cRemotely opened by %s",\
+    "with": [\
+      {\
+        "nbt": "graves[-1].data.status.destroyer.name",\
+        "color": "red",\
+        "storage": "sgrave2:common"\
+      }\
+    ]\
+  }
+
+execute unless score (graves/show_grave_info/bn/destruction_type) sgrave2.config matches 0 if data storage sgrave2:common graves[-1].data.status{destruction_type:"ropened"} if score (graves/show_grave_info/bn/destroyer) sgrave2.config matches 0 run tellraw @s {\
+    "translate": "sgrave2.grave_info.status.opened", \
+    "fallback": "  §bStatus: §cRemotely opened"\
+  }
+
 execute unless score (graves/show_grave_info/bn/destruction_type) sgrave2.config matches 0 if data storage sgrave2:common graves[-1].data.status{destruction_type:"broken"} unless score (graves/show_grave_info/bn/destroyer) sgrave2.config matches 0 run tellraw @s {\
     "translate": "sgrave2.grave_info.status.broken_by",\
     "fallback": "  §bStatus: §cBroken by %s",\
@@ -301,6 +318,7 @@ execute if score (graves/show_grave_info/bn/destruction_type) sgrave2.config mat
     "translate": "sgrave2.grave_info.status.broken",\
     "fallback": "  §bStatus: §cDestroyed"\
   }
+
 
 ##
 tellraw @s ""
