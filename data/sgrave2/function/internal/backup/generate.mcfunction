@@ -82,6 +82,11 @@ data modify storage sgrave2:common backups[-1].contents.items[{Slot:100b}].id se
 data modify storage sgrave2:common backups[-1].contents.items[{Slot:100b}].count set from storage sgrave2:common players[-1].pcontents.items.equipment.feet.count
 data modify storage sgrave2:common backups[-1].contents.items[{Slot:100b}].components set from storage sgrave2:common players[-1].pcontents.items.equipment.feet.components
 
+data remove storage sgrave2:common backups[-1].contents.items[{id:0}]
+
+## Cancel backup generation if it didn't collect any items
+execute unless data storage sgrave2:common backups[-1].contents.items[0] run return run data remove storage sgrave2:common backups[-1]
+
 ## Store BID
 execute store result storage sgrave2:common backups[-1].data.bid int 1 run scoreboard players add .global sgrave2.bid 1
 
