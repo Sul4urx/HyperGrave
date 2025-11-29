@@ -20,3 +20,6 @@ execute store result storage sgrave2:common players[-1].pcontents.xp.points int 
 ##> Items
 data modify storage sgrave2:common players[-1].pcontents.items.inventory set from entity @s Inventory
 data modify storage sgrave2:common players[-1].pcontents.items.equipment set from entity @s equipment
+
+execute unless data entity @s equipment.head.id unless data entity @s equipment.chest.id unless data entity @s equipment.legs.id unless data entity @s equipment.feet.id run data modify storage sgrave2:common players[-1].pcontents.items.equipment set value {}
+execute unless data entity @s Inventory[0] run data modify storage sgrave2:common players[-1].pcontents.items.inventory set value []
