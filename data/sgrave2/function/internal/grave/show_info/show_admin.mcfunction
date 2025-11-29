@@ -70,6 +70,13 @@ tellraw @s [\
 tellraw @s {\
   "translate": "sgrave2.grave_info.owner",\
   "fallback": "  §bOwner: %s",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.owner.description",\
+      "fallback": "The player who generated the grave."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.owner.name", \
@@ -83,6 +90,13 @@ tellraw @s {\
 tellraw @s {\
   "translate": "sgrave2.grave_info.location", \
   "fallback": "  §bLocation: %s §7(%s§7)",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.location.all.description",\
+      "fallback": "The exact location the grave was generated in (NOT where the player died, that can be different sometimes)."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.pos_integer[]",\
@@ -101,13 +115,27 @@ tellraw @s {\
 ## XP
 tellraw @s {\
   "translate": "sgrave2.grave_info.xp",\
-  "fallback": "  §bExperience:"\
+  "fallback": "  §bExperience:",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.xp.description",\
+      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
+    }\
+  }\
 }
 
 ##> XP before death
 execute unless data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
   "translate": "sgrave2.grave_info.xp.before_death",\
   "fallback": "    §eBefore death: %s (%s levels §7+ %s points)",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.xp.description",\
+      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].contents.xp.before_death.total",\
@@ -131,6 +159,13 @@ execute unless data storage sgrave2:common graves[-1].contents.xp.before_death{t
 execute if data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
   "translate": "sgrave2.grave_info.xp.before_death.total_too_big",\
   "fallback": "    §eBefore death: %s levels §7+ %s points",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.xp.before_death_total_too_big.description",\
+      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].contents.xp.before_death.levels",\
@@ -149,6 +184,13 @@ execute if data storage sgrave2:common graves[-1].contents.xp.before_death{total
 tellraw @s {\
   "translate": "sgrave2.grave_info.xp.after_death",\
   "fallback": "    §eAfter death: %s (%s levels §7+ %s points)",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.xp.description",\
+      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].contents.xp.after_death.total",\
@@ -201,6 +243,13 @@ execute unless data storage sgrave2:common graves[-1].status{destroyed:1b} run t
 tellraw @s {\
   "translate": "sgrave2.grave_info.creation_time",\
   "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
+  "hover_event": {\
+    "action": "show_text",\
+    "value": {\
+      "translate": "sgrave2.grave_info.creation_time.description",\
+      "fallback": "The in-game time the grave was generated at."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.creation_time.day",\
