@@ -13,24 +13,88 @@ execute unless data storage sgrave2:common backups[0] run return run title @s ac
 execute store result score .backup_exists sgrave2.temp_var run function sgrave2:internal/backup/show_info/check_if_backup_exists with storage sgrave2:common temp.args
 
 ## If not, tell error to player
-execute if score .backup_exists sgrave2.temp_var matches 0 run return run title @s actionbar {"translate": "sgrave2.backup_info.fail.bid_no_exist", "fallback": "§cBackup #%s§c does not exist.", "with": [{"nbt": "temp.args.bid", "storage": "sgrave2:common", "color": "red"}]}
+execute if score .backup_exists sgrave2.temp_var matches 0 run return run title @s actionbar {\
+  "translate": "sgrave2.backup_info.fail.bid_no_exist",\
+  "fallback": "§cBackup #%s§c does not exist.",\
+  "with": [\
+    {\
+      "nbt": "temp.args.bid",\
+      "storage": "sgrave2:common",\
+      "color": "red"\
+    }\
+  ]\
+}
 
 ## Bring the nessecary elements of maps to last index so that we can work with them
 
 ##> Backup
 function sgrave2:internal/map/backups/lookup with storage sgrave2:common temp.args
 
+tellraw @s ""
+
 ## Title
-tellraw @s [{"translate": "sgrave2.backup_info.title", "fallback": "\nBackup §6#%s info", "with": [{"nbt": "backups[-1].data.bid", "storage": "sgrave2:common", "color": "gold"}]}]
+tellraw @s [\
+  {\
+    "translate": "sgrave2.backup_info.title",\
+    "fallback": "Backup §6#%s info", \
+    "with": [\
+      {\  
+        "nbt": "backups[-1].data.bid",\
+        "storage": "sgrave2:common",\
+        "color": "gold"\
+      }\
+    ]\
+  }\
+]
 
 ## Owner
-tellraw @s {"translate": "sgrave2.backup_info.owner", "fallback": "  §bOwner: %s", "with": [{"nbt": "backups[-1].data.owner.name", "color": "green", "storage": "sgrave2:common"}]}
+tellraw @s {\
+  "translate": "sgrave2.backup_info.owner",\
+  "fallback": "  §bOwner: %s", \
+  "with": [\
+    {\
+      "nbt": "backups[-1].data.owner.name",\
+      "color": "green",\
+      "storage": "sgrave2:common"\
+    }\
+  ]\
+}
 
 ## Relevant grave
-execute if data storage sgrave2:common backups[-1].data.relevant_grave run tellraw @s {"translate": "sgrave2.backup_info.relevant_grave", "fallback": "  §bRelevant grave: §6#%s", "with": [{"nbt": "backups[-1].data.relevant_grave.data.gid", "color": "gold", "storage": "sgrave2:common"}]}
+execute if data storage sgrave2:common backups[-1].data.relevant_grave run tellraw @s {\
+  "translate": "sgrave2.backup_info.relevant_grave",\
+  "fallback": "  §bRelevant grave: §6#%s",\
+  "with": [\
+    {\  
+      "nbt": "backups[-1].data.relevant_grave.data.gid",\
+      "color": "gold",\
+      "storage": "sgrave2:common"\
+    }\
+  ]\
+}
 
 ## Creation time
-tellraw @s {"translate": "sgrave2.backup_info.creation_time", "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes", "with": [{"nbt": "backups[-1].data.creation_time.day", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "backups[-1].data.creation_time.hours", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "backups[-1].data.creation_time.minutes", "color": "gold", "storage": "sgrave2:common"}]}
+tellraw @s {\
+  "translate": "sgrave2.backup_info.creation_time",\
+  "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
+  "with": [\
+    {\
+      "nbt": "backups[-1].data.creation_time.day",\
+      "color": "gold",\
+      "storage": "sgrave2:common"\
+    },\
+    {\
+      "nbt": "backups[-1].data.creation_time.hours",\
+      "color": "gold",\
+      "storage": "sgrave2:common"\
+    },\
+    {\
+      "nbt": "backups[-1].data.creation_time.minutes",\
+      "color": "gold",\
+      "storage": "sgrave2:common"\
+    }\
+  ]\
+}
 
 ## Items
 function sgrave2:internal/backup/show_info/show_items with storage sgrave2:common backups[-1].data
