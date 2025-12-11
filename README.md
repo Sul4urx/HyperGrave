@@ -1,7 +1,7 @@
 The source code for HyperGrave.
 
 > [!WARNING]
-> HyperGrave is heavily in beta. Expect bugs!
+> HyperGrave is in beta. Expect bugs!
 
 If you found a bug, report it in **Issues** tab > **New issue**. You can also suggest a new feature there.
 
