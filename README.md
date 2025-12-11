@@ -1,11 +1,11 @@
-The source code for SGrave 2. This repository has **nothing to do** with SGrave 1.
+The source code for HyperGrave.
 
 > [!WARNING]
-> SGrave 2 is heavily in beta. Expect bugs!
+> HyperGrave is heavily in beta. Expect bugs!
 
 If you found a bug, report it in **Issues** tab > **New issue**. You can also suggest a new feature there.
 
-If you have a question about this data pack, use `/trigger sgrave2.help` in game.
+If you have a question about this data pack, use `/trigger hygrave.help` in game.
 
 You don't need any resource packs to use SGrave 2, unlike SGrave 1.
 

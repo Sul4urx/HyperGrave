@@ -1,1 +1,0 @@
-execute as @s at @s run function sgrave2:internal/grave/force_generate

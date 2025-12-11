@@ -1,0 +1,1 @@
+$execute store result score .macro_result.teleport_self hygrave.temp_var run tp @s $(x) $(y) $(z)
