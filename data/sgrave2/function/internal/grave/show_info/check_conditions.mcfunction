@@ -85,13 +85,13 @@ execute if score .grave_exists sgrave2.temp_var matches 0 run return run title @
 function sgrave2:internal/map/graves/lookup with storage sgrave2:common temp.args
 
 ## Check for type:
-## N: Active grave belonging to the player
-## B: Destroyed grave belonging to the player
-## O: Active grave not belonging to the player
-## BO: Destroyed grave not belonging to the player
+## AO: Active grave belonging to the player
+## BO: Destroyed grave belonging to the player
+## AN: Active grave not belonging to the player
+## BN: Destroyed grave not belonging to the player
 execute store result score .stored_pid sgrave2.temp_var run data get storage sgrave2:common graves[-1].data.owner.pid
 
-##> N
+##> AO
 execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/ao) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/ao with storage sgrave2:common temp.args
 
 execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/ao) sgrave2.config matches 0 run title @s actionbar {\
@@ -99,7 +99,7 @@ execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data stora
     "fallback": "§cYou cannot view the contents of this grave."\
   }
 
-##> B
+##> BO
 execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bo) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/bo with storage sgrave2:common temp.args
 
 execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bo) sgrave2.config matches 0 run title @s actionbar {\
@@ -107,7 +107,7 @@ execute if score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage s
     "fallback": "§cYou cannot view the contents of this grave."\
   }
 
-##> O
+##> AN
 execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/an) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/an with storage sgrave2:common temp.args
 
 execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/an) sgrave2.config matches 0 run title @s actionbar {\
@@ -115,7 +115,7 @@ execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid unless data s
     "fallback": "§cYou cannot view the contents of this grave."\
   }
 
-##> BO
+##> BN
 execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bn) sgrave2.config matches 0 run function sgrave2:internal/grave/show_info/show_non-admin/bn with storage sgrave2:common temp.args
 
 execute unless score .stored_pid sgrave2.temp_var = @s sgrave2.pid if data storage sgrave2:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bn) sgrave2.config matches 0 run title @s actionbar {\

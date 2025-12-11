@@ -2,7 +2,7 @@
 
 # Register sub-configs for Grave Placement Restrictions config
 
-## N(ormal graves) (Set default)
+## Active Owner (Set default)
 execute unless score (graves/show_grave_info/ao) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/ao) sgrave2.config 1
 
 execute unless score (graves/show_grave_info/ao/owner) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/ao/owner) sgrave2.config 1
@@ -22,7 +22,7 @@ execute unless score (graves/show_grave_info/ao/xp/before_death) sgrave2.config 
 execute unless score (graves/show_grave_info/ao/xp/after_death) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/ao/xp/after_death) sgrave2.config 1
 
 
-## B(roken graves) (Set default)
+## Broken Owner (Set default)
 execute unless score (graves/show_grave_info/bo) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/bo) sgrave2.config 1
 
 execute unless score (graves/show_grave_info/bo/owner) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/bo/owner) sgrave2.config 1
@@ -44,7 +44,7 @@ execute unless score (graves/show_grave_info/bo/destroyer) sgrave2.config matche
 execute unless score (graves/show_grave_info/bo/destruction_type) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/bo/destruction_type) sgrave2.config 1
 
 
-## O(thers' graves) (Set default)
+## Active Non-owner (Set default)
 execute unless score (graves/show_grave_info/an) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/an) sgrave2.config 1
 
 execute unless score (graves/show_grave_info/an/owner) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/an/owner) sgrave2.config 1
@@ -64,7 +64,7 @@ execute unless score (graves/show_grave_info/an/xp/before_death) sgrave2.config 
 execute unless score (graves/show_grave_info/an/xp/after_death) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/an/xp/after_death) sgrave2.config 1
 
 
-## B(roken) O(thers' graves) (Set default)
+## Broken Non-Owner (Set default)
 execute unless score (graves/show_grave_info/bn) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/bn) sgrave2.config 1
 
 execute unless score (graves/show_grave_info/bn/owner) sgrave2.config matches 0..1 run scoreboard players set (graves/show_grave_info/bn/owner) sgrave2.config 1
@@ -87,7 +87,7 @@ execute unless score (graves/show_grave_info/bn/destruction_type) sgrave2.config
 
 
 
-## N(ormal graves) (Store as NBT)
+## Active Owner (Store as NBT)
 execute store result storage sgrave2:common configs.value.graves.show_grave_info.ao.all byte 1 run scoreboard players get (graves/show_grave_info/ao) sgrave2.config
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.ao{all:0b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.ao.all set value "§c❌"
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.ao{all:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.ao.all set value "§a✔"
@@ -125,7 +125,7 @@ execute if data storage sgrave2:common configs.value.graves.show_grave_info.ao{i
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.ao{items:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.ao.items set value "§a✔"
 
 
-## B(roken graves) (Store as NBT)
+## Broken Non-owner (Store as NBT)
 execute store result storage sgrave2:common configs.value.graves.show_grave_info.bo.all byte 1 run scoreboard players get (graves/show_grave_info/bo) sgrave2.config
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.bo{all:0b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.bo.all set value "§c❌"
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.bo{all:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.bo.all set value "§a✔"
@@ -167,7 +167,7 @@ execute if data storage sgrave2:common configs.value.graves.show_grave_info.bo{d
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.bo{destruction_type:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.bo.destruction_type set value "§a✔"
 
 
-## O(thers' graves) (Store as NBT)
+## Active Non-owner (Store as NBT)
 execute store result storage sgrave2:common configs.value.graves.show_grave_info.an.all byte 1 run scoreboard players get (graves/show_grave_info/an) sgrave2.config
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.an{all:0b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.an.all set value "§c❌"
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.an{all:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.an.all set value "§a✔"
@@ -205,7 +205,7 @@ execute if data storage sgrave2:common configs.value.graves.show_grave_info.an{i
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.an{items:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.an.items set value "§a✔"
 
 
-## B(roken) O(thers' graves) (Store as NBT)
+## Broken Non-owner (Store as NBT)
 execute store result storage sgrave2:common configs.value.graves.show_grave_info.bn.all byte 1 run scoreboard players get (graves/show_grave_info/bn) sgrave2.config
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.bn{all:0b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.bn.all set value "§c❌"
 execute if data storage sgrave2:common configs.value.graves.show_grave_info.bn{all:1b} run data modify storage sgrave2:common configs.text.graves.show_grave_info.bn.all set value "§a✔"
