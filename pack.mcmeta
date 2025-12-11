@@ -1,7 +1,19 @@
 {
   "pack": {
-    "pack_format": 81,
-    "supported_formats": [71, 81],
-    "description": "A sophisticated grave data pack | version 2a0-beta-3"
+    "pack_format": 94,
+    "supported_formats": [71, 94],
+    "min_format": 71,
+    "max_format": 94,
+    "description": "A sophisticated grave data pack | version 2a0-beta-3"    
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "pre_25_4",
+        "min_format": 71,
+        "max_format": 88,
+        "formats": [71, 88]
+      }
+    ]
   }
 }

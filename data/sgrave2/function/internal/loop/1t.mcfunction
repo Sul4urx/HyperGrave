@@ -33,16 +33,14 @@ execute if score .global sgrave2.bid matches ..2127 run scoreboard players set (
 execute if score .global sgrave2.bid matches 2128.. run scoreboard players operation (first_bid) sgrave2.var = .global sgrave2.bid
 execute if score .global sgrave2.bid matches 2128.. run scoreboard players remove (first_bid) sgrave2.var 126
 
+## Change game rules so that SGrave can work properly
+function sgrave2:internal/misc/change_gamerules
 
 ## Register configs
 function sgrave2:internal/config/register
 
 ## Add a player to player map, if they don't exist there
 execute as @a at @s unless score @s sgrave2.pid matches 1.. run function sgrave2:internal/map/players/insert
-
-## Change game rules so that SGrave can work properly
-execute if score (general/change_gamerules) sgrave2.config matches 1 if score (general/mod_compatibility_mode) sgrave2.config matches 0 run gamerule keepInventory true
-execute if score (general/change_gamerules) sgrave2.config matches 1 run gamerule doImmediateRespawn false
 
 ## Player died
 execute as @a[scores={sgrave2.death_count=1..}] at @s run function sgrave2:internal/event/player/player_died

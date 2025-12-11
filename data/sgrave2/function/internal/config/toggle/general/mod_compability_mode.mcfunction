@@ -1,7 +1,7 @@
 #<< config/open_page/general
 
 ## Change game rules
-gamerule keepInventory false
+gamerule minecraft:keep_inventory false
 
 ## Toggle value
 scoreboard players add (general/mod_compatibility_mode) sgrave2.config 1
