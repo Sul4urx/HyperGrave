@@ -2,6 +2,6 @@
   "pack": {
     "pack_format": 61,
     "supported_formats": [48, 61],
-    "description": "A sophisticated grave data pack | version 2a0-beta-3"
+    "description": "A sophisticated grave data pack | v0.4.0"
   }
 }

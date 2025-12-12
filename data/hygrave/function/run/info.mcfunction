@@ -8,7 +8,7 @@ tellraw @s {\
   "translate": "hygrave.info",\
   "fallback": "§l§bHyper§l§6Grave§r §fversion %s §8| §fMade By §bSul4ur\n§6ℹ This data pack is heavily in beta. Expect bugs!\n§fA very sophisticated grave data pack with many features and a lot of customizability\n\n§fWeb: §7[%s §7| %s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
   "with": [\
-    "§72a0-beta-3",\
+    "§70.4.0",\
     {\
       "translate": "hygrave.info.doc",\
       "fallback": "§aDocumentation",\
