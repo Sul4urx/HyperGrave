@@ -51,6 +51,13 @@ tellraw @s [\
 tellraw @s {\
   "translate": "sgrave2.backup_info.owner",\
   "fallback": "  §bOwner: %s", \
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.backup_info.owner.description",\
+      "fallback": "The player that generated this backup."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "backups[-1].data.owner.name",\
@@ -64,6 +71,13 @@ tellraw @s {\
 execute if data storage sgrave2:common backups[-1].data.relevant_grave run tellraw @s {\
   "translate": "sgrave2.backup_info.relevant_grave",\
   "fallback": "  §bRelevant grave: §6#%s",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.backup_info.relevant_grave.description",\
+      "fallback": "The GID of the grave that the player generated alongside this backup."\
+    }\
+  },\
   "with": [\
     {\  
       "nbt": "backups[-1].data.relevant_grave.data.gid",\
@@ -77,6 +91,13 @@ execute if data storage sgrave2:common backups[-1].data.relevant_grave run tellr
 tellraw @s {\
   "translate": "sgrave2.backup_info.creation_time",\
   "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.backup_info.creation_time.description",\
+      "fallback": "The in-game time the backup was generated at."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "backups[-1].data.creation_time.day",\
