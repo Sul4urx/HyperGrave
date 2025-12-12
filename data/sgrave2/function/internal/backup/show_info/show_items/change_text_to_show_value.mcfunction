@@ -19,9 +19,14 @@ $data modify storage sgrave2:common temp.text_to_show.slots.$(slot_id) set value
           }", "{\
             \\"translate\\": \\"sgrave2.backup_info.items.slot.$(slot_id)\\", \
             \\"fallback\\": \\"§7Slot: §a$(slot_text)\\"\
-          }"\
+          }", "\\"\\"", "{\
+            \\"translate\\": \\"sgrave2.backup_info.items.click_to_restore\\", \
+            \\"fallback\\": \\"§fClick to restore item.\\"\
+          }\
         ]\
       }\
-    }\
+  "clickEvent": {\
+    "action": "suggest_command",\
+    "value": "/function sgrave2:run/backup/restore_item {bid: $(bid), slot: $(slot_number)}"\
   }\
 }'
