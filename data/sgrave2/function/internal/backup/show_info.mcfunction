@@ -1,0 +1,72 @@
+#<! admin/show_backup_info
+
+## Read the input bid and store it
+$data modify storage sgrave2:common temp.args.bid set value $(bid)
+
+## Check if any backups have been generated yet
+execute unless data storage sgrave2:common backups[0] run return run title @s actionbar {\
+  "translate": "sgrave2.backup_info.fail.backup_none_exist",\
+  "fallback": "§cNo backups have been generated yet."\
+}
+
+## Check if the backup has ever existed before
+execute store result score .backup_exists sgrave2.temp_var run function sgrave2:internal/backup/show_info/check_if_backup_exists with storage sgrave2:common temp.args
+execute if score .backup_exists sgrave2.temp_var matches 0 run return run title @s actionbar {"translate": "sgrave2.backup_info.fail.bid_no_exist", "fallback": "§cBackup #%s§c does not exist.", "with": [{"nbt": "temp.args.bid", "storage": "sgrave2:common", "color": "red"}]}
+
+## If not, tell error to player
+function sgrave2:internal/map/backups/lookup with storage sgrave2:common temp.args
+
+## Title
+tellraw @s [{"translate": "sgrave2.backup_info.title", "fallback": "\nBackup §6#%s info", "with": [{"nbt": "backups[-1].data.bid", "storage": "sgrave2:common", "color": "gold"}]}]
+
+## Owner
+tellraw @s {"translate": "sgrave2.backup_info.owner", "fallback": "  §bOwner: %s", "with": [{"nbt": "backups[-1].data.owner.name", "color": "green", "storage": "sgrave2:common"}]}
+
+## Creation time
+tellraw @s {"translate": "sgrave2.backup_info.creation_time", "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes", "with": [{"nbt": "backups[-1].data.creation_time.day", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "backups[-1].data.creation_time.hours", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "backups[-1].data.creation_time.minutes", "color": "gold", "storage": "sgrave2:common"}]}
+
+## Items
+function sgrave2:internal/backup/show_info/show_items with storage sgrave2:common backups[-1].data
+
+##
+tellraw @s ""
+
+## Menu
+$tellraw @s {\
+  "translate": "sgrave2.backup_info.menu",\
+  "fallback": "§7[%s§7|%s§7]",\
+  "with": [\
+    {\
+      "translate": "sgrave2.backup_info.menu.back",\
+      "fallback": "§b< ",\
+      "hoverEvent": {\
+        "action": "show_text",\
+        "contents": {\
+          "translate": "sgrave2.backup_info.menu_description.back",\
+          "fallback": "Click to view info about previous backup."\
+        }\
+      },\
+      "clickEvent": {\
+        "action": "run_command",\
+        "value": "/function sgrave2:internal/backup/show_info/show_admin/view_previous {bid: $(bid)}"\
+      }\
+    },\
+    {\
+      "translate": "sgrave2.backup_info.menu.back",\
+      "fallback": " §b>",\
+      "hoverEvent": {\
+        "action": "show_text",\
+        "contents": {\
+          "translate": "sgrave2.backup_info.menu_description.back",\
+          "fallback": "Click to view info about next backup."\
+        }\
+      },\
+      "clickEvent": {\
+        "action": "run_command",\
+        "value": "/function sgrave2:internal/backup/show_info/show_admin/view_next {bid: $(bid)}"\
+      }\
+    }\
+  ]\
+}
+##
+tellraw @s ""
