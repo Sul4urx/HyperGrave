@@ -55,6 +55,8 @@ data modify storage sgrave2:common backups[-1].contents.items append from storag
 data modify storage sgrave2:common backups[-1].contents.items append from storage sgrave2:common players[-1].pcontents.items.inventory[{Slot:102b}]
 data modify storage sgrave2:common backups[-1].contents.items append from storage sgrave2:common players[-1].pcontents.items.inventory[{Slot:103b}]
 
+## Cancel backup generation if it didn't collect any items
+execute unless data storage sgrave2:common backups[-1].contents.items[0] run return run data remove storage sgrave2:common backups[-1]
 
 ## Store BID
 execute store result storage sgrave2:common backups[-1].data.bid int 1 run scoreboard players add .global sgrave2.bid 1
