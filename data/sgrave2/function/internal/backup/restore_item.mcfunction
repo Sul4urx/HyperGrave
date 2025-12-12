@@ -1,5 +1,8 @@
 #<! backup/restore_item
 
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Backup
 $function sgrave2:internal/map/backups/lookup {bid: $(bid)}
 
 ## If backup doesn't exist, throw error
@@ -32,7 +35,7 @@ data remove storage sgrave2:common temp.backup.contents.items[0]
 ## If failed to set item, get rid of the spawned item and throw an error
 execute if entity @n[nbt={Item:{components:{"minecraft:custom_data":{"sgrave2:common":{temp_item:1b}}}}}] run title @s actionbar {\
   "translate": "sgrave2.backup.restore_item.fail.item_no_exist",\
-  "fallback": "§cThere is no item in this slot.",\
+  "fallback": "§cThere is no item in this slot."\
 }
 kill @e[nbt={Item:{components:{"minecraft:custom_data":{"sgrave2:common":{temp_item:1b}}}}}]
 

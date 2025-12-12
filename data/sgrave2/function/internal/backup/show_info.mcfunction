@@ -11,9 +11,13 @@ execute unless data storage sgrave2:common backups[0] run return run title @s ac
 
 ## Check if the backup has ever existed before
 execute store result score .backup_exists sgrave2.temp_var run function sgrave2:internal/backup/show_info/check_if_backup_exists with storage sgrave2:common temp.args
-execute if score .backup_exists sgrave2.temp_var matches 0 run return run title @s actionbar {"translate": "sgrave2.backup_info.fail.bid_no_exist", "fallback": "§cBackup #%s§c does not exist.", "with": [{"nbt": "temp.args.bid", "storage": "sgrave2:common", "color": "red"}]}
 
 ## If not, tell error to player
+execute if score .backup_exists sgrave2.temp_var matches 0 run return run title @s actionbar {"translate": "sgrave2.backup_info.fail.bid_no_exist", "fallback": "§cBackup #%s§c does not exist.", "with": [{"nbt": "temp.args.bid", "storage": "sgrave2:common", "color": "red"}]}
+
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Backup
 function sgrave2:internal/map/backups/lookup with storage sgrave2:common temp.args
 
 ## Title
