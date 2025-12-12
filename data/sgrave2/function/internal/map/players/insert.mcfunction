@@ -7,7 +7,7 @@ data modify storage sgrave2:common players append value {player:{uuid:[I;],name:
 data modify storage sgrave2:common players[-1].player.uuid set from entity @s UUID
 
 ##> Name
-summon minecraft:item ~ ~ ~ {Tags:["sgrave2.temp.item_to_get_players_name"],Item:{id:"minecraft:player_head"}}
+summon minecraft:item ~ ~32767 ~ {Tags:["sgrave2.temp.item_to_get_players_name"],Item:{id:"minecraft:player_head"}}
 item modify entity @n[tag=sgrave2.temp.item_to_get_players_name] container.0 {function:"minecraft:fill_player_head",entity:"this"}
 data modify storage sgrave2:common players[-1].player.name set from entity @n[tag=sgrave2.temp.item_to_get_players_name] Item.components.minecraft:profile.name
 kill @e[tag=sgrave2.temp.item_to_get_players_name]

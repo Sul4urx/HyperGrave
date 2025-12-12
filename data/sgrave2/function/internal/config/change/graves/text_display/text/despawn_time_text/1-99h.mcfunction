@@ -2,7 +2,7 @@
 $data modify storage sgrave2:common temp.config.value set value '$(value)'
 
 ## Error if value is not valid
-summon minecraft:text_display ~ ~ ~ {Tags: ["sgrave2.temp.config_checker.text_display"], text: '"a"'}
+summon minecraft:text_display ~ ~255 ~ {Tags: ["sgrave2.temp.config_checker.text_display"], text: '"a"'}
 
 data modify entity @n[tag=sgrave2.temp.config_checker.text_display] text set from storage sgrave2:common temp.config.value
 

@@ -2,7 +2,7 @@
 
 ## Summon temp item (used for manipulating each item stored in grave)
 ## Call it manipulator item
-summon minecraft:item ~ ~5000 ~ {Invulnerable:1b,Tags:["sgrave2.temp.item_manipulator"],Item:{id:"minecraft:clock",count:1}}
+summon minecraft:item ~ ~32767 ~ {Invulnerable:1b,Tags:["sgrave2.temp.item_manipulator"],Item:{id:"minecraft:clock",count:1}}
 
 ## Loop through items of grave and give them to the player
 execute store result score .loop_count sgrave2.temp_var if data entity @s item.components.minecraft:custom_data.sgrave2:common.items[]

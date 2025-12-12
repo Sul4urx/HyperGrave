@@ -3,7 +3,7 @@
 
 ## Summon temp item (used for manipulating each item stored in grave)
 ## Call it manipulator item
-summon minecraft:item ~ ~5000 ~ {Invulnerable:1b,Tags:["sgrave2.temp.item_manipulator"],Item:{id:"minecraft:clock",count:1}}
+summon minecraft:item ~ ~32767 ~ {Invulnerable:1b,Tags:["sgrave2.temp.item_manipulator"],Item:{id:"minecraft:clock",count:1}}
 
 data modify storage sgrave2:common temp.items set from storage sgrave2:common graves[-1].contents.items
 
