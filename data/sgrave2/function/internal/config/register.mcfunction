@@ -66,9 +66,6 @@ execute if data storage sgrave2:common configs.value.graves{tell_grave_mini_info
 execute if data storage sgrave2:common configs.value.graves{tell_grave_mini_info:2b} run data modify storage sgrave2:common configs.text.graves.tell_grave_mini_info set value "§aE"
 
 
-## Blacklist Slots
-execute unless data storage sgrave2:common configs.value.players.blacklist_slots[] run data modify storage sgrave2:common configs.value.players.blacklist_slots set value []
-
 
 ## Sub-configs
 function sgrave2:internal/config/register/costs/grave_opening_costs
