@@ -25,6 +25,14 @@ execute if score .global sgrave2.gid matches ..1127 run scoreboard players set (
 execute if score .global sgrave2.gid matches 1128.. run scoreboard players operation (first_gid) sgrave2.var = .global sgrave2.gid
 execute if score .global sgrave2.gid matches 1128.. run scoreboard players remove (first_gid) sgrave2.var 126
 
+##> Start BIDs from 2000
+execute unless score .global sgrave2.bid matches 2000.. run scoreboard players set .global sgrave2.bid 2000
+
+##> First BID
+execute if score .global sgrave2.bid matches ..2127 run scoreboard players set (first_bid) sgrave2.var 2001
+execute if score .global sgrave2.bid matches 2128.. run scoreboard players operation (first_bid) sgrave2.var = .global sgrave2.bid
+execute if score .global sgrave2.bid matches 2128.. run scoreboard players remove (first_bid) sgrave2.var 126
+
 
 ## Register configs
 function sgrave2:internal/config/register
