@@ -39,6 +39,9 @@ execute if score (general/mod_compatibility_mode) sgrave2.config matches 0 run f
 execute if score (general/mod_compatibility_mode) sgrave2.config matches 1 run data modify storage sgrave2:common temp.args.distance set from storage sgrave2:common configs.value.general.'mod_compatibility_mode/item_collection_distance'
 execute if score (general/mod_compatibility_mode) sgrave2.config matches 1 as @e[type=item,distance=..16] at @s run function sgrave2:internal/grave/generate/collect_items with storage sgrave2:common temp.args
 
+## Distribute items
+function sgrave2:internal/grave/generate/distribute_items
+
 ## Calculate total XP
 function sgrave2:internal/grave/generate/take_xp/main
 

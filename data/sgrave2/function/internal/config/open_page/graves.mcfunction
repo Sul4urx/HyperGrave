@@ -135,6 +135,35 @@ tellraw @s [\
   }\
 ]
 
+##> Item Distribution
+tellraw @s [\
+  {\
+    "translate": "sgrave2.config.item_distribution",\
+    "fallback": "   Item Distribution: ",\
+    "hoverEvent": {\
+      "action":"show_text",\
+      "contents": {\
+        "translate": "sgrave2.config_description.item_distribution",\
+        "fallback": "The items to remove, keep or take."\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[§b>§7]",\
+    "hoverEvent": {\
+      "action": "show_text",\
+      "contents": {\
+        "translate": "sgrave2.config_sub_page_open_description.item_distribution",\
+        "fallback": "Click to open the \"§lItem Distribution§r\" sub-page."\
+      }\
+    },\
+    "clickEvent": {\
+      "action": "run_command",\
+      "value": "/function sgrave2:internal/config/open_page/graves/item_distribution"\
+    }\
+  }\
+]
+
 ##> Show Grave Info
 tellraw @s [\
   {\

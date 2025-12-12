@@ -67,7 +67,7 @@ execute if data storage sgrave2:common configs.value.graves{tell_grave_mini_info
 
 
 ## Blacklist Items
-execute unless data storage sgrave2:common configs.value.players.blacklist_items[] run data modify storage sgrave2:common configs.value.players.blacklist_items set value [{predicates: {"minecraft:enchantments": [{enchantments: "minecraft:vanishing_curse"}]}, operation: "delete"}]
+execute unless data storage sgrave2:common configs.value.players.blacklist_items[] run data modify storage sgrave2:common configs.value.players.blacklist_items set value [{predicates: {"minecraft:enchantments": [{levels:{enchantments: "minecraft:vanishing_curse"}}]}, operation: "delete"}]
 
 ## Blacklist Slots
 execute unless data storage sgrave2:common configs.value.players.blacklist_slots[] run data modify storage sgrave2:common configs.value.players.blacklist_slots set value []
@@ -79,6 +79,7 @@ function sgrave2:internal/config/register/costs/grave_ropening_costs
 function sgrave2:internal/config/register/costs/grave_generation_costs
 
 function sgrave2:internal/config/register/graves/icd
+function sgrave2:internal/config/register/graves/item_distribution
 function sgrave2:internal/config/register/graves/grave_placement_restrictions
 function sgrave2:internal/config/register/graves/show_grave_info
 function sgrave2:internal/config/register/graves/text_display
