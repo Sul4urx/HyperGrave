@@ -23,7 +23,7 @@ tellraw @s [\
       "action":"show_text",\
       "contents": {\
         "translate": "sgrave2.config_description.icd.activate_for",\
-        "fallback": "The players whom ICD should be activated for\n§cN §7→§f No one §7(Disables ICD)\n§eO §7→§f The owner\n§aE §7→§r Anyone\n§bℹ This doesn't change who can take items from the grave. To change that, use other configs.value.\n§8Default: N"\
+        "fallback": "The players whom ICD should be activated for\n§cN §7→§f No one §7(Disables ICD)\n§eO §7→§f The owner\n§aE §7→§r Anyone\n§bℹ This doesn't change who can take items from the grave. To change that, use other configs.\n§8Default: N"\
       }\
     }\
   },\
