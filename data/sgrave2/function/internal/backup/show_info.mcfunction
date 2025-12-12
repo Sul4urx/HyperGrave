@@ -119,7 +119,7 @@ $tellraw @s {\
       },\
       "clickEvent": {\
         "action": "run_command",\
-        "value": "/function sgrave2:internal/backup/show_info/show_admin/view_previous {bid: $(bid)}"\
+        "value": "/function sgrave2:internal/backup/show_info/view_previous {bid: $(bid)}"\
       }\
     },\
     {\
@@ -149,7 +149,7 @@ $tellraw @s {\
       },\
       "clickEvent": {\
         "action": "run_command",\
-        "value": "/function sgrave2:internal/backup/show_info/show_admin/view_next {bid: $(bid)}"\
+        "value": "/function sgrave2:internal/backup/show_info/view_next {bid: $(bid)}"\
       }\
     }\
   ]\
