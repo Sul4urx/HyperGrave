@@ -54,7 +54,10 @@ tellraw @s {"translate": "sgrave2.grave_info.location", "fallback": "  §bLocati
 tellraw @s {"translate": "sgrave2.grave_info.xp", "fallback": "  §bExperience:"}
 
 ##> XP before death
-tellraw @s {"translate": "sgrave2.grave_info.xp.before_death", "fallback": "    §eBefore death: %s (%s levels §7+ %s points)", "with": [{"nbt": "graves[-1].contents.xp.before_death.total", "color": "gold", "storage": "sgrave2:common"},{"nbt": "graves[-1].contents.xp.before_death.levels", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "graves[-1].contents.xp.before_death.points", "color": "gold", "storage": "sgrave2:common"}]}
+execute unless data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {"translate": "sgrave2.grave_info.xp.before_death", "fallback": "    §eBefore death: %s (%s levels §7+ %s points)", "with": [{"nbt": "graves[-1].contents.xp.before_death.total", "color": "gold", "storage": "sgrave2:common"},{"nbt": "graves[-1].contents.xp.before_death.levels", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "graves[-1].contents.xp.before_death.points", "color": "gold", "storage": "sgrave2:common"}]}
+
+##>> If total is too big, get rid of it
+execute if data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {"translate": "sgrave2.grave_info.xp.before_death.total_too_big", "fallback": "    §eBefore death: %s levels §7+ %s points", "with": [{"nbt": "graves[-1].contents.xp.before_death.levels", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "graves[-1].contents.xp.before_death.points", "color": "gold", "storage": "sgrave2:common"}]}
 
 ##> XP after death
 tellraw @s {"translate": "sgrave2.grave_info.xp.after_death", "fallback": "    §eAfter death: %s (%s levels §7+ %s points)", "with": [{"nbt": "graves[-1].contents.xp.after_death.total", "color": "gold", "storage": "sgrave2:common"},{"nbt": "graves[-1].contents.xp.after_death.levels", "color": "gold", "storage": "sgrave2:common"}, {"nbt": "graves[-1].contents.xp.after_death.points", "color": "gold", "storage": "sgrave2:common"}]}
