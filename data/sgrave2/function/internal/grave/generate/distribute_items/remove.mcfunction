@@ -22,9 +22,9 @@ execute store result score .slot_operation sgrave2.temp_var run function sgrave2
 scoreboard players set .remove_item sgrave2.temp_var 0
 
 ##> See the function that returned to .slot_operation for more info on what it returned
-execute if score .slot_operation sgrave2.temp_var matches 2 run scoreboard players set .remove_item sgrave2.temp_var 1
+execute if score .slot_operation sgrave2.temp_var matches 18 run scoreboard players set .remove_item sgrave2.temp_var 1
 
-execute unless score .slot_operation sgrave2.temp_var matches 1..64 run function sgrave2:internal/grave/generate/distribute_items/remove/check_item_predicates with storage sgrave2:common temp.args
+execute unless score .slot_operation sgrave2.temp_var matches 1.. run function sgrave2:internal/grave/generate/distribute_items/remove/check_item_predicates with storage sgrave2:common temp.args
 
 scoreboard players set .slot_operation sgrave2.temp_var 0
 
