@@ -1,4 +1,4 @@
-#<< config/open_page/players
+#<< config/open_page/graves
 
 ## Toggle value
 scoreboard players add (graves/tell_grave_mini_info) sgrave2.config 1
@@ -11,4 +11,4 @@ playsound minecraft:ui.button.click
 function sgrave2:internal/config/register
 
 ## Refresh page
-function sgrave2:internal/config/open_page/players
+function sgrave2:internal/config/open_page/graves
