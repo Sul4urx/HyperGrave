@@ -1,0 +1,94 @@
+#<! grave/admin/generate
+
+## Bring the nessecary elements of maps to last index so that we can work with them
+
+##> Player
+execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @s hygrave.pid 
+function hygrave:internal/map/players/lookup with storage hygrave:common temp.args
+
+## Reset death count
+scoreboard players set @s hygrave.death_count 0
+
+## Tag the dead player as the owner of the grave
+tag @s add hygrave.temp.grave.owner
+
+## This item display is the base of the grave
+## It holds all of the grave data
+execute align xyz run summon minecraft:item_display ~0.5 ~ ~0.5 {Tags:["hygrave.grave.base","hygrave.temp.grave.base"],item:{id:"minecraft:light_blue_dye",components:{"minecraft:custom_data":{"hygrave:common":{}}}},view_range:0}
+
+## Set despawn time
+scoreboard players operation @n[tag=hygrave.temp.grave.base] hygrave.despawn_time = (graves/despawn_time) hygrave.config
+execute as @n[tag=hygrave.temp.grave.base] at @s store result entity @s item.components.minecraft:custom_data.hygrave:common.despawn_time int 1 run scoreboard players get @s hygrave.despawn_time
+
+## Set XP for before death
+data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.levels set from storage hygrave:common players[-1].pcontents.xp.levels
+data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.points set from storage hygrave:common players[-1].pcontents.xp.points
+
+xp set @s 0 levels
+xp set @s 0 points
+
+
+## This item display is the player head part of the grave
+summon minecraft:item_display ~ ~ ~ {Tags: ["hygrave.grave.player_head", "hygrave.temp.grave.player_head"], item: {id: "minecraft:player_head"}, Glowing:1b, transformation: {left_rotation: [0f,0f,0f,1f], right_rotation: [0f,0f,0f,1f], scale: [1f,1f,1f], translation: [0f,0.75f,0f]}, shadow_radius: 0.5, shadow_strength: 0.75, teleport_duration: 20}
+
+item modify entity @n[tag=hygrave.temp.grave.player_head] contents {function:"minecraft:fill_player_head",entity:"this"}
+
+## If Glowing Graves config is false, set the grave to not glow
+execute if score (graves/glowing_graves) hygrave.config matches 0 run data modify entity @n[tag=hygrave.temp.grave.player_head] Glowing set value 0b
+
+## Copy items from player to grave
+function hygrave:internal/grave/generate/copy_items
+
+## Distribute items
+function hygrave:internal/grave/generate/distribute_items
+
+## Calculate total XP
+function hygrave:internal/grave/generate/take_xp/main
+
+## Clear player's inventory
+function hygrave:internal/grave/generate/clear_player_inv
+
+## Distribute XP
+function hygrave:internal/grave/generate/distribute_xp
+
+## Store creation time data
+execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/generate/get_creation_time
+
+## Add the final elements: interaction and text display
+summon minecraft:interaction ~ ~ ~ {Tags:["hygrave.grave.interaction","hygrave.temp.grave.interaction"],width:0.5,height:0.5}
+summon minecraft:text_display ~ ~ ~ {billboard:"vertical",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[0f,1f,0f]},alignment:"center",Tags:["hygrave.grave.text_display","hygrave.temp.grave.text_display"],shadow:1b}
+
+## Attach all grave parts to the base grave
+ride @n[tag=hygrave.temp.grave.player_head] mount @n[tag=hygrave.temp.grave.base]
+ride @n[tag=hygrave.temp.grave.interaction] mount @n[tag=hygrave.temp.grave.base]
+ride @n[tag=hygrave.temp.grave.text_display] mount @n[tag=hygrave.temp.grave.base]
+
+## Grave placement restrictions
+function hygrave:internal/grave/generate/grave_placement_restrictions with entity @s
+
+## Store other data
+execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/map/graves/insert
+
+##> Store PID and GIDs
+execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner.pid int 1 run scoreboard players get @s hygrave.pid
+data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.gid set from storage hygrave:common graves[-1].data.gid
+
+##> Add grave data to player/grave map
+data modify storage hygrave:common players[-1].graves append from storage hygrave:common graves[-1]
+
+##> Store owner
+data modify storage hygrave:common graves[-1].data.owner set from storage hygrave:common players[-1].player
+data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner set from storage hygrave:common players[-1].player
+
+## Update last_gid variable
+scoreboard players operation (last_gid) hygrave.var = @n[tag=hygrave.temp.grave.base] hygrave.gid
+
+## Tell grave mini-info
+execute if score (graves/tell_grave_mini_info) hygrave.config matches 1..2 run function hygrave:internal/grave/generate/tell_grave_mini_info/self
+execute if score (graves/tell_grave_mini_info) hygrave.config matches 2 run function hygrave:internal/grave/generate/tell_grave_mini_info/others
+
+## Remove temp tags
+tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
+tag @e[tag=hygrave.temp.grave.interaction] remove hygrave.temp.grave.interaction
+tag @e[tag=hygrave.temp.grave.player_head] remove hygrave.temp.grave.player_head
+tag @e[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner

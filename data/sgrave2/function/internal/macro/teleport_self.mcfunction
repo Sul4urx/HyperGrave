@@ -1,1 +1,0 @@
-$execute store result score .macro_result.teleport_self sgrave2.temp_var run tp @s $(x) $(y) $(z)

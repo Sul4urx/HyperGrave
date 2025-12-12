@@ -1,0 +1,1 @@
+execute as @s at @s run function hygrave:internal/grave/force_generate
