@@ -40,6 +40,14 @@ execute store result storage sgrave2:common configs.value.general.change_gamerul
 execute if data storage sgrave2:common configs.value.general{change_gamerules:0b} run data modify storage sgrave2:common configs.text.general.change_gamerules set value "§c❌"
 execute if data storage sgrave2:common configs.value.general{change_gamerules:1b} run data modify storage sgrave2:common configs.text.general.change_gamerules set value "§a✔"
 
+## Drop grave contents on despawn
+execute unless score (graves/drop_contents_on_despawn) sgrave2.config matches 0..1 run scoreboard players set (graves/drop_contents_on_despawn) sgrave2.config 1
+
+execute store result storage sgrave2:common configs.value.graves.drop_contents_on_despawn byte 1 run scoreboard players get (graves/drop_contents_on_despawn) sgrave2.config
+
+execute if data storage sgrave2:common configs.value.graves{drop_contents_on_despawn:0b} run data modify storage sgrave2:common configs.text.graves.drop_contents_on_despawn set value "§c❌"
+execute if data storage sgrave2:common configs.value.graves{drop_contents_on_despawn:1b} run data modify storage sgrave2:common configs.text.graves.drop_contents_on_despawn set value "§a✔"
+
 ## Glowing Graves
 execute unless score (graves/glowing_graves) sgrave2.config matches 0..1 run scoreboard players set (graves/glowing_graves) sgrave2.config 1
 
