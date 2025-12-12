@@ -47,45 +47,6 @@ tellraw @s [\
         }\
       },\
       {\
-        "translate": "sgrave2.config.main_menu.players",\
-        "fallback": " §bPlayers ",\
-        "hoverEvent": {\
-          "action": "show_text",\
-          "contents": {\
-            "translate": "sgrave2.config_page_open_description.players",\
-            "fallback": "All configs about players\nClick to open page 'Players'."\
-            }\
-          },\
-        "clickEvent": {\
-          "action": "run_command",\
-          "value": "/function sgrave2:internal/config/open_page/players"\
-        }\
-      }\
-    ]\
-  }\
-]
-
-tellraw @s [\
-  "\n",\
-  {\
-    "translate": "§7[%s§7|%s§7]",\
-    "with": [\
-      {\
-        "translate": "sgrave2.config.main_menu.dropped_contents",\
-        "fallback": " §bDropped Contents ",\
-        "hoverEvent": {\
-          "action": "show_text",\
-          "contents": {\
-            "translate": "sgrave2.config_page_open_description.dropped_contents",\
-            "fallback": "All configs about dropped items and XP from graves\nClick to open page 'Dropped Contents'."\
-            }\
-          },\
-        "clickEvent": {\
-          "action": "run_command",\
-          "value": "/function sgrave2:internal/config/open_page/dropped_contents"\
-        }\
-      },\
-      {\
         "translate": "sgrave2.config.main_menu.general",\
         "fallback": " §bGeneral ",\
         "hoverEvent": {\
@@ -98,6 +59,30 @@ tellraw @s [\
         "clickEvent": {\
           "action": "run_command",\
           "value": "/function sgrave2:internal/config/open_page/general"\
+        }\
+      }\
+    ]\
+  }\
+]
+
+tellraw @s [\
+  "\n",\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "translate": "sgrave2.config.main_menu.dropped_contents",\
+        "fallback": "     §bDropped Contents    §l ",\
+        "hoverEvent": {\
+          "action": "show_text",\
+          "contents": {\
+            "translate": "sgrave2.config_page_open_description.dropped_contents",\
+            "fallback": "All configs about dropped items and XP from graves\nClick to open page 'Dropped Contents'."\
+            }\
+          },\
+        "clickEvent": {\
+          "action": "run_command",\
+          "value": "/function sgrave2:internal/config/open_page/dropped_contents"\
         }\
       }\
     ]\
