@@ -13,6 +13,9 @@ scoreboard players operation @n[tag=sgrave2.temp.grave.item_to_give_back] sgrave
 ##> Dropped Contents / Invulnerable Items
 execute if score (dropped_contents/invulnerable_items) sgrave2.config matches 1 run data modify entity @n[tag=sgrave2.temp.grave.item_to_give_back] Invulnerable set value 1b
 
+##> Dropped Contents / No Gravity Items
+execute if score (dropped_contents/no_gravity_items) sgrave2.config matches 1 run data modify entity @n[tag=sgrave2.temp.grave.item_to_give_back] NoGravity set value 1b
+
 ## Set item content
 data modify entity @n[tag=sgrave2.temp.grave.item_to_give_back] Item set from storage sgrave2:common temp.items_to_summon_as_entity[-1]
 
