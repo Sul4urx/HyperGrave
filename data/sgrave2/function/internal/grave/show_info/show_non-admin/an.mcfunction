@@ -38,6 +38,13 @@ tellraw @s [\
 execute unless score (graves/show_grave_info/an/owner) sgrave2.config matches 0 run tellraw @s {\
   "translate": "sgrave2.grave_info.owner",\
   "fallback": "  §bOwner: %s",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.grave_info.owner.description",\
+      "fallback": "The player who generated the grave."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.owner.name", \
@@ -51,6 +58,13 @@ execute unless score (graves/show_grave_info/an/owner) sgrave2.config matches 0 
 execute unless score (graves/show_grave_info/an/location.xyz) sgrave2.config matches 0 unless score (graves/show_grave_info/an/location.dim) sgrave2.config matches 0 run tellraw @s {\
   "translate": "sgrave2.grave_info.location.all", \
   "fallback": "  §bLocation: %s §7(%s§7)",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.grave_info.location.all.description",\
+      "fallback": "The exact location the grave was generated in (NOT where the player died, that can be different sometimes)."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.pos_integer[]",\
@@ -69,6 +83,13 @@ execute unless score (graves/show_grave_info/an/location.xyz) sgrave2.config mat
 execute unless score (graves/show_grave_info/an/location.xyz) sgrave2.config matches 0 if score (graves/show_grave_info/an/location.dim) sgrave2.config matches 0 run tellraw @s {\
   "translate": "sgrave2.grave_info.location.xyz", \
   "fallback": "  §bLocation: %s",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.grave_info.location.xyz.description",\
+      "fallback": "The exact X, Y and Z coordinates the grave was generated in (NOT where the player died, that can be different sometimes).\n\nThe admin doesn't allow me to show the dimension as well, for some reason. The admin is kinda a weird guy in my opinion, but I don't really know, maybe there is a good reason why they did this... I mean why would the admin want to show the exact coordinates but not the dimension? what's the point???"\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.pos_integer[]",\
@@ -82,6 +103,13 @@ execute unless score (graves/show_grave_info/an/location.xyz) sgrave2.config mat
 execute if score (graves/show_grave_info/an/location.xyz) sgrave2.config matches 0 unless score (graves/show_grave_info/an/location.dim) sgrave2.config matches 0 run tellraw @s {\
   "translate": "sgrave2.grave_info.location.dim", \
   "fallback": "  §bDimension: %s",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+        "translate": "sgrave2.grave_info.localtion.dim.description",\
+        "fallback": "The dimension the grave was generated in."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.dimension.name",\
@@ -95,6 +123,13 @@ execute if score (graves/show_grave_info/an/location.xyz) sgrave2.config matches
 execute unless score (graves/show_grave_info/an/xp/after_death) sgrave2.config matches 0 unless score (graves/show_grave_info/an/xp/before_death) sgrave2.config matches 0 unless data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
     "translate": "sgrave2.grave_info.xp",\
     "fallback": "  §bExperience:\n    §eBefore death: %s (%s levels §7+ %s points)\n    §eAfter death: %s (%s levels §7+ %s points)", \
+    "hoverEvent": {\
+      "action": "show_text",\
+      "contents": {\
+        "translate": "sgrave2.grave_info.xp.description",\
+        "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
+      }\
+    },\
     "with": [\
       {\
         "nbt": "graves[-1].contents.xp.before_death.total",\
@@ -131,8 +166,15 @@ execute unless score (graves/show_grave_info/an/xp/after_death) sgrave2.config m
 
 ##> If before death total is too big, get rid of it
 execute unless score (graves/show_grave_info/an/xp/after_death) sgrave2.config matches 0 unless score (graves/show_grave_info/an/xp/before_death) sgrave2.config matches 0 if data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
-    "translate": "sgrave2.grave_info.xp",\
+    "translate": "sgrave2.grave_info.xp.before_death_total_too_big",\
     "fallback": "  §bExperience:\n    §eBefore death: %s levels §7+ %s points\n    §eAfter death: %s (%s levels §7+ %s points)", \
+    "hoverEvent": {\
+      "action": "show_text",\
+      "contents": {\
+        "translate": "sgrave2.grave_info.xp.before_death_total_too_big.description",\
+        "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
+      }\
+    },\
     "with": [\
       {\
         "nbt": "graves[-1].contents.xp.before_death.levels",\
@@ -164,8 +206,15 @@ execute unless score (graves/show_grave_info/an/xp/after_death) sgrave2.config m
 
 ##> XP before death
 execute if score (graves/show_grave_info/an/xp/after_death) sgrave2.config matches 0 unless score (graves/show_grave_info/an/xp/before_death) sgrave2.config matches 0 unless data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
-    "translate": "sgrave2.grave_info.xp",\
+    "translate": "sgrave2.grave_info.xp.before_death_only",\
     "fallback": "  §bXP (Before death): %s (%s levels §7+ %s points)",\
+    "hoverEvent": {\
+      "action": "show_text",\
+      "contents": {\
+        "translate": "sgrave2.grave_info.xp.before_death_only.description",\
+        "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave).\nYou're not allowed to see the After death XP of this grave."\
+      }\
+    },\
     "with": [\
       {\
         "nbt": "graves[-1].contents.xp.before_death.total",\
@@ -187,8 +236,15 @@ execute if score (graves/show_grave_info/an/xp/after_death) sgrave2.config match
 
 ##>> If total is too big, get rid of it
 execute if score (graves/show_grave_info/an/xp/after_death) sgrave2.config matches 0 unless score (graves/show_grave_info/an/xp/before_death) sgrave2.config matches 0 if data storage sgrave2:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
-    "translate": "sgrave2.grave_info.xp",\
+    "translate": "sgrave2.grave_info.xp.before_death_only.before_death_total_too_big",\
     "fallback": "  §bXP (Before death): %s levels §7+ %s points",\
+    "hoverEvent": {\
+      "action": "show_text",\
+      "contents": {\
+        "translate": "sgrave2.grave_info.xp.before_death_only.before_death_total_too_big.description",\
+        "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave).\nYou're not allowed to see the After death XP of this grave."\
+      }\
+    },\
     "with": [\
       {\
         "nbt": "graves[-1].contents.xp.before_death.levels",\
@@ -205,8 +261,15 @@ execute if score (graves/show_grave_info/an/xp/after_death) sgrave2.config match
 
 ##> XP after death
 execute unless score (graves/show_grave_info/an/xp/after_death) sgrave2.config matches 0 if score (graves/show_grave_info/an/xp/before_death) sgrave2.config matches 0 run tellraw @s {\
-    "translate": "sgrave2.grave_info.xp",\
+    "translate": "sgrave2.grave_info.xp.after_death_only",\
     "fallback": "  §bXP (After death): %s (%s levels §7+ %s points)",\
+    "hoverEvent": {\
+      "action": "show_text",\
+      "contents": {\
+        "translate": "sgrave2.grave_info.xp.after_death_only.description",\
+        "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave).\nYou're not allowed to see the Before death XP of this grave."\
+      }\
+    },\
     "with": [\
       {\
         "nbt": "graves[-1].contents.xp.after_death.total",\
@@ -260,6 +323,13 @@ execute unless score (graves/show_grave_info/an/despawn_time) sgrave2.config mat
 execute unless score (graves/show_grave_info/an/creation_time) sgrave2.config matches 0 run tellraw @s {\
   "translate": "sgrave2.grave_info.creation_time",\
   "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
+  "hoverEvent": {\
+    "action": "show_text",\
+    "contents": {\
+      "translate": "sgrave2.grave_info.creation_time.description",\
+      "fallback": "The in-game time the grave was generated at."\
+    }\
+  },\
   "with": [\
     {\
       "nbt": "graves[-1].data.creation_time.day",\

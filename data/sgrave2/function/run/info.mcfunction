@@ -108,7 +108,7 @@ tellraw @s {\
       "fallback": "§aConfig",\
       "hoverEvent": {\
         "action": "show_text",\
-        "value": {\
+        "contents": {\
           "translate": "sgrave2.info_menu_button_description.config",\
           "fallback": "Click to open the config menu (Requires elevated permissions)."\
         }\
