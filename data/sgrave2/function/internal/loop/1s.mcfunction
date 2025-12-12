@@ -10,3 +10,5 @@ execute as @e[tag=sgrave2.grave.base] at @s run function sgrave2:internal/grave/
 
 execute as @e[tag=sgrave2.grave.item] at @s run function sgrave2:internal/grave/dropped_contents/despawn_time/decrease
 execute as @e[tag=sgrave2.grave.xp] at @s run function sgrave2:internal/grave/dropped_contents/despawn_time/decrease
+
+execute as @e[tag=sgrave2.backup.restored_item] at @s run function sgrave2:internal/backup/dropped_contents/despawn_time/decrease
