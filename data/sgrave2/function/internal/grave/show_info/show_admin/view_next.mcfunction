@@ -19,4 +19,4 @@ execute store result score .return_value sgrave2.temp_var run function sgrave2:i
 
 execute store result storage sgrave2:common temp.args2.gid int 1 run scoreboard players get .return_value sgrave2.temp_var
 
-function sgrave2:run/show_admin_grave_info with storage sgrave2:common temp.args2
+function sgrave2:run/grave/admin/show_grave_info with storage sgrave2:common temp.args2
