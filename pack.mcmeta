@@ -3,5 +3,13 @@
     "pack_format": 61,
     "supported_formats": [48, 61],
     "description": "A sophisticated grave data pack | v0.4.0"
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "pre_24_3",
+        "formats": [48, 48]
+      }
+    ]
   }
 }
