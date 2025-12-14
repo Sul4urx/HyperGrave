@@ -1,5 +1,5 @@
 name: Bug Report
-description: Found a bug for SGrave 2? Report it here!
+description: Found a bug for HyperGrave? Report it here!
 labels: [bug]
 title: "[BUG] "
 assignees: [Sul4urx]
@@ -10,11 +10,11 @@ body:
   - type: dropdown
     id: sgrave_version
     attributes:
-      label: "SGrave version(s):"
+      label: "HyperGrave version(s):"
       description: "Please select the version(s) of SGrave you've been able to reproduce this issue on."
       multiple: true
       options:
-        - v2a0-beta-3
+        - 0.4.0
         - Other
     validations:
       required: true
@@ -25,6 +25,8 @@ body:
       description: "Please select the version(s) of Minecraft you've been able to reproduce this issue on."
       multiple: true
       options:
+      	- '1.21.11'
+      	- '1.21.9 - 1.21.10'
         - '1.21.6 - 1.21.8'
         - '1.21.5'
         - '1.21.4'
