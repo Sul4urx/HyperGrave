@@ -1,4 +1,4 @@
-#<< grave/open
+#<< grave/generate
 
 ## Game Modes
 scoreboard players set .check_costs.gamemodes hygrave.temp_var 1

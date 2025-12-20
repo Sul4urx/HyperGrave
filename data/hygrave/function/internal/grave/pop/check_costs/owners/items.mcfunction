@@ -31,4 +31,4 @@ data remove storage hygrave:common temp.args
 ## Check if item passes the next predicate
 data modify storage hygrave:common temp.args.value set from storage hygrave:common temp.config_copy.items[-1]
 
-function hygrave:internal/grave/open/check_costs/owners/items with storage hygrave:common temp.args
+function hygrave:internal/grave/unpack/check_costs/owners/items with storage hygrave:common temp.args

@@ -16,9 +16,9 @@ scoreboard players set .check_costs.items hygrave.temp_var 0
 
 execute unless score .loop_count hygrave.temp_var matches 1.. run scoreboard players set .check_costs.items hygrave.temp_var 1
 
-execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/open/check_costs/non_owners/items with storage hygrave:common temp.args
+execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/pop/check_costs/non_owners/items with storage hygrave:common temp.args
 
-execute if score .check_costs.items hygrave.temp_var matches 1 run function hygrave:internal/grave/open/check_costs/non_owners/items/remove with storage hygrave:common temp.args.value
+execute if score .check_costs.items hygrave.temp_var matches 1 run function hygrave:internal/grave/pop/check_costs/non_owners/items/remove with storage hygrave:common temp.args.value
 
 ## XP
 scoreboard players set .check_costs.xp hygrave.temp_var 0

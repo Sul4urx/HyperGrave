@@ -21,19 +21,19 @@ function hygrave:internal/map/players/lookup with storage hygrave:common temp.ar
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 ## Check and apply costs
-execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/open/check_costs/owners
-execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/open/check_costs/non_owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/unpack/check_costs/owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/unpack/check_costs/non_owners
 
 execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.open.fail.cannot_afford_cost.gamemodes",\
+  "translate": "hygrave.grave.unpack.fail.cannot_afford_cost.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to open or break this grave."\
 }
 execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.open.fail.cannot_afford_cost.items",\
+  "translate": "hygrave.grave.unpack.fail.cannot_afford_cost.items",\
   "fallback": "§cYou do not have the nessecary requirements to open or break this grave."\
 }
 execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.open.fail.cannot_afford_cost.xp",\
+  "translate": "hygrave.grave.unpack.fail.cannot_afford_cost.xp",\
   "fallback": "§cYou do not have the nessecary requirements to open or break this grave.",\
   "with": [\
     {\
@@ -45,8 +45,8 @@ execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run t
 }
 
 ## Give items
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/open/give_items/main
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} as @n[tag=hygrave.temp.grave.interactor] at @s run return run function hygrave:internal/grave/open/give_icd_item
+execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/unpack/give_items/main
+execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} as @n[tag=hygrave.temp.grave.interactor] at @s run return run function hygrave:internal/grave/unpack/give_icd_item
 
 ## Give XP
 data modify storage hygrave:common temp.args.value set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.total

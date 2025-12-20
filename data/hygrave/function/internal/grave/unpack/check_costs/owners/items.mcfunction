@@ -1,5 +1,4 @@
-#<< grave/open/check_costs/non_owners
-
+#<< grave/unpack/check_costs/owners
 
 ## Check if item passes provided predicate
 ## If it does, set .check_costs.items score to true
@@ -31,4 +30,4 @@ data remove storage hygrave:common temp.args
 ## Check if item passes the next predicate
 data modify storage hygrave:common temp.args.value set from storage hygrave:common temp.config_copy.items[-1]
 
-function hygrave:internal/grave/open/check_costs/non_owners/items with storage hygrave:common temp.args
+function hygrave:internal/grave/unpack/check_costs/owners/items with storage hygrave:common temp.args

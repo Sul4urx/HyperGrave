@@ -1,4 +1,4 @@
-#<< grave/open/give_items/main
+#<< grave/unpack/give_items/main
 
 # Summon items as entity (the items that have been queued to summon as entity instead)
 
@@ -29,4 +29,4 @@ kill @e[nbt={Item:{components:{"minecraft:custom_data":{"hygrave:common":{temp_i
 tag @e[tag=hygrave.temp.grave.item_to_give_back] remove hygrave.temp.grave.item_to_give_back
 
 ## Do all of the above for the next queued item to summon as entity
-execute if data storage hygrave:common temp.items_to_summon_as_entity[0] run function hygrave:internal/grave/open/give_items/drop_rest_of_items
+execute if data storage hygrave:common temp.items_to_summon_as_entity[0] run function hygrave:internal/grave/unpack/give_items/drop_rest_of_items

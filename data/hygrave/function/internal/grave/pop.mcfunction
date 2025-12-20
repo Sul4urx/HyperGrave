@@ -24,15 +24,15 @@ execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at
 execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_costs/non_owners
 
 execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.open.fail.cannot_afford_cost.gamemodes",\
+  "translate": "hygrave.grave.pop.fail.cannot_afford_cost.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to open or break this grave."\
 }
 execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.open.fail.cannot_afford_cost.items",\
+  "translate": "hygrave.grave.pop.fail.cannot_afford_cost.items",\
   "fallback": "§cYou do not have the nessecary requirements to open or break this grave."\
 }
 execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.open.fail.cannot_afford_cost.xp",\
+  "translate": "hygrave.grave.pop.fail.cannot_afford_cost.xp",\
   "fallback": "§cYou do not have the nessecary requirements to open or break this grave.",\
   "with": [\
     {\

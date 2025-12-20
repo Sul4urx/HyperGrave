@@ -1,4 +1,4 @@
-#<< grave/open/give_items/main
+#<< grave/unpack/give_items/main
 
 ## Store the slot of the item in a score
 scoreboard players set .slot hygrave.temp_var -32768
@@ -14,7 +14,7 @@ data modify entity @n[tag=hygrave.temp.item_manipulator] Item set from entity @s
 execute unless score .slot hygrave.temp_var matches -32768 store result entity @s item.components.minecraft:custom_data.hygrave:common.items[-1].Slot int 1 run scoreboard players get .slot hygrave.temp_var
 
 ## Put item in correct slot of player's inventory
-execute unless score .slot hygrave.temp_var matches -32768 run function hygrave:internal/grave/open/give_items/put_item_in_correct_slot/main with entity @s item.components.minecraft:custom_data.hygrave:common.items[-1]
+execute unless score .slot hygrave.temp_var matches -32768 run function hygrave:internal/grave/unpack/give_items/put_item_in_correct_slot/main with entity @s item.components.minecraft:custom_data.hygrave:common.items[-1]
 
 ## If the slot in player's inventory is full,
 ## queue the item to be summoned as entity instead
@@ -30,4 +30,4 @@ data remove entity @s item.components.minecraft:custom_data.hygrave:common.items
 
 ## Do all of the above for the next item of the grave
 scoreboard players remove .loop_count hygrave.temp_var 1
-execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/open/give_items/loop
+execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/unpack/give_items/loop

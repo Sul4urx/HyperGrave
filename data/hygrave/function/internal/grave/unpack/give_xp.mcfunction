@@ -1,4 +1,4 @@
-#<< grave/open
+#<< grave/unpack
 
 ## Add XP
 $xp add @s $(total) points
