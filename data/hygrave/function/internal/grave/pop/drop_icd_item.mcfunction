@@ -1,10 +1,16 @@
-#<< grave/break
+#<< grave/pop
 
 ## Spawn item
-summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock",components:{"minecraft:custom_data":{"hygrave:common":{temp_item:1b}}}},Tags:["hygrave.temp.grave.item_to_give_back","hygrave.grave.item"],Age:-32768s}
+summon minecraft:item ~ ~ ~ {Item: {id: "minecraft:clock", components: {"minecraft:custom_data": {"hygrave:common": {temp_item: 1b}}}}, Tags: ["hygrave.temp.grave.item_to_give_back","hygrave.grave.item"],Age:-32768s}
 
 ## Set item
 data modify entity @n[tag=hygrave.temp.grave.item_to_give_back] Item set from entity @s item.components.minecraft:custom_data.hygrave:common.items[0]
+
+## Remove item from grave
+data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0]
+
+## If failed to set item, get rid of the item
+kill @e[nbt={Item: {components: {"minecraft:custom_data": {"hygrave:common": {temp_item: 1b}}}}}]
 
 ## Apply item configs to the item
 
@@ -17,15 +23,8 @@ execute if score (dropped_contents/invulnerable_items) hygrave.config matches 1 
 ##> Dropped Contents / No Gravity Items
 execute if score (dropped_contents/no_gravity_items) hygrave.config matches 1 run data modify entity @n[tag=hygrave.temp.grave.item_to_give_back] NoGravity set value 1b
 
-## Remove item from grave
-data remove entity @s item.components.minecraft:custom_data.hygrave:common.items[0]
+## Immediately switch to the next item
+scoreboard players set @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown 0
 
-## If failed to set item, get rid of the item
-kill @e[nbt={Item:{components:{"minecraft:custom_data":{"hygrave:common":{temp_item:1b}}}}}]
-
-## Remove temp tag
-tag @e[tag=hygrave.temp.grave.item_to_give_back] remove hygrave.temp.grave.item_to_give_back
-
-
-## Do all of above for the rest of items of the grave
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/break/drop_items
+## Play sound
+playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1

@@ -20,8 +20,8 @@ data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 
 ## Check and apply costs
-execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/break/check_costs/owners
-execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/break/check_costs/non_owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_costs/owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_costs/non_owners
 
 execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
   "translate": "hygrave.grave.open.fail.cannot_afford_cost.gamemodes",\
@@ -44,11 +44,11 @@ execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run t
 }
 
 ## Drop items
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/break/drop_items
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run return run function hygrave:internal/grave/break/drop_icd_item
+execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/pop/drop_items
+execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run return run function hygrave:internal/grave/pop/drop_icd_item
 
 ## Drop XP
-execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/break/drop_xp
+execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/pop/drop_xp
 
 ## Play sound
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
