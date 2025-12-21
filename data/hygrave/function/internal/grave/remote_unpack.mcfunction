@@ -1,8 +1,8 @@
-#<< event/player/player_tried_to_ropen_grave
+#<< event/player/player_tried_to_remotely_unpack_grave
 
 ## If Grave doesn't exist, throw error
 $execute unless data storage hygrave:common active_graves[{data:{gid:$(gid)}}] run return run title @s actionbar {\
-  "translate": "hygrave.ropen_grave.fail.grave_destroyed",\
+  "translate": "hygrave.remote_unpack_grave.fail.grave_destroyed",\
   "fallback": "§cGrave #$(gid) either does not exist or has been destroyed.",\
 }
 
@@ -30,19 +30,19 @@ tag @s add hygrave.temp.grave.interactor
 function hygrave:internal/grave/tag_owner with storage hygrave:common graves[-1].data.owner
 
 ## Check and apply costs
-execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/ropen/check_costs/owners
-execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/ropen/check_costs/non_owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_costs/owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_costs/non_owners
 
 execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @s actionbar {\
-  "translate": "hygrave.grave.ropen.fail.cannot_afford_cost.gamemodes",\
+  "translate": "hygrave.grave.remote_unpack.fail.cannot_afford_cost.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to remotely open this grave."\
 }
 execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @s actionbar {\
-  "translate": "hygrave.grave.ropen.fail.cannot_afford_cost.items",\
+  "translate": "hygrave.grave.remote_unpack.fail.cannot_afford_cost.items",\
   "fallback": "§cYou do not have the nessecary requirements to remotely open this grave."\
 }
 execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @s actionbar {\
-  "translate": "hygrave.grave.ropen.fail.cannot_afford_cost.xp",\
+  "translate": "hygrave.grave.remote_unpack.fail.cannot_afford_cost.xp",\
   "fallback": "§cYou do not have the nessecary requirements to remotely open this grave.",\
   "with": [\
     {\
@@ -54,7 +54,7 @@ execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run t
 }
 
 ## Give items
-function hygrave:internal/grave/ropen/give_items/main
+function hygrave:internal/grave/remote_unpack/give_items/main
 
 ## Give XP
 data modify storage hygrave:common temp.args.value set from storage hygrave:common graves[-1].contents.xp.after_death.total

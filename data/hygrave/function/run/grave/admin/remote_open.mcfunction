@@ -1,6 +1,6 @@
 ## If Grave doesn't exist, throw error
 $execute unless data storage hygrave:common active_graves[{data:{gid:$(gid)}}] run return run title @s actionbar {\
-  "translate": "hygrave.ropen_grave.fail.grave_destroyed",\
+  "translate": "hygrave.remote_unpack_grave.fail.grave_destroyed",\
   "fallback": "§cGrave #$(gid) either does not exist or has been destroyed.",\
 }
 
@@ -28,7 +28,7 @@ tag @s add hygrave.temp.grave.interactor
 function hygrave:internal/grave/tag_owner with storage hygrave:common graves[-1].data.owner
 
 ## Give items
-function hygrave:internal/grave/ropen/give_items/main
+function hygrave:internal/grave/remote_unpack/give_items/main
 
 ## Give XP
 data modify storage hygrave:common temp.args.value set from storage hygrave:common graves[-1].contents.xp.after_death.total

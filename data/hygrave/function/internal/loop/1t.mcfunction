@@ -78,7 +78,7 @@ scoreboard players set @a hygrave.show_grave_info.view_previous 0
 scoreboard players enable @a hygrave.show_grave_info.view_previous
 
 ##> Remotely open grave
-execute as @a[scores={hygrave.remote_open_grave=1000..}] at @s run function hygrave:internal/event/player/player_tried_to_ropen_grave
+execute as @a[scores={hygrave.remote_open_grave=1000..}] at @s run function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
 scoreboard players set @a hygrave.remote_open_grave 0
 scoreboard players enable @a hygrave.remote_open_grave
 
