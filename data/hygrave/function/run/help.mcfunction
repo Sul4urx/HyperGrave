@@ -45,7 +45,7 @@ tellraw @s {\
         "action": "show_text",\
         "value": {\
           "translate": "hygrave.help_menu.faq.1",\
-          "fallback": "§bWhy does the player head part of the grave show a default skin and is not the same as mine?\n§fYou must have a good internet connection and must be using a non-cracked Minecraft launcher for the head to show your skin. If you still can't get it to work, then it is probably a bug.\n\n§bIt says you must have the nessecary requirements to open or break/remotely open this grave. What are the requirements?\n§fBy default, there are no requirements to open or break graves and is impossible to remotely open graves. Take a look at the Costs config. If there are no predicates or if the predicates should have been matched, then this is a bug."\
+          "fallback": "§bWhy does the player head part of the grave show a default skin and is not the same as mine?\n§fYou must have a good internet connection and must be using a non-cracked Minecraft launcher for the head to show your skin. If you still can't get it to work, then it is probably a bug.\n\n§bIt says you must have the nessecary requirements to (remotely) loot this grave. What are the requirements?\n§fBy default, there are no requirements to loot graves and is impossible to remotely loot graves. Take a look at the Costs config. If there are no predicates or if the predicates should have been matched, then this is a bug."\
         }\
       },\
     },\

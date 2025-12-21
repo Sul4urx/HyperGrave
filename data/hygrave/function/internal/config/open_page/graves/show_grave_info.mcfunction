@@ -932,7 +932,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.show_grave_info.destruction_type",\
-        "fallback": "Whether how the grave was destroyed should be shown (e.g. destroyed, opened, despawned). §7(Destruction TyPe)"\
+        "fallback": "Whether how the grave was destroyed should be shown (e.g. looted by a player, despawned, etc). §7(Destruction TyPe)"\
       }\
     }\
   },\

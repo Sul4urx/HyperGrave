@@ -44,8 +44,8 @@ scoreboard objectives add hygrave.show_grave_info trigger
 scoreboard objectives add hygrave.show_grave_info.view_next trigger
 scoreboard objectives add hygrave.show_grave_info.view_previous trigger
 
-##> Remote open graves
-scoreboard objectives add hygrave.remote_open_grave trigger
+##> Remotely loot graves
+scoreboard objectives add hygrave.remote_loot_grave trigger
 
 ##> Info and Help
 scoreboard objectives add hygrave.info trigger

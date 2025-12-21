@@ -35,15 +35,15 @@ execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] a
 
 execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.grave.remote_unpack.fail.cannot_afford_cost.gamemodes",\
-  "fallback": "§cYou do not have the nessecary requirements to remotely open this grave."\
+  "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave."\
 }
 execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.grave.remote_unpack.fail.cannot_afford_cost.items",\
-  "fallback": "§cYou do not have the nessecary requirements to remotely open this grave."\
+  "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave."\
 }
 execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.grave.remote_unpack.fail.cannot_afford_cost.xp",\
-  "fallback": "§cYou do not have the nessecary requirements to remotely open this grave.",\
+  "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave.",\
   "with": [\
     {\
       "nbt": "configs.text.costs.grave_ropening_costs.owners.xp.levels",\

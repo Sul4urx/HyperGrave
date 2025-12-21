@@ -23,7 +23,7 @@ tellraw @s [\
           "action": "show_text",\
           "value": {\
             "translate": "hygrave.config_page_open_description.costs",\
-            "fallback": "All configs about requirements and costs to accomplish certain tasks like opening or generating graves\nClick to open page 'Costs'."\
+            "fallback": "All configs about requirements and costs to accomplish certain tasks like looting graves or generating graves\nClick to open page 'Costs'."\
             }\
           },\
         "click_event": {\

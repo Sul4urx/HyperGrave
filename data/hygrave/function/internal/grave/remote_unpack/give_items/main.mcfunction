@@ -1,5 +1,5 @@
 #<< grave/remote_unpack
-#<! grave/admin/remote_open
+#<! grave/admin/remote_loot
 
 ## Summon temp item (used for manipulating each item stored in grave)
 ## Call it manipulator item

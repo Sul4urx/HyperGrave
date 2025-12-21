@@ -15,7 +15,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_opening_costs",\
-        "fallback": "The costs of opening or breaking a grave"\
+        "fallback": "The costs of looting a grave"\
       }\
     }\
   },\
@@ -44,7 +44,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_ropening_costs",\
-        "fallback": "The costs of remotely opening a grave"\
+        "fallback": "The costs of remotely looting a grave"\
       }\
     }\
   },\

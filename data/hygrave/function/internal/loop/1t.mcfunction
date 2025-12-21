@@ -77,10 +77,10 @@ execute as @a[scores={hygrave.show_grave_info.view_previous=1000..}] at @s run f
 scoreboard players set @a hygrave.show_grave_info.view_previous 0
 scoreboard players enable @a hygrave.show_grave_info.view_previous
 
-##> Remotely open grave
-execute as @a[scores={hygrave.remote_open_grave=1000..}] at @s run function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
-scoreboard players set @a hygrave.remote_open_grave 0
-scoreboard players enable @a hygrave.remote_open_grave
+##> Remotely loot grave
+execute as @a[scores={hygrave.remote_loot_grave=1000..}] at @s run function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
+scoreboard players set @a hygrave.remote_loot_grave 0
+scoreboard players enable @a hygrave.remote_loot_grave
 
 ## Grave management
 execute as @e[tag=hygrave.grave.base] at @s run function hygrave:internal/grave/main

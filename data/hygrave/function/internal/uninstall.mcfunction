@@ -28,7 +28,7 @@ scoreboard objectives remove hygrave.rotation_cooldown
 scoreboard objectives remove hygrave.show_grave_info
 scoreboard objectives remove hygrave.show_grave_info.view_next
 scoreboard objectives remove hygrave.show_grave_info.view_previous
-scoreboard objectives remove hygrave.remote_open_grave
+scoreboard objectives remove hygrave.remote_loot_grave
 scoreboard objectives remove hygrave.info
 scoreboard objectives remove hygrave.help
 scoreboard objectives remove hygrave.death_count

@@ -311,7 +311,7 @@ tellraw @s ""
 ## Status
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"unpacked"} unless score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
   "translate": "hygrave.grave_info.status.unpacked_by",\
-  "fallback": "  §bStatus: §cOpened by %s",\
+  "fallback": "  §bStatus: §cLooted by %s",\
   "with": [\
       {\
       "nbt": "graves[-1].data.status.destroyer.name",\
@@ -323,12 +323,12 @@ execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config
 
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"unpacked"} if score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.unpacked", \
-    "fallback": "  §bStatus: §cOpened"\
+    "fallback": "  §bStatus: §cLooted"\
   }
 
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"remote_unpacked"} unless score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.remote_unpacked_by",\
-    "fallback": "  §bStatus: §cRemotely opened by %s",\
+    "fallback": "  §bStatus: §cRemotely looted by %s",\
     "with": [\
       {\
         "nbt": "graves[-1].data.status.destroyer.name",\
@@ -340,12 +340,12 @@ execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config
 
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"remote_unpacked"} if score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.remote_unpacked", \
-    "fallback": "  §bStatus: §cRemotely opened"\
+    "fallback": "  §bStatus: §cRemotely looted"\
   }
 
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"popped"} unless score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.popped_by",\
-    "fallback": "  §bStatus: §cBroken by %s",\
+    "fallback": "  §bStatus: §cLooted by %s",\
     "with": [\
       {\
         "nbt": "graves[-1].data.status.destroyer.name",\
@@ -357,7 +357,7 @@ execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config
 
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"popped"} if score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.popped",\
-    "fallback": "  §bStatus: §cBroken"\
+    "fallback": "  §bStatus: §cLooted"\
   }
 
 
@@ -369,7 +369,7 @@ execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config
 
 execute if score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status.destroyer unless score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.destroyed_by",\
-    "fallback": "  §bStatus: §cDestroyed by %s",\
+    "fallback": "  §bStatus: §cLooted by %s",\
     "with": [\
       {\
         "nbt": "graves[-1].data.status.destroyer.name",\
@@ -381,12 +381,12 @@ execute if score (graves/show_grave_info/bn/destruction_type) hygrave.config mat
 
 execute if score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 unless score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 unless data storage hygrave:common graves[-1].data.status.destroyer run tellraw @s {\
     "translate": "hygrave.grave_info.status.destroyed",\
-    "fallback": "  §bStatus: §cDestroyed"\
+    "fallback": "  §bStatus: §cLooted"\
   }
 
 execute if score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0 if score (graves/show_grave_info/bn/destroyer) hygrave.config matches 0 run tellraw @s {\
     "translate": "hygrave.grave_info.status.destroyed",\
-    "fallback": "  §bStatus: §cDestroyed"\
+    "fallback": "  §bStatus: §cBroken"\
   }
 
 
@@ -414,18 +414,18 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
       }\
     },\
     {\
-      "translate": "hygrave.grave_info.menu.unpack",\
-      "fallback": " §bOpen ",\
+      "translate": "hygrave.grave_info.menu.remote_unpack",\
+      "fallback": " §bLoot ",\
       "hover_event": {\
         "action": "show_text",\
         "value": {\
-          "translate": "hygrave.grave_info.menu_description.unpack",\
-          "fallback": "Click to remotely open this grave."\
+          "translate": "hygrave.grave_info.menu_description.remote_unpack",\
+          "fallback": "Click to remotely loot this grave."\
         }\
       },\
       "click_event": {\
         "action": "suggest_command",\
-        "command": "/trigger hygrave.remote_open_grave set $(gid)"\
+        "command": "/trigger hygrave.remote_loot_grave set $(gid)"\
       }\
     },\
     {\
@@ -446,8 +446,8 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
   ]\
 }
 $execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.menu_no_open",\
-  "fallback": "§7[%s§7| Open |%s§7]",\
+  "translate": "hygrave.grave_info.menu_no_remote_unpack",\
+  "fallback": "§7[%s§7| Loot |%s§7]",\
   "with": [\
     {\
       "translate": "hygrave.grave_info.menu.back",\
