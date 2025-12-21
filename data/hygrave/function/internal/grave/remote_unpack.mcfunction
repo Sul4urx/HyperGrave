@@ -65,7 +65,7 @@ execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:inte
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
 ## Update status
-data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"ropened"}
+data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"remote_unpacked"}
 data modify storage hygrave:common graves[-1].data.status.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
 
 data modify storage hygrave:common players[{temp:{owner:1b}}].graves[-1].data.status set from storage hygrave:common graves[-1].data.status

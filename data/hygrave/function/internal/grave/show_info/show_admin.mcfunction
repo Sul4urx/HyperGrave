@@ -281,9 +281,9 @@ execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} 
   "fallback": "  §bStatus: §aActive"\
 }
 
-execute if data storage hygrave:common graves[-1].data.status{destruction_type:"opened"\
+execute if data storage hygrave:common graves[-1].data.status{destruction_type:"unpacked"\
 } run tellraw @s {\
-  "translate": "hygrave.grave_info.status.opened_by",\
+  "translate": "hygrave.grave_info.status.unpacked_by",\
   "fallback": "  §bStatus: §cOpened by %s",\
   "with": [\
       {\
@@ -294,9 +294,9 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
   ]\
 }
 
-execute if data storage hygrave:common graves[-1].data.status{destruction_type:"ropened"\
+execute if data storage hygrave:common graves[-1].data.status{destruction_type:"remote_unpacked"\
 } run tellraw @s {\
-  "translate": "hygrave.grave_info.status.opened_by",\
+  "translate": "hygrave.grave_info.status.remote_unpacked_by",\
   "fallback": "  §bStatus: §cRemotely opened by %s",\
   "with": [\
     {\
@@ -307,9 +307,9 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
   ]\
 }
 
-execute if data storage hygrave:common graves[-1].data.status{destruction_type:"broken"\
+execute if data storage hygrave:common graves[-1].data.status{destruction_type:"popped"\
 } run tellraw @s {\
-  "translate": "hygrave.grave_info.status.broken_by",\
+  "translate": "hygrave.grave_info.status.popped_by",\
   "fallback": "  §bStatus: §cBroken by %s",\
   "with": [\
     {\
@@ -350,12 +350,12 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
       }\
     },\
     {\
-      "translate": "hygrave.grave_info.menu.open",\
+      "translate": "hygrave.grave_info.menu.remote_unpack",\
       "fallback": " §bOpen ",\
       "hover_event": {\
         "action": "show_text",\
         "value": {\
-          "translate": "hygrave.grave_info.menu_description.open",\
+          "translate": "hygrave.grave_info.menu_description.remote_unpack",\
           "fallback": "Click to remotely open this grave."\
         }\
       },\
@@ -382,7 +382,7 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
   ]\
 }
 $execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.menu_grayed_open",\
+  "translate": "hygrave.grave_info.menu_grayed_remote_unpack",\
   "fallback": "§7[%s§7| Open |%s§7]",\
   "with": [\
     {\

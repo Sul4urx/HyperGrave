@@ -55,7 +55,7 @@ playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
 ## Update grave status
 
-data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"broken"}
+data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"popped"}
 data modify storage hygrave:common graves[-1].data.status.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
 
 function hygrave:internal/map/players/graves/lookup with storage hygrave:common temp.args

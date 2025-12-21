@@ -392,12 +392,12 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
       }\
     },\
     {\
-      "translate": "hygrave.grave_info.menu.open",\
+      "translate": "hygrave.grave_info.menu.unpack",\
       "fallback": " §bOpen ",\
       "hover_event": {\
         "action": "show_text",\
         "value": {\
-          "translate": "hygrave.grave_info.menu_description.open",\
+          "translate": "hygrave.grave_info.menu_description.unpack",\
           "fallback": "Click to remotely open this grave."\
         }\
       },\
