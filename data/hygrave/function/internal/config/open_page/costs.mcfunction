@@ -35,11 +35,11 @@ tellraw @s [\
   }\
 ]
 
-##> Grave Remote Opening Costs
+##> Grave Remote Looting Costs
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_ropening_costs",\
-    "fallback": "   Grave Remote Opening Costs: ",\
+    "fallback": "   Grave Remote Looting Costs: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -54,7 +54,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_sub_page_open_description.grave_ropening_costs",\
-        "fallback": "Click to open the \"§lGrave Remote Opening Costs§r\" sub-page."\
+        "fallback": "Click to open the \"§lGrave Remote Looting Costs§r\" sub-page."\
       }\
     },\
     "click_event": {\

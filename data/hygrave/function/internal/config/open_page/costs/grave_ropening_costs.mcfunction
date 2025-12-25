@@ -1,16 +1,16 @@
 #<< config/open_page/costs
 
-# Grave Remote Opening Costs
+# Grave Remote Looting Costs
 
 ##
 tellraw @s ""
 
-## Category: Grave Remote Opening Costs
+## Category: Grave Remote Looting Costs
 tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_ropening_costs",\
-    "fallback": " Costs §7/ §r§lGrave Remote Opening Costs"\
+    "fallback": " Costs §7/ §r§lGrave Remote Looting Costs"\
   }\
 ]
 
