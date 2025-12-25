@@ -36,7 +36,7 @@ execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run t
   "fallback": "§cYou do not have the nessecary requirements to loot this grave.",\
   "with": [\
     {\
-      "nbt": "configs.text.costs.grave_opening_costs.owners.xp.levels",\
+      "nbt": "configs.text.costs.grave_looting_costs.owners.xp.levels",\
       "storage": "hygrave:common",\
       "color": "red"\
     }\

@@ -9,12 +9,12 @@ tellraw @s {"translate": "hygrave.config_category.Costs","fallback": " §lCosts:
 ##> Grave Looting Costs
 tellraw @s [\
   {\
-    "translate": "hygrave.config.grave_opening_costs",\
+    "translate": "hygrave.config.grave_looting_costs",\
     "fallback": "   Grave Looting Costs: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
-        "translate": "hygrave.config_description.grave_opening_costs",\
+        "translate": "hygrave.config_description.grave_looting_costs",\
         "fallback": "The costs of looting a grave"\
       }\
     }\
@@ -24,13 +24,13 @@ tellraw @s [\
     "hover_event": {\
       "action": "show_text",\
       "value": {\
-        "translate": "hygrave.config_sub_page_open_description.grave_opening_costs",\
+        "translate": "hygrave.config_sub_page_open_description.grave_looting_costs",\
         "fallback": "Click to open the \"§lGrave Looting Costs§r\" sub-page."\
       }\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/costs/grave_opening_costs"\
+      "command": "/function hygrave:internal/config/open_page/costs/grave_looting_costs"\
     }\
   }\
 ]
