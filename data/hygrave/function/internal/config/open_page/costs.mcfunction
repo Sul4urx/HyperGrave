@@ -6,11 +6,11 @@ tellraw @s ""
 ## Category: Costs
 tellraw @s {"translate": "hygrave.config_category.Costs","fallback": " §lCosts:"}
 
-##> Grave Opening-Breaking Costs
+##> Grave Looting Costs
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_opening_costs",\
-    "fallback": "   Grave Opening-Breaking Costs: ",\
+    "fallback": "   Grave Looting Costs: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -25,7 +25,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_sub_page_open_description.grave_opening_costs",\
-        "fallback": "Click to open the \"§lGrave Opening-Breaking Costs§r\" sub-page."\
+        "fallback": "Click to open the \"§lGrave Looting Costs§r\" sub-page."\
       }\
     },\
     "click_event": {\

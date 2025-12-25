@@ -1,16 +1,16 @@
 #<< config/open_page/costs
 
-# Grave Opening-Breaking Costs
+# Grave Looting Costs
 
 ##
 tellraw @s ""
 
-## Category: Grave Opening-Breaking Costs
+## Category: Grave Looting Costs
 tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_opening_costs",\
-    "fallback": " Costs §7/ §r§lGrave Opening-Breaking Costs"\
+    "fallback": " Costs §7/ §r§lGrave Looting Costs"\
   }\
 ]
 

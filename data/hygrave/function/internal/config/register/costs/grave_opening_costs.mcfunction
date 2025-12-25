@@ -1,6 +1,6 @@
 #<< config/register
 
-# Register sub-configs for Grave Opening-Breaking Costs config
+# Register sub-configs for Grave Looting Costs config
 
 ## Owners
 
