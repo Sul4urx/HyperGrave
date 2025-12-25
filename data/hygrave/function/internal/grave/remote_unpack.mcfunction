@@ -46,7 +46,7 @@ execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run t
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave.",\
   "with": [\
     {\
-      "nbt": "configs.text.costs.grave_ropening_costs.owners.xp.levels",\
+      "nbt": "configs.text.costs.grave_remote_looting_costs.owners.xp.levels",\
       "storage": "hygrave:common",\
       "color": "red"\
     }\

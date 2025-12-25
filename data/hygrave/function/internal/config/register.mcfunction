@@ -109,7 +109,7 @@ execute if data storage hygrave:common configs.value.graves{tell_grave_mini_info
 
 ## Sub-configs
 function hygrave:internal/config/register/costs/grave_looting_costs
-function hygrave:internal/config/register/costs/grave_ropening_costs
+function hygrave:internal/config/register/costs/grave_remote_looting_costs
 function hygrave:internal/config/register/costs/grave_generation_costs
 
 function hygrave:internal/config/register/graves/icd

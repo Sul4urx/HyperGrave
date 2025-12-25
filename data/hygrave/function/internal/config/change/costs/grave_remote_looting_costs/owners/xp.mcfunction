@@ -1,4 +1,4 @@
-#<< config/open_page/costs/grave_ropening_costs
+#<< config/open_page/costs/grave_remote_looting_costs
 $data modify storage hygrave:common temp.config.levels set value $(value)
 
 ## Error if value is not valid
@@ -11,15 +11,15 @@ execute unless predicate {\
   },\
   range: {min: 0}\
 } run return run title @s actionbar {\
-  "translate": "hygrave.change_config_message.grave_ropening_costs.owners.xp.fail",\
+  "translate": "hygrave.change_config_message.grave_remote_looting_costs.owners.xp.fail",\
   "fallback": "§cValue must be a non-negative integer."\
 }
 
 ## Otherwise change values
-execute store result score (costs/grave_ropening_costs/owners/xp) hygrave.config run data get storage hygrave:common temp.config.levels
+execute store result score (costs/grave_remote_looting_costs/owners/xp) hygrave.config run data get storage hygrave:common temp.config.levels
 
 ## Update configs
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/costs/grave_ropening_costs
+function hygrave:internal/config/open_page/costs/grave_remote_looting_costs

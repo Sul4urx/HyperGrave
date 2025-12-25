@@ -1,4 +1,4 @@
-#<< config/change/costs/grave_ropening_costs/owners/items/change_list
+#<< config/change/costs/grave_remote_looting_costs/non_owners/items/change_list
 
 ## Remove temp data
 data remove storage hygrave:common temp.args
@@ -61,7 +61,7 @@ execute if score .loop_count hygrave.temp_var matches ..0 run return run scorebo
 ## Until the whole list fails
 data modify storage hygrave:common temp.args.value set from storage hygrave:common temp.config.value_copy[-1]
 
-function hygrave:internal/config/change/costs/grave_ropening_costs/owners/items/change_list/check_value with storage hygrave:common temp.args
+function hygrave:internal/config/change/costs/grave_remote_looting_costs/non_owners/items/change_list/check_value with storage hygrave:common temp.args
 
 execute unless score .predicate_is_valid hygrave.temp_var matches 1 run return fail
 

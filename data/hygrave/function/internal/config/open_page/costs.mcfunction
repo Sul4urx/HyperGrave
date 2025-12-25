@@ -38,12 +38,12 @@ tellraw @s [\
 ##> Grave Remote Looting Costs
 tellraw @s [\
   {\
-    "translate": "hygrave.config.grave_ropening_costs",\
+    "translate": "hygrave.config.grave_remote_looting_costs",\
     "fallback": "   Grave Remote Looting Costs: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
-        "translate": "hygrave.config_description.grave_ropening_costs",\
+        "translate": "hygrave.config_description.grave_remote_looting_costs",\
         "fallback": "The costs of remotely looting a grave"\
       }\
     }\
@@ -53,13 +53,13 @@ tellraw @s [\
     "hover_event": {\
       "action": "show_text",\
       "value": {\
-        "translate": "hygrave.config_sub_page_open_description.grave_ropening_costs",\
+        "translate": "hygrave.config_sub_page_open_description.grave_remote_looting_costs",\
         "fallback": "Click to open the \"§lGrave Remote Looting Costs§r\" sub-page."\
       }\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/costs/grave_ropening_costs"\
+      "command": "/function hygrave:internal/config/open_page/costs/grave_remote_looting_costs"\
     }\
   }\
 ]
