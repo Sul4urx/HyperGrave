@@ -25,8 +25,8 @@ body:
       description: "Please select the version(s) of Minecraft you've been able to reproduce this issue on."
       multiple: true
       options:
-      	- '1.21.11'
-      	- '1.21.9 - 1.21.10'
+        - '1.21.11'
+        - '1.21.9 - 1.21.10'
         - '1.21.6 - 1.21.8'
         - '1.21.5'
         - '1.21.4'
