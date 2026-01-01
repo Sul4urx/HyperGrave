@@ -71,7 +71,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/toggle/general/mod_compability_mode"\
+      "command": "/function hygrave:internal/config/toggle/general/mod_compatibility_mode"\
     }\
   },\
 ]
