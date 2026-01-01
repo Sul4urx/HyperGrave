@@ -11,7 +11,7 @@ body:
     id: sgrave_version
     attributes:
       label: "HyperGrave version(s):"
-      description: "Please select the version(s) of SGrave you've been able to reproduce this issue on."
+      description: "Please select the version(s) of HyperGrave you've been able to reproduce this issue on."
       multiple: true
       options:
         - 0.4.0
