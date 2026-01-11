@@ -292,17 +292,16 @@ tellraw @s [\
   }\
 ]
 
-# TODO: Remove experimental label from the config below
 ##> Text Display Properties
 tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties",\
-    "fallback": "   §3Text Display Properties: ",\
+    "fallback": "   Text Display Properties: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.text_display_properties",\
-        "fallback": "The properties of the text display part of the grave, which normally shows the owner's name, the GID and the despawn time.\n\n§3ℹ This is an experimental config!"\
+        "fallback": "The properties of the text display part of the grave, which normally shows the owner's name, the GID and the despawn time."\
       }\
     }\
   },\
