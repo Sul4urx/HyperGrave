@@ -116,5 +116,6 @@ function hygrave:internal/config/register/graves/icd
 function hygrave:internal/config/register/graves/item_distribution
 function hygrave:internal/config/register/graves/grave_placement_restrictions
 function hygrave:internal/config/register/graves/show_grave_info
-function hygrave:internal/config/register/graves/text_display
+function hygrave:internal/config/register/graves/text_display/text
+function hygrave:internal/config/register/graves/text_display/icd_text
 function hygrave:internal/config/register/graves/xp_distribution

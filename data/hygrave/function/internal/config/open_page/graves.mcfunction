@@ -292,6 +292,7 @@ tellraw @s [\
   }\
 ]
 
+# TODO: Remove experimental label from the config below
 ##> Text Display Properties
 tellraw @s [\
   {\

@@ -25,9 +25,9 @@ execute as @n[tag=hygrave.grave.player_head] at @s if score @s hygrave.rotation_
 execute as @n[tag=hygrave.grave.icd] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate
 
 ## Update text display
-execute if score (graves/icd/switch_text_display) hygrave.config matches 0 run function hygrave:internal/grave/update_text_display/prepare
-execute unless score (graves/icd/switch_text_display) hygrave.config matches 0 unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/update_text_display/prepare
-execute unless score (graves/icd/switch_text_display) hygrave.config matches 0 if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/update_text_display/icd/prepare
+execute if score (graves/icd/switch_text_display) hygrave.config matches 0 run function hygrave:internal/grave/update_text_display/update
+execute unless score (graves/icd/switch_text_display) hygrave.config matches 0 unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/update_text_display/update
+execute unless score (graves/icd/switch_text_display) hygrave.config matches 0 if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/update_text_display/update_icd
 
 ## Tag the ICD (Item Cycle Display) activator
 execute if score (graves/icd/activate_for) hygrave.config matches 1 if score (graves/icd/revert_sneaking_behavior) hygrave.config matches 0 run tag @a[distance=..4,predicate=hygrave:is_sneaking,tag=hygrave.temp.grave.owner] add hygrave.temp.grave.icd_activator
