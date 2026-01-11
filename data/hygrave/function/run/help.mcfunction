@@ -55,7 +55,7 @@ tellraw @s {\
         "action": "show_text",\
         "value": {\
           "translate": "hygrave.help_menu.faq.1",\
-          "fallback": "§bHow do I change a config?\n§fUse this command: §7/function hygrave:run/config\n§fKeep in mind that anything inclosed in §7[§bsquare brackets§7]§f can be clicked on.\n\n§bGrave does not generate, What is going on?\n§fBy default, Creative mode players cannot generate graves. Consider checking Grave Generation Costs config. If there are no predicates or if the predicates should have been matched, then this is probably a bug.\n\n§bI asked for help, but Sul4ur is taking so long to reply.\n§fI don't always check discord, but I usually respond within 24 hours.\nKeep in mind that you §lmust ping me§r§f with @Sul4ur, otherwise it's gonna take much longer.\nIf you pinged me but I didn't respond within 24 hours, you can ping me again."\
+          "fallback": "§bHow do I change a config?\n§fUse this command: §7/function hygrave:run/config\n§fKeep in mind that anything enclosed in §7[§bsquare brackets§7]§f can be clicked on.\n\n§bGrave does not generate, What is going on?\n§fBy default, Creative mode players cannot generate graves. Consider checking Grave Generation Costs config. If there are no predicates or if the predicates should have been matched, then this is probably a bug.\n\n§bI asked for help, but Sul4ur is taking so long to reply.\n§fI don't always check discord, but I usually respond within 24 hours.\nKeep in mind that you §lmust ping me§r§f with @Sul4ur, otherwise it's gonna take much longer.\nIf you pinged me but I didn't respond within 24 hours, you can ping me again."\
         }\
       },\
     }\
