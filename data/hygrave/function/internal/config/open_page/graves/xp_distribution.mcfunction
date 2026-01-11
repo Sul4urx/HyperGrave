@@ -1,6 +1,6 @@
 #<< config/open_page/costs/grave_generation_costs
 
-# ICD Properties
+# Grave Generation Costs
 
 ## Insert a newline before the menu
 tellraw @s ""

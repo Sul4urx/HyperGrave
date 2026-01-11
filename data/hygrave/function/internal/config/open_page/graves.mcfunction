@@ -150,7 +150,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.icd",\
-        "fallback": "The properties of the ICD feature."\
+        "fallback": "The properties of the ICD feature.\n\n§bℹ If you don't know what ICD is, refer to the in-game help menu for more information (Use §3/trigger hygrave.help§b)."\
       }\
     }\
   },\

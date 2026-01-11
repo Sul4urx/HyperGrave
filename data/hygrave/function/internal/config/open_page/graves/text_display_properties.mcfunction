@@ -3,8 +3,6 @@
 ##
 tellraw @s ""
 
-# TODO: Add a hint explaining what ICD is 
-
 ## Category: Text Display Properties
 tellraw @s [\
   "",\
@@ -52,7 +50,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.text_display_properties.icd_text",\
-        "fallback": "The displayed text when ICD is activated.",\
+        "fallback": "The displayed text when ICD is activated.\n\n§bℹ If you don't know what ICD is, refer to the in-game help menu for more information (Use §3/trigger hygrave.help§b).",\
       }\
     }\
   },\
