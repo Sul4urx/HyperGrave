@@ -5,7 +5,13 @@
 ## Owners
 
 ##> Items
-execute unless data storage hygrave:common configs.value.costs.grave_remote_looting_costs.owners.items[] run data modify storage hygrave:common configs.value.costs.grave_remote_looting_costs.owners.items set value [{}]
+execute unless data storage hygrave:common configs.value.costs.grave_remote_looting_costs.owners.item_ids[] run data modify storage hygrave:common configs.value.costs.grave_remote_looting_costs.owners.item_ids set value []
+
+execute unless score (costs/grave_remote_looting_costs/owners/item_remove_count) hygrave.config matches 0.. run scoreboard players set (costs/grave_remote_looting_costs/owners/item_remove_count) hygrave.config 1
+
+execute store result storage hygrave:common configs.value.costs.grave_remote_looting_costs.owners.item_remove_count int 1 run scoreboard players get (costs/grave_remote_looting_costs/owners/item_remove_count) hygrave.config
+
+data modify storage hygrave:common configs.text.costs.grave_remote_looting_costs.owners.item_remove_count set string storage hygrave:common configs.value.costs.grave_remote_looting_costs.owners.item_remove_count
 
 ##> XP
 execute unless score (costs/grave_remote_looting_costs/owners/xp) hygrave.config matches 0.. run scoreboard players set (costs/grave_remote_looting_costs/owners/xp) hygrave.config 0
@@ -34,7 +40,13 @@ execute if data storage hygrave:common configs.value.costs.grave_remote_looting_
 ## Non-Owners
 
 ##> Items
-execute unless data storage hygrave:common configs.value.costs.grave_remote_looting_costs.non_owners.items[] run data modify storage hygrave:common configs.value.costs.grave_remote_looting_costs.non_owners.items set value [{}]
+execute unless data storage hygrave:common configs.value.costs.grave_remote_looting_costs.non_owners.item_ids[] run data modify storage hygrave:common configs.value.costs.grave_remote_looting_costs.non_owners.item_ids set value []
+
+execute unless score (costs/grave_remote_looting_costs/non_owners/item_remove_count) hygrave.config matches 0.. run scoreboard players set (costs/grave_remote_looting_costs/non_owners/item_remove_count) hygrave.config 1
+
+execute store result storage hygrave:common configs.value.costs.grave_remote_looting_costs.non_owners.item_remove_count int 1 run scoreboard players get (costs/grave_remote_looting_costs/non_owners/item_remove_count) hygrave.config
+
+data modify storage hygrave:common configs.text.costs.grave_remote_looting_costs.non_owners.item_remove_count set string storage hygrave:common configs.value.costs.grave_remote_looting_costs.non_owners.item_remove_count
 
 ##> XP
 execute unless score (costs/grave_remote_looting_costs/non_owners/xp) hygrave.config matches 0.. run scoreboard players set (costs/grave_remote_looting_costs/non_owners/xp) hygrave.config 0

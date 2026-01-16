@@ -32,36 +32,69 @@ tellraw @s [\
 ##>> Items
 tellraw @s [\
   {\
-    "translate": "hygrave.config.grave_generation_costs.with_item.items",\
+    "translate": "hygrave.config.grave_generation_costs.with_item.items.ids",\
     "fallback": "      Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
-        "translate": "hygrave.config_description.grave_generation_costs.with_item.items",\
-        "fallback": "A list of item predicates\nThe player must have an item that passes at least one of these predicates in their inventory to generate a grave.\n\n§bℹ Format: §7{value:[§6item§7, §6item§7, §8…§7]}\n§6item§f: An item predicate in format §7{items: [\"§6id§7\", '§6id§7', §8…§7], count: {min: §6min_count§7, max: §6max_count§7}}\n  §6id§f: The id of the item (e.g. minecraft:diamond)\n  §6min_count§r: The minimum stack size of the item (i.e. minimum number of items in a stack, e.g. 6)\n  §6max_count§r: The maximum stack size of the item (i.e. maximum number of items in a stack, e.g. 15)\n\n§a{value:[{}]}§7 → §fNo item predicates\n§a{value:[]}§7 → §fReset value to default\n\n§aThis is just a simplified format. To learn more about this format and fields §7components§a and §7predicates§a, go to the wiki section in HyperGrave's github page.\n\n§8Default: []"\
-      }\
-    }\
-  },\
-  {\
-    "text": "§7[§b✎§7]",\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "hygrave.config_change_description.grave_generation_costs.with_item.items",\
-        "fallback": "Click to change the list.\n\n§8Current value: %s",\
+        "translate": "hygrave.config_description.grave_generation_costs.with_item.items.ids",\
+        "fallback": "A list of IDs of items. The player must have at least one of these items in their inventory in order to generate a grave.\n\n§bℹ To find the ID of an item, look for something like §3minecraft:diamond§b in the tooltip of the item. If you can't find it, press F3 + H and try again.\n\n§8Current: %s\n§8Default: []",\
         "with": [\
           {\
-            "nbt": "configs.value.costs.grave_generation_costs.with_item.items",\
+            "nbt": "configs.value.costs.grave_generation_costs.with_item.item_ids",\
             "storage": "hygrave:common",\
             "color": "dark_gray"\
           }\
         ]\
       }\
-    },\
-    "click_event": {\
-      "action": "suggest_command",\
-      "command": "/function hygrave:internal/config/change/costs/grave_generation_costs/with_item/items/change_list {value:[{…}]}"\
     }\
+  },\
+  {\
+    "translate": "§7[%s§7|%s§7|%s§7]",\
+    "with": [\
+      {\
+        "text": "§a+ ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_generation_costs.with_item.items.ids.add",\
+            "fallback": "Click to add an item ID to the list.\n\n§bℹ Replace §6?§b with the ID of the item you want to add to the list."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_generation_costs/with_item/item_ids/add_item {value: '?'}"\
+        }\
+      },\
+      {\
+        "text": " §c- ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_generation_costs.with_item.items.ids.remove",\
+            "fallback": "Click to remove an item from the list.\n\n§bℹ Replace §6?§b with the index of the item you want to remove from the list.\n\n§bExample (Given value is §3['minecraft:diamond', 'minecraft:amethyst', 'minecraft:copper_ingot']§b):\n  §61 §7→ §fRemoves the §61§fst item from the list, which is 'minecraft:diamond'.\n  §62 §7→ §fRemoves the §62§fnd item from the list, which is 'minecraft:amethyst'.\n  §63 §7→ §fRemoves the §63§frd item from the list, which is 'minecraft:copper_ingot'."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_generation_costs/with_item/item_ids/remove_item_index {index: ?}"\
+        }\
+      },\
+      {\
+        "text": " §b✎",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_generation_costs.with_item.items.ids.change",\
+            "fallback": "Click to change the entire list.\n\n§bℹ Format: §7['§6item§7', '§6item§7', '§6item§7', §8...§7] §3(§6item§3 is the ID of the item).§r\n\n§bExample: §3['minecraft:diamond', 'minecraft:wooden_sword', 'minecraft:copper_ingot'] §7→ §bThe player must have at least either a diamond, a wooden sword or a copper ingot in order to generate a grave.",\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_generation_costs/with_item/item_ids/change_list {value:['item', 'item', ...]}"\
+        }\
+      }\
+    ]\
   }\
 ]
 

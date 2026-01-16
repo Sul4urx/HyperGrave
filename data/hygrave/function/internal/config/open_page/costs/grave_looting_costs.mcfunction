@@ -32,35 +32,104 @@ tellraw @s [\
 ##>> Items
 tellraw @s [\
   {\
-    "translate": "hygrave.config.grave_looting_costs.owners.items",\
+    "translate": "hygrave.config.grave_looting_costs.owners.items.ids",\
     "fallback": "      Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
-        "translate": "hygrave.config_description.grave_looting_costs.owners.items",\
-        "fallback": "A list of item predicates\nThe player must have an item that passes at least one of these predicates in their mainhand to loot the grave.\n\n§bℹ Format: §7{value:[§6item§7, §6item§7, §8…§7]}\n§6item§f: An item predicate in format §7{items: [\"§6id§7\", '§6id§7', §8…§7], count: {min: §6min_count§7, max: §6max_count§7}, remove: §6remove§7}\n  §6id§f: The id of the item (e.g. minecraft:diamond)\n  §6min_count§r: The minimum stack size of the item (i.e. minimum number of items in a stack, e.g. 6)\n  §6max_count§r: The maximum stack size of the item (i.e. maximum number of items in a stack, e.g. 15)\n  §6remove§r: The amount to remove from the item's stack size\n\n§a{value:[{}]}§7 → §fNo item predicates\n§a{value:[]}§7 → §fReset value to default\n\n§aThis is just a simplified format. To learn more about this format and fields §7components§a and §7predicates§a, go to the wiki section in HyperGrave's github page.\n\n§8Default: []"\
-      }\
-    }\
-  },\
-  {\
-    "text": "§7[§b✎§7]",\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "hygrave.config_change_description.grave_looting_costs.owners.items",\
-        "fallback": "Click to change the list.\n\n§8Current value: %s",\
+        "translate": "hygrave.config_description.grave_looting_costs.owners.items.ids",\
+        "fallback": "A list of IDs of items. The player must have one of these items in their hand in order to loot the grave.\n\n§bℹ To find the ID of an item, look for something like §3minecraft:diamond§b in the tooltip of the item. If you can't find it, press F3 + H and try again.\n\n§6ℹ Some amount of the item §nwill get removed§r§6 according to the sub-config Remove Count.§e For example if the value of this config is ['minecraft:diamond'] and Remove Count is set to 2 and the player has 64 diamonds, they will have 62 diamonds in their hand after looting the grave.\n\n§8Current: %s\n§8Default: []",\
         "with": [\
           {\
-            "nbt": "configs.value.costs.grave_looting_costs.owners.items",\
+            "nbt": "configs.value.costs.grave_looting_costs.owners.item_ids",\
             "storage": "hygrave:common",\
             "color": "dark_gray"\
           }\
         ]\
       }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7|%s§7|%s§7]",\
+    "with": [\
+      {\
+        "text": "§a+ ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_looting_costs.owners.items.ids.add",\
+            "fallback": "Click to add an item ID to the list.\n\n§bℹ Replace §6?§b with the ID of the item you want to add to the list."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/owners/item_ids/add_item {value: '?'}"\
+        }\
+      },\
+      {\
+        "text": " §c- ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_looting_costs.owners.items.ids.remove",\
+            "fallback": "Click to remove an item from the list.\n\n§bℹ Replace §6?§b with the index of the item you want to remove from the list.\n\n§bExample (Given value is §3['minecraft:diamond', 'minecraft:amethyst', 'minecraft:copper_ingot']§b):\n  §61 §7→ §fRemoves the §61§fst item from the list, which is 'minecraft:diamond'.\n  §62 §7→ §fRemoves the §62§fnd item from the list, which is 'minecraft:amethyst'.\n  §63 §7→ §fRemoves the §63§frd item from the list, which is 'minecraft:copper_ingot'."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/owners/item_ids/remove_item_index {index: ?}"\
+        }\
+      },\
+      {\
+        "text": " §b✎",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_looting_costs.owners.items.ids.change",\
+            "fallback": "Click to change the entire list.\n\n§bℹ Format: §7['§6item§7', '§6item§7', '§6item§7', §8...§7] §3(§6item§3 is the ID of the item).§r\n\n§bExample: §3['minecraft:diamond', 'minecraft:wooden_sword', 'minecraft:copper_ingot'] §7→ §bThe player must have either a diamond, a wooden sword or a copper ingot in their hand in order to loot the grave.",\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/owners/item_ids/change_list {value:['item', 'item', ...]}"\
+        }\
+      }\
+    ]\
+  }\
+]
+
+##>>> Remove count
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.grave_looting_costs.owners.item_remove_count",\
+    "fallback": "        Remove Count: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.grave_looting_costs.owners.item_remove_count",\
+        "fallback": "The amount to remove from the item in the player's hand if the player had the item nessecary to loot the grave.\n\n§bℹ The player must also have at least this amount of the item in their hand to loot the grave.\n\n§8Default: 1"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.costs.grave_looting_costs.owners.item_remove_count",\
+        "storage": "hygrave:common",\
+        "color": "aqua"\
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_change_description.grave_looting_costs.owners.item_remove_count",\
+        "fallback": "Click to change the config. Replace §6?§r with the remove count."\
+      }\
     },\
     "click_event": {\
       "action": "suggest_command",\
-      "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/owners/items/change_list {value:[{…}]}"\
+      "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/owners/item_ids/change_remove_count {value: ?}"\
     }\
   }\
 ]
@@ -199,35 +268,104 @@ tellraw @s [\
 ##>> Items
 tellraw @s [\
   {\
-    "translate": "hygrave.config.grave_looting_costs.non_owners.items",\
+    "translate": "hygrave.config.grave_looting_costs.non_owners.items.ids",\
     "fallback": "      Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
-        "translate": "hygrave.config_description.grave_looting_costs.non_owners.items",\
-        "fallback": "A list of item predicates\nThe player must have an item that passes at least one of these predicates in their mainhand to remotely loot the grave.\n\n§bℹ Format: §7{value:[§6item§7, §6item§7, §8…§7]}\n§6item§f: An item predicate in format §7{items: [\"§6id§7\", '§6id§7', §8…§7], count: {min: §6min_count§7, max: §6max_count§7}, remove: §6remove§7}\n  §6id§f: The id of the item (e.g. minecraft:diamond)\n  §6min_count§r: The minimum stack size of the item (i.e. minimum number of items in a stack, e.g. 6)\n  §6max_count§r: The maximum stack size of the item (i.e. maximum number of items in a stack, e.g. 15)\n  §6remove§r: The amount to remove from the item's stack size\n\n§a{value:[{}]}§7 → §fNo item predicates\n§a{value:[]}§7 → §fReset value to default\n\n§aThis is just a simplified format. To learn more about this format and fields §7components§a and §7predicates§a, go to the wiki section in HyperGrave's github page.\n\n§8Default: []"\
-      }\
-    }\
-  },\
-  {\
-    "text": "§7[§b✎§7]",\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "hygrave.config_change_description.grave_looting_costs.non)owners.items",\
-        "fallback": "Click to change the list.\n\n§8Current value: %s",\
+        "translate": "hygrave.config_description.grave_looting_costs.non_owners.items.ids",\
+        "fallback": "A list of IDs of items. The player must have one of these items in their hand in order to loot the grave.\n\n§bℹ To find the ID of an item, look for something like §3minecraft:diamond§b in the tooltip of the item. If you can't find it, press F3 + H and try again.\n\n§6ℹ Some amount of the item §nwill get removed§r§6 according to the sub-config Remove Count.§e For example if the value of this config is ['minecraft:diamond'] and Remove Count is set to 2 and the player has 64 diamonds, they will have 62 diamonds in their hand after looting the grave.\n\n§8Current: %s\n§8Default: []",\
         "with": [\
           {\
-            "nbt": "configs.value.costs.grave_looting_costs.non_owners.items",\
+            "nbt": "configs.value.costs.grave_looting_costs.non_owners.item_ids",\
             "storage": "hygrave:common",\
             "color": "dark_gray"\
           }\
         ]\
       }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7|%s§7|%s§7]",\
+    "with": [\
+      {\
+        "text": "§a+ ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_looting_costs.non_owners.items.ids.add",\
+            "fallback": "Click to add an item ID to the list.\n\n§bℹ Replace §6?§b with the ID of the item you want to add to the list."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/non_owners/item_ids/add_item {value: '?'}"\
+        }\
+      },\
+      {\
+        "text": " §c- ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_looting_costs.non_owners.items.ids.remove",\
+            "fallback": "Click to remove an item from the list.\n\n§bℹ Replace §6?§b with the index of the item you want to remove from the list.\n\n§bExample (Given value is §3['minecraft:diamond', 'minecraft:amethyst', 'minecraft:copper_ingot']§b):\n  §61 §7→ §fRemoves the §61§fst item from the list, which is 'minecraft:diamond'.\n  §62 §7→ §fRemoves the §62§fnd item from the list, which is 'minecraft:amethyst'.\n  §63 §7→ §fRemoves the §63§frd item from the list, which is 'minecraft:copper_ingot'."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/non_owners/item_ids/remove_item_index {index: ?}"\
+        }\
+      },\
+      {\
+        "text": " §b✎",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.grave_looting_costs.non_owners.items.ids.change",\
+            "fallback": "Click to change the entire list.\n\n§bℹ Format: §7['§6item§7', '§6item§7', '§6item§7', §8...§7] §3(§6item§3 is the ID of the item).§r\n\n§bExample: §3['minecraft:diamond', 'minecraft:wooden_sword', 'minecraft:copper_ingot'] §7→ §bThe player must have either a diamond, a wooden sword or a copper ingot in their hand in order to loot the grave.",\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/non_owners/item_ids/change_list {value:['item', 'item', ...]}"\
+        }\
+      }\
+    ]\
+  }\
+]
+
+##>>> Remove count
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.grave_looting_costs.non_owners.item_remove_count",\
+    "fallback": "        Remove Count: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.grave_looting_costs.non_owners.item_remove_count",\
+        "fallback": "The amount to remove from the item in the player's hand if the player had the item nessecary to loot the grave.\n\n§bℹ The player must also have at least this amount of the item in their hand to loot the grave.\n\n§8Default: 1"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.costs.grave_looting_costs.non_owners.item_remove_count",\
+        "storage": "hygrave:common",\
+        "color": "aqua"\
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_change_description.grave_looting_costs.non_owners.item_remove_count",\
+        "fallback": "Click to change the config. Replace §6?§r with the remove count."\
+      }\
     },\
     "click_event": {\
       "action": "suggest_command",\
-      "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/non_owners/items/change_list {value:[{…}]}"\
+      "command": "/function hygrave:internal/config/change/costs/grave_looting_costs/non_owners/item_ids/change_remove_count {value: ?}"\
     }\
   }\
 ]

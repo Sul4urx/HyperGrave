@@ -1,3 +1,3 @@
 #<< grave/remote_unpack/check_costs/owners
 
-$item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-$(remove),add:true}
+$item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-$(item_remove_count),add:true}

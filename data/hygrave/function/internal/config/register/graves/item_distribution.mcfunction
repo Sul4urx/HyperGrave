@@ -15,9 +15,11 @@ execute if data storage hygrave:common configs.value.graves.item_distribution.gr
 ## Grave Generation Success
 
 ##> Remove
-execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove[] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove set value [{predicates: {"minecraft:enchantments": [{enchantments: "minecraft:vanishing_curse"}]}}]
+execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_items[0] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_items set value []
+execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_enchs[0] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_enchs set value ["minecraft:vanishing_curse"]
 
 ##> Keep
-execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep[] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep set value [{count:-1}]
+execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_items[0] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_items set value []
+execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_enchs[0] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_enchs set value []
 
 

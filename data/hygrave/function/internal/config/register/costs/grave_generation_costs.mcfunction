@@ -5,7 +5,7 @@
 ## With Item
 
 ##> Items
-execute unless data storage hygrave:common configs.value.costs.grave_generation_costs.with_item.items[] run data modify storage hygrave:common configs.value.costs.grave_generation_costs.with_item.items set value [{}]
+execute unless data storage hygrave:common configs.value.costs.grave_generation_costs.with_item.item_ids[0] run data modify storage hygrave:common configs.value.costs.grave_generation_costs.with_item.item_ids set value []
 
 ##> XP
 execute unless score (costs/grave_generation_costs/with_item/xp) hygrave.config matches 0.. run scoreboard players set (costs/grave_generation_costs/with_item/xp) hygrave.config 0

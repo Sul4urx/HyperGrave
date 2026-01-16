@@ -7,18 +7,12 @@ execute if score (costs/grave_looting_costs/non_owners/gamemodes/adventure) hygr
 execute if score (costs/grave_looting_costs/non_owners/gamemodes/creative) hygrave.config matches 0 if entity @s[gamemode=creative] run return run scoreboard players set .check_costs.gamemodes hygrave.temp_var 0
 
 ## Items
-execute if data storage hygrave:common configs.value.costs.grave_looting_costs.non_owners.items[] run data modify storage hygrave:common temp.config_copy.items set from storage hygrave:common configs.value.costs.grave_looting_costs.non_owners.items
-data modify storage hygrave:common temp.args.value set from storage hygrave:common temp.config_copy.items[-1]
-
-
-execute store result score .loop_count hygrave.temp_var if data storage hygrave:common configs.value.costs.grave_looting_costs.non_owners.items[]
 scoreboard players set .check_costs.items hygrave.temp_var 0
 
-execute unless score .loop_count hygrave.temp_var matches 1.. run scoreboard players set .check_costs.items hygrave.temp_var 1
+execute unless data storage hygrave:common configs.value.costs.grave_looting_costs.non_owners.item_ids[0] run scoreboard players set .check_costs.items hygrave.temp_var 1
 
-execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/unpack/check_costs/non_owners/items with storage hygrave:common temp.args
-
-execute if score .check_costs.items hygrave.temp_var matches 1 run function hygrave:internal/grave/unpack/check_costs/non_owners/items/remove with storage hygrave:common temp.args.value
+execute if data storage hygrave:common configs.value.costs.grave_looting_costs.non_owners.item_ids[0] run function hygrave:internal/grave/unpack/check_costs/non_owners/items with storage hygrave:common configs.value.costs.grave_looting_costs.non_owners
+execute if score .check_costs.items hygrave.temp_var matches 1 if data storage hygrave:common configs.value.costs.grave_looting_costs.non_owners.item_ids[0] run function hygrave:internal/grave/unpack/check_costs/non_owners/items/remove with storage hygrave:common configs.value.costs.grave_looting_costs.non_owners
 
 ## XP
 scoreboard players set .check_costs.xp hygrave.temp_var 0
