@@ -1,5 +1,5 @@
 ## Store the operation
-$data modify storage hygrave:common temp.out.slot_operation set from storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success."$(slot)"
+$data modify storage hygrave:common temp.out.slot_operation set from storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success."$(slot_id)"
 
 ## Return the operation
 ## -32767 -> default

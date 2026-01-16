@@ -114,6 +114,7 @@ function hygrave:internal/config/register/costs/grave_generation_costs
 
 function hygrave:internal/config/register/graves/icd
 function hygrave:internal/config/register/graves/item_distribution
+function hygrave:internal/config/register/graves/slot_distribution
 function hygrave:internal/config/register/graves/grave_placement_restrictions
 function hygrave:internal/config/register/graves/show_grave_info
 function hygrave:internal/config/register/graves/text_display/text
