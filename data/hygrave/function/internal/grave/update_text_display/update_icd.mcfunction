@@ -1,6 +1,6 @@
 #<< grave/main
 
-# TODO: Improve performance
+# TODO: Cleanup and improve performance
 
 ## Convert from ticks to seconds, minutes and hours
 scoreboard players operation .despawn_time.seconds hygrave.temp_var = @s hygrave.despawn_time
@@ -21,24 +21,33 @@ scoreboard players operation .despawn_time.hours hygrave.temp_var /= (3600) hygr
 ## Prepare text
 data modify storage hygrave:common temp.args.texts set value [[""], "", [""], "", [""]]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_1{type: nothing} run data modify storage hygrave:common temp.args.texts[0] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_1.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[0][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_1{type: nothing} unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[0] append value " "
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[0] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_2.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[0][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_2{type: nothing} unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[0] append value " "
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[0] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_1.text_3.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[0][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 
 
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_1{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_1.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[2][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_1{type: nothing} unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append value " "
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_2.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[2][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_2{type: nothing} unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append value " "
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_2.text_3.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[2][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 
 
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_1{type: nothing} run data modify storage hygrave:common temp.args.texts[4] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_1.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[4][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_1{type: nothing} unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[4] append value " "
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[4] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_2.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[4][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_2{type: nothing} unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[4] append value " "
 execute unless data storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[4] append from storage hygrave:common configs.value.graves.text_display.icd_text.line_3.text_3.text
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[4][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 
 execute if data storage hygrave:common temp.args.texts[0][1] if data storage hygrave:common temp.args.texts[2][1] run data modify storage hygrave:common temp.args.texts[1] set value "\n"
 execute if data storage hygrave:common temp.args.texts[2][1] if data storage hygrave:common temp.args.texts[4][1] run data modify storage hygrave:common temp.args.texts[3] set value "\n"

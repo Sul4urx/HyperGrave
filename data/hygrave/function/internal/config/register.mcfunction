@@ -9,6 +9,14 @@ execute store result storage hygrave:common configs.value.graves.despawn_time in
 
 data modify storage hygrave:common configs.text.graves.despawn_time set string storage hygrave:common configs.value.graves.despawn_time
 
+## Freeze Grave Despawn Time
+execute unless score (graves/freeze_grave_despawn_time) hygrave.config matches 0..1 run scoreboard players set (graves/freeze_grave_despawn_time) hygrave.config 0
+
+execute store result storage hygrave:common configs.value.graves.freeze_grave_despawn_time byte 1 run scoreboard players get (graves/freeze_grave_despawn_time) hygrave.config
+
+execute if data storage hygrave:common configs.value.graves{freeze_grave_despawn_time:0b} run data modify storage hygrave:common configs.text.graves.freeze_grave_despawn_time set value "§c∞"
+execute if data storage hygrave:common configs.value.graves{freeze_grave_despawn_time:1b} run data modify storage hygrave:common configs.text.graves.freeze_grave_despawn_time set value "§a∞"
+
 ## Item Despawn Time
 execute unless score (dropped_contents/item_despawn_time) hygrave.config matches 0.. run scoreboard players set (dropped_contents/item_despawn_time) hygrave.config 2700
 
