@@ -222,25 +222,50 @@ tellraw @s [\
     }\
   },\
   {\
-    "translate": "§7[%s§7]",\
+    "translate": "§7[%s§7|%s§7]",\
     "with": [\
       {\
-        "nbt": "configs.text.dropped_contents.xp.despawn_time",\
-        "storage": "hygrave:common",\
-        "color": "aqua"\
+        "translate": "%s ",\
+        "with": [\
+          {\
+            "nbt": "configs.text.dropped_contents.xp.despawn_time",\
+            "storage": "hygrave:common",\
+            "color": "aqua"\
+          }\
+        ],\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.replace_value",\
+            "fallback": "Click to change the config's value. \nReplace §o?§r with the value you want to change the config to."\
+          }\
+        },\
+        "click_event": {\
+          "action": "suggest_command",\
+          "command": "/function hygrave:internal/config/change/dropped_contents/xp_despawn_time {value: ?}"\ 
+        }\
+      },\
+      {\
+        "translate": " %s",\
+        "with": [\
+          {\
+            "nbt": "configs.text.dropped_contents.freeze_xp_despawn_time",\
+            "storage": "hygrave:common"\
+          }\
+        ],\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_toggle_description.freeze_xp_despawn_time",\
+            "fallback": "Click to freeze/unfreeze the despawn time of XP orbs dropped from graves."\
+          }\
+        },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/toggle/dropped_contents/freeze_xp_despawn_time"\
+        }\
       }\
-    ],\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "hygrave.config_change_description.replace_value",\
-        "fallback": "Click to change the config's value. \nReplace §o?§r with the value you want to change the config to."\
-      }\
-    },\
-    "click_event": {\
-      "action": "suggest_command",\
-      "command": "/function hygrave:internal/config/change/dropped_contents/xp_despawn_time {value: ?}"\ 
-    }\
+    ]\
   }\
 ]
 
