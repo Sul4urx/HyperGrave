@@ -24,6 +24,14 @@ execute store result storage hygrave:common configs.value.dropped_contents.item.
 
 data modify storage hygrave:common configs.text.dropped_contents.item.despawn_time set string storage hygrave:common configs.value.dropped_contents.item.despawn_time
 
+## Freeze Item Despawn Time
+execute unless score (dropped_contents/freeze_item_despawn_time) hygrave.config matches 0..1 run scoreboard players set (dropped_contents/freeze_item_despawn_time) hygrave.config 0
+
+execute store result storage hygrave:common configs.value.dropped_contents.freeze_item_despawn_time byte 1 run scoreboard players get (dropped_contents/freeze_item_despawn_time) hygrave.config
+
+execute if data storage hygrave:common configs.value.dropped_contents{freeze_item_despawn_time:0b} run data modify storage hygrave:common configs.text.dropped_contents.freeze_item_despawn_time set value "§c∞"
+execute if data storage hygrave:common configs.value.dropped_contents{freeze_item_despawn_time:1b} run data modify storage hygrave:common configs.text.dropped_contents.freeze_item_despawn_time set value "§a∞"
+
 ## XP Despawn Time
 execute unless score (dropped_contents/xp_despawn_time) hygrave.config matches 0.. run scoreboard players set (dropped_contents/xp_despawn_time) hygrave.config 1200
 
