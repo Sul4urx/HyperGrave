@@ -14,16 +14,16 @@ tellraw @s ""
 tellraw @s [\
   "",\
   {\
-    "translate": "§7[%s§7|%s§7|%s§7]",\
+    "translate": "§7[%s§7|%s§7]",\
     "with": [\
       {\
         "translate": "hygrave.config.main_menu.costs",\
-        "fallback": " §bCosts ",\
+        "fallback": "§l  §r§bRequirements  ",\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
             "translate": "hygrave.config_page_open_description.costs",\
-            "fallback": "All configs about requirements and costs to accomplish certain tasks like looting graves or generating graves\nClick to open page 'Costs'."\
+            "fallback": "All configs about requirements to accomplish certain tasks like looting graves or generating graves\nClick to open page 'Requirements'."\
             }\
           },\
         "click_event": {\
@@ -32,23 +32,8 @@ tellraw @s [\
         }\
       },\
       {\
-        "translate": "hygrave.config.main_menu.graves",\
-        "fallback": " §bGraves ",\
-        "hover_event": {\
-          "action": "show_text",\
-          "value": {\
-            "translate": "hygrave.config_page_open_description.graves",\
-            "fallback": "All configs about graves in general\nClick to open page 'Graves'."\
-            }\
-          },\
-        "click_event": {\
-          "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
-        }\
-      },\
-      {\
         "translate": "hygrave.config.main_menu.general",\
-        "fallback": " §bGeneral ",\
+        "fallback": "  §bGeneral§l  ",\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
@@ -68,11 +53,11 @@ tellraw @s [\
 tellraw @s [\
   "\n",\
   {\
-    "translate": "§7[%s§7]",\
+    "translate": "§7[%s§7|%s§7]",\
     "with": [\
       {\
         "translate": "hygrave.config.main_menu.dropped_contents",\
-        "fallback": "     §bDropped Contents    §l ",\
+        "fallback": " §bDropped Contents ",\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
@@ -83,6 +68,21 @@ tellraw @s [\
         "click_event": {\
           "action": "run_command",\
           "command": "/function hygrave:internal/config/open_page/dropped_contents"\
+        }\
+      },\
+      {\
+        "translate": "hygrave.config.main_menu.graves",\
+        "fallback": " §bGraves ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_page_open_description.graves",\
+            "fallback": "All configs about graves in general\nClick to open page 'Graves'."\
+            }\
+          },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/open_page/graves"\
         }\
       }\
     ]\

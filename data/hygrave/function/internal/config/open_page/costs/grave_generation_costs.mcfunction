@@ -1,16 +1,14 @@
 #<< config/open_page/costs
 
-# Grave Generation Costs
-
 ##
 tellraw @s ""
 
-## Category: Grave Generation Costs
+## Category: Grave Generation Requirements
 tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_generation_costs",\
-    "fallback": " Costs §7/ §r§lGrave Generation Costs"\
+    "fallback": " Requirements §7/ §r§lGenerating Graves"\
   }\
 ]
 
@@ -23,7 +21,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_costs.with_item",\
-        "fallback": "The costs of generating a grave for players who have items"\
+        "fallback": "Grave generation requirements if the player's inventory is not empty\n\nThe requirements here will only be applied if the player has at least one item in their inventory."\
       }\
     }\
   }\
@@ -223,7 +221,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_costs.no_item",\
-        "fallback": "The costs of generating a grave for players who don't have an item in their inventory."\
+        "fallback": "Grave generation requirements if the player's inventory is empty.\n\nThe requirements here will only be applied if the player has no items in their inventory."\
       }\
     }\
   }\
@@ -359,7 +357,7 @@ tellraw @s [\
           "action": "show_text",\
           "value": {\
             "translate": "hygrave.config_go_back_description.costs",\
-            "fallback": "Click to go back to page 'Costs'.",\
+            "fallback": "Click to go back to page 'Requirements'.",\
           }\
         },\
         "click_event": {\

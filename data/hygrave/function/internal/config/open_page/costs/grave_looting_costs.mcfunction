@@ -1,16 +1,14 @@
 #<< config/open_page/costs
 
-# Grave Looting Costs
-
 ##
 tellraw @s ""
 
-## Category: Grave Looting Costs
+## Category: Grave Looting Requirements
 tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_looting_costs",\
-    "fallback": " Costs §7/ §r§lGrave Looting Costs"\
+    "fallback": " Requirements §7/ §r§lLooting Graves"\
   }\
 ]
 
@@ -23,7 +21,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_looting_costs.owners",\
-        "fallback": "The costs of looting a grave for the owner of the grave"\
+        "fallback": "Grave looting requirements if the player owns the grave\n\nThe requirements here will only be applied if the player is the owner of the grave (i.e. is the player who generated this grave)."\
       }\
     }\
   }\
@@ -259,7 +257,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_looting_costs.non_owners",\
-        "fallback": "The costs of looting a grave for players who are §nnot§r the owner of the grave"\
+        "fallback": "Grave looting requirements if the player doesn't own the grave\n\nThe requirements here will only be applied if the player is not the owner of the grave (i.e. did not generate this grave)."\
       }\
     }\
   }\
@@ -500,7 +498,7 @@ tellraw @s [\
           "action": "show_text",\
           "value": {\
             "translate": "hygrave.config_go_back_description.costs",\
-            "fallback": "Click to go back to page 'Costs'.",\
+            "fallback": "Click to go back to page 'Requirements'.",\
           }\
         },\
         "click_event": {\

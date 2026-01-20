@@ -3,19 +3,19 @@
 ##
 tellraw @s ""
 
-## Category: Costs
-tellraw @s {"translate": "hygrave.config_category.Costs","fallback": " §lCosts:"}
+## Category: Requirements
+tellraw @s {"translate": "hygrave.config_category.costs","fallback": " §lRequirements:"}
 
-##> Grave Looting Costs
+##> Looting Graves
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_costs",\
-    "fallback": "   Grave Looting Costs: ",\
+    "fallback": "   Looting Graves: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_looting_costs",\
-        "fallback": "The costs of looting a grave"\
+        "fallback": "The requirements to loot a grave"\
       }\
     }\
   },\
@@ -25,7 +25,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_sub_page_open_description.grave_looting_costs",\
-        "fallback": "Click to open the \"§lGrave Looting Costs§r\" sub-page."\
+        "fallback": "Click to open the \"§lLooting Graves§r\" sub-page."\
       }\
     },\
     "click_event": {\
@@ -35,16 +35,16 @@ tellraw @s [\
   }\
 ]
 
-##> Grave Remote Looting Costs
+##> Remotely Looting Graves
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_remote_looting_costs",\
-    "fallback": "   Grave Remote Looting Costs: ",\
+    "fallback": "   Remotely Looting Graves: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_remote_looting_costs",\
-        "fallback": "The costs of remotely looting a grave"\
+        "fallback": "The requirements to remotely loot a grave"\
       }\
     }\
   },\
@@ -54,7 +54,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_sub_page_open_description.grave_remote_looting_costs",\
-        "fallback": "Click to open the \"§lGrave Remote Looting Costs§r\" sub-page."\
+        "fallback": "Click to open the \"§lRemotely Looting Graves§r\" sub-page."\
       }\
     },\
     "click_event": {\
@@ -64,16 +64,16 @@ tellraw @s [\
   }\
 ]
 
-##> Grave Generation Costs
+##> Generating Graves
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_costs",\
-    "fallback": "   Grave Generation Costs: ",\
+    "fallback": "   Generating Graves: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_costs",\
-        "fallback": "The costs of generating a grave\n§bℹ This doesn't change the amount of XP or Item that should be deleted or kept. For that use other configs."\
+        "fallback": "The requirements to generate a grave\n§bℹ This doesn't change the amount of XP or item that should be deleted or kept. For that use other configs such as Item Distribution and XP Distribution"\
       }\
     }\
   },\
@@ -83,7 +83,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_sub_page_open_description.grave_generation_costs",\
-        "fallback": "Click to open the \"§lGrave Generation Costs§r\" sub-page."\
+        "fallback": "Click to open the \"§lGenerating Graves§r\" sub-page."\
       }\
     },\
     "click_event": {\
