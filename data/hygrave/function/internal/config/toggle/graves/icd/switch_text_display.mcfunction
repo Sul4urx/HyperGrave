@@ -1,4 +1,4 @@
-#<< config/open_page/graves/icd_properties
+#<< config/open_page/grave_interaction/icd_properties
 
 ## Toggle value
 scoreboard players add (graves/icd/switch_text_display) hygrave.config 1
@@ -11,4 +11,4 @@ playsound minecraft:ui.button.click
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/icd_properties
+function hygrave:internal/config/open_page/grave_interaction/icd_properties

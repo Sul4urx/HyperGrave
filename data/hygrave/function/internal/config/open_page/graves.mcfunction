@@ -166,35 +166,6 @@ tellraw @s [\
   }\
 ]
 
-##> ICD Properties
-tellraw @s [\
-  {\
-    "translate": "hygrave.config.icd",\
-    "fallback": "   ICD Properties: ",\
-    "hover_event": {\
-      "action":"show_text",\
-      "value": {\
-        "translate": "hygrave.config_description.icd",\
-        "fallback": "The properties of the ICD feature.\n\n§bℹ If you don't know what ICD is, refer to the in-game help menu for more information (Use §3/trigger hygrave.help§b)."\
-      }\
-    }\
-  },\
-  {\
-    "translate": "§7[§b>§7]",\
-    "hover_event": {\
-      "action": "show_text",\
-      "value": {\
-        "translate": "hygrave.config_sub_page_open_description.icd",\
-        "fallback": "Click to open the \"§lICD Properties§r\" sub-page."\
-      }\
-    },\
-    "click_event": {\
-      "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/graves/icd_properties"\
-    }\
-  }\
-]
-
 ##> Item Distribution
 tellraw @s [\
   {\

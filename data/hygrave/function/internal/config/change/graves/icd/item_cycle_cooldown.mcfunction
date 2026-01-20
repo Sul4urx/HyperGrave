@@ -1,4 +1,4 @@
-#<< config/open_page/graves/icd_properties
+#<< config/open_page/grave_interaction/icd_properties
 $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not valid
@@ -35,4 +35,4 @@ execute store result score (graves/icd/item_cycle_cooldown) hygrave.config run d
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/icd_properties
+function hygrave:internal/config/open_page/grave_interaction/icd_properties

@@ -1,4 +1,4 @@
-#<< config/open_page/graves
+#<< config/open_page/grave_interaction
 
 # ICD Properties
 
@@ -10,7 +10,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.icd",\
-    "fallback": " Graves §7/ §r§lICD Properties:"\
+    "fallback": " Grave Interaction §7/ §r§lICD Properties:"\
   }\
 ]
 
@@ -177,7 +177,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page/grave_interaction"\
         }\
       },\
       {\
@@ -191,7 +191,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves/icd_properties"\
+          "command": "/function hygrave:internal/config/open_page/grave_interaction/icd_properties"\
         }\
       }\
     ]\
