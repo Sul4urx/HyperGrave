@@ -14,7 +14,7 @@ tellraw @s ""
 tellraw @s [\
   "",\
   {\
-    "translate": "§7[%s§7|%s§7]",\
+    "translate": "§7[%s§7|%s§7|%s§7]",\
     "with": [\
       {\
         "translate": "hygrave.config.main_menu.costs",\
@@ -45,6 +45,21 @@ tellraw @s [\
           "action": "run_command",\
           "command": "/function hygrave:internal/config/open_page/general"\
         }\
+      },\
+      {\
+        "translate": "hygrave.config.main_menu.graves",\
+        "fallback": "  §bGraves  ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_page_open_description.graves",\
+            "fallback": "All configs about graves in general\nClick to open page 'Graves'."\
+            }\
+          },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/open_page/graves"\
+        }\
       }\
     ]\
   }\
@@ -71,18 +86,18 @@ tellraw @s [\
         }\
       },\
       {\
-        "translate": "hygrave.config.main_menu.graves",\
-        "fallback": " §bGraves ",\
+        "translate": "hygrave.config.main_menu.grave_interaction",\
+        "fallback": " §bGrave Interaction ",\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
-            "translate": "hygrave.config_page_open_description.graves",\
-            "fallback": "All configs about graves in general\nClick to open page 'Graves'."\
+            "translate": "hygrave.config_page_open_description.grave_interaction",\
+            "fallback": "All configs about interacting with graves\nClick to open page 'Grave Interaction'."\
             }\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page/grave_interaction"\
         }\
       }\
     ]\
