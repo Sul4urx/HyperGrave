@@ -3,7 +3,7 @@
 ##
 tellraw @s ""
 
-## Category: Graves
+## Category: General
 tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral:"}
 
 ##> Change Game Rules
