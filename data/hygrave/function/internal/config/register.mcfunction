@@ -144,3 +144,5 @@ function hygrave:internal/config/register/graves/show_grave_info
 function hygrave:internal/config/register/graves/text_display/text
 function hygrave:internal/config/register/graves/text_display/icd_text
 function hygrave:internal/config/register/graves/xp_distribution
+
+function hygrave:internal/config/register/grave_interaction/click_behavior

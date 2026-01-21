@@ -1,4 +1,4 @@
-#<< grave/pop
+#<< grave/pop_icd_item
 
 ## Spawn item
 summon minecraft:item ~ ~ ~ {Item: {id: "minecraft:clock", components: {"minecraft:custom_data": {"hygrave:common": {temp_item: 1b}}}}, Tags: ["hygrave.temp.grave.item_to_give_back","hygrave.grave.item"],Age:-32768s}

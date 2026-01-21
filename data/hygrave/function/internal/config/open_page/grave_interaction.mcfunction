@@ -35,6 +35,35 @@ tellraw @s [\
   }\
 ]
 
+##> Click Behavior
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.click_behavior",\
+    "fallback": "   Click Behavior: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.click_behavior",\
+        "fallback": "What happens when a player clicks on the grave."\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[§b>§7]",\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_sub_page_open_description.click_behavior",\
+        "fallback": "Click to open the \"§lClick Behavior§r\" sub-page."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/open_page/grave_interaction/click_behavior"\
+    }\
+  }\
+]
+
 ##
 tellraw @s ""
 

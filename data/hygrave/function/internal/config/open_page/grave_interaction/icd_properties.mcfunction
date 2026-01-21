@@ -172,7 +172,7 @@ tellraw @s [\
           "action": "show_text",\
           "value": {\
             "translate": "hygrave.config_go_back_description.graves",\
-            "fallback": "Click to go back to page 'Graves'.",\
+            "fallback": "Click to go back to page 'Grave Interaction'.",\
           }\
         },\
         "click_event": {\

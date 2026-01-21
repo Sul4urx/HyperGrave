@@ -44,8 +44,7 @@ execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run t
 }
 
 ## Drop items
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/pop/drop_items
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run return run function hygrave:internal/grave/pop/drop_icd_item
+function hygrave:internal/grave/pop/drop_items
 
 ## Drop XP
 execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/pop/drop_xp

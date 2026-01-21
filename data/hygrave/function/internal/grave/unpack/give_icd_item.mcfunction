@@ -1,4 +1,4 @@
-#<< grave/unpack
+#<< grave/unpack_icd_item
 
 ## Player's main hand must be empty 
 ## when taking item from grave with ICD activated

@@ -1,4 +1,5 @@
 #<< grave/unpack
+#<< grave/unpack_icd_item
 
 ## Game Modes
 scoreboard players set .check_costs.gamemodes hygrave.temp_var 1
