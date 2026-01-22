@@ -21,7 +21,7 @@ execute unless predicate {\
 ## Otherwise success
 title @s actionbar {\
   "translate": "hygrave.change_config_message.mod_compatibility_mode.item_collection_distance.success",\
-  "fallback": "Successfully changed the Item Collection Distance config from %s to %s.",\
+  "fallback": "Successfully changed the Item Collection Distance config from %s blocks to %s blocks.",\
   "with": [\
     {"storage": "hygrave:common", "nbt": "configs.text.general.'mod_compatibility_mode/item_collection_distance'"},\
     {"storage": "hygrave:common", "nbt": "temp.config.value"}\
