@@ -5,7 +5,7 @@
 
 ## If the predicate doesn't pass,
 ## .check_costs.items score will remain false
-$execute if data storage hygrave:common configs.value.costs.grave_generation_costs.with_item.item_ids[0] if predicate {\
+$execute if predicate {\
   condition: "minecraft:any_of",\
   terms: [\
     {\

@@ -5,7 +5,7 @@
 
 ## If the predicate doesn't pass,
 ## .check_costs.items score will remain false
-$execute if data storage hygrave:common configs.value.costs.grave_looting_costs.owners.item_ids[0] if predicate {\
+$execute if predicate {\
   condition: "minecraft:entity_properties",\
   entity: "this",\
   predicate: {\
