@@ -1,2 +1,2 @@
-## Show config menu page 1
+## Show config menu
 function hygrave:internal/config/open_page/main
