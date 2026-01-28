@@ -30,23 +30,23 @@ tag @s add hygrave.temp.grave.interactor
 function hygrave:internal/grave/tag_owner with storage hygrave:common graves[-1].data.owner
 
 ## Check and apply requirements
-execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_costs/owners
-execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_costs/non_owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_requirements/owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_requirements/non_owners
 
-execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @s actionbar {\
+execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.grave.remote_unpack.fail.does_not_meet_requirements.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave."\
 }
-execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @s actionbar {\
+execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.grave.remote_unpack.fail.does_not_meet_requirements.items",\
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave."\
 }
-execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @s actionbar {\
+execute unless score .check_requirements.xp hygrave.temp_var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.grave.remote_unpack.fail.does_not_meet_requirements.xp",\
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave.",\
   "with": [\
     {\
-      "nbt": "configs.text.costs.grave_remote_looting_costs.owners.xp.levels",\
+      "nbt": "configs.text.requirements.grave_remote_looting_requirements.owners.xp.levels",\
       "storage": "hygrave:common",\
       "color": "red"\
     }\

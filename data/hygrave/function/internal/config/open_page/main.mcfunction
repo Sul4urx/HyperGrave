@@ -28,18 +28,18 @@ tellraw @s [\
     "translate": "§7[%s§7|%s§7|%s§7]",\
     "with": [\
       {\
-        "translate": "hygrave.config.main_menu.costs",\
+        "translate": "hygrave.config.main_menu.requirements",\
         "fallback": "§l  §r§bRequirements  ",\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
-            "translate": "hygrave.config_page_open_description.costs",\
+            "translate": "hygrave.config_page_open_description.requirements",\
             "fallback": "All configs about requirements to accomplish certain tasks like looting graves or generating graves\nClick to open page 'Requirements'."\
             }\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/costs"\
+          "command": "/function hygrave:internal/config/open_page/requirements"\
         }\
       },\
       {\

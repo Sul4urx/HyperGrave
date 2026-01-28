@@ -1,4 +1,4 @@
-#<< config/open_page/costs/grave_generation_costs
+#<< config/open_page/requirements/grave_generation_requirements
 
 ## Insert a newline before the menu
 tellraw @s ""

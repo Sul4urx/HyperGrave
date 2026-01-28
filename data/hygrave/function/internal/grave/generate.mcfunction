@@ -53,12 +53,12 @@ function hygrave:internal/grave/generate/distribute_items
 function hygrave:internal/grave/generate/take_xp/main
 
 ## Check requirements
-execute unless data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_costs/no_item
-execute if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_costs/with_item
+execute unless data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_requirements/no_item
+execute if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_requirements/with_item
 
-execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
-execute unless score .check_costs.items hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
-execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
+execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
+execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
+execute unless score .check_requirements.xp hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
 
 ## If compatibility mode is set to true
 ## Get rid of player's dropped XP and items

@@ -21,23 +21,23 @@ function hygrave:internal/map/players/lookup with storage hygrave:common temp.ar
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 ## Check and apply requirements
-execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/unpack/check_costs/owners
-execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/unpack/check_costs/non_owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/unpack/check_requirements/owners
+execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/unpack/check_requirements/non_owners
 
-execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
+execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
   "translate": "hygrave.grave.unpack.fail.does_not_meet_requirements.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave."\
 }
-execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
+execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
   "translate": "hygrave.grave.unpack.fail.does_not_meet_requirements.items",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave."\
 }
-execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
+execute unless score .check_requirements.xp hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
   "translate": "hygrave.grave.unpack.fail.does_not_meet_requirements.xp",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave.",\
   "with": [\
     {\
-      "nbt": "configs.text.costs.grave_looting_costs.owners.xp.levels",\
+      "nbt": "configs.text.requirements.grave_looting_requirements.owners.xp.levels",\
       "storage": "hygrave:common",\
       "color": "red"\
     }\
