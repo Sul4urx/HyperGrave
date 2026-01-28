@@ -1,9 +1,8 @@
-#<! uninstall
-#<< reinstall
+#<! reinstall
 
 ## Check if the confirmation code was entered correctly
-$data modify storage hygrave:common temp.uninstall_confirm set value "$(confirm)"
-execute unless data storage hygrave:common temp{uninstall_confirm:"UNINSTALL"} run return -7
+$data modify storage hygrave:common temp.reinstall_confirm set value "$(confirm)"
+execute unless data storage hygrave:common temp{reinstall_confirm:"REINSTALL"} run return -7
 
 ## Uninstall if confirmed
 
@@ -34,3 +33,7 @@ scoreboard objectives remove hygrave.remote_loot_grave
 scoreboard objectives remove hygrave.info
 scoreboard objectives remove hygrave.help
 scoreboard objectives remove hygrave.death_count
+
+## Reload to reinstall
+reload
+
