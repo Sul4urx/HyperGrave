@@ -3,7 +3,7 @@
 
 ## Check if the confirmation code was entered correctly
 $data modify storage hygrave:common temp.uninstall_confirm set value "$(confirm)"
-execute unless data storage hygrave:common temp{uninstall_confirm:"UNINSTALL"} run return -7
+execute unless data storage hygrave:common temp{uninstall_confirm:"UNINSTALL"} unless data storage hygrave:common temp{uninstall_confirm:"UNINSTALL_NO_OUTPUT_MESSAGE"} run return -7
 
 ## Uninstall if confirmed
 
@@ -34,3 +34,9 @@ scoreboard objectives remove hygrave.remote_loot_grave
 scoreboard objectives remove hygrave.info
 scoreboard objectives remove hygrave.help
 scoreboard objectives remove hygrave.death_count
+
+## Show success message
+execute unless data storage hygrave:common temp{uninstall_confirm:"UNINSTALL_NO_OUTPUT_MESSAGE"} run tellraw @s {\
+  "translate": "hygrave.uninstall.success",\
+  "fallback": "\n§6§lSuccessfully uninstalled HyperGrave.\n\n§bℹ Reloading this world will cause HyperGrave to be reinstalled automatically. To prevent that, use the §6/datapack disable§b command to disable HyperGrave. To reinstall HyperGrave, use §6/reload§b.\n\n§bℹ You might also want to disable the §6keep_inventory§b gamerule.\n",\
+}
