@@ -6,7 +6,7 @@ tellraw @s ""
 
 tellraw @s {\
   "translate": "hygrave.info",\
-  "fallback": "§l§bHyper§l§6Grave§r §fversion %s §8| §fMade By §bSul4ur\n§6ℹ This data pack is in beta. Expect bugs!\n§fA very sophisticated grave data pack with many features and a lot of customizability\n\n§fWeb: §7[%s §7| %s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
+  "fallback": "§l§bHyper§l§6Grave§r §fversion %s §8| §fMade By §bSul4ur\n§6ℹ This data pack is in beta. Expect bugs!\n§fA very sophisticated grave data pack with many features and a lot of customizability\n\n§fWeb: §7[%s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
   "with": [\
     "§70.4.0",\
     {\
@@ -22,21 +22,6 @@ tellraw @s {\
       "click_event": {\
         "action": "open_url",\
         "url": "https://modrinth.com/datapack/hypergrave"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.info.doc",\
-      "fallback": "§7Wiki",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.info_menu_button_description.doc",\
-          "fallback": "Click to open the HyperGrave wiki.\nThe wiki is similar to the documentation, but it is for advanced features of HyperGrave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "open_url",\
-        "url": "https://github.com/sul4urx/hypergrave/wiki"\
       }\
     },\
     {\
