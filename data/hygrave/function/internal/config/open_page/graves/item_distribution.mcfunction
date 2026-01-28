@@ -74,7 +74,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.item_distribution.grave_generation_success",\
-        "fallback": "The item distribution if the player successfully generated a grave (i.e. had nessecary requirements to generate a grave).\n\n§bℹ Items that don't match any of the item predicates in the fields below will be taken by the grave instead.\n\n§bℹ Grave generation costs are applied as if items have already been distributed using this field. For example if a diamond is required to generate a grave and the item distribution config removes all diamonds on grave generation success, the grave will not generate and the field Grave Generation Fail would be used instead. This can be a bit confusing, but it could be important."\
+        "fallback": "The item distribution if the player successfully generated a grave (i.e. had nessecary requirements to generate a grave).\n\n§bℹ Items that don't match any of the item predicates in the fields below will be taken by the grave instead.\n\n§bℹ Requirements for generating graves are applied as if items have already been distributed using this field. For example if a diamond is required to generate a grave and the item distribution config removes all diamonds on grave generation success, the grave will not generate and the field Grave Generation Fail would be used instead. This can be a bit confusing, but it could be important."\
       }\
     }\
   }\

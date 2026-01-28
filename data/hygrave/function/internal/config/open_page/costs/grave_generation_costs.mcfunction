@@ -141,7 +141,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_costs.with_item.gamemodes",\
-        "fallback": "§a⬛ §7→§r Players in that game mode can generate a grave with items. Other costs will still apply.\n§c⬛ §7→§r Players in that game mode cannot generate a grave with items.\n\n§bS §7→§r Survival\n§bA §7→§r Adventure\n§bC §7→§r Creative\n\n§cS§7, §cA§7, §cC §7→§r Essentially disables generating the grave for players with items.\n\n§8Default: §aS§8, §aA§8, §cC"\
+        "fallback": "§a⬛ §7→§r Players in that game mode can generate a grave with items (if other requirements are also met).\n§c⬛ §7→§r Players in that game mode cannot generate a grave with items.\n\n§bS §7→§r Survival\n§bA §7→§r Adventure\n§bC §7→§r Creative\n\n§cS§7, §cA§7, §cC §7→§r Essentially disables generating the grave for players with items.\n\n§8Default: §aS§8, §aA§8, §cC"\
       }\
     }\
   },\
@@ -272,7 +272,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_costs.no_item.gamemodes",\
-        "fallback": "§a⬛ §7→§r Players in that game mode can generate a grave without having any items. Other costs will still apply.\n§c⬛ §7→§r Players in that game mode cannot generate a grave without items.\n\n§bS §7→§r Survival\n§bA §7→§r Adventure\n§bC §7→§r Creative\n\n§cS§7, §cA§7, §cC §7→§r Essentially disables generating the grave for players with items.\n\n§8Default: §aS§8, §aA§8, §cC"\
+        "fallback": "§a⬛ §7→§r Players in that game mode can generate a grave without having any items (if other requirements are also met).\n§c⬛ §7→§r Players in that game mode cannot generate a grave without items.\n\n§bS §7→§r Survival\n§bA §7→§r Adventure\n§bC §7→§r Creative\n\n§cS§7, §cA§7, §cC §7→§r Essentially disables generating the grave for players with items.\n\n§8Default: §aS§8, §aA§8, §cC"\
       }\
     }\
   },\

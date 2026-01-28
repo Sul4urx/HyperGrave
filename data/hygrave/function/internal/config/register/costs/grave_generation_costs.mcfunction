@@ -1,6 +1,6 @@
 #<< config/register
 
-# Register sub-configs for Grave Generation Costs config
+# Register sub-configs for Grave Generation Requirements config
 
 ## With Item
 

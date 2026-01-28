@@ -1,6 +1,6 @@
 #<< config/register
 
-# Register sub-configs for Grave Remote Looting Costs config
+# Register sub-configs for Grave Remote Looting Requirements config
 
 ## Owners
 

@@ -19,20 +19,20 @@ function hygrave:internal/map/players/lookup with storage hygrave:common temp.ar
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 
-## Check and apply costs
+## Check and apply requirements
 execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_costs/owners
 execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_costs/non_owners
 
 execute unless score .check_costs.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.pop.fail.cannot_afford_cost.gamemodes",\
+  "translate": "hygrave.grave.pop.fail.does_not_meet_requirements.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave."\
 }
 execute unless score .check_costs.items hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.pop.fail.cannot_afford_cost.items",\
+  "translate": "hygrave.grave.pop.fail.does_not_meet_requirements.items",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave."\
 }
 execute unless score .check_costs.xp hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
-  "translate": "hygrave.grave.pop.fail.cannot_afford_cost.xp",\
+  "translate": "hygrave.grave.pop.fail.does_not_meet_requirements.xp",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave.",\
   "with": [\
     {\

@@ -52,7 +52,7 @@ function hygrave:internal/grave/generate/distribute_items
 ## Calculate total XP
 function hygrave:internal/grave/generate/take_xp/main
 
-## Check costs
+## Check requirements
 execute unless data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_costs/no_item
 execute if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_costs/with_item
 
