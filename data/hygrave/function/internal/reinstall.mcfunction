@@ -16,6 +16,7 @@ data remove storage hygrave:common active_graves
 data remove storage hygrave:common players
 data remove storage hygrave:common dimensions
 data remove storage hygrave:common configs
+data remove storage hygrave:common data
 
 ##> Remove all scores
 scoreboard objectives remove hygrave.temp_var
@@ -23,6 +24,7 @@ scoreboard objectives remove hygrave.var
 scoreboard objectives remove hygrave.config
 scoreboard objectives remove hygrave.pid
 scoreboard objectives remove hygrave.gid
+scoreboard objectives remove hygrave.data_version
 scoreboard objectives remove hygrave.despawn_time
 scoreboard objectives remove hygrave.icd.cooldown
 scoreboard objectives remove hygrave.rotation_cooldown
