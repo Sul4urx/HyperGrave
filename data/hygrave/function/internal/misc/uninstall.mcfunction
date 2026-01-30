@@ -1,5 +1,4 @@
 #<! uninstall
-#<< reinstall
 
 ## Check if the confirmation code was entered correctly
 $data modify storage hygrave:common temp.uninstall_confirm set value "$(confirm)"

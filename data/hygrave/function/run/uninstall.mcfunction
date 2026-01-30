@@ -10,7 +10,7 @@ tellraw @s [\
             "action": "show_text",\
             "value": {\
                 "translate": "hygrave.uninstall.instructions",\
-                "fallback": "If you really want to uninstall HyperGrave, run the following command:\n\n/function hygrave:internal/uninstall {confirm:\"UNINSTALL\"}\n\nIf you don't want to use HyperGrave again, use §n/datapack disable§r to remove HyperGrave. If you don't do this, HyperGrave will reinstall after a reload. You can also remove the data pack file from the §odatapacks§r folder."\
+                "fallback": "If you really want to uninstall HyperGrave, run the following command:\n\n/function hygrave:internal/misc/uninstall {confirm:\"UNINSTALL\"}\n\nIf you don't want to use HyperGrave again, use §n/datapack disable§r to remove HyperGrave. If you don't do this, HyperGrave will reinstall after a reload. You can also remove the data pack file from the §odatapacks§r folder."\
             }\
         }\
     },\

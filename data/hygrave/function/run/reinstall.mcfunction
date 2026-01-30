@@ -10,7 +10,7 @@ tellraw @s [\
             "action": "show_text",\
             "value": {\
                 "translate": "hygrave.reinstall.instructions",\
-                "fallback": "If you really want to reinstall HyperGrave, run the following command:\n\n/function hygrave:internal/reinstall {confirm:\"REINSTALL\"}"\
+                "fallback": "If you really want to reinstall HyperGrave, run the following command:\n\n/function hygrave:internal/misc/reinstall {confirm:\"REINSTALL\"}"\
             }\
         }\
     },\
