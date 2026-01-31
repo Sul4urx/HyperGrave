@@ -88,20 +88,20 @@ When entering this phase, Y gets incremented by 1 one last time and Z is set to 
 ### Release Phase
 The third and final phase is the release phase. When entering this phase, X gets set to 2 (not 1, to avoid confusion with Minecraft versions) and Y and Z get set to 0.
 
-When updating HyperGrave from version X.Y.Z to A.B.C, if: ($x$ and $y$ and $z$ in all cases are non-negative integers)
-- ($`\forall{x}\in[0,Y]\land \forall{y} \land \forall{z}`$) the player has to fully uninstall HyperGrave in version $x$.$y$.$z$ to use the new version:
+When updating HyperGrave from version X.Y.Z to A.B.C, if: ($`x`$ and $`y`$ and $`z`$ in all cases are non-negative integers)
+- ($`\forall{x}\in[0,Y]\land \forall{y} \land \forall{z}`$) the player has to fully uninstall HyperGrave in version $`x`$.$`y`$.$`z`$ to use the new version:
     - **A = X + 1**
     - **B = 0**
     - **C = 0**
     - For example: The player has to uninstall HyperGrave first in order to upgrade from 2.5.2 to 3.0.0 or later.
-- ($`\forall{y}\in[0,Y]\land \forall{z}`$) the player can upgrade from version X.$y$.$z$ to A.B.C without uninstalling HyperGrave, but has to uninstall HyperGrave when downgrading from version A.B.C to X.Y.Z:
+- ($`\forall{y}\in[0,Y]\land \forall{z}`$) the player can upgrade from version X.$`y`$.$`z`$ to A.B.C without uninstalling HyperGrave, but has to uninstall HyperGrave when downgrading from version A.B.C to X.Y.Z:
     - **A = X**
     - **B = Y + 1**
     - **C = 0**
     - For example: If the player upgrades from 2.5.2 to 2.6.0 or from 2.4.3 to 2.8.1, HyperGrave will automatically make the necessary changes (and tell the player if they have to make a few changes manually). 
     
     - However, if the player wants to downgrade from 2.6.0 to 2.5.2, they will have to uninstall HyperGrave first.
-- ($`\forall{z}\in[0,Z]`$) the player can upgrade from version X.Y.$z$ to A.B.C and downgrade from latter to former without uninstalling HyperGrave:
+- ($`\forall{z}\in[0,Z]`$) the player can upgrade from version X.Y.$`z`$ to A.B.C and downgrade from latter to former without uninstalling HyperGrave:
     - **A = X**
     - **B = Y**
     - **C = Z + 1**
