@@ -105,4 +105,20 @@ When updating HyperGrave from version X.Y.Z to A.B.C, if: ($`x`$ and $`y`$ and $
     - **A = X**
     - **B = Y**
     - **C = Z + 1**
-    - For example: If the player upgrades from 2.5.2 to 2.5.3 or downgrades from 2.5.3 to 2.5.1, HyperGrave will automatically make the necessary changes (and tell the player if they have to make a few changes manually).
+    - For example: If the player upgrades from 2.5.2 to 2.5.3 or downgrades from 2.5.3 to 2.5.1, HyperGrave will automatically make the necessary changes (and tell the player if they have to make a few changes manually)
+ 
+## License
+Copyright © 2026 Sul4ur
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>
