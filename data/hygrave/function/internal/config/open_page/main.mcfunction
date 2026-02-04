@@ -115,5 +115,29 @@ tellraw @s [\
   }\
 ]
 
+tellraw @s [\
+  "\n",\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "translate": "hygrave.config.main_menu.grave_appearance",\
+        "fallback": "        §bGrave Style & Appearance        ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_page_open_description.grave_appearance",\
+            "fallback": "All configs about styles and appearances of graves\nClick to open page 'Grave Style & Appearance'."\
+            }\
+          },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/open_page/grave_appearance"\
+        }\
+      }\
+    ]\
+  }\
+]
+
 ##
 tellraw @s ""
