@@ -1,6 +1,7 @@
 #<< grave/pop
 #<< grave/main
 #<< grave/unpack
+#<< grave/despawn_time/delete_grave
 
 execute on passengers run kill @s[tag=hygrave.grave.interaction]
 execute on passengers run kill @s[tag=hygrave.grave.player_head]

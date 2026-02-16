@@ -11,8 +11,4 @@ execute if data entity @s item.components.minecraft:custom_data.hygrave:common.i
 function hygrave:internal/grave/despawn_time/delete_grave/drop_xp
 
 ## Delete grave
-execute on passengers run kill @s[tag=hygrave.grave.interaction]
-execute on passengers run kill @s[tag=hygrave.grave.player_head]
-execute on passengers run kill @s[tag=hygrave.grave.text_display]
-execute on passengers run kill @s[tag=hygrave.grave.icd]
-kill @s
+function hygrave:internal/grave/delete
