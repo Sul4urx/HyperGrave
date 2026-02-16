@@ -50,6 +50,7 @@ If you don't know much about source code and stuff like that, you can skip this 
 | ---------------------------- | ------------------------------------- | -----------------------| --------- |
 | `main`                       | The main branch                       | v0.5.0                 | ✔         |
 | `archive/release/mc-1.21.4`  | For Minecraft versions 1.21 to 1.21.4 | v0.4.0                 | ❌        |
+| `develop`                    | The next minor version of HyperGrave  | -                      | -        |
 
 ## Commits
 Git commits follow [conventional commits v1.0.0](https://conventionalcommits.org/en/v1.0.0).
