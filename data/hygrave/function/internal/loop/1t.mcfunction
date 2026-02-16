@@ -95,6 +95,8 @@ tag @e[tag=hygrave.temp.grave.interaction] remove hygrave.temp.grave.interaction
 tag @e[tag=hygrave.temp.grave.interactor] remove hygrave.temp.grave.interactor
 tag @e[tag=hygrave.temp.grave.item_to_give_back] remove hygrave.temp.grave.item_to_give_back
 tag @e[tag=hygrave.temp.grave.player_head] remove hygrave.temp.grave.player_head
+tag @e[tag=hygrave.temp.grave.model.decoration_1] remove hygrave.temp.grave.model.decoration_1
+tag @e[tag=hygrave.temp.grave.model.decoration_2] remove hygrave.temp.grave.model.decoration_2
 tag @e[tag=hygrave.temp.item_manipulator] remove hygrave.temp.item_manipulator
 
 ## Remove temp data and temp scores

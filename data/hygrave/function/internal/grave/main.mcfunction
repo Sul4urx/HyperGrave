@@ -12,17 +12,13 @@ execute if score .grave_is_in_storage hygrave.temp_var matches 0 run return run 
 tag @s add hygrave.temp.grave.base
 execute on passengers at @s if entity @s[tag=hygrave.grave.interaction] run tag @s add hygrave.temp.grave.interaction
 execute on passengers at @s if entity @s[tag=hygrave.grave.player_head] run tag @s add hygrave.temp.grave.player_head
+execute on passengers at @s if entity @s[tag=hygrave.grave.model.decoration_1] run tag @s add hygrave.temp.grave.model.decoration_1
+execute on passengers at @s if entity @s[tag=hygrave.grave.model.decoration_2] run tag @s add hygrave.temp.grave.model.decoration_2
 execute on passengers at @s if entity @s[tag=hygrave.grave.text_display] run tag @s add hygrave.temp.grave.text_display
 execute on passengers at @s if entity @s[tag=hygrave.grave.icd] run tag @s add hygrave.temp.grave.icd
 execute as @n[tag=hygrave.temp.grave.interaction] at @s on target at @s run tag @s add hygrave.temp.grave.interactor
 execute as @n[tag=hygrave.temp.grave.interaction] at @s on attacker at @s run tag @s add hygrave.temp.grave.interactor
 function hygrave:internal/grave/tag_owner with entity @s item.components.minecraft:custom_data.hygrave:common.owner
-
-## Rotate player head and item in ICD
-scoreboard players add @n[tag=hygrave.temp.grave.player_head] hygrave.rotation_cooldown 1
-scoreboard players add @n[tag=hygrave.temp.grave.icd] hygrave.rotation_cooldown 1
-execute as @n[tag=hygrave.grave.player_head] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate
-execute as @n[tag=hygrave.grave.icd] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate
 
 ## Update text display
 execute if score (graves/icd/switch_text_display) hygrave.config matches 0 run function hygrave:internal/grave/update_text_display/update
@@ -37,10 +33,13 @@ execute if score (graves/icd/activate_for) hygrave.config matches 1 if score (gr
 execute if score (graves/icd/activate_for) hygrave.config matches 2 if score (graves/icd/revert_sneaking_behavior) hygrave.config matches 1 run tag @a[distance=..4,predicate=!hygrave:is_sneaking] add hygrave.temp.grave.icd_activator
 
 ## ICD management
-execute as @n[tag=hygrave.temp.grave.icd_activator] at @s run function hygrave:internal/grave/icd/check_conditions
-execute unless entity @a[tag=hygrave.temp.grave.icd_activator] run function hygrave:internal/grave/icd/cancel
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run data modify entity @n[tag=hygrave.temp.grave.player_head] view_range set value 0
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run data modify entity @n[tag=hygrave.temp.grave.player_head] view_range set value 1
+function hygrave:internal/grave/icd/display
+execute if entity @n[tag=hygrave.temp.grave.icd_activator] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 1b
+execute unless entity @n[tag=hygrave.temp.grave.icd_activator] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 0b
+
+## Stylize grave
+execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/icd/model
+execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/model
 
 ## If player both interacted and attacked grave, prioritize interaction
 execute as @n[tag=hygrave.temp.grave.interaction] at @s if data entity @s interaction run data remove entity @s attack
@@ -62,6 +61,8 @@ tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
 tag @e[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
 tag @e[tag=hygrave.temp.grave.player_head] remove hygrave.temp.grave.player_head
 tag @e[tag=hygrave.temp.grave.text_display] remove hygrave.temp.grave.text_display
+tag @e[tag=hygrave.temp.grave.model.decoration_1] remove hygrave.temp.grave.model.decoration_1
+tag @e[tag=hygrave.temp.grave.model.decoration_2] remove hygrave.temp.grave.model.decoration_2
 tag @e[tag=hygrave.temp.grave.icd] remove hygrave.temp.grave.icd
 tag @e[tag=hygrave.temp.grave.interaction] remove hygrave.temp.grave.interaction
 tag @e[tag=hygrave.temp.grave.interactor] remove hygrave.temp.grave.interactor
