@@ -6,6 +6,35 @@ tellraw @s ""
 ## Category: Grave Appearance
 tellraw @s {"translate": "hygrave.config_category.grave_appearance","fallback": " §lGrave Appearance:"}
 
+##> Grave Model
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.grave_model",\
+    "fallback": "   Grave Model: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.grave_model",\
+        "fallback": "The model of the grave."\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[§b>§7]",\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_sub_page_open_description.grave_model",\
+        "fallback": "Click to open the \"§lGrave Model§r\" sub-page."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/open_page/grave_appearance/grave_model"\
+    }\
+  }\
+]
+
 ##
 tellraw @s ""
 

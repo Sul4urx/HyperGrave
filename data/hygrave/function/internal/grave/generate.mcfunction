@@ -34,7 +34,7 @@ xp set @s 0 points
 
 
 ## This item display is the player head part of the grave
-summon minecraft:item_display ~ ~ ~ {Tags: ["hygrave.grave.player_head", "hygrave.temp.grave.player_head"], item: {id: "minecraft:player_head"}, Glowing:1b, transformation: {left_rotation: [0f,0f,0f,1f], right_rotation: [0f,0f,0f,1f], scale: [1f,1f,1f], translation: [0f,0.75f,0f]}, shadow_radius: 0.5, shadow_strength: 0.75, teleport_duration: 20}
+summon minecraft:item_display ~ ~ ~ {Tags: ["hygrave.grave.player_head", "hygrave.temp.grave.player_head"], item: {id: "minecraft:player_head"}, Glowing:1b, transformation: {left_rotation: [0f,0f,0f,1f], right_rotation: [0f,0f,0f,1f], scale: [1f,1f,1f], translation: [0f,0.75f,0f]}, shadow_radius: 0.5, shadow_strength: 0.75}
 
 item modify entity @n[tag=hygrave.temp.grave.player_head] contents {function:"minecraft:fill_player_head",entity:"this"}
 
@@ -75,14 +75,20 @@ function hygrave:internal/grave/generate/distribute_xp
 ## Store creation time data
 execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/generate/get_creation_time
 
-## Add the final elements: interaction and text display
+## Add the final elements: interaction, text display, grave models and ICD item
 summon minecraft:interaction ~ ~ ~ {Tags:["hygrave.grave.interaction","hygrave.temp.grave.interaction"],width:0.5,height:0.5}
 summon minecraft:text_display ~ ~ ~ {billboard:"vertical",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[0f,1f,0f]},alignment:"center",Tags:["hygrave.grave.text_display","hygrave.temp.grave.text_display"],shadow:1b}
+summon minecraft:item_display ~ ~ ~ {item: {id: "minecraft:green_dye", components: {"minecraft:custom_model_data": {strings: ["hygrave.grave.decoration--1", "", ""]}}}, Tags:["hygrave.grave.model.decoration_1","hygrave.temp.grave.model.decoration_1"], view_range: 0, transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[0f,0.5f,0f]}}
+summon minecraft:item_display ~ ~ ~ {item: {id: "minecraft:green_dye", components: {"minecraft:custom_model_data": {strings: ["hygrave.grave.decoration--1", "", ""]}}}, Tags:["hygrave.grave.model.decoration_2","hygrave.temp.grave.model.decoration_2"], view_range: 0, transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[0f,0.5f,0f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["hygrave.grave.icd", "hygrave.temp.grave.icd"], transformation: {left_rotation: [0f, 0f, 0f, 1f], right_rotation: [0f, 0f, 0f, 1f], scale: [0.75f, 0.75f, 0.75f], translation: [0f, 0.5f, 0f]}, item_display: fixed}
 
 ## Attach all grave parts to the base grave
 ride @n[tag=hygrave.temp.grave.player_head] mount @n[tag=hygrave.temp.grave.base]
 ride @n[tag=hygrave.temp.grave.interaction] mount @n[tag=hygrave.temp.grave.base]
 ride @n[tag=hygrave.temp.grave.text_display] mount @n[tag=hygrave.temp.grave.base]
+ride @n[tag=hygrave.temp.grave.model.decoration_1] mount @n[tag=hygrave.temp.grave.base]
+ride @n[tag=hygrave.temp.grave.model.decoration_2] mount @n[tag=hygrave.temp.grave.base]
+ride @n[tag=hygrave.temp.grave.icd] mount @n[tag=hygrave.temp.grave.base]
 
 ## Grave placement restrictions
 function hygrave:internal/grave/generate/grave_placement_restrictions with entity @s
@@ -111,8 +117,19 @@ scoreboard players operation (last_gid) hygrave.var = @n[tag=hygrave.temp.grave.
 execute if score (graves/tell_grave_mini_info) hygrave.config matches 1..2 run function hygrave:internal/grave/generate/tell_grave_mini_info/self
 execute if score (graves/tell_grave_mini_info) hygrave.config matches 2 run function hygrave:internal/grave/generate/tell_grave_mini_info/others
 
+## Update grave model
+execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/model
+
+## Make rotations on grave model smooth
+data modify entity @n[tag=hygrave.temp.grave.player_head] teleport_duration set value 20
+data modify entity @n[tag=hygrave.temp.grave.icd] teleport_duration set value 20
+
 ## Remove temp tags
 tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
 tag @e[tag=hygrave.temp.grave.interaction] remove hygrave.temp.grave.interaction
 tag @e[tag=hygrave.temp.grave.player_head] remove hygrave.temp.grave.player_head
+tag @e[tag=hygrave.temp.grave.model.decoration_1] remove hygrave.temp.grave.model.decoration_1
+tag @e[tag=hygrave.temp.grave.model.decoration_2] remove hygrave.temp.grave.model.decoration_2
+tag @e[tag=hygrave.temp.grave.text_display] remove hygrave.temp.grave.text_display
+tag @e[tag=hygrave.temp.grave.icd] remove hygrave.temp.grave.icd
 tag @e[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
