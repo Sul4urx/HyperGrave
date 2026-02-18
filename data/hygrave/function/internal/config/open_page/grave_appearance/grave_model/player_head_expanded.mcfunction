@@ -97,6 +97,42 @@ tellraw @s [\
   }\
 ]
 
+
+##> Glowing
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.grave_model.player_head.glowing",\
+    "fallback": "      Glowing: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.grave_model.player_head.glowing",\
+        "fallback": "Whether the player's head should have a glow outline, as if they had the glowing status effect.\n§8Default: ✔"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.graves.glowing_graves",\
+        "storage": "hygrave:common" \
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/toggle/graves/glowing_graves"\
+    }\
+  }\
+]
+
 ##> Vertical Position
 tellraw @s [\
   {\
