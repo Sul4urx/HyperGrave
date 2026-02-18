@@ -35,4 +35,4 @@ execute store result score (grave_appearance/grave_model/icd_item/rotation_speed
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/grave_appearance/grave_model
+function hygrave:internal/config/open_page/grave_appearance/grave_model/icd_item_expanded
