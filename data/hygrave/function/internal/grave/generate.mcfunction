@@ -39,7 +39,7 @@ summon minecraft:item_display ~ ~ ~ {Tags: ["hygrave.grave.player_head", "hygrav
 item modify entity @n[tag=hygrave.temp.grave.player_head] contents {function:"minecraft:fill_player_head",entity:"this"}
 
 ## If Glowing Graves config is false, set the grave to not glow
-execute if score (graves/glowing_graves) hygrave.config matches 0 run data modify entity @n[tag=hygrave.temp.grave.player_head] Glowing set value 0b
+execute if score (grave_appearance/grave_model/player_head/glowing) hygrave.config matches 0 run data modify entity @n[tag=hygrave.temp.grave.player_head] Glowing set value 0b
 
 ## Copy items from player to grave
 execute if score (general/mod_compatibility_mode) hygrave.config matches 0 run function hygrave:internal/grave/generate/copy_items

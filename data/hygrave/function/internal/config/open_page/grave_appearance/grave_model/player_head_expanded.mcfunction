@@ -115,7 +115,7 @@ tellraw @s [\
     "translate": "§7[%s§7]",\
     "with": [\
       {\
-        "nbt": "configs.text.graves.glowing_graves",\
+        "nbt": "configs.text.grave_appearance.grave_model.player_head.glowing",\
         "storage": "hygrave:common" \
       }\
     ],\
@@ -128,7 +128,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/toggle/graves/glowing_graves"\
+      "command": "/function hygrave:internal/config/toggle/grave_appearance/grave_model/player_head/glowing"\
     }\
   }\
 ]
