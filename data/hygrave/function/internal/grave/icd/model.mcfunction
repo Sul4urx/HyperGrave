@@ -6,6 +6,10 @@
 execute if score (grave_appearance/grave_model/player_head/render_icd) hygrave.config matches 1.. run data modify entity @n[tag=hygrave.temp.grave.player_head] view_range set value 1.0f
 execute if score (grave_appearance/grave_model/player_head/render_icd) hygrave.config matches ..0 run data modify entity @n[tag=hygrave.temp.grave.player_head] view_range set value 0.0f
 
+##> Glow
+execute if score (grave_appearance/grave_model/player_head/glowing) hygrave.config matches 0 run data modify entity @n[tag=hygrave.temp.grave.player_head] Glowing set value 0b
+execute if score (grave_appearance/grave_model/player_head/glowing) hygrave.config matches 1 run data modify entity @n[tag=hygrave.temp.grave.player_head] Glowing set value 1b
+
 ##> Rotate
 scoreboard players add @n[tag=hygrave.temp.grave.player_head] hygrave.rotation_cooldown 1
 execute if score @n[tag=hygrave.temp.grave.player_head] hygrave.rotation_cooldown matches 20.. run data modify storage hygrave:common temp.args.rotation_speed set from storage hygrave:common configs.value.grave_appearance.grave_model.player_head.rotation_speed
