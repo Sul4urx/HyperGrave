@@ -72,14 +72,6 @@ execute store result storage hygrave:common configs.value.graves.drop_contents_o
 execute if data storage hygrave:common configs.value.graves{drop_contents_on_despawn:0b} run data modify storage hygrave:common configs.text.graves.drop_contents_on_despawn set value "§c❌"
 execute if data storage hygrave:common configs.value.graves{drop_contents_on_despawn:1b} run data modify storage hygrave:common configs.text.graves.drop_contents_on_despawn set value "§a✔"
 
-## Glowing Graves
-execute unless score (graves/glowing_graves) hygrave.config matches 0..1 run scoreboard players set (graves/glowing_graves) hygrave.config 1
-
-execute store result storage hygrave:common configs.value.graves.glowing_graves byte 1 run scoreboard players get (graves/glowing_graves) hygrave.config
-
-execute if data storage hygrave:common configs.value.graves{glowing_graves:0b} run data modify storage hygrave:common configs.text.graves.glowing_graves set value "§c❌"
-execute if data storage hygrave:common configs.value.graves{glowing_graves:1b} run data modify storage hygrave:common configs.text.graves.glowing_graves set value "§a✔"
-
 ## Invulnerable Items
 execute unless score (dropped_contents/invulnerable_items) hygrave.config matches 0..1 run scoreboard players set (dropped_contents/invulnerable_items) hygrave.config 0
 

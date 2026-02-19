@@ -20,6 +20,14 @@ execute store result storage hygrave:common configs.value.grave_appearance.grave
 execute if data storage hygrave:common configs.value.grave_appearance.grave_model.player_head{render_icd:0b} run data modify storage hygrave:common configs.text.grave_appearance.grave_model.player_head.render_icd set value "§c❌"
 execute if data storage hygrave:common configs.value.grave_appearance.grave_model.player_head{render_icd:1b} run data modify storage hygrave:common configs.text.grave_appearance.grave_model.player_head.render_icd set value "§a✔"
 
+## Glowing
+execute unless score (grave_appearance/grave_model/player_head/glowing) hygrave.config matches 0..1 run scoreboard players set (grave_appearance/grave_model/player_head/glowing) hygrave.config 1
+
+execute store result storage hygrave:common configs.value.grave_appearance.grave_model.player_head.glowing byte 1 run scoreboard players get (grave_appearance/grave_model/player_head/glowing) hygrave.config
+
+execute if data storage hygrave:common configs.value.grave_appearance.grave_model.player_head{glowing:0b} run data modify storage hygrave:common configs.text.grave_appearance.grave_model.player_head.glowing set value "§c❌"
+execute if data storage hygrave:common configs.value.grave_appearance.grave_model.player_head{glowing:1b} run data modify storage hygrave:common configs.text.grave_appearance.grave_model.player_head.glowing set value "§a✔"
+
 ##> Vertical Position
 execute unless score (grave_appearance/grave_model/player_head/vertical_position) hygrave.config matches 0..4 run scoreboard players set (grave_appearance/grave_model/player_head/vertical_position) hygrave.config 0
 
