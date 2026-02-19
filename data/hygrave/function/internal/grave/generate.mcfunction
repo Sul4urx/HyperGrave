@@ -34,12 +34,9 @@ xp set @s 0 points
 
 
 ## This item display is the player head part of the grave
-summon minecraft:item_display ~ ~ ~ {Tags: ["hygrave.grave.player_head", "hygrave.temp.grave.player_head"], item: {id: "minecraft:player_head"}, Glowing:1b, transformation: {left_rotation: [0f,0f,0f,1f], right_rotation: [0f,0f,0f,1f], scale: [1f,1f,1f], translation: [0f,0.75f,0f]}, shadow_radius: 0.5, shadow_strength: 0.75}
+summon minecraft:item_display ~ ~ ~ {Tags: ["hygrave.grave.player_head", "hygrave.temp.grave.player_head"], item: {id: "minecraft:player_head"}, transformation: {left_rotation: [0f,0f,0f,1f], right_rotation: [0f,0f,0f,1f], scale: [1f,1f,1f], translation: [0f,0.75f,0f]}, shadow_radius: 0.5, shadow_strength: 0.75}
 
 item modify entity @n[tag=hygrave.temp.grave.player_head] contents {function:"minecraft:fill_player_head",entity:"this"}
-
-## If Glowing Graves config is false, set the grave to not glow
-execute if score (grave_appearance/grave_model/player_head/glowing) hygrave.config matches 0 run data modify entity @n[tag=hygrave.temp.grave.player_head] Glowing set value 0b
 
 ## Copy items from player to grave
 execute if score (general/mod_compatibility_mode) hygrave.config matches 0 run function hygrave:internal/grave/generate/copy_items
