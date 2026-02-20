@@ -23,13 +23,13 @@ title @s actionbar {\
   "translate": "hygrave.change_config_message.icd.item_cycle_cooldown.success",\
   "fallback": "Successfully changed the Item Cycle Cooldown config from %s ticks to %s ticks.",\
   "with": [\
-    {"storage": "hygrave:common", "nbt": "configs.text.graves.icd.item_cycle_cooldown"},\
+    {"storage": "hygrave:common", "nbt": "configs.text.grave_interaction.icd_properties.item_cycle_cooldown"},\
     {"storage": "hygrave:common", "nbt": "temp.config.value"}\
   ]\
 }
 
 ## If success, change value
-execute store result score (graves/icd/item_cycle_cooldown) hygrave.config run data get storage hygrave:common temp.config.value
+execute store result score (grave_interaction/icd_properties/item_cycle_cooldown) hygrave.config run data get storage hygrave:common temp.config.value
 
 ## Update configs
 function hygrave:internal/config/register

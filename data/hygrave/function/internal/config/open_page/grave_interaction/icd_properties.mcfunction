@@ -31,7 +31,7 @@ tellraw @s [\
     "translate": "§7[%s§7]",\
     "with": [\
       {\
-        "nbt": "configs.text.graves.icd.activate_for",\
+        "nbt": "configs.text.grave_interaction.icd_properties.activate_for",\
         "storage": "hygrave:common",\
         "color": "aqua"\
       }\
@@ -45,7 +45,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/toggle/graves/icd/activate_for"\
+      "command": "/function hygrave:internal/config/toggle/grave_interaction/icd_properties/activate_for"\
     }\
   }\
 ]
@@ -67,7 +67,7 @@ tellraw @s [\
     "translate": "§7[%s§7]",\
     "with": [\
       {\
-        "nbt": "configs.text.graves.icd.item_cycle_cooldown",\
+        "nbt": "configs.text.grave_interaction.icd_properties.item_cycle_cooldown",\
         "storage": "hygrave:common",\
         "color": "aqua"\
       }\
@@ -81,7 +81,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "suggest_command",\
-      "command": "/function hygrave:internal/config/change/graves/icd/item_cycle_cooldown {value: ?}"\
+      "command": "/function hygrave:internal/config/change/grave_interaction/icd_properties/item_cycle_cooldown {value: ?}"\
     }\
   }\
 ]
@@ -103,7 +103,7 @@ tellraw @s [\
     "translate": "§7[%s§7]",\
     "with": [\
       {\
-        "nbt": "configs.text.graves.icd.revert_sneaking_behavior",\
+        "nbt": "configs.text.grave_interaction.icd_properties.revert_sneaking_behavior",\
         "storage": "hygrave:common",\
         "color": "aqua"\
       }\
@@ -117,7 +117,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/toggle/graves/icd/revert_sneaking_behavior"\
+      "command": "/function hygrave:internal/config/toggle/grave_interaction/icd_properties/revert_sneaking_behavior"\
     }\
   }\
 ]
@@ -139,7 +139,7 @@ tellraw @s [\
     "translate": "§7[%s§7]",\
     "with": [\
       {\
-        "nbt": "configs.text.graves.icd.switch_text_display",\
+        "nbt": "configs.text.grave_interaction.icd_properties.switch_text_display",\
         "storage": "hygrave:common",\
         "color": "aqua"\
       }\
@@ -153,7 +153,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/toggle/graves/icd/switch_text_display"\
+      "command": "/function hygrave:internal/config/toggle/grave_interaction/icd_properties/switch_text_display"\
     }\
   }\
 ]
