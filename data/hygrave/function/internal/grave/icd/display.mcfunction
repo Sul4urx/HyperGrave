@@ -5,4 +5,4 @@ data modify entity @n[tag=hygrave.temp.grave.icd] item set from entity @s item.c
 
 ## Item cycle cooldown
 scoreboard players add @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown 1
-execute if score @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown >= (graves/icd/item_cycle_cooldown) hygrave.config run function hygrave:internal/grave/icd/cycle_items
+execute if score @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown >= (grave_interaction/icd_properties/item_cycle_cooldown) hygrave.config run function hygrave:internal/grave/icd/cycle_items

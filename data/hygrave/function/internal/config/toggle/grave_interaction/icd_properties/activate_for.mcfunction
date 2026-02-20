@@ -1,8 +1,8 @@
 #<< config/open_page/grave_interaction/icd_properties
 
 ## Toggle value
-scoreboard players add (graves/icd/switch_text_display) hygrave.config 1
-execute if score (graves/icd/switch_text_display) hygrave.config matches 2.. run scoreboard players set (graves/icd/switch_text_display) hygrave.config 0
+scoreboard players add (grave_interaction/icd_properties/activate_for) hygrave.config 1
+execute if score (grave_interaction/icd_properties/activate_for) hygrave.config matches 3.. run scoreboard players set (grave_interaction/icd_properties/activate_for) hygrave.config 0
 
 ## Play sound
 playsound minecraft:ui.button.click

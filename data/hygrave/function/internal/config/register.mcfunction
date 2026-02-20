@@ -128,7 +128,6 @@ function hygrave:internal/config/register/requirements/grave_looting_requirement
 function hygrave:internal/config/register/requirements/grave_remote_looting_requirements
 function hygrave:internal/config/register/requirements/grave_generation_requirements
 
-function hygrave:internal/config/register/graves/icd
 function hygrave:internal/config/register/graves/item_distribution
 function hygrave:internal/config/register/graves/slot_distribution
 function hygrave:internal/config/register/graves/grave_placement_restrictions
@@ -137,6 +136,7 @@ function hygrave:internal/config/register/graves/text_display/text
 function hygrave:internal/config/register/graves/text_display/icd_text
 function hygrave:internal/config/register/graves/xp_distribution
 
+function hygrave:internal/config/register/grave_interaction/icd_properties
 function hygrave:internal/config/register/grave_interaction/click_behavior
 
 function hygrave:internal/config/register/grave_appearance/grave_model
