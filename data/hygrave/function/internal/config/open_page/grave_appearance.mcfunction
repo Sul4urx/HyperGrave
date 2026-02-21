@@ -35,6 +35,36 @@ tellraw @s [\
   }\
 ]
 
+
+##> Text Display Properties
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.text_display_properties",\
+    "fallback": "   Text Display Properties: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.text_display_properties",\
+        "fallback": "The properties of the text display part of the grave, which normally shows the owner's name, the GID and the despawn time."\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[§b>§7]",\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_sub_page_open_description.text_display_properties",\
+        "fallback": "Click to open the \"§lText Display Properties§r\" sub-page."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties"\
+    }\
+  }\
+]
+
 ##
 tellraw @s ""
 

@@ -1,4 +1,4 @@
-#<< config/open_page/graves/text_display_properties
+#<< config/open_page/grave_appearance/text_display_properties
 
 ##
 tellraw @s ""
@@ -27,9 +27,9 @@ tellraw @s [\
     "fallback": "   Line 1:"\
   }\
 ]
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 1, text_idx: 1}
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 1, text_idx: 2}
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 1, text_idx: 3}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 1, text_idx: 1}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 1, text_idx: 2}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 1, text_idx: 3}
 
 tellraw @s [\
   "\n",\
@@ -38,9 +38,9 @@ tellraw @s [\
     "fallback": "   Line 2:"\
   }\
 ]
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 2, text_idx: 1}
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 2, text_idx: 2}
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 2, text_idx: 3}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 2, text_idx: 1}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 2, text_idx: 2}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 2, text_idx: 3}
 
 tellraw @s [\
   "\n",\
@@ -49,9 +49,9 @@ tellraw @s [\
     "fallback": "   Line 3:"\
   }\
 ]
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 3, text_idx: 1}
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 3, text_idx: 2}
-function hygrave:internal/config/open_page/graves/text_display_properties/text/show_field {line_idx: 3, text_idx: 3}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 3, text_idx: 1}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 3, text_idx: 2}
+function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field {line_idx: 3, text_idx: 3}
 
 
 ##
@@ -73,7 +73,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves/text_display_properties"\
+          "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties"\
         }\
       },\
       {\
@@ -87,7 +87,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves/text_display_properties/text"\
+          "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text"\
         }\
       }\
     ]\

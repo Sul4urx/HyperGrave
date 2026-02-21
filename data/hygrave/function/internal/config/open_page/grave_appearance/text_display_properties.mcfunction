@@ -1,4 +1,4 @@
-#<< config/open_page/main
+#<< config/open_page/grave_appearance
 
 ##
 tellraw @s ""
@@ -8,7 +8,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.text_display_properties",\
-    "fallback": " Graves §7/ §r§lText Display Properties:"\
+    "fallback": " Grave Appearance §7/ §r§lText Display Properties:"\
   }\
 ]
 
@@ -36,7 +36,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/graves/text_display_properties/text"\
+      "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text"\
     }\
   }\
 ]
@@ -65,7 +65,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/graves/text_display_properties/icd_text"\
+      "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties/icd_text"\
     }\
   }\
 ]
@@ -83,13 +83,13 @@ tellraw @s [\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
-            "translate": "hygrave.config_go_back_description.graves",\
-            "fallback": "Click to go back to page 'Graves'.",\
+            "translate": "hygrave.config_go_back_description.grave_appearance",\
+            "fallback": "Click to go back to page 'Grave Style & Appearance'.",\
           }\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page/grave_appearance"\
         }\
       },\
       {\
@@ -103,7 +103,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves/text_display_properties"\
+          "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties"\
         }\
       }\
     ]\
