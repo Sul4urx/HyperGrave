@@ -250,8 +250,8 @@ tellraw @s [\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
-            "translate": "hygrave.config_go_back_description.graves",\
-            "fallback": "Click to go back to page 'Grave Interaction'.",\
+            "translate": "hygrave.config_go_back_description.grave_appearance",\
+            "fallback": "Click to go back to page 'Grave Style & Appearance'.",\
           }\
         },\
         "click_event": {\
