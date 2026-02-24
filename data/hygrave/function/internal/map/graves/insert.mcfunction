@@ -5,6 +5,11 @@ data modify storage hygrave:common graves append value {}
 data modify storage hygrave:common graves[-1].contents.items set from entity @s item.components.minecraft:custom_data.hygrave:common.items
 data modify storage hygrave:common graves[-1].contents.xp set from entity @s item.components.minecraft:custom_data.hygrave:common.xp
 
+##> The difference between contents.items vs data.items:
+##> contents.items: This one will change depending on the items that are currently stored in the grave. If an item is taken from the grave using ICD, that item will be removed from contents.items . If the grave is broken, the list will be emptied.
+##> data.items: This one will never change after grave generation. Useful for Grave Infos and stuff like that.
+data modify storage hygrave:common graves[-1].data.items set from entity @s item.components.minecraft:custom_data.hygrave:common.items
+
 ## Set data (status, position, dimension, etc)
 
 ##> Status

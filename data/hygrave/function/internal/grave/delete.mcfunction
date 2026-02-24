@@ -10,3 +10,6 @@ execute on passengers run kill @s[tag=hygrave.grave.model.decoration_1]
 execute on passengers run kill @s[tag=hygrave.grave.model.decoration_2]
 execute on passengers run kill @s[tag=hygrave.grave.icd]
 kill @s[tag=hygrave.grave.base]
+
+## Clear all items
+data modify storage hygrave:common graves[-1].contents.items set value []
