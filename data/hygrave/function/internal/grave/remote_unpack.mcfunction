@@ -70,5 +70,8 @@ data modify storage hygrave:common graves[-1].data.status.destroyer set from sto
 
 data modify storage hygrave:common players[{temp:{owner:1b}}].graves[-1].data.status set from storage hygrave:common graves[-1].data.status
 
+## Clear all items
+data modify storage hygrave:common graves[-1].contents.items set value []
+
 ## Remove temp tag
 tag @s remove hygrave.temp.grave.interactor
