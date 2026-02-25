@@ -112,12 +112,6 @@ execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches
   },\
   "with": [\
     {\
-      "nbt": "graves[-1].data.pos_integer[]",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "separator": "§7, "\
-    },\
-    {\
       "nbt": "graves[-1].data.dimension.name",\
       "color": "green",\
       "storage": "hygrave:common"\
