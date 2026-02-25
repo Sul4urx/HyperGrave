@@ -366,7 +366,7 @@ tellraw @s {\
 tellraw @s ""
 
 ## Menu
-$execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
+$tellraw @s {\
   "translate": "hygrave.grave_info.menu",\
   "fallback": "§7[%s§7|%s§7|%s§7]",\
   "with": [\
@@ -398,42 +398,6 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
       "click_event": {\
         "action": "suggest_command",\
         "command": "/trigger hygrave.remote_loot_grave set $(gid)"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.grave_info.menu.back",\
-      "fallback": " §b>",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.back",\
-          "fallback": "Click to view info about next grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info.view_next set $(gid)"\
-      }\
-    }\
-  ]\
-}
-$execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.menu_no_remote_unpack",\
-  "fallback": "§7[%s§7| Loot |%s§7]",\
-  "with": [\
-    {\
-      "translate": "hygrave.grave_info.menu.back",\
-      "fallback": "§b< ",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.back",\
-          "fallback": "Click to view info about previous grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info.view_previous set $(gid)"\
       }\
     },\
     {\
