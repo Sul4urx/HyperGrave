@@ -34,8 +34,9 @@ execute if score (grave_interaction/icd_properties/activate_for) hygrave.config 
 
 ## ICD management
 function hygrave:internal/grave/icd/display
-execute if entity @n[tag=hygrave.temp.grave.icd_activator] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 1b
+execute if entity @n[tag=hygrave.temp.grave.icd_activator] if data entity @s item.components.minecraft:custom_data.hygrave:common.items[0] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 1b
 execute unless entity @n[tag=hygrave.temp.grave.icd_activator] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 0b
+execute unless data entity @s item.components.minecraft:custom_data.hygrave:common.items[0] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 0b
 
 ## Stylize grave
 execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} run function hygrave:internal/grave/icd/model
