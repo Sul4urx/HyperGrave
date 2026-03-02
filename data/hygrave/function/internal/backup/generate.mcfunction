@@ -9,6 +9,10 @@ function hygrave:internal/map/players/lookup with storage hygrave:common temp.ar
 ## Add backup data
 data modify storage hygrave:common backups append value {}
 
+## If Mod Compatibility Mode is disabled, update PContents
+## So that it uses the player's inventory in current tick
+execute unless score (general/mod_compatibility_mode) hygrave.config matches 1.. run function hygrave:internal/map/players/store_pcontents
+
 ## For players, the offhand and armor slots are
 ## stored in a compound, not an array
 

@@ -85,8 +85,9 @@ scoreboard players enable @a hygrave.remote_loot_grave
 ## Grave management
 execute as @e[tag=hygrave.grave.base] at @s run function hygrave:internal/grave/main
 
-## Player map management
-execute as @a at @s run function hygrave:internal/map/players/main
+## Player map management (The functions inside only need to be run
+## if Mod Compatibility Mode is enabled)
+execute if score (general/mod_compatibility_mode) hygrave.config matches 1.. as @a at @s run function hygrave:internal/map/players/main
 
 ## Remove temp tags
 tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
