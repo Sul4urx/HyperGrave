@@ -33,7 +33,7 @@ execute if score (grave_interaction/icd_properties/activate_for) hygrave.config 
 execute if score (grave_interaction/icd_properties/activate_for) hygrave.config matches 2 if score (grave_interaction/icd_properties/revert_sneaking_behavior) hygrave.config matches 1 run tag @a[distance=..4,predicate=!hygrave:is_sneaking] add hygrave.temp.grave.icd_activator
 
 ## ICD management
-function hygrave:internal/grave/icd/display
+execute unless data entity @n[tag=hygrave.temp.grave.icd] {view_range:0.0f} run function hygrave:internal/grave/icd/display
 execute if entity @n[tag=hygrave.temp.grave.icd_activator] if data entity @s item.components.minecraft:custom_data.hygrave:common.items[0] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 1b
 execute unless entity @n[tag=hygrave.temp.grave.icd_activator] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 0b
 execute unless data entity @s item.components.minecraft:custom_data.hygrave:common.items[0] run data modify entity @s item.components.minecraft:custom_data.hygrave:common.icd_activated set value 0b
