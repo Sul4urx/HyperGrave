@@ -60,7 +60,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_model.decoration_1.render",\
-        "fallback": "Whether grave decoration 1 should render at all (when ICD is not activated).\n\n§8Default: ❌"\
+        "fallback": "Whether grave decoration 1 should render at all (when ICD is not activated).\n\n§6ℹ Requires Sul4ur's Global Resource Pack for decoration to render properly.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -95,7 +95,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_model.decoration_1.render_icd",\
-        "fallback": "Whether grave decoration 1 should render at all (when ICD is activated).\n\n§8Default: ❌"\
+        "fallback": "Whether grave decoration 1 should render at all (when ICD is activated).\n\n§6ℹ Requires Sul4ur's Global Resource Pack for decoration to render properly.\n\n§8Default: ❌"\
       }\
     }\
   },\
