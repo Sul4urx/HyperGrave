@@ -1,4 +1,5 @@
-#<< config/open_page/grave_interaction/click_behavior
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_interaction/click_behavior
 
 ## Toggle value
 scoreboard players add (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config 1

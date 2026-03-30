@@ -1,4 +1,5 @@
-#<< grave/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/main
 
 ## Convert from ticks to seconds, minutes and hours
 scoreboard players operation .despawn_time.seconds hygrave.temp_var = @s hygrave.despawn_time

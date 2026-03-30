@@ -1,4 +1,6 @@
-#<< grave/generate/copy_items
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/distribute_items
+#@>   function hygrave:internal/grave/generate/distribute_items/remove
 
 # Loop through all items stored in the grave
 # and if any of the items match the item predicates 

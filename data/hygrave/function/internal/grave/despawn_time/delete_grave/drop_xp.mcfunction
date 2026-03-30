@@ -1,4 +1,5 @@
-#<< grave/despawn_time/delete_grave
+#@> Executed from:
+#@>   function hygrave:internal/grave/despawn_time/delete_grave
 
 ## Spawn XP orb
 summon minecraft:experience_orb ~ ~ ~ {Tags: ["hygrave.temp.grave.xp_to_drop", "hygrave.grave.xp"], Age: -32768s}

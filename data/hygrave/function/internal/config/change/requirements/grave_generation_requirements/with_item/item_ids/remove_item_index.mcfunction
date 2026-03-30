@@ -1,4 +1,5 @@
-#<< config/open_page/requirements/grave_generation_requirements
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/requirements/grave_generation_requirements
 
 ## Subtract 1 from index
 $scoreboard players set .index hygrave.temp_var $(index)

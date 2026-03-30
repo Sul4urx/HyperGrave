@@ -1,4 +1,5 @@
-#<< config/change/graves/item_distribution/grave_generation_success/remove/item_ids/remove_item_index
+#@> Executed from:
+#@>   function hygrave:internal/config/change/graves/item_distribution/grave_generation_success/remove/item_ids/remove_item_index
 
 ## Error if item does not exist
 $execute if data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_items[$(index)] run scoreboard players set .item_id_list_is_valid hygrave.temp_var 1

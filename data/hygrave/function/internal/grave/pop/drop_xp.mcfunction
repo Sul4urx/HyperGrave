@@ -1,4 +1,5 @@
-#<< grave/pop
+#@> Executed from:
+#@>   function hygrave:internal/grave/pop
 
 ## Spawn XP orb
 summon minecraft:experience_orb ~ ~ ~ {Tags: ["hygrave.temp.grave.xp_to_give_back", "hygrave.grave.xp"], Age: -32768s}

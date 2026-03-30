@@ -1,4 +1,6 @@
-#<< config/open_page/grave_appearance/grave_model
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance/grave_model/player_head_expanded
+
 $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not valid

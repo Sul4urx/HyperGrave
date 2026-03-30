@@ -1,4 +1,5 @@
-#<< backup/show_info
+#@> Executed from:
+#@>   function hygrave:internal/backup/show_info
 
 ## The text to show for each slot
 ## This will be outputted as macro later

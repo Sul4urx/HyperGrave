@@ -1,5 +1,6 @@
-#<< load
-#<< loop/1s
+#@> Executed from:
+#@>   function hygrave:internal/load
+#@>   function hygrave:internal/loop/1s
 
 ## Schedule function to run again
 schedule function hygrave:internal/loop/1s 1s

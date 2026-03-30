@@ -1,4 +1,5 @@
-#<< grave/generate
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
 
 ## Game Modes
 scoreboard players set .check_requirements.gamemodes hygrave.temp_var 1

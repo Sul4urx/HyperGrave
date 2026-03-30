@@ -1,4 +1,5 @@
-#<< config/change/graves/slot_distribution/grave_generation_success
+#@> Executed from:
+#@>   function hygrave:internal/config/change/graves/slot_distribution/grave_generation_success
 
 ## Copy the config value
 data modify storage hygrave:common temp.config.value2 set from storage hygrave:common temp.config.value

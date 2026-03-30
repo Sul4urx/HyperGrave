@@ -1,5 +1,6 @@
-#<< grave/main
-#<< grave/icd/display
+#@> Executed from:
+#@>   function hygrave:internal/grave/model
+#@>   function hygrave:internal/grave/icd/model
 
 ## Rotate
 $rotate @s ~$(rotation_speed) ~

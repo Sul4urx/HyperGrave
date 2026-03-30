@@ -1,4 +1,6 @@
-#<< grave/unpack/give_items/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/unpack/give_items/loop
+#@>   function hygrave:internal/grave/unpack/give_items/main
 
 ## Store the slot of the item in a score
 scoreboard players set .slot hygrave.temp_var -32768

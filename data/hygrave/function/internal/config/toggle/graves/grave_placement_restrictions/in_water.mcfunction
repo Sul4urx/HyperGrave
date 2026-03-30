@@ -1,4 +1,5 @@
-#<< config/open_page/graves/grave_placement_restrictions
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/grave_placement_restrictions
 
 ## Toggle value
 scoreboard players add (graves/grave_placement_restrictions_restrictions/in_water) hygrave.config 1

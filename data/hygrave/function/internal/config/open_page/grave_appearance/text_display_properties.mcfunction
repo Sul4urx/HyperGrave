@@ -1,4 +1,5 @@
-#<< config/open_page/grave_appearance
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance
 
 ##
 tellraw @s ""

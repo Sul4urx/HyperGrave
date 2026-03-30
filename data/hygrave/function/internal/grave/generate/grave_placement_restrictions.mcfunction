@@ -1,4 +1,6 @@
-#<< grave/generate
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/force_generate
 
 ## If min and max build height limits have not been
 ## defined for this dimension, define them

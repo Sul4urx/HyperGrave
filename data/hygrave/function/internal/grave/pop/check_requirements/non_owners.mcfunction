@@ -1,5 +1,6 @@
-#<< grave/pop
-#<< grave/pop_icd_item
+#@> Executed from:
+#@>   function hygrave:internal/grave/pop
+#@>   function hygrave:internal/grave/pop_icd_item
 
 ## Game Modes
 scoreboard players set .check_requirements.gamemodes hygrave.temp_var 1

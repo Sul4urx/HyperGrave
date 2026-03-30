@@ -1,4 +1,5 @@
-#<< grave/generate/take_xp/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/take_xp/main
 
 ## Convert levels to total
 ## The formulas differ for different ranges of levels

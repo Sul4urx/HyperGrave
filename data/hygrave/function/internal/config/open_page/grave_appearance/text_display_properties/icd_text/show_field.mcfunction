@@ -1,4 +1,5 @@
-#<< config/open_page/grave_appearance/text_display_properties
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance/text_display_properties/icd_text
 
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: nothing} run tellraw @s [\
   {\

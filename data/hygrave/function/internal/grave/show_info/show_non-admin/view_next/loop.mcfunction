@@ -1,5 +1,6 @@
-#<< grave/show_info/show_non-admin/view_next/loop
-#<< grave/show_info/show_non-admin/view_next
+#@> Executed from:
+#@>   function hygrave:internal/grave/show_info/show_non-admin/view_next
+#@>   function hygrave:internal/grave/show_info/show_non-admin/view_next/loop
 
 ## If loop goes on for about 128 times, break out of loop
 execute if score .loop_count hygrave.temp_var matches 0 run return -1

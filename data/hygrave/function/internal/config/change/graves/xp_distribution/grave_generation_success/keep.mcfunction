@@ -1,4 +1,6 @@
-#<< config/open_page/graves/xp_distribution
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/xp_distribution
+
 $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not valid

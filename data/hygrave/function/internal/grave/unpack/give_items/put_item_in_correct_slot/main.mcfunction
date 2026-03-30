@@ -1,4 +1,5 @@
-#<< grave/unpack/give_items/loop
+#@> Executed from:
+#@>   function hygrave:internal/grave/unpack/give_items/loop
 
 ## Set .slot_is_full to true if the player already has item in that slot
 $execute store success score .slot_is_full hygrave.temp_var if data entity @p[tag=hygrave.temp.grave.interactor] Inventory[{Slot:$(Slot)b}]

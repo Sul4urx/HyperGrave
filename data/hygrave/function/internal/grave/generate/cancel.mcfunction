@@ -1,4 +1,5 @@
-#<< grave/generate/cancel
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
 
 ## Distribute XP
 function hygrave:internal/grave/generate/cancel/distribute_xp

@@ -1,4 +1,6 @@
-#<< config/open_page/general
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/general
+
 $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not valid

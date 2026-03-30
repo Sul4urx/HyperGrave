@@ -1,4 +1,5 @@
-#<! reinstall
+#@> Executed from:
+#@>   function hygrave:run/reinstall
 
 ## Check if the confirmation code was entered correctly
 $data modify storage hygrave:common temp.reinstall_confirm set value "$(confirm)"

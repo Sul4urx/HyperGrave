@@ -1,3 +1,5 @@
+#@> Unused
+
 ## Store the slot operation
 ## The operation will later be applied
 data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[{Slot:0b}].components.minecraft:custom_data.hygrave:common.temp.item_operation set from storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success.h1

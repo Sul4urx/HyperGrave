@@ -1,4 +1,5 @@
-#<< grave/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/main
 
 ## Bring the nessecary elements of maps to last index so that we can work with them
 

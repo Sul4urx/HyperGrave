@@ -1,4 +1,5 @@
-#<< config/open_page/grave_interaction/icd_properties
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_interaction/icd_properties
 
 ## Toggle value
 scoreboard players add (grave_interaction/icd_properties/revert_sneaking_behavior) hygrave.config 1

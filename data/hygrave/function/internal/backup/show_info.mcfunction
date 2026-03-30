@@ -1,4 +1,5 @@
-#<! admin/show_backup_info
+#@> Executed from:
+#@>   function hygrave:run/backup/show_backup_info
 
 ## Read the input bid and store it
 $data modify storage hygrave:common temp.args.bid set value $(bid)

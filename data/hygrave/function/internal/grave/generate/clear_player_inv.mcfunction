@@ -1,4 +1,6 @@
-#<< grave/generate
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/force_generate
 
 ## For each item slot in grave, check if it is occupied by an item
 ## and if it is, remove the slot from the player

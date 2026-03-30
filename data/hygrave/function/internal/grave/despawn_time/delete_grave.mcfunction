@@ -1,4 +1,5 @@
-#<< grave/despawn_time/decrease
+#@> Executed from:
+#@>   function hygrave:internal/grave/despawn_time/decrease
 
 ## Update status
 data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"despawned"}

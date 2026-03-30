@@ -1,4 +1,5 @@
-#<! backup/restore_all_items
+#@> Executed from:
+#@>   function hygrave:run/backup/restore_all_items
 
 ## Bring the nessecary elements of maps to last index so that we can work with them
 

@@ -1,4 +1,6 @@
-#<< config/open_page/requirements/grave_remote_looting_requirements
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/requirements/grave_remote_looting_requirements
+
 $data modify storage hygrave:common temp.config.value set value "$(value)"
 
 ## Error if list is not valid

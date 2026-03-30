@@ -1,4 +1,5 @@
-#<< config/change/graves/slot_distribution/grave_generation_success
+#@> Executed from:
+#@>   function hygrave:internal/config/change/graves/slot_distribution/grave_generation_success
 
 # Translate slot names in keys to slot ids
 # Example: {h1: op, h2: op, offhand: op, ...} to {0: op, 1: op, "-106": op, ...}

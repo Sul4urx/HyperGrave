@@ -1,4 +1,5 @@
-#<< config/open_page/grave_appearance/grave_model
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance/grave_model/icd_item_expanded
 
 ## Toggle value
 scoreboard players add (grave_appearance/grave_model/icd_item/render_icd) hygrave.config 1

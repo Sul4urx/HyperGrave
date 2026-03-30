@@ -1,4 +1,5 @@
-#<< grave/show_info/show_items/add_item_value
+#@> Executed from:
+#@>   function hygrave:internal/grave/show_info/show_items/add_item_value
 
 # Mark the square representing the item and add a tooltip for the item
 $data modify storage hygrave:common temp.text_to_show.slots.$(slot_id) set value {\

@@ -1,4 +1,6 @@
-#<< map/dimensions/insert/height_limit/main
+#@> Executed from:
+#@>   function hygrave:internal/map/dimensions/insert/height_limit/main
+#@>   function hygrave:internal/map/dimensions/insert/height_limit/test/max
 
 ## If these two conditions both return false:
 

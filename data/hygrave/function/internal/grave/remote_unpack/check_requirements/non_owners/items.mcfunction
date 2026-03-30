@@ -1,4 +1,5 @@
-#<< grave/remote_unpack/check_requirements/non_owners
+#@> Executed from:
+#@>   function hygrave:internal/grave/remote_unpack/check_requirements/non_owners
 
 ## Check if item passes provided predicate
 ## If it does, set .check_requirements.items score to true

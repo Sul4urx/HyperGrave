@@ -1,5 +1,6 @@
-#<< backup/show_info/view_next/loop
-#<< backup/show_info/view_next
+#@> Executed from:
+#@>   function hygrave:internal/backup/show_info/view_next
+#@>   function hygrave:internal/backup/show_info/view_next/loop
 
 ## If loop goes on for about 128 times, break out of loop
 execute if score .loop_count hygrave.temp_var matches 0 run return -1

@@ -1,4 +1,5 @@
-#<< config/open_page/graves/item_distribution
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/item_distribution
 
 ## Subtract 1 from index
 $scoreboard players set .index hygrave.temp_var $(index)

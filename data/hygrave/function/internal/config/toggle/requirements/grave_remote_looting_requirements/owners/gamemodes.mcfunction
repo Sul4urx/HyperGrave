@@ -1,4 +1,5 @@
-#<< config/open_page/requirements/grave_remote_looting_requirements
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/requirements/grave_remote_looting_requirements
 
 ## Toggle value
 $scoreboard players add (requirements/grave_remote_looting_requirements/owners/gamemodes/$(gamemode)) hygrave.config 1

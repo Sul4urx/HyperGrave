@@ -1,4 +1,5 @@
-#<< event/player/player_tried_to_remotely_unpack_grave
+#@> Executed from:
+#@>   function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
 
 ## If Grave doesn't exist, throw error
 $execute unless data storage hygrave:common active_graves[{data:{gid:$(gid)}}] run return run title @s actionbar {\

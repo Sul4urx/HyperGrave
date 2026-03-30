@@ -1,4 +1,5 @@
-#<< config/open_page/graves/show_grave_info
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/show_grave_info
 
 ## Toggle value
 scoreboard players add (graves/show_grave_info/bo/xp/after_death) hygrave.config 1

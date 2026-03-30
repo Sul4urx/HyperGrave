@@ -1,6 +1,9 @@
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/force_generate
 
 ##> Spawn an item, which is used to check whether
-##> an item should be kept, removed or taken.
+##> an item should be kept, removed or taken
 execute if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run summon minecraft:item ~ ~32767 ~ {Item:{id:"minecraft:clock"},Tags:["hygrave.temp.item_distribution_manipulator"]}
 
 ##> Apply operations 'keep' and 'remove'

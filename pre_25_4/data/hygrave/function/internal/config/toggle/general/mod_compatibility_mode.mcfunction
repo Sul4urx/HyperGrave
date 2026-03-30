@@ -1,4 +1,5 @@
-#<< config/open_page/general
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/general
 
 ## Change game rules
 gamerule keepInventory false

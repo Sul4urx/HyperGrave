@@ -1,4 +1,5 @@
-#<< loop/1t
+#@> Executed from:
+#@>   function hygrave:internal/loop/1t
 
 ## Bring the nessecary elements of maps to last index so that we can work with them
 

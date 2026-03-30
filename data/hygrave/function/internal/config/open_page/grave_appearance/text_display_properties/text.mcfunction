@@ -1,4 +1,5 @@
-#<< config/open_page/grave_appearance/text_display_properties
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance/text_display_properties
 
 ##
 tellraw @s ""

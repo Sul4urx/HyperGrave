@@ -1,4 +1,5 @@
-#<< grave/remote_unpack
+#@> Executed from:
+#@>   function hygrave:internal/grave/remote_unpack
 
 ## Game Modes
 scoreboard players set .check_requirements.gamemodes hygrave.temp_var 1

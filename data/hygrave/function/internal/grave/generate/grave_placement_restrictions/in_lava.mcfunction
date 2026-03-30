@@ -1,4 +1,6 @@
-#<< grave/generate/grave_placement_restrictions
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/grave_placement_restrictions
+#@>   function hygrave:internal/grave/generate/grave_placement_restrictions/in_lava
 
 ## Remove one from iteration count
 scoreboard players remove .loop_count hygrave.temp_var 1

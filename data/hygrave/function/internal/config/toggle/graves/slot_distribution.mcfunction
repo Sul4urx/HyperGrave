@@ -1,4 +1,5 @@
-#<< config/open_page/graves/slot_distribution
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/slot_distribution
 
 ## Toggle value
 $execute unless data storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success{'$(slot)': 'remove'} unless data storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success{'$(slot)': 'keep'} unless data storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success{'$(slot)': 'take'} run data modify storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success.'$(slot)' set value 'r'

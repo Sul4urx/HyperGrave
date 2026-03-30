@@ -1,4 +1,7 @@
-#<< grave/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/main
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/force_generate
 
 # Stylize grave if ICD is not activated
 

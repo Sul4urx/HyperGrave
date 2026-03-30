@@ -1,4 +1,5 @@
-#<< config/change/requirements/grave_remote_looting_requirements/owners/item_ids/remove_item_index
+#@> Executed from:
+#@>   function hygrave:internal/config/change/requirements/grave_remote_looting_requirements/owners/item_ids/remove_item_index
 
 ## Error if item does not exist
 $execute if data storage hygrave:common configs.value.requirements.grave_remote_looting_requirements.owners.item_ids[$(index)] run scoreboard players set .item_id_list_is_valid hygrave.temp_var 1

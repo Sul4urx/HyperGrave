@@ -1,4 +1,5 @@
-#<< config/change/graves/item_distribution/grave_generation_success/keep/ench_ids/remove_ench_index
+#@> Executed from:
+#@>   function hygrave:internal/config/change/graves/item_distribution/grave_generation_success/keep/ench_ids/remove_ench_index
 
 ## Error if item does not exist
 $execute if data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_enchs[$(index)] run scoreboard players set .ench_id_list_is_valid hygrave.temp_var 1

@@ -1,4 +1,5 @@
-#<< loop/1t
+#@> Executed from:
+#@>   function hygrave:internal/loop/1t
 
 ## Check if the grave exists in data `active_graves` in storage `hygrave:common`
 ## If not, delete the grave

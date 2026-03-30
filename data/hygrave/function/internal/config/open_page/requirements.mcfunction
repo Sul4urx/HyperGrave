@@ -1,4 +1,5 @@
-#<< config/open_page/main
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/main
 
 ##
 tellraw @s ""

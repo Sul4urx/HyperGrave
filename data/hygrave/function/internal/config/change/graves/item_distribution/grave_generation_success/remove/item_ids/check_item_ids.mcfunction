@@ -1,5 +1,6 @@
-#<< config/change/graves/item_distribution/grave_generation_success/remove/item_ids/add_item
-#<< config/change/graves/item_distribution/grave_generation_success/remove/item_ids/change_list
+#@> Executed from:
+#@>   function hygrave:internal/config/change/graves/item_distribution/grave_generation_success/remove/item_ids/add_item
+#@>   function hygrave:internal/config/change/graves/item_distribution/grave_generation_success/remove/item_ids/change_list
 
 $execute if predicate {\
   condition: "minecraft:entity_properties",\

@@ -1,3 +1,4 @@
-#<< grave/remote_unpack/check_requirements/non_owners
+#@> Executed from:
+#@>   function hygrave:internal/grave/remote_unpack/check_requirements/non_owners
 
 $item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-$(item_remove_count),add:true}

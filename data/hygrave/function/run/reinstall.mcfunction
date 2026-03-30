@@ -1,3 +1,5 @@
+#@> Executed by the player
+
 tellraw @s [\
     {\
         "translate": "hygrave.reinstall.confirmation_ask",\

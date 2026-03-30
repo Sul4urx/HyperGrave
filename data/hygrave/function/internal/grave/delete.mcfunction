@@ -1,7 +1,8 @@
-#<< grave/pop
-#<< grave/main
-#<< grave/unpack
-#<< grave/despawn_time/delete_grave
+#@> Executed from:
+#@>   function hygrave:internal/grave/pop
+#@>   function hygrave:internal/grave/main
+#@>   function hygrave:internal/grave/unpack
+#@>   function hygrave:internal/grave/despawn_time/delete_grave
 
 execute on passengers run kill @s[tag=hygrave.grave.interaction]
 execute on passengers run kill @s[tag=hygrave.grave.player_head]

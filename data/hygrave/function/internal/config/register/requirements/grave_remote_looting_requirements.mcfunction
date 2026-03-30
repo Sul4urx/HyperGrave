@@ -1,4 +1,5 @@
-#<< config/register
+#@> Executed from:
+#@>   function hygrave:internal/config/register
 
 # Register sub-configs for Grave Remote Looting Requirements config
 

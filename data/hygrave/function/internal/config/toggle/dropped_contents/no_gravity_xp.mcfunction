@@ -1,4 +1,5 @@
-#<< config/open_page/dropped_contents
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/dropped_contents
 
 ## Toggle value
 scoreboard players add (dropped_contents/no_gravity_xp) hygrave.config 1

@@ -1,4 +1,5 @@
-#<< grave/generate/take_xp/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/take_xp/calculate_total/main
 
 ## If player's levels is a number from 0 to 16,
 ## the formula for converting levels to total xp is:

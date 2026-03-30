@@ -1,4 +1,5 @@
-#<! grave/admin/generate
+#@> Executed from:
+#@>   function hygrave:run/grave/admin/generate
 
 ## Bring the nessecary elements of maps to last index so that we can work with them
 

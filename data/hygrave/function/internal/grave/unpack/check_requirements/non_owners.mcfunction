@@ -1,5 +1,6 @@
-#<< grave/unpack
-#<< grave/unpack_icd_item
+#@> Executed from:
+#@>   function hygrave:internal/grave/unpack
+#@>   function hygrave:internal/grave/unpack_icd_item
 
 ## Game Modes
 scoreboard players set .check_requirements.gamemodes hygrave.temp_var 1

@@ -1,4 +1,5 @@
-#<< config/open_page/grave_appearance/text_display_properties/text
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text/show_field
 
 ## Toggle value
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text{bold: 1b} run data modify storage hygrave:common configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold set value 2b

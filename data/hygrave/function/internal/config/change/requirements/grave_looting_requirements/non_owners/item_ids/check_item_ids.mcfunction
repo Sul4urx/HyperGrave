@@ -1,5 +1,6 @@
-#<< config/change/requirements/grave_looting_requirements/non_owners/item_ids/add_item
-#<< config/change/requirements/grave_looting_requirements/non_owners/item_ids/change_list
+#@> Executed from:
+#@>   function hygrave:internal/config/change/requirements/grave_looting_requirements/non_owners/item_ids/add_item
+#@>   function hygrave:internal/config/change/requirements/grave_looting_requirements/non_owners/item_ids/change_list
 
 $execute if predicate {\
   condition: "minecraft:entity_properties",\

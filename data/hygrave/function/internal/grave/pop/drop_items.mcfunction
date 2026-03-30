@@ -1,4 +1,6 @@
-#<< grave/pop
+#@> Executed from:
+#@>   function hygrave:internal/grave/pop
+#@>   function hygrave:internal/grave/pop/drop_items
 
 ## Spawn item
 summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock",components:{"minecraft:custom_data":{"hygrave:common":{temp_item:1b}}}},Tags:["hygrave.temp.grave.item_to_give_back","hygrave.grave.item"],Age:-32768s}

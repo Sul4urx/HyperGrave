@@ -1,4 +1,5 @@
-#<< backup/show_info
+#@> Executed from:
+#@>   function hygrave:internal/backup/show_info
 
 ## Save BID in `temp.bid` data in storage and in `.bid` temp score
 $data modify storage hygrave:common temp.bid set value $(bid)

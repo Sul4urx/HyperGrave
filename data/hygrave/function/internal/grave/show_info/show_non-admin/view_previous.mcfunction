@@ -1,7 +1,5 @@
-#<< grave/show_info/show_non-admin/an
-#<< grave/show_info/show_non-admin/ao
-#<< grave/show_info/show_non-admin/bn
-#<< grave/show_info/show_non-admin/bn
+#@> Executed from:
+#@>   function hygrave:internal/loop/1t
 
 ## Save GID in `temp.gid` data in storage and in `.gid` temp score
 execute store result storage hygrave:common temp.gid int 1 run scoreboard players get @s hygrave.show_grave_info.view_previous

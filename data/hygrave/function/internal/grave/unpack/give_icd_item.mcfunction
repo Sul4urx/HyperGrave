@@ -1,6 +1,7 @@
-#<< grave/unpack_icd_item
+#@> Executed from:
+#@>   function hygrave:internal/grave/unpack_icd_item
 
-## Player's main hand must be empty 
+## Player's main hand must be empty
 ## when taking item from grave with ICD activated
 execute if items entity @s weapon.mainhand * run return -1
 

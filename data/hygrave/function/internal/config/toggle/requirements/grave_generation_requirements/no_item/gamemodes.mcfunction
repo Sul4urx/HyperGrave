@@ -1,4 +1,5 @@
-#<< config/open_page/requirements/grave_generation_requirements
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/requirements/grave_generation_requirements
 
 ## Toggle value
 $scoreboard players add (requirements/grave_generation_requirements/no_item/gamemodes/$(gamemode)) hygrave.config 1

@@ -1,4 +1,6 @@
-#<< grave/unpack/give_items/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/unpack/give_items/main
+#@>   function hygrave:internal/grave/unpack/give_items/drop_rest_of_items
 
 # Summon items as entity (the items that have been queued to summon as entity instead)
 

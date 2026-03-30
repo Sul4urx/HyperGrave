@@ -1,4 +1,5 @@
-#<< config/open_page/general
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/general
 
 ## Toggle value
 scoreboard players add (general/change_gamerules) hygrave.config 1

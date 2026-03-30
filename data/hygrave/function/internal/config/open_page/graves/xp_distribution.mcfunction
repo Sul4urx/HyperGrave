@@ -1,4 +1,5 @@
-#<< config/open_page/requirements/grave_generation_requirements
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves
 
 ## Insert a newline before the menu
 tellraw @s ""

@@ -1,4 +1,5 @@
-#<< grave/generate/grave_placement_restrictions
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/grave_placement_restrictions
 
 ## Get min build height limit value
 execute store result score .y_pos hygrave.temp_var run data get entity @s Pos[1]

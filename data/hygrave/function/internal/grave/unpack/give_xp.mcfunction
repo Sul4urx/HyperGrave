@@ -1,4 +1,4 @@
-#<< grave/unpack
+#@> Unused
 
 ## Add XP
 $xp add @s $(total) points

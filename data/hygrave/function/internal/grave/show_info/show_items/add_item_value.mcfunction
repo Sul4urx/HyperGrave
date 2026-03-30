@@ -1,4 +1,5 @@
-#<< grave/show_info/show_items
+#@> Executed from:
+#@>   function hygrave:internal/grave/show_info/show_items
 
 # Define an item for this slot
 

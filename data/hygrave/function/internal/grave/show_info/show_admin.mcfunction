@@ -1,4 +1,5 @@
-#<! admin/show_grave_info
+#@> Executed from:
+#@>   function hygrave:run/grave/admin/show_grave_info
 
 ## Read the input GID and store it
 execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get @s hygrave.show_grave_info

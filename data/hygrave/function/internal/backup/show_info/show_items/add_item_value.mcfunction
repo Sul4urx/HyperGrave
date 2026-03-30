@@ -1,4 +1,5 @@
-#<< backup/show_info/show_items
+#@> Executed from:
+#@>   function hygrave:internal/backup/show_info/show_items
 
 # Define an item for this slot
 

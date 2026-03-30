@@ -1,4 +1,5 @@
-#<< config/open_page/graves/show_grave_info
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/show_grave_info
 
 ## Toggle value
 scoreboard players add (graves/show_grave_info/bn/creation_time) hygrave.config 1

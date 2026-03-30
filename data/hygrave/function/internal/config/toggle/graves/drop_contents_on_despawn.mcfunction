@@ -1,4 +1,5 @@
-#<< config/open_page/graves
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves
 
 ## Toggle value
 scoreboard players add (graves/drop_contents_on_despawn) hygrave.config 1

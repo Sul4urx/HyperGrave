@@ -1,4 +1,5 @@
-#<< grave/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/main
 
 # Stylize grave if ICD is not activated
 

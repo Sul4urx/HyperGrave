@@ -1,4 +1,5 @@
-#<< config/open_page/graves
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves
 
 ## Toggle value
 scoreboard players add (graves/tell_grave_mini_info) hygrave.config 1

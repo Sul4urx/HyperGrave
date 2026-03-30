@@ -1,5 +1,6 @@
-#<< grave/remote_unpack
-#<! grave/admin/remote_loot
+#@> Executed from:
+#@>   function hygrave:run/grave/admin/remote_loot
+#@>   function hygrave:internal/grave/remote_unpack
 
 ## Summon temp item (used for manipulating each item stored in grave)
 ## Call it manipulator item

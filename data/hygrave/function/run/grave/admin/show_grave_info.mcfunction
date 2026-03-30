@@ -1,3 +1,5 @@
+#@> Executed by the player
+
 ## Show grave info as admin (all grave info will be shown regardless of configs)
 $scoreboard players set @s hygrave.show_grave_info $(gid)
 

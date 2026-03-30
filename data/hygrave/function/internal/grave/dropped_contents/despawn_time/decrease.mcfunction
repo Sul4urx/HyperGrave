@@ -1,4 +1,5 @@
-#<< loop/1s
+#@> Executed from:
+#@>   function hygrave:internal/loop/1s
 
 ## Remove 1 second from despawn time
 scoreboard players remove @s hygrave.despawn_time 1

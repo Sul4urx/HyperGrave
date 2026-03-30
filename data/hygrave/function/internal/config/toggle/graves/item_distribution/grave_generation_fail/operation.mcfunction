@@ -1,4 +1,5 @@
-#<< config/open_page/graves/item_distribution
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves/item_distribution
 
 ## Toggle value
 scoreboard players add (graves/item_distribution/grave_generation_fail/operation) hygrave.config 1

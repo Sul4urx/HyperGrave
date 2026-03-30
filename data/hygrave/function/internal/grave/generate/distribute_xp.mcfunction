@@ -1,4 +1,6 @@
-#<< grave/generate
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/force_generate
 
 ## If total weight is 0, reset all weights
 execute unless score (graves/xp_distribution/grave_generation_success/total) hygrave.config matches 1.. run scoreboard players reset (graves/xp_distribution/grave_generation_success/remove)

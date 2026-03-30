@@ -1,4 +1,5 @@
-#<< grave/show_info/check_conditions
+#@> Executed from:
+#@>   function hygrave:internal/grave/show_info/check_conditions
 
 # Show grave info for active graves not belonging to the player
 

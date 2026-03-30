@@ -1,9 +1,10 @@
-#<< config/open_page/main
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/main
 
 ##
 tellraw @s ""
 
-## Category: Graves
+## Category: General
 tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral:"}
 
 ##> Change Game Rules
@@ -50,7 +51,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.mod_compatibility_mode",\
-        "fallback": "§a✔ §7→§r keepInventory game rule is set to false (can be rechanged later) and Graves collect dropped items\n§c❌ §7→§r keepInventory is set to true (can't be rechanged if Change Game Rules config is set to true) and Graves take items from player's inventory.\n\n§bPros:\n§f  §7•§f Better compatibility (especially with mods that add custom slots)\n§cCons:\n  §7•§f Increased risk of item loss\n  §7•§f Most configs related to items or slots (e.g. Graves / Item Distribution) won't work. If you really want these configs to be usable, you should use mods that can do what these configs can.\n  §7•§f Items won't be put in appropriate slots and will instead be dropped.\n\n§3ℹ This is an experimental config!\n\n§8Default: ❌"\
+        "fallback": "§a✔ §7→§r keepInventory game rule is set to false (can be rechanged later) and Graves collect dropped items\n§c❌ §7→§r keepInventory is set to true (can't be rechanged if Change Game Rules config is set to true) and Graves take items from player's inventory.\n\n§bPros:\n  §7•§f Better compatibility (especially with mods that add custom slots)\n§cCons:\n  §7•§f Increased risk of item loss\n  §7•§f Most configs related to items or slots (e.g. Graves / Item Distribution) won't work. If you really want these configs to be usable, you should use mods that can do what these configs can.\n  §7•§f Items won't be put in appropriate slots and will instead be dropped.\n  §7•§f May cause significant TPS drop (A TPS drop is what causes lag).\n§3ℹ This is an experimental config!\n\n§8Default: ❌"\
       }\
     }\
   },\

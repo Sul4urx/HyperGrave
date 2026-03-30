@@ -1,4 +1,5 @@
-#<< config/open_page/grave_appearance/grave_model
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_appearance/grave_model/player_head_expanded
 
 ## Toggle value
 scoreboard players add (grave_appearance/grave_model/player_head/render) hygrave.config 1

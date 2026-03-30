@@ -1,5 +1,6 @@
-#<< map/players/main
-#<< backup/generate
+#@> Executed from:
+#@>   function hygrave:internal/map/players/main
+#@>   function hygrave:internal/backup/generate
 
 ## Store PContents (Previous tick Contents)
 ## Used for getting content data from player right when the player loses them

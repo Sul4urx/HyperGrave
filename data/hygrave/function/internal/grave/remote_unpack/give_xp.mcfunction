@@ -1,5 +1,4 @@
-#<< grave/remote_unpack
-#<! grave/admin/remote_loot
+#@> Unused
 
 ## Add XP
 $xp add @s $(total) points

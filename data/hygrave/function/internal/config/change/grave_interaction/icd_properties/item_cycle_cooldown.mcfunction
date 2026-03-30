@@ -1,4 +1,6 @@
-#<< config/open_page/grave_interaction/icd_properties
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/grave_interaction/icd_properties
+
 $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not valid

@@ -1,4 +1,5 @@
-#<< grave/generate/check_requirements/with_item
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/check_requirements/with_item
 
 ## Check if item passes provided predicate
 ## If it does, set .check_requirements.items score to true

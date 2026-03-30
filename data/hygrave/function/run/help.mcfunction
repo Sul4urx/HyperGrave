@@ -1,3 +1,5 @@
+#@> Executed by the player
+
 ## Prevent loop
 scoreboard players set @s hygrave.help 0
 

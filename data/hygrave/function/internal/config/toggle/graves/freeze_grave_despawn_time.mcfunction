@@ -1,4 +1,5 @@
-#<< config/open_page/graves
+#@> Executed from:
+#@>   function hygrave:internal/config/open_page/graves
 
 ## Toggle value
 scoreboard players add (graves/freeze_grave_despawn_time) hygrave.config 1

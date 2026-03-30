@@ -1,4 +1,5 @@
-#<< grave/generate
+#@> Executed from:
+#@>   function hygrave:internal/backup/generate
 
 ## Tick
 execute store result score .creation_time.tick hygrave.temp_var run time query daytime

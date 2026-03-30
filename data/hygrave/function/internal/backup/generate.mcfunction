@@ -1,4 +1,5 @@
-#<< event/player/player_died
+#@> Executed from:
+#@>   function hygrave:internal/event/player/player_died
 
 ## Bring the nessecary elements of maps to last index so that we can work with them
 

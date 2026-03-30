@@ -1,4 +1,6 @@
-#<< backup/restore
+#@> Executed from:
+#@>   function hygrave:internal/backup/restore_all_items
+#@>   function hygrave:internal/backup/restore_all_items/drop_items
 
 ## Spawn item
 summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock",components:{"minecraft:custom_data":{"hygrave:common":{temp_item:1b}}}},Tags:["hygrave.temp.backup.restored_item","hygrave.backup.restored_item"],Age:-32768s,PickupDelay:120s}

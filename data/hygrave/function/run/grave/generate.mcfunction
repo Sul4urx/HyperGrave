@@ -1,3 +1,5 @@
+#@> Executed by the player
+
 ## Disable Mod Compatibility Mode temporarily, try to generate grave, 
 ## then reset the config back to its previous value.
 scoreboard players operation .mod_compatibility_mode hygrave.temp_var = (general/mod_compatibility_mode) hygrave.config

@@ -1,4 +1,5 @@
-#<< grave/main
+#@> Executed from:
+#@>   function hygrave:internal/grave/main
 
 ## Item cycle cooldown
 scoreboard players add @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown 1

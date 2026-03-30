@@ -1,4 +1,6 @@
-#<< grave/generate
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/force_generate
 
 $execute unless entity @p[tag=hygrave.temp.grave.owner,distance=..$(distance)] run return -1
 

@@ -1,5 +1,5 @@
-#<< grave/generate/distribute_items/keep
-#<< grave/generate/distribute_items/keep/check_item_predicates
+#@> Executed from:
+#@>   function hygrave:internal/grave/generate/distribute_items/keep
 
 ## Remove temp data
 data remove storage hygrave:common temp.args
