@@ -69,31 +69,18 @@ scoreboard objectives add hygrave.info trigger
 scoreboard objectives add hygrave.help trigger
 
 ## Handle upgrades and downgrades
-execute if data storage hygrave:common data.latest_schema_version unless data storage hygrave:common data{latest_schema_version:1} run return run function hygrave:internal/versioning/unsupported_downgrade_unknown_version
+execute if data storage hygrave:common data.latest_schema_version unless data storage hygrave:common data{latest_schema_version:1} run return run function hygrave:internal/versioning/unsupported_unknown_version_change
 
-execute if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches 1.. run return run function hygrave:internal/versioning/unsupported_downgrade
-execute if score (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version matches 6.. run return run function hygrave:internal/versioning/unsupported_downgrade
+execute if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 0, minor: 5, patch: 0} run return run function hygrave:internal/versioning/upgrade/from_0_5_0
 
-## Store Data version
-##> It stores the version of HyperGrave
-##> Used for upgrading and downgrading HyperGrave
-scoreboard players set (namespace=hygrave,type=major,schema_version=1) hygrave.data_version 0
-scoreboard players set (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version 5
-scoreboard players set (namespace=hygrave,type=patch,schema_version=1) hygrave.data_version 0
+execute if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches 3.. run return run function hygrave:internal/versioning/unsupported_downgrade
+execute if score (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version matches 1.. run return run function hygrave:internal/versioning/unsupported_downgrade
+execute if score (namespace=hygrave,type=patch,schema_version=1) hygrave.data_version matches 1.. run return run function hygrave:internal/versioning/downgrade
 
-data modify storage hygrave:common data.latest_schema_version set value 1
-data modify storage hygrave:common data.schema_version_1.hygrave.data_version set value {\
-    version: {\
-        major: 0,\
-        minor: 5,\
-        patch: 0,\
-        form: {\
-            array: [0, 5, 0],\
-            string: "0.5.0",\
-            single_int: 1_0000_0005_0000L \
-        }\
-    }\
-}
+execute if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches ..1 run return run function hygrave:internal/versioning/unsupported_upgrade
+
+## Data version
+function hygrave:internal/misc/store_data_version
 
 ## Run loop functions
 function hygrave:internal/loop/1s
