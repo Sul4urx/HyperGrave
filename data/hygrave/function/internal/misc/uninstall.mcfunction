@@ -23,6 +23,7 @@ data remove storage hygrave:common data
 scoreboard objectives remove hygrave.temp_var
 scoreboard objectives remove hygrave.var
 scoreboard objectives remove hygrave.config
+scoreboard objectives remove hygrave.bid
 scoreboard objectives remove hygrave.pid
 scoreboard objectives remove hygrave.gid
 scoreboard objectives remove hygrave.data_version
