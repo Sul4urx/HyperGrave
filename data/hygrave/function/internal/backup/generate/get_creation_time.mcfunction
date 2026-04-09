@@ -17,7 +17,7 @@ scoreboard players operation .creation_time.minutes hygrave.temp_var /= (100) hy
 scoreboard players operation .creation_time.hours hygrave.temp_var = .creation_time.tick hygrave.temp_var
 scoreboard players operation .creation_time.hours hygrave.temp_var /= (1000) hygrave.var
 scoreboard players add .creation_time.hours hygrave.temp_var 6
-execute if score .creation_time.hours hygrave.temp_var matches 24.. run scoreboard players remove .despawn_time.hours hygrave.temp_var 24
+execute if score .creation_time.hours hygrave.temp_var matches 24.. run scoreboard players remove .creation_time.hours hygrave.temp_var 24
 
 ## Store data
 execute store result storage hygrave:common backups[-1].data.creation_time.day int 1 run scoreboard players get .creation_time.day hygrave.temp_var
