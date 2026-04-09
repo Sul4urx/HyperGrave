@@ -38,7 +38,7 @@ tellraw @s {\
       },\
       "click_event": {\
         "action": "open_url",\
-        "url": "https://modrinth.com/resourcepack/sul4respack"\
+        "url": "https://modrinth.com/resourcepack/sul4ur-global-respack"\
       }\
     },\
     {\
