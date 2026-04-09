@@ -1,5 +1,6 @@
 #@> Executed from:
 #@>   function hygrave:internal/loop/1t
+#@>   function hygrave:run/grave/generate
 
 ## If Mod Compatibility Mode is disabled, update player maps and PContents
 ## So that it uses the player's inventory and xp in current tick
