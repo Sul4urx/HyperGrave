@@ -1,9 +1,9 @@
 {
   "pack": {
     "pack_format": 94,
-    "supported_formats": [71, 94],
+    "supported_formats": [71, 101],
     "min_format": 71,
-    "max_format": 94,
+    "max_format": 101,
     "description": "A sophisticated grave data pack | v2.0.0"    
   },
   "overlays": {
