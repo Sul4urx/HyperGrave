@@ -1,0 +1,19 @@
+{
+    "schemaVersion": 1,
+    "id": "hygrave",
+    "version": "2.0.0",
+    "name": "HyperGrave",
+    "description": "An extremely sophisticated grave mod",
+    "authors": ["Sul4ur"],
+    "contact": {
+        "homepage": "https://modrinth.com/datapack/hypergrave",
+        "issues": "https://github.com/sul4urx/hypergrave/issues"
+    },
+    "license": "GPL-3.0",
+    "icon": "pack.png",
+    "environment": "*",
+    "depends": {
+        "fabric-resource-loader-v0": "*",
+        "minecraft": ">=1.21.5 <26.1.99999"
+    }
+}

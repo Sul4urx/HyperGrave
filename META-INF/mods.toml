@@ -1,0 +1,27 @@
+modLoader = "lowcodefml"
+loaderVersion = "[40,)"
+license = "GPL-3.0"
+showAsDataPack = true
+
+[[mods]]
+modId = "hygrave"
+version = "2.0.0" 
+displayName = "HyperGrave" 
+description = "An extremely sophisticated grave mod" 
+logoFile = "pack.png"
+authors = "Sul4ur"
+displayURL = "https://modrinth.com/datapack/hypergrave"
+
+[[dependencies.hygrave]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.21.5, 26.1.999999)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hygrave]]
+modId = "forge"
+mandatory = true
+versionRange = "[51,)"
+ordering = "NONE"
+side = "BOTH"

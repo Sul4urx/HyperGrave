@@ -1,0 +1,35 @@
+{
+    "schema_version": 1,
+    "quilt_loader": {
+        "group": "com.sul4ur",
+        "id": "hygrave",
+        "version": "2.0.0",
+        "metadata": {
+            "name": "HyperGrave",
+            "description": "An extremely sophisticated grave mod",
+            "contributors": {
+                "Sul4ur": "Owner"
+            },
+            "contact": {
+                "homepage": "https://modrinth.com/datapack/hypergrave",
+                "issues": "https://github.com/sul4urx/hypergrave/issues"
+            },
+            "icon": "pack.png",
+            "license": "GPL-3.0"
+        },
+        "intermediate_mappings": "net.fabricmc:intermediary",
+        "depends": [
+            {
+                "id": "quilt_resource_loader",
+                "versions": "*",
+                "unless": "fabric-resource-loader-v0"    
+            },
+            {
+                "id": "minecraft",
+                "versions": {
+                    "all": [">=1.21.5", "<26.1.999999"]
+                }
+            }
+        ]
+    }
+}
