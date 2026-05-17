@@ -7,12 +7,27 @@ scoreboard players set @s hygrave.info 0
 tellraw @s ""
 
 tellraw @s {\
-  "translate": "hygrave.info",\
-  "fallback": "§l§bHyper§l§6Grave§r §fversion %s §8| §fMade By §bSul4ur\n§fA very sophisticated grave data pack with many features and a lot of customizability\n\n§fWeb: §7[%s §7| %s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
+  "translate": "hygrave.info.title",\
+  "fallback": "§l§bHyper§l§6Grave§r §fversion %s §8| §fMade By §bSul4ur",\
+  "with": ["§72.1.0-alpha"]\
+}
+
+execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 run tellraw @s {\
+  "translate": "hygrave.info.alpha_warning",\
+  "fallback": "§cWARNING: Be careful, you're using a version that has not been developed yet. Use it with caution, as it is §nconsidered to be very unstable!§r §cThis version should ONLY be used for testing!"\
+}
+
+tellraw @s {\
+  "translate": "hygrave.info.description",\
+  "fallback": "§fA very sophisticated grave data pack with many features and a lot of customizability"\
+}
+
+tellraw @s {\
+  "translate": "hygrave.info.links",\
+  "fallback": "\n§fWeb: §7[%s §7| %s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
   "with": [\
-    "§72.0.0",\
     {\
-      "translate": "hygrave.info.doc",\
+      "translate": "hygrave.info.links.doc",\
       "fallback": "§aDocumentation",\
       "hover_event": {\
         "action": "show_text",\
@@ -27,7 +42,7 @@ tellraw @s {\
       }\
     },\
     {\
-      "translate": "hygrave.info.sgrp",\
+      "translate": "hygrave.info.links.sgrp",\
       "fallback": "§dSGRP",\
       "hover_event": {\
         "action": "show_text",\
@@ -42,7 +57,7 @@ tellraw @s {\
       }\
     },\
     {\
-      "translate": "hygrave.info.issues",\
+      "translate": "hygrave.info.links.issues",\
       "fallback": "§cIssues",\
       "hover_event": {\
         "action": "show_text",\
@@ -57,7 +72,7 @@ tellraw @s {\
       }\
     },\
     {\
-      "translate": "hygrave.info.code",\
+      "translate": "hygrave.info.links.code",\
       "fallback": "§eCode",\
       "hover_event": {\
         "action": "show_text",\
@@ -74,7 +89,7 @@ tellraw @s {\
     \
     \
     {\
-      "translate": "hygrave.info.help",\
+      "translate": "hygrave.info.links.help",\
       "fallback": "§bHelp",\
       "hover_event": {\
         "action": "show_text",\
@@ -89,7 +104,7 @@ tellraw @s {\
       }\
     },\
     {\
-      "translate": "hygrave.info.show_grave_info",\
+      "translate": "hygrave.info.links.show_grave_info",\
       "fallback": "§6Grave Info",\
       "hover_event": {\
         "action": "show_text",\
@@ -106,7 +121,7 @@ tellraw @s {\
     \
     \
     {\
-      "translate": "hygrave.info.config",\
+      "translate": "hygrave.info.links.config",\
       "fallback": "§aConfig",\
       "hover_event": {\
         "action": "show_text",\
@@ -123,4 +138,4 @@ tellraw @s {\
   ]\
 }
 
-tellraw @s ""
+tellraw @s "" 

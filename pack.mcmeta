@@ -4,7 +4,7 @@
     "supported_formats": [71, 101],
     "min_format": 71,
     "max_format": 101,
-    "description": "A sophisticated grave data pack | v2.0.0"    
+    "description": "A sophisticated grave data pack | v2.1.0-alpha"    
   },
   "overlays": {
     "entries": [

@@ -14,7 +14,7 @@ body:
       description: "Please select the version(s) of HyperGrave you've been able to reproduce this issue on."
       multiple: true
       options:
-        - 2.0.0
+        - 2.1.0
         - Other
     validations:
       required: true
