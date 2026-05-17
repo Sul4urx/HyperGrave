@@ -118,8 +118,6 @@ tellraw @s {\
         "command": "/trigger hygrave.show_grave_info"\
       }\
     },\
-    \
-    \
     {\
       "translate": "hygrave.info.links.config",\
       "fallback": "§aConfig",\
