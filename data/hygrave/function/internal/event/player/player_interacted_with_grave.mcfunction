@@ -1,24 +1,24 @@
 #@> Executed from:
 #@>   function hygrave:internal/grave/main
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Remove temp data
 data remove storage hygrave:common players[].temp
 
 ##> Grave
 data modify storage hygrave:common temp.args.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
-function hygrave:internal/map/graves/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
 
 ##> Player (Owner)
-function hygrave:internal/map/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
+function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
-function hygrave:internal/map/players/graves/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/players/graves/lookup with storage hygrave:common temp.args
 
 ##> Player (Interactor)
 execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @p[tag=hygrave.temp.grave.interactor] hygrave.pid
-function hygrave:internal/map/players/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 ## Pop or Unpack the grave

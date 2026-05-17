@@ -1,11 +1,11 @@
 #@> Executed from:
 #@>   function hygrave:internal/event/player/player_died
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Player
 execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @s hygrave.pid 
-function hygrave:internal/map/players/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
 
 ## Add backup data
 data modify storage hygrave:common backups append value {}
@@ -94,7 +94,7 @@ execute store result storage hygrave:common backups[-1].data.bid int 1 run score
 ## Creation time (used for show backup info feature)
 function hygrave:internal/backup/generate/get_creation_time
 
-## Add backup data to player/backup map
+## Add backup data to player/backup database
 data modify storage hygrave:common players[-1].backups append from storage hygrave:common backups[-1]
 
 ## Store owner

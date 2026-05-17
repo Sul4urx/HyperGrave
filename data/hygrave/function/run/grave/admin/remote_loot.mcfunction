@@ -6,23 +6,23 @@ $execute unless data storage hygrave:common active_graves[{data:{gid:$(gid)}}] r
   "fallback": "§cGrave #$(gid) either does not exist or has been destroyed.",\
 }
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Remove temp data
 data remove storage hygrave:common players[].temp
 
 ##> Grave
-$function hygrave:internal/map/graves/lookup {gid:$(gid)}
+$function hygrave:internal/database/graves/lookup {gid:$(gid)}
 
 ##> Player (Owner)
-function hygrave:internal/map/players/lookup with storage hygrave:common graves[-1].data.owner
+function hygrave:internal/database/players/lookup with storage hygrave:common graves[-1].data.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
-$function hygrave:internal/map/players/graves/lookup {gid:$(gid)}
+$function hygrave:internal/database/players/graves/lookup {gid:$(gid)}
 
 ##> Player (Interactor)
 execute store result storage hygrave:common temp.args1.pid int 1 run scoreboard players get @s hygrave.pid
-function hygrave:internal/map/players/lookup with storage hygrave:common temp.args1
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.args1
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 ## Add temp tags

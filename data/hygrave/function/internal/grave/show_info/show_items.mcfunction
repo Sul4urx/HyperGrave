@@ -5,10 +5,10 @@
 #@>   function hygrave:internal/grave/show_info/show_non-admin/bn
 #@>   function hygrave:internal/grave/show_info/show_non-admin/bo
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Grave
-$function hygrave:internal/map/graves/lookup {gid: $(gid)}
+$function hygrave:internal/database/graves/lookup {gid: $(gid)}
 
 ## The text to show for each slot
 ## This will be outputted as macro later

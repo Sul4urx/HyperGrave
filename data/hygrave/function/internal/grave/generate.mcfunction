@@ -2,15 +2,15 @@
 #@>   function hygrave:run/grave/generate
 #@>   function hygrave:internal/event/player/player_died
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Player
 execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @s hygrave.pid 
-function hygrave:internal/map/players/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
 
 ##> Last Backup
 execute store result storage hygrave:common temp.args.bid int 1 run scoreboard players get (last_bid) hygrave.var
-function hygrave:internal/map/backups/lookup with storage hygrave:common temp.args.bid
+function hygrave:internal/database/backups/lookup with storage hygrave:common temp.args.bid
 
 ## Reset death count
 scoreboard players set @s hygrave.death_count 0
@@ -92,7 +92,7 @@ ride @n[tag=hygrave.temp.grave.icd] mount @n[tag=hygrave.temp.grave.base]
 function hygrave:internal/grave/generate/grave_placement_restrictions with entity @s
 
 ## Store other data
-execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/map/graves/insert
+execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/database/graves/insert
 
 ##> Store PID and GID
 execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner.pid int 1 run scoreboard players get @s hygrave.pid
@@ -101,7 +101,7 @@ data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:cus
 ##> Store relevant BID
 data modify storage hygrave:common backups[-1].data.relevant_grave.data.gid set from storage hygrave:common graves[-1].data.gid
 
-##> Add grave data to player/grave map
+##> Add grave data to player/grave database
 data modify storage hygrave:common players[-1].graves append from storage hygrave:common graves[-1]
 
 ##> Store owner

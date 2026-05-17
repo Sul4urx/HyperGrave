@@ -21,7 +21,7 @@ execute if score (dropped_contents/no_gravity_items) hygrave.config matches 1 ru
 ## Set item content
 data modify entity @n[tag=hygrave.temp.grave.item_to_give_back] Item set from storage hygrave:common temp.items_to_summon_as_entity[-1]
 
-## Remove the item from items_to_summon_as_entity temp map
+## Remove the item from items_to_summon_as_entity temp database
 data remove storage hygrave:common temp.items_to_summon_as_entity[-1]
 
 ## If Set item content operation failed, get rid of the item
