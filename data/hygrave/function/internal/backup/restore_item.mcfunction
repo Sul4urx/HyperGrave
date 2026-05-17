@@ -1,10 +1,10 @@
 #@> Executed from:
 #@>   function hygrave:run/backup/restore_item
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Backup
-$function hygrave:internal/map/backups/lookup {bid: $(bid)}
+$function hygrave:internal/database/backups/lookup {bid: $(bid)}
 
 ## If backup doesn't exist, throw error
 $execute unless data storage hygrave:common backups[{data:{bid:$(bid)}}] run return run title @s actionbar {\

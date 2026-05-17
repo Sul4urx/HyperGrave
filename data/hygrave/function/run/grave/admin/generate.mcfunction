@@ -5,9 +5,9 @@
 scoreboard players operation .mod_compatibility_mode hygrave.temp_var = (general/mod_compatibility_mode) hygrave.config
 scoreboard players set (general/mod_compatibility_mode) hygrave.config 0
 
-## Update player maps and PContents
+## Update player databases and PContents
 ## So that it uses the player's inventory and xp in current tick
-function hygrave:internal/map/players/main
+function hygrave:internal/database/players/main
 
 ## Generate backup
 function hygrave:internal/backup/generate

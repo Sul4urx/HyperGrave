@@ -40,15 +40,15 @@ function hygrave:internal/misc/change_gamerules
 ## Register configs
 function hygrave:internal/config/register
 
-## Add a player to player map, if they don't exist there
-execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/map/players/insert
+## Add a player to player database, if they don't exist there
+execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/database/players/insert
 
 ## Player died
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died
 scoreboard players set @a hygrave.death_count 0
 
 ## Update active graves
-function hygrave:internal/map/graves/active/update
+function hygrave:internal/database/graves/active/update
 
 ## Show HyperGrave info
 execute as @a at @s unless score @s hygrave.info matches 0 run function hygrave:run/info
@@ -86,9 +86,9 @@ scoreboard players enable @a hygrave.remote_loot_grave
 ## Grave management
 execute as @e[tag=hygrave.grave.base] at @s run function hygrave:internal/grave/main
 
-## Player map management (The functions inside only need to be run
+## Player database management (The functions inside only need to be run
 ## if Mod Compatibility Mode is enabled)
-execute if score (general/mod_compatibility_mode) hygrave.config matches 1.. as @a at @s run function hygrave:internal/map/players/main
+execute if score (general/mod_compatibility_mode) hygrave.config matches 1.. as @a at @s run function hygrave:internal/database/players/main
 
 ## Remove temp tags
 tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base

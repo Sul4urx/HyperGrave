@@ -1,4 +1,4 @@
-## Add grave to grave map
+## Add grave to grave database
 data modify storage hygrave:common graves append value {}
 
 ## Set contents (items and XP)

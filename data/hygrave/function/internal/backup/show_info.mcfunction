@@ -26,10 +26,10 @@ execute if score .backup_exists hygrave.temp_var matches 0 run return run title 
   ]\
 }
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Backup
-function hygrave:internal/map/backups/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/backups/lookup with storage hygrave:common temp.args
 
 tellraw @s ""
 

@@ -27,10 +27,10 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
 }
 
 
-## Bring the nessecary elements of maps to last index so that we can work with them
+## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Grave
-function hygrave:internal/map/graves/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
 
 ## Prevent loop
 scoreboard players set @s hygrave.show_grave_info 0

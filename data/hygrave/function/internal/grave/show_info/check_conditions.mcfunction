@@ -81,10 +81,10 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
 }
 
 
-## Bring the nessecary elements of maps to last index so that we can work with thems
+## Bring the nessecary elements of databases to last index so that we can work with thems
 
 ##> Grave
-function hygrave:internal/map/graves/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
 
 ## Check for type:
 ## AO: Active grave belonging to the player
