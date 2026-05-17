@@ -40,7 +40,7 @@ execute store result entity @n[tag=hygrave.temp.grave.base] item.components.mine
 
 ## Calculate take XP levels and points
 execute store result storage hygrave:common temp.args.value int 1 run scoreboard players get .xt hygrave.temp_var
-function hygrave:internal/macro/xp_add with storage hygrave:common temp.args
+function hygrave:internal/helper/xp_add with storage hygrave:common temp.args
 
 execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.levels int 1 run xp query @s levels
 execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.points int 1 run xp query @s points
@@ -74,4 +74,4 @@ scoreboard players operation .xk hygrave.temp_var /= .v2 hygrave.temp_var
 
 ## Apply operation 'keep'
 execute store result storage hygrave:common temp.args.value int 1 run scoreboard players get .xk hygrave.temp_var
-function hygrave:internal/macro/xp_add with storage hygrave:common temp.args
+function hygrave:internal/helper/xp_add with storage hygrave:common temp.args

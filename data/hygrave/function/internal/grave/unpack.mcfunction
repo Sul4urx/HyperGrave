@@ -52,7 +52,7 @@ function hygrave:internal/grave/unpack/give_items/main
 ## Give XP
 data modify storage hygrave:common temp.args.value set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.total
 
-execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:internal/macro/xp_add with storage hygrave:common temp.args
+execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:internal/helper/xp_add with storage hygrave:common temp.args
 
 ## Play sound
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1

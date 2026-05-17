@@ -36,4 +36,4 @@ scoreboard players operation .xk hygrave.temp_var /= .v2 hygrave.temp_var
 
 ## Apply operation 'keep'
 execute store result storage hygrave:common temp.args.value int 1 run scoreboard players get .xk hygrave.temp_var
-function hygrave:internal/macro/xp_add with storage hygrave:common temp.args
+function hygrave:internal/helper/xp_add with storage hygrave:common temp.args
