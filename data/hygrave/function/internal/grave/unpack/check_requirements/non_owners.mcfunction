@@ -24,4 +24,4 @@ execute if score .player_xp hygrave.temp_var >= (requirements/grave_looting_requ
 
 execute store result storage hygrave:common temp.args.value int 1 run data get storage hygrave:common configs.value.requirements.grave_looting_requirements.non_owners.xp.levels -1
 
-execute if score .check_requirements.xp hygrave.temp_var matches 1 run function hygrave:internal/macro/xp_add_level with storage hygrave:common temp.args
+execute if score .check_requirements.xp hygrave.temp_var matches 1 run function hygrave:internal/helper/xp_add_level with storage hygrave:common temp.args

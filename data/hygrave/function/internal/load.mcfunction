@@ -15,7 +15,7 @@
 #
 # Some functions do not have a parent comment. That doesn't mean that they're unused, that just
 # means I don't want those functions to show its parent functions,
-# For example, functions in 'hygrave:internal/macro/**/*' don't have parent comments, because
+# For example, functions in 'hygrave:internal/helper/**/*' don't have parent comments, because
 # they're supposed to and can be used anywhere as helper functions.
 
 #@> Executed on load
