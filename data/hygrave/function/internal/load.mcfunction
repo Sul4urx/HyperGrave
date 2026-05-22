@@ -87,10 +87,6 @@ execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygr
 ## Data version
 function hygrave:internal/misc/store_data_version
 
-## Check if command '/time query day(time)' works or not
-execute store success score .time_query_works hygrave.temp_var run function hygrave:internal/misc/query_time
-execute unless score .time_query_works hygrave.temp_var matches 1.. run tellraw @a "\n§cCommands '/time query day' and '/time query daytime' failed.\nIf you are receiving this message, PLEASE REPORT IT AS SOON AS POSSIBLE.\nDON'T BE LAZY AND DON't GIVE EXCUSES. JUST REPORT IT.\n\nYou can report it by emailing me at 'contactsul4ur@gmail.com'.\n\nYou may start using HyperGrave. Just know that it might run into some issues. They are expected to be minor issues."\
-
 ## Run loop functions
 function hygrave:internal/loop/1s
 function hygrave:internal/loop/1t
