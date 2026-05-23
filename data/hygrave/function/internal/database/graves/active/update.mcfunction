@@ -1,5 +1,4 @@
-#@> Executed from:
-#@>   function hygrave:internal/loop/1t
+#@> Currently unused for performance reasons
 
 ## Update active graves
 data modify storage hygrave:common active_graves set from storage hygrave:common graves

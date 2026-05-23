@@ -47,9 +47,6 @@ execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died
 scoreboard players set @a hygrave.death_count 0
 
-## Update active graves
-function hygrave:internal/database/graves/active/update
-
 ## Show HyperGrave info
 execute as @a at @s unless score @s hygrave.info matches 0 run function hygrave:run/info
 scoreboard players set @a hygrave.info 0
