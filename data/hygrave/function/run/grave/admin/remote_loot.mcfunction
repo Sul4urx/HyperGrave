@@ -1,7 +1,7 @@
 #@> Executed by the player
 
 ## If Grave doesn't exist, throw error
-$execute unless data storage hygrave:common active_graves[{data:{gid:$(gid)}}] run return run title @s actionbar {\
+$execute unless score (is_active,gid=$(gid)) hygrave.var matches 1 run return run title @s actionbar {\
   "translate": "hygrave.remote_unpack_grave.fail.grave_destroyed",\
   "fallback": "§cGrave #$(gid) either does not exist or has been destroyed.",\
 }
