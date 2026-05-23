@@ -65,14 +65,11 @@ execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:inte
 ## Play sound
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
-## Update status
-data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"remote_unpacked"}
-data modify storage hygrave:common graves[-1].data.status.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
+## Delete grave
+data modify storage hygrave:common temp.args.destruction_type set value "remote_unpacked"
+data modify storage hygrave:common temp.args.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
 
-data modify storage hygrave:common players[{temp:{owner:1b}}].graves[-1].data.status set from storage hygrave:common graves[-1].data.status
-
-## Clear all items
-data modify storage hygrave:common graves[-1].contents.items set value []
+function hygrave:internal/database/graves/delete with storage hygrave:common temp.args
 
 ## Remove temp tag
 tag @s remove hygrave.temp.grave.interactor

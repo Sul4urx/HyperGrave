@@ -7,7 +7,7 @@
 scoreboard players set .grave_is_in_storage hygrave.temp_var 0
 execute store result score .grave_is_in_storage hygrave.temp_var run function hygrave:internal/grave/check_if_grave_data_in_storage with entity @s item.components.minecraft:custom_data.hygrave:common
 
-execute if score .grave_is_in_storage hygrave.temp_var matches 0 run return run function hygrave:internal/grave/delete
+execute if score .grave_is_in_storage hygrave.temp_var matches 0 run return run function hygrave:internal/grave/remove_grave_entity
 
 ## Add temp tags
 tag @s add hygrave.temp.grave.base
