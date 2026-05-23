@@ -1,4 +1,4 @@
-#@> Currently unused since running this every tick causes a lot of lag
+#@> Currently unused for performance reasons
 
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
