@@ -4,7 +4,7 @@
 
 ## If min and max build height limits have not been
 ## defined for this dimension, define them
-$execute unless data storage hygrave:common dimensions."$(Dimension)".build_height_limit run function hygrave:internal/database/dimensions/insert/height_limit/main
+$execute unless data storage hygrave:common dimensions."$(Dimension)".build_height_limit run function hygrave:internal/database/dimensions/append/height_limit/main
 $execute store result score .min_height hygrave.temp_var run data get storage hygrave:common dimensions."$(Dimension)".build_height_limit.min
 $execute store result score .max_height hygrave.temp_var run data get storage hygrave:common dimensions."$(Dimension)".build_height_limit.max
 

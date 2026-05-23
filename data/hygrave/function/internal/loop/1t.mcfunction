@@ -41,7 +41,7 @@ function hygrave:internal/misc/change_gamerules
 function hygrave:internal/config/register
 
 ## Add a player to player database, if they don't exist there
-execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/database/players/insert
+execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/database/players/append
 
 ## Player died
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died

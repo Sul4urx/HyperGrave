@@ -1,6 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/database/dimensions/insert/height_limit/main
-#@>   function hygrave:internal/database/dimensions/insert/height_limit/test/min
+#@>   function hygrave:internal/database/dimensions/append/height_limit/main
+#@>   function hygrave:internal/database/dimensions/append/height_limit/test/min
 
 ## If these two conditions both return false:
 
@@ -17,4 +17,4 @@ execute if score .condition_1 hygrave.temp_var matches 0 if score .condition_2 h
 ## then we can determine the maximum build height limit for this dimension
 $execute if score .conditions hygrave.temp_var matches 1 run return run scoreboard players set .min_height hygrave.temp_var $(height)
 execute store result storage hygrave:common temp.args.height int 1 run scoreboard players add .height hygrave.temp_var 16
-execute unless score .height hygrave.temp_var matches 2031.. run function hygrave:internal/database/dimensions/insert/height_limit/test/min with storage hygrave:common temp.args
+execute unless score .height hygrave.temp_var matches 2031.. run function hygrave:internal/database/dimensions/append/height_limit/test/min with storage hygrave:common temp.args
