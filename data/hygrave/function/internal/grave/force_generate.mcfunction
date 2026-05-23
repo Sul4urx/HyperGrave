@@ -83,7 +83,7 @@ ride @n[tag=hygrave.temp.grave.icd] mount @n[tag=hygrave.temp.grave.base]
 function hygrave:internal/grave/generate/grave_placement_restrictions with entity @s
 
 ## Store other data
-execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/database/graves/insert
+execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/database/graves/append
 
 ##> Store PID and GID
 execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner.pid int 1 run scoreboard players get @s hygrave.pid
