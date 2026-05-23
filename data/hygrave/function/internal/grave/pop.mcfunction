@@ -56,13 +56,11 @@ execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/g
 ## Play sound
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
-## Update grave status
-
-data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"popped"}
-data modify storage hygrave:common graves[-1].data.status.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
-
-function hygrave:internal/database/players/graves/lookup with storage hygrave:common temp.args
-data modify storage hygrave:common players[{temp:{owner:1b}}].graves[-1].data.status set from storage hygrave:common graves[-1].data.status
-
 ## Delete grave
-function hygrave:internal/grave/delete
+data modify storage hygrave:common temp.args.destruction_type set value "popped"
+data modify storage hygrave:common temp.args.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
+
+function hygrave:internal/database/graves/delete with storage hygrave:common temp.args
+
+## Remove grave entity
+function hygrave:internal/grave/remove_grave_entity
