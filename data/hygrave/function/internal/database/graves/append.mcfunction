@@ -41,3 +41,6 @@ execute if dimension minecraft:the_end run data modify storage hygrave:common gr
 ## Set GID
 execute store result score @s hygrave.gid run scoreboard players add .global hygrave.gid 1
 execute store result storage hygrave:common graves[-1].data.gid int 1 run scoreboard players get @s hygrave.gid
+
+## Update status
+function hygrave:internal/database/graves/append/update_status with storage hygrave:common graves[-1].data

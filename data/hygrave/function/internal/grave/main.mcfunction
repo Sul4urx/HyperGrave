@@ -1,7 +1,7 @@
 #@> Executed from:
 #@>   function hygrave:internal/loop/1t
 
-## Check if the grave exists in data `active_graves` in storage `hygrave:common`
+## Check if the grave is marked active
 ## If not, delete the grave
 ## This allows for deleting the grave entity remotely
 scoreboard players set .grave_is_in_storage hygrave.temp_var 0
