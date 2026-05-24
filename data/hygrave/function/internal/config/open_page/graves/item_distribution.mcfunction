@@ -39,7 +39,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.item_distribution.grave_generation_fail.operation",\
-        "fallback": "§cRemove §7→§r If a player fails to generate a grave, all of their items will be removed.\n§aKeep §7→§r If a player fails to generate a grave, all of their items will be kept inside their inventory.\n§8Default: Keep"\
+        "fallback": "§cRemove §7→§r If a player fails to generate a grave, all of their items will be removed.\n§aKeep §7→§r If a player fails to generate a grave, all of their items will be kept inside their inventory.\n§eDrop §7→§r If a player fails to generate a grave, all of their items will be dropped.\n§8Default: Keep"\
       }\
     }\
   },\
