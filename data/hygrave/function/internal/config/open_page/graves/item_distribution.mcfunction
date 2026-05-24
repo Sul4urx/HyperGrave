@@ -66,6 +66,42 @@ tellraw @s [\
   }\
 ]
 
+##> Naturalize Drop Acceleration
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.item_distribution.grave_generation_fail.naturalize_drop_acceleration",\
+    "fallback": "     Naturalize Drop Acceleration: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config.item_distribution.grave_generation_fail.naturalize_drop_acceleration",\
+        "fallback": "If true and config Operation is set to §eDrop§r, the items that are being dropped will have a little bit of random acceleration so that it matches the default vanilla behavior for what happens to dropped items when the player dies.\n\nTry this config for yourself to see exactly what I mean!\n\n§8Default: ✔"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.graves.item_distribution.grave_generation_fail.naturalize_drop_acceleration",\
+        "storage": "hygrave:common",\
+        "color": "aqua"\
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/toggle/graves/item_distribution/grave_generation_fail/naturalize_drop_acceleration"\
+    }\
+  }\
+]
+
 ## Grave Generation Success
 tellraw @s [\
   {\
