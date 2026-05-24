@@ -3,7 +3,7 @@
 
 ## Toggle value
 scoreboard players add (graves/item_distribution/grave_generation_fail/operation) hygrave.config 1
-execute if score (graves/item_distribution/grave_generation_fail/operation) hygrave.config matches 2.. run scoreboard players set (graves/item_distribution/grave_generation_fail/operation) hygrave.config 0
+execute if score (graves/item_distribution/grave_generation_fail/operation) hygrave.config matches 3.. run scoreboard players set (graves/item_distribution/grave_generation_fail/operation) hygrave.config 0
 
 ## Play sound
 playsound minecraft:ui.button.click

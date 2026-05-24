@@ -6,12 +6,13 @@
 ## Grave Generation Fail
 
 ##> Operation
-execute unless score (graves/item_distribution/grave_generation_fail/operation) hygrave.config matches 0..1 run scoreboard players set (graves/item_distribution/grave_generation_fail/operation) hygrave.config 1
+execute unless score (graves/item_distribution/grave_generation_fail/operation) hygrave.config matches 0..2 run scoreboard players set (graves/item_distribution/grave_generation_fail/operation) hygrave.config 1
 
 execute store result storage hygrave:common configs.value.graves.item_distribution.grave_generation_fail.operation byte 1 run scoreboard players get (graves/item_distribution/grave_generation_fail/operation) hygrave.config
 
 execute if data storage hygrave:common configs.value.graves.item_distribution.grave_generation_fail{operation:0b} run data modify storage hygrave:common configs.text.graves.item_distribution.grave_generation_fail.operation set value "§cRemove"
 execute if data storage hygrave:common configs.value.graves.item_distribution.grave_generation_fail{operation:1b} run data modify storage hygrave:common configs.text.graves.item_distribution.grave_generation_fail.operation set value "§aKeep"
+execute if data storage hygrave:common configs.value.graves.item_distribution.grave_generation_fail{operation:2b} run data modify storage hygrave:common configs.text.graves.item_distribution.grave_generation_fail.operation set value "§eDrop"
 
 ## Grave Generation Success
 
