@@ -10,7 +10,7 @@ data modify entity @n[tag=hygrave.temp.grave.item_to_drop] Item set from entity 
 
 ## Apply item configs to the item
 
-##> Dropped Contents / Item Despawn time
+##> Dropped Contents / Item Despawn Time
 scoreboard players operation @n[tag=hygrave.temp.grave.item_to_drop] hygrave.despawn_time = (dropped_contents/item_despawn_time) hygrave.config
 
 ##> Dropped Contents / Invulnerable Items

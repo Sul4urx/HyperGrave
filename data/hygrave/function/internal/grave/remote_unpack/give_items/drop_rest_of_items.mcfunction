@@ -9,7 +9,7 @@ summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:clock",components:{"minecraft:c
 
 ## Apply item configs to the item
 
-##> Dropped Contents / Item Despawn time
+##> Dropped Contents / Item Despawn Time
 scoreboard players operation @n[tag=hygrave.temp.grave.item_to_give_back] hygrave.despawn_time = (dropped_contents/item_despawn_time) hygrave.config
 
 ##> Dropped Contents / Invulnerable Items
