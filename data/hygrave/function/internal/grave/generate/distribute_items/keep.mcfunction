@@ -37,6 +37,7 @@ data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:cus
 ## Check if next item should be kept
 scoreboard players remove .loop_count hygrave.temp_var 1
 
-data remove storage hygrave:common temp
+data remove storage hygrave:common temp.item
+data remove storage hygrave:common temp.args
 
 execute if score .loop_count hygrave.temp_var matches 1.. if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/distribute_items/keep with storage hygrave:common configs
