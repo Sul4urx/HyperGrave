@@ -24,7 +24,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.item_distribution.grave_generation_fail",\
-        "fallback": "The item distribution if the player failed to generate a grave (i.e. didn't have nessecary requirements to generate a grave). \n\n§bℹ Items that don't match any of the item predicates in the fields below will be kept in the player's inventory instead."\
+        "fallback": "The item distribution if the player failed to generate a grave (i.e. didn't have nessecary requirements to generate a grave)."\
       }\
     }\
   }\
