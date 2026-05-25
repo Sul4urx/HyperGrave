@@ -44,6 +44,8 @@ execute if score (general/mod_compatibility_mode) hygrave.config matches 0 run f
 execute if score (general/mod_compatibility_mode) hygrave.config matches 1 run data modify storage hygrave:common temp.args.distance set from storage hygrave:common configs.value.general.'mod_compatibility_mode/item_collection_distance'
 execute if score (general/mod_compatibility_mode) hygrave.config matches 1 as @e[type=item,distance=..16] at @s run function hygrave:internal/grave/generate/collect_items with storage hygrave:common temp.args
 
+data modify storage hygrave:common temp.grave_contents.all_items set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items
+
 ## Distribute items
 function hygrave:internal/grave/generate/distribute_items
 
@@ -51,8 +53,11 @@ function hygrave:internal/grave/generate/distribute_items
 function hygrave:internal/grave/generate/take_xp/main
 
 ## Check requirements
-execute unless data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_requirements/no_item
-execute if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/check_requirements/with_item
+data modify storage hygrave:common temp.grave_contents.items set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items
+data remove storage hygrave:common temp.grave_contents.items[{components:{'minecraft:custom_data':{'hygrave:common':{delete_item:1b}}}}]
+
+execute unless data storage hygrave:common temp.grave_contents.items[0] run function hygrave:internal/grave/generate/check_requirements/no_item
+execute if data storage hygrave:common temp.grave_contents.items[0] run function hygrave:internal/grave/generate/check_requirements/with_item
 
 execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
 execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel
