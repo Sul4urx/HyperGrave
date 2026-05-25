@@ -6,7 +6,7 @@ summon minecraft:experience_orb ~ ~ ~ {Tags: ["hygrave.temp.grave.xp_to_give_bac
 
 ## Apply XP configs to the XP orb
 
-##> Dropped Contents / XP despawn time
+##> Dropped Contents / XP despawn Time
 scoreboard players operation @n[tag=hygrave.temp.grave.xp_to_give_back] hygrave.despawn_time = (dropped_contents/xp_despawn_time) hygrave.config
 
 ##> Dropped Contents / Invulnerable XP
