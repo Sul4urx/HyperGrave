@@ -18,8 +18,6 @@ $function hygrave:internal/database/graves/lookup {gid:$(gid)}
 function hygrave:internal/database/players/lookup with storage hygrave:common graves[-1].data.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
-$function hygrave:internal/database/players/graves/lookup {gid:$(gid)}
-
 ##> Player (Interactor)
 execute store result storage hygrave:common temp.args1.pid int 1 run scoreboard players get @s hygrave.pid
 function hygrave:internal/database/players/lookup with storage hygrave:common temp.args1
@@ -43,8 +41,6 @@ playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 ## Update status
 data modify storage hygrave:common graves[-1].data.status set value {destroyed:1b,destruction_type:"remote_unpacked"}
 data modify storage hygrave:common graves[-1].data.status.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
-
-data modify storage hygrave:common players[{temp:{owner:1b}}].graves[-1].data.status set from storage hygrave:common graves[-1].data.status
 
 ## Remove temp tag
 tag @s remove hygrave.temp.grave.interactor

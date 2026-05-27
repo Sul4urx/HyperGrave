@@ -15,8 +15,6 @@ function hygrave:internal/database/graves/lookup with storage hygrave:common tem
 function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
-function hygrave:internal/database/players/graves/lookup with storage hygrave:common temp.args
-
 ##> Player (Interactor)
 execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @p[tag=hygrave.temp.grave.interactor] hygrave.pid
 function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
