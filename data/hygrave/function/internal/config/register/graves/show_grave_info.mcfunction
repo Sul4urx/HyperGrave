@@ -22,6 +22,8 @@ execute unless score (graves/show_grave_info/ao/xp/before_death) hygrave.config 
 
 execute unless score (graves/show_grave_info/ao/xp/after_death) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/ao/xp/after_death) hygrave.config 1
 
+execute unless score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/ao/grave_list_display) hygrave.config 1
+
 
 ## Broken Owner (Set default)
 execute unless score (graves/show_grave_info/bo) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/bo) hygrave.config 1
@@ -44,6 +46,7 @@ execute unless score (graves/show_grave_info/bo/destroyer) hygrave.config matche
 
 execute unless score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/bo/destruction_type) hygrave.config 1
 
+execute unless score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/bo/grave_list_display) hygrave.config 1
 
 ## Active Non-owner (Set default)
 execute unless score (graves/show_grave_info/an) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/an) hygrave.config 1
@@ -64,6 +67,7 @@ execute unless score (graves/show_grave_info/an/xp/before_death) hygrave.config 
 
 execute unless score (graves/show_grave_info/an/xp/after_death) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/an/xp/after_death) hygrave.config 1
 
+execute unless score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/an/grave_list_display) hygrave.config 1
 
 ## Broken Non-Owner (Set default)
 execute unless score (graves/show_grave_info/bn) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/bn) hygrave.config 1
@@ -86,6 +90,7 @@ execute unless score (graves/show_grave_info/bn/destroyer) hygrave.config matche
 
 execute unless score (graves/show_grave_info/bn/destruction_type) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/bn/destruction_type) hygrave.config 1
 
+execute unless score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 0..1 run scoreboard players set (graves/show_grave_info/bn/grave_list_display) hygrave.config 1
 
 
 ## Active Owner (Store as NBT)
@@ -124,6 +129,10 @@ execute if data storage hygrave:common configs.value.graves.show_grave_info.ao.x
 execute store result storage hygrave:common configs.value.graves.show_grave_info.ao.items byte 1 run scoreboard players get (graves/show_grave_info/ao/items) hygrave.config
 execute if data storage hygrave:common configs.value.graves.show_grave_info.ao{items:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.ao.items set value "§c❌"
 execute if data storage hygrave:common configs.value.graves.show_grave_info.ao{items:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.ao.items set value "§a✔"
+
+execute store result storage hygrave:common configs.value.graves.show_grave_info.ao.grave_list_display byte 1 run scoreboard players get (graves/show_grave_info/ao/grave_list_display) hygrave.config
+execute if data storage hygrave:common configs.value.graves.show_grave_info.ao{grave_list_display:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.ao.grave_list_display set value "§c❌"
+execute if data storage hygrave:common configs.value.graves.show_grave_info.ao{grave_list_display:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.ao.grave_list_display set value "§a✔"
 
 
 ## Broken Non-owner (Store as NBT)
@@ -167,6 +176,10 @@ execute store result storage hygrave:common configs.value.graves.show_grave_info
 execute if data storage hygrave:common configs.value.graves.show_grave_info.bo{destruction_type:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bo.destruction_type set value "§c❌"
 execute if data storage hygrave:common configs.value.graves.show_grave_info.bo{destruction_type:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bo.destruction_type set value "§a✔"
 
+execute store result storage hygrave:common configs.value.graves.show_grave_info.bo.grave_list_display byte 1 run scoreboard players get (graves/show_grave_info/bo/grave_list_display) hygrave.config
+execute if data storage hygrave:common configs.value.graves.show_grave_info.bo{grave_list_display:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bo.grave_list_display set value "§c❌"
+execute if data storage hygrave:common configs.value.graves.show_grave_info.bo{grave_list_display:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bo.grave_list_display set value "§a✔"
+
 
 ## Active Non-owner (Store as NBT)
 execute store result storage hygrave:common configs.value.graves.show_grave_info.an.all byte 1 run scoreboard players get (graves/show_grave_info/an) hygrave.config
@@ -204,6 +217,10 @@ execute if data storage hygrave:common configs.value.graves.show_grave_info.an.x
 execute store result storage hygrave:common configs.value.graves.show_grave_info.an.items byte 1 run scoreboard players get (graves/show_grave_info/an/items) hygrave.config
 execute if data storage hygrave:common configs.value.graves.show_grave_info.an{items:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.an.items set value "§c❌"
 execute if data storage hygrave:common configs.value.graves.show_grave_info.an{items:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.an.items set value "§a✔"
+
+execute store result storage hygrave:common configs.value.graves.show_grave_info.an.grave_list_display byte 1 run scoreboard players get (graves/show_grave_info/an/grave_list_display) hygrave.config
+execute if data storage hygrave:common configs.value.graves.show_grave_info.an{grave_list_display:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.an.grave_list_display set value "§c❌"
+execute if data storage hygrave:common configs.value.graves.show_grave_info.an{grave_list_display:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.an.grave_list_display set value "§a✔"
 
 
 ## Broken Non-owner (Store as NBT)
@@ -246,3 +263,7 @@ execute if data storage hygrave:common configs.value.graves.show_grave_info.bn{d
 execute store result storage hygrave:common configs.value.graves.show_grave_info.bn.destruction_type byte 1 run scoreboard players get (graves/show_grave_info/bn/destruction_type) hygrave.config
 execute if data storage hygrave:common configs.value.graves.show_grave_info.bn{destruction_type:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bn.destruction_type set value "§c❌"
 execute if data storage hygrave:common configs.value.graves.show_grave_info.bn{destruction_type:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bn.destruction_type set value "§a✔"
+
+execute store result storage hygrave:common configs.value.graves.show_grave_info.bn.grave_list_display byte 1 run scoreboard players get (graves/show_grave_info/bn/grave_list_display) hygrave.config
+execute if data storage hygrave:common configs.value.graves.show_grave_info.bn{grave_list_display:0b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bn.grave_list_display set value "§c❌"
+execute if data storage hygrave:common configs.value.graves.show_grave_info.bn{grave_list_display:1b} run data modify storage hygrave:common configs.text.graves.show_grave_info.bn.grave_list_display set value "§a✔"

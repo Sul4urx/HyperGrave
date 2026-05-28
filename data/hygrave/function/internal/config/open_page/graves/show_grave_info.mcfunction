@@ -1048,6 +1048,110 @@ tellraw @s [\
 ##
 tellraw @s ""
 
+## GLD
+tellraw @s [\
+  "",\
+  {\
+    "translate": "hygrave.config.show_grave_info.grave_list_display",\
+    "fallback": "   GLD:§l   ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.show_grave_info.grave_list_display",\
+        "fallback": "Whether this type of grave should get shown in the grave list display when a player uses `/trigger hygrave.show_grave_list`. §7(Grave List Display)"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7|%s§7|%s§7|%s§7]",\
+    "with": [\
+      {\
+        "translate": "%s ",\
+        "with": [\
+          {\
+            "nbt": "configs.text.graves.show_grave_info.ao.grave_list_display",\
+            "storage": "hygrave:common"\
+          }\
+        ],\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.toggle.show_grave_info.ao",\
+            "fallback": "Click to toggle the config's value for active graves."\
+          }\
+        },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/toggle/graves/show_grave_info/ao/grave_list_display"\
+        }\
+      },\
+      {\
+        "translate": " %s ",\
+        "with": [\
+          {\
+            "nbt": "configs.text.graves.show_grave_info.bo.grave_list_display",\
+            "storage": "hygrave:common"\
+          }\
+        ],\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.toggle.show_grave_info.bo",\
+            "fallback": "Click to toggle the config's value for destroyed graves."\
+          }\
+        },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/toggle/graves/show_grave_info/bo/grave_list_display"\
+        }\
+      },\
+      {\
+        "translate": " %s ",\
+        "with": [\
+          {\
+            "nbt": "configs.text.graves.show_grave_info.an.grave_list_display",\
+            "storage": "hygrave:common"\
+          }\
+        ],\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.toggle.show_grave_info.an",\
+            "fallback": "Click to toggle the config's value for graves that belong to other players."\
+          }\
+        },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/toggle/graves/show_grave_info/an/grave_list_display"\
+        }\
+      },\
+      {\
+        "translate": " %s",\
+        "with": [\
+          {\
+            "nbt": "configs.text.graves.show_grave_info.bn.grave_list_display",\
+            "storage": "hygrave:common"\
+          }\
+        ],\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_change_description.toggle.show_grave_info.bn",\
+            "fallback": "Click to toggle the config's value for destroyed graves that belong to other players."\
+          }\
+        },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/toggle/graves/show_grave_info/bn/grave_list_display"\
+        }\
+      }\
+    ]\
+  }\
+]
+
+##
+tellraw @s ""
+
 ## Config page menu
 tellraw @s [\
   {\
