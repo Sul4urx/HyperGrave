@@ -17,6 +17,7 @@ scoreboard players set (1000) hygrave.var 1000
 scoreboard players set (1625) hygrave.var 1625
 scoreboard players set (3600) hygrave.var 3600
 scoreboard players set (2520) hygrave.var 2520
+scoreboard players set (24000) hygrave.var 24000
 
 ##> Start GIDs from 1000
 execute unless score .global hygrave.gid matches 1000.. run scoreboard players set .global hygrave.gid 1000

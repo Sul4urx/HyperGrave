@@ -2,11 +2,16 @@
 #@>   function hygrave:internal/grave/generate
 #@>   function hygrave:internal/grave/force_generate
 
+## Total Tick
+execute store result score .creation_time.total_ticks hygrave.temp_var run function hygrave:internal/grave/generate/get_creation_time/query_time
+
 ## Tick
-execute store result score .creation_time.tick hygrave.temp_var run time query daytime
+scoreboard players operation .creation_time.tick hygrave.temp_var = .creation_time.total_ticks hygrave.temp_var
+scoreboard players operation .creation_time.tick hygrave.temp_var %= (24000) hygrave.var
 
 ## Day count
-execute store result score .creation_time.day hygrave.temp_var run time query day
+scoreboard players operation .creation_time.day hygrave.temp_var = .creation_time.total_ticks hygrave.temp_var
+scoreboard players operation .creation_time.day hygrave.temp_var /= (24000) hygrave.var
 
 ## Minutes
 scoreboard players operation .creation_time.minutes hygrave.temp_var = .creation_time.tick hygrave.temp_var
