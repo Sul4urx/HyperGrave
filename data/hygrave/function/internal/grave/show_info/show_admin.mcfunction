@@ -333,7 +333,7 @@ tellraw @s ""
 ## Menu
 $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
   "translate": "hygrave.grave_info.menu",\
-  "fallback": "§7[%s§7|%s§7|%s§7]",\
+  "fallback": "§7[%s§7|%s§7|%s§7|%s§7]",\
   "with": [\
     {\
       "translate": "hygrave.grave_info.menu.back",\
@@ -366,6 +366,21 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
       }\
     },\
     {\
+      "translate": "hygrave.grave_info.menu.search",\
+      "fallback": " §b\U0001f50d Search ",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.grave_info.menu_description.search",\
+          "fallback": "Click to show a list of GIDs of all graves."\
+        }\
+      },\
+      "click_event": {\
+        "action": "run_command",\
+        "command": "/function hygrave:run/grave/admin/show_grave_list"\
+      }\
+    },\
+    {\
       "translate": "hygrave.grave_info.menu.back",\
       "fallback": " §b>",\
       "hover_event": {\
@@ -384,7 +399,7 @@ $execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b}
 }
 $execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
   "translate": "hygrave.grave_info.menu_grayed_remote_unpack",\
-  "fallback": "§7[%s§7| Loot |%s§7]",\
+  "fallback": "§7[%s§7| Loot |%s§7|%s§7]",\
   "with": [\
     {\
       "translate": "hygrave.grave_info.menu.back",\
@@ -399,6 +414,21 @@ $execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run
       "click_event": {\
         "action": "run_command",\
         "command": "/function hygrave:internal/grave/show_info/show_admin/view_previous {gid: $(gid)}"\
+      }\
+    },\
+    {\
+      "translate": "hygrave.grave_info.menu.search",\
+      "fallback": " §b\U0001f50d Search ",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.grave_info.menu_description.search",\
+          "fallback": "Click to show a list of GIDs of all graves."\
+        }\
+      },\
+      "click_event": {\
+        "action": "run_command",\
+        "command": "/function hygrave:run/grave/admin/show_grave_list"\
       }\
     },\
     {\
