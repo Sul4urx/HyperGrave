@@ -369,7 +369,7 @@ tellraw @s ""
 ## Menu
 $tellraw @s {\
   "translate": "hygrave.grave_info.menu",\
-  "fallback": "§7[%s§7|%s§7|%s§7]",\
+  "fallback": "§7[%s§7|%s§7|%s§7|%s§7]",\
   "with": [\
     {\
       "translate": "hygrave.grave_info.menu.back",\
@@ -399,6 +399,21 @@ $tellraw @s {\
       "click_event": {\
         "action": "suggest_command",\
         "command": "/trigger hygrave.remote_loot_grave set $(gid)"\
+      }\
+    },\
+    {\
+      "translate": "hygrave.grave_info.menu.search",\
+      "fallback": " §b\U0001f50d Search ",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.grave_info.menu_description.search",\
+          "fallback": "Click to show a list of GIDs of all graves."\
+        }\
+      },\
+      "click_event": {\
+        "action": "run_command",\
+        "command": "/trigger hygrave.show_grave_list"\
       }\
     },\
     {\

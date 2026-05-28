@@ -57,6 +57,9 @@ scoreboard objectives add hygrave.rotation_cooldown dummy
 ##> Show grave info
 scoreboard objectives add hygrave.show_grave_info trigger
 
+##> Show grave list
+scoreboard objectives add hygrave.show_grave_list trigger
+
 ##>> View next and view previous
 scoreboard objectives add hygrave.show_grave_info.view_next trigger
 scoreboard objectives add hygrave.show_grave_info.view_previous trigger
