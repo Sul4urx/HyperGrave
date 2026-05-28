@@ -13,6 +13,12 @@
         "min_format": 71,
         "max_format": 88,
         "formats": [71, 88]
+      },
+      {
+        "directory": "pre_26_1",
+        "min_format": 71,
+        "max_format": 94,
+        "formats": [71, 94]
       }
     ]
   }
