@@ -65,6 +65,11 @@ execute as @a at @s if score @s hygrave.show_grave_info matches ..-1 run functio
 scoreboard players set @a hygrave.show_grave_info 0
 scoreboard players enable @a hygrave.show_grave_info
 
+##> Show grave info
+execute as @a at @s if score @s hygrave.show_grave_list matches 1.. run function hygrave:internal/grave/show_list
+scoreboard players set @a hygrave.show_grave_list 0
+scoreboard players enable @a hygrave.show_grave_list
+
 ##>> View next
 execute as @a[scores={hygrave.show_grave_info.view_next=1000..}] at @s run function hygrave:internal/grave/show_info/show_non-admin/view_next
 scoreboard players set @a hygrave.show_grave_info.view_next 0
