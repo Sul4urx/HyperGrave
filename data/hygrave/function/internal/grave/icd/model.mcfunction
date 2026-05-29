@@ -95,7 +95,7 @@ data modify entity @n[tag=hygrave.temp.grave.model.decoration_2] transformation 
 ## ICD Item
 execute if score (grave_appearance/grave_model/icd_item/render_icd) hygrave.config matches 1.. run data modify entity @n[tag=hygrave.temp.grave.icd] view_range set value 1.0f
 execute if score (grave_appearance/grave_model/icd_item/render_icd) hygrave.config matches ..0 run data modify entity @n[tag=hygrave.temp.grave.icd] view_range set value 0.0f
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common.items[0] run data modify entity @n[tag=hygrave.temp.grave.icd] view_range set value 0.0f
+execute unless data storage hygrave:common temp.grave_data.items[0] run data modify entity @n[tag=hygrave.temp.grave.icd] view_range set value 0.0f
 
 ##> Rotate
 scoreboard players add @n[tag=hygrave.temp.grave.icd] hygrave.rotation_cooldown 1
