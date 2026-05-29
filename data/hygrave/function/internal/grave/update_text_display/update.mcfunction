@@ -51,9 +51,9 @@ execute if data storage hygrave:common temp.args.texts[2] if data storage hygrav
 execute if data storage hygrave:common temp.args.texts[1] if data storage hygrave:common temp.args.texts[2] run data modify storage hygrave:common temp.args.texts insert 2 value "\n"
 
 ## Aliases
-data modify storage hygrave:common temp.text_display.owner set from entity @n[type=minecraft:item_display,distance=..1,tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
+data modify storage hygrave:common temp.text_display.owner set from storage hygrave:common temp.grave_data.owner
 
-data modify storage hygrave:common temp.text_display.gid set from entity @n[type=minecraft:item_display,distance=..1,tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.gid
+data modify storage hygrave:common temp.text_display.gid set from storage hygrave:common temp.grave_data.gid
 
 execute store result storage hygrave:common temp.text_display.despawn_time.seconds int 1 run scoreboard players get .despawn_time.seconds hygrave.temp_var
 execute store result storage hygrave:common temp.text_display.despawn_time.fseconds int 1 run scoreboard players get @s hygrave.despawn_time
@@ -61,11 +61,11 @@ execute store result storage hygrave:common temp.text_display.despawn_time.minut
 execute store result storage hygrave:common temp.text_display.despawn_time.fminutes int 0.0166666666666666666666 run scoreboard players get @s hygrave.despawn_time
 execute store result storage hygrave:common temp.text_display.despawn_time.hours int 1 run scoreboard players get .despawn_time.hours hygrave.temp_var
 
-execute store result storage hygrave:common temp.text_display.item_count int 1 if data entity @n[type=minecraft:item_display,distance=..1,tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[]
+execute store result storage hygrave:common temp.text_display.item_count int 1 if data storage hygrave:common temp.grave_data.items[]
 
-data modify storage hygrave:common temp.text_display.xp set from entity @n[type=minecraft:item_display,distance=..1,tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp
+data modify storage hygrave:common temp.text_display.xp set from storage hygrave:common temp.grave_data.xp
 
-data modify storage hygrave:common temp.text_display.creation_time set from entity @n[type=minecraft:item_display,distance=..1,tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.creation_time
+data modify storage hygrave:common temp.text_display.creation_time set from storage hygrave:common temp.grave_data.creation_time
 
 ## Update current text display
 data modify entity @n[type=minecraft:text_display,distance=..1,tag=hygrave.temp.grave.text_display] text set from storage hygrave:common temp.args.texts
