@@ -51,6 +51,9 @@ scoreboard objectives add hygrave.icd.cooldown dummy
 ##> Rotation cooldown (used to control rotating objects)
 scoreboard objectives add hygrave.rotation_cooldown dummy
 
+##> Text display update cooldown (used to update text displays of graves)
+scoreboard objectives add hygrave.text_display_update_cooldown dummy
+
 
 ## Trigger scores
 

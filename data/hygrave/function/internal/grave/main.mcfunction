@@ -25,9 +25,13 @@ execute as @n[type=minecraft:interaction,distance=..1,tag=hygrave.temp.grave.int
 function hygrave:internal/grave/tag_owner with storage hygrave:common temp.grave_data.owner
 
 ## Update text display
-execute if score (grave_interaction/icd_properties/switch_text_display) hygrave.config matches 0 run function hygrave:internal/grave/update_text_display/update
+scoreboard players add @s[tag=hygrave.temp.grave.base] hygrave.text_display_update_cooldown 1
+
+execute if score @s hygrave.text_display_update_cooldown matches 20.. if score (grave_interaction/icd_properties/switch_text_display) hygrave.config matches 0 run function hygrave:internal/grave/update_text_display/update
 execute unless score (grave_interaction/icd_properties/switch_text_display) hygrave.config matches 0 unless data storage hygrave:common temp.grave_data{icd_activated:1b} run function hygrave:internal/grave/update_text_display/update
 execute unless score (grave_interaction/icd_properties/switch_text_display) hygrave.config matches 0 if data storage hygrave:common temp.grave_data{icd_activated:1b} run function hygrave:internal/grave/update_text_display/update_icd
+
+execute if score @s[tag=hygrave.temp.grave.base] hygrave.text_display_update_cooldown matches 20.. run scoreboard players set @s hygrave.text_display_update_cooldown 0
 
 ## Tag the ICD activator
 execute if score (grave_interaction/icd_properties/activate_for) hygrave.config matches 1 if score (grave_interaction/icd_properties/revert_sneaking_behavior) hygrave.config matches 0 run tag @a[distance=..4,predicate=hygrave:is_sneaking,tag=hygrave.temp.grave.owner] add hygrave.temp.grave.icd_activator
