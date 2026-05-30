@@ -11,13 +11,6 @@ execute unless score .item_id_list_is_valid hygrave.temp_var matches 1 run title
   "fallback": "§cInvalid item ID."\
 }
 
-## Otherwise success
-$execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run title @s actionbar {\
-  "translate": "hygrave.change_config_message.grave_generation_requirements.with_item.add_item.success",\
-  "fallback": "Successfully added item %s to the list.",\
-  "with": ["$(value)"]\
-}
-
 ## If success, change value
 execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run data modify storage hygrave:common configs.value.requirements.grave_generation_requirements.with_item.item_ids append from storage hygrave:common temp.config.value
 

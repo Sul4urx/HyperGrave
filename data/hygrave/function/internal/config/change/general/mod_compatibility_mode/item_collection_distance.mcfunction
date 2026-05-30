@@ -20,16 +20,6 @@ execute unless predicate {\
   "fallback": "§cThe value must be an integer between 0 and 16 (inclusive)."\
 }
 
-## Otherwise success
-title @s actionbar {\
-  "translate": "hygrave.change_config_message.mod_compatibility_mode.item_collection_distance.success",\
-  "fallback": "Successfully changed the Item Collection Distance config from %s blocks to %s blocks.",\
-  "with": [\
-    {"storage": "hygrave:common", "nbt": "configs.text.general.'mod_compatibility_mode/item_collection_distance'"},\
-    {"storage": "hygrave:common", "nbt": "temp.config.value"}\
-  ]\
-}
-
 ## If success, change value
 execute store result score (general/mod_compatibility_mode/item_collection_distance) hygrave.config run data get storage hygrave:common temp.config.value
 

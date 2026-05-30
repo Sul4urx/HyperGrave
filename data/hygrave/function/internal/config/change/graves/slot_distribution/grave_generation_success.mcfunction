@@ -17,12 +17,6 @@ execute if data storage hygrave:common temp.config{value:{}} unless score .is_va
   "fallback": "§cAll slots must be valid."\
 }
 
-## Otherwise success
-execute if data storage hygrave:common temp.config{value:{}} if score .is_valid hygrave.temp_var matches 1 run title @s actionbar {\
-  "translate": "hygrave.change_config_message.slot_distribution.grave_generation_success.success",\
-  "fallback": "Successfully changed the value."\
-}
-
 ## If success, change value
 execute if data storage hygrave:common temp.config{value:{}} if score .is_valid hygrave.temp_var matches 1 run data modify storage hygrave:common configs.text.graves.slot_distribution.grave_generation_success set from storage hygrave:common temp.config.value
 execute if data storage hygrave:common temp.config{value:{}} if score .is_valid hygrave.temp_var matches 1 run data modify storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success set value {}

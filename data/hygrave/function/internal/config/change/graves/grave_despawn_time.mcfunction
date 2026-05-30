@@ -17,16 +17,6 @@ execute unless predicate {\
   "fallback": "§cThe value must be a non-negative integer."\
 }
 
-## Otherwise success
-title @s actionbar {\
-  "translate": "hygrave.change_config_message.despawn_time.grave.success",\
-  "fallback": "Successfully changed the Grave Despawn Time config from %s seconds to %s seconds.",\
-  "with": [\
-    {"storage": "hygrave:common", "nbt": "configs.value.graves.despawn_time"},\
-    {"storage": "hygrave:common", "nbt": "temp.config.value"}\
-  ]\
-}
-
 ## If success, change value
 execute store result score (graves/despawn_time) hygrave.config run data get storage hygrave:common temp.config.value
 

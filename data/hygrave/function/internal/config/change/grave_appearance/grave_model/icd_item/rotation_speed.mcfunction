@@ -20,16 +20,6 @@ execute unless predicate {\
   "fallback": "§cThe value must be an integer between -180 and 180 (non-inclusive)."\
 }
 
-## Otherwise success
-title @s actionbar {\
-  "translate": "hygrave.change_config_message.icd_item.rotation_speed.success",\
-  "fallback": "Successfully changed the Rotation Speed from %s°/s to %s°/s.",\
-  "with": [\
-    {"storage": "hygrave:common", "nbt": "configs.text.grave_appearance.grave_model.icd_item.rotation_speed"},\
-    {"storage": "hygrave:common", "nbt": "temp.config.value"}\
-  ]\
-}
-
 ## If success, change value
 execute store result score (grave_appearance/grave_model/icd_item/rotation_speed) hygrave.config run data get storage hygrave:common temp.config.value
 

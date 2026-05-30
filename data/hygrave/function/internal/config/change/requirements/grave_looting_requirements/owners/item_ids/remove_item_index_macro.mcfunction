@@ -9,17 +9,5 @@ execute unless score .item_id_list_is_valid hygrave.temp_var matches 1 run title
   "fallback": "§cThe list is either empty or index is out of range."\
 }
 
-## Otherwise success
-$execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run title @s actionbar {\
-  "translate": "hygrave.change_config_message.grave_looting_requirements.owners.remove_item_index.success",\
-  "fallback": "Successfully removed item %s from the list.",\
-  "with": [\
-    {\
-      "nbt": "configs.value.requirements.grave_looting_requirements.owners.item_ids[$(index)]",\
-      "storage": "hygrave:common"\
-    }\
-  ]\
-}
-
 ## If success, change value
 $execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run data remove storage hygrave:common configs.value.requirements.grave_looting_requirements.owners.item_ids[$(index)]
