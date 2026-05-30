@@ -1,8 +1,5 @@
 The source code for HyperGrave.
 
-> [!WARNING]
-> HyperGrave is still in development. Expect bugs (and maybe even data loss)!
-
 If you found a bug, report it in **Issues** tab > **New issue**. You can also suggest a new feature there.
 
 If you have a question about this data pack, use `/trigger hygrave.help` in game.
