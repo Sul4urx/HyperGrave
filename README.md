@@ -56,15 +56,23 @@ If you don't know much about source code and stuff like that, you can skip this 
 Git commits follow [conventional commits v1.0.0](https://conventionalcommits.org/en/v1.0.0).
 
 ### Types
-- **feat**: When a feature gets added, changed or removed
-- **fix**: When a bug gets patched
+- **feat**: When a feature gets added, changed or removed.
+- **fix**: When a bug gets patched.
 - **doc** or **docs**: Changes of this type affect documentation or UI
     (which includes things like comments, config tooltips, UI, menus, etc).
 - **ui**: Changes of this type affect UI. Commits of this type can always be replaced with **doc** or **docs** (but not vice versa).
 - **refactor**: When a rename or moving of something happens in the internal codebase.
 - **reword**: When a rename or moving of something happens in the UI/UX.
+- **rename**: When either or both of the **reword** and **refactor** happens at the same time.
 - **style**: Changes that only affect formatting, white-space, etc and do not change the meaning of the code.
-- **version**: When the version of HyperGrave gets changed
+- **perf**: Performance improvements.
+- **version**:
+    - **version(inital)**: When a new version starts being worked on.
+    - **version(final)**: When a new version is finished.
+    - Commits between these two commits are for the new version.
+    - Messages of these commits are only the new version that is being worked on. They are usually (but not nessecarily) the same version.
+    - For example, commits between `version(initial): 2.3.2` and `version(final): 2.3.2` are commits for version 2.3.2.
+- **chore**: Miscellaneous commits.
 
 ## Versioning
 HyperGrave uses a special versioning scheme. It is in the format of X.Y.Z (Three non-negative integers X, Y and Z seperated by dots).
