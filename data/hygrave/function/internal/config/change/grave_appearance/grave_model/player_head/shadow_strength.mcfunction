@@ -20,16 +20,6 @@ execute unless predicate {\
   "fallback": "§cThe value must be an integer between 0 and 10000 (inclusive)."\
 }
 
-## Otherwise success
-title @s actionbar {\
-  "translate": "hygrave.change_config_message.player_head.shadow_strength.success",\
-  "fallback": "Successfully changed the Shadow Strength from %s to %s.",\
-  "with": [\
-    {"storage": "hygrave:common", "nbt": "configs.text.grave_appearance.grave_model.player_head.shadow_strength"},\
-    {"storage": "hygrave:common", "nbt": "temp.config.value"}\
-  ]\
-}
-
 ## If success, change value
 execute store result score (grave_appearance/grave_model/player_head/shadow_strength) hygrave.config run data get storage hygrave:common temp.config.value
 

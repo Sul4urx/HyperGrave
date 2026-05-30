@@ -11,13 +11,6 @@ execute unless score .ench_id_list_is_valid hygrave.temp_var matches 1 run title
   "fallback": "§cInvalid enchantment ID."\
 }
 
-## Otherwise success
-$execute if score .ench_id_list_is_valid hygrave.temp_var matches 1 run title @s actionbar {\
-  "translate": "hygrave.change_config_message.item_distribution.grave_generation_success.keep.add_ench.success",\
-  "fallback": "Successfully added enchantment %s to the list.",\
-  "with": ["$(value)"]\
-}
-
 ## If success, change value
 execute if score .ench_id_list_is_valid hygrave.temp_var matches 1 run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_enchs append from storage hygrave:common temp.config.value
 

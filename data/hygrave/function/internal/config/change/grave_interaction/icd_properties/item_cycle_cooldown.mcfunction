@@ -20,16 +20,6 @@ execute unless predicate {\
   "fallback": "§cThe value must be an integer between 0 and 160 (inclusive)."\
 }
 
-## Otherwise success
-title @s actionbar {\
-  "translate": "hygrave.change_config_message.icd.item_cycle_cooldown.success",\
-  "fallback": "Successfully changed the Item Cycle Cooldown config from %s ticks to %s ticks.",\
-  "with": [\
-    {"storage": "hygrave:common", "nbt": "configs.text.grave_interaction.icd_properties.item_cycle_cooldown"},\
-    {"storage": "hygrave:common", "nbt": "temp.config.value"}\
-  ]\
-}
-
 ## If success, change value
 execute store result score (grave_interaction/icd_properties/item_cycle_cooldown) hygrave.config run data get storage hygrave:common temp.config.value
 

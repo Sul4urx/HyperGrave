@@ -11,12 +11,6 @@ execute unless score .item_id_list_is_valid hygrave.temp_var matches 1 run title
   "fallback": "§cIncorrect format: At least one of the item IDs is invalid."\
 }
 
-## Otherwise success
-execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run title @s actionbar {\
-  "translate": "hygrave.change_config_message.item_distribution.grave_generation_success.keep_items.change_list.success",\
-  "fallback": "Successfully changed the list."\
-}
-
 ## If success, change value
 execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_items set from storage hygrave:common temp.config.value
 
