@@ -8,7 +8,7 @@ You don't need any resource packs to use HyperGrave.
 
 ## Downloads
 These are the downloads for the latest version of HyperGrave:
-- [HyperGrave v0.5.0 (MC 1.21.5 - 1.21.11)](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv0.5.0%2Fmc-1.21.11/HyperGrave.v0.5.0.MC.1.21.5.-.1.21.11.zip)
+- [HyperGrave v2.0.0 (MC 1.21.5 - 26.1.x)](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv2.0.0%2Fmc-26.1.x/HyperGrave.v2.0.0.MC.1.21.5.-.26.1.x.DATAPACK.zip)
 
 ### Upgrading and downgrading
 - If you are upgrading from a version older than v0.5.0, **remember to first uninstall HyperGrave from the older version** and then you can replace the older version with the newer version. **This will remove all data from HyperGrave**.
@@ -39,13 +39,16 @@ If you want to try out older versions of HyperGrave (which is not recommended), 
 ##### v0.4.0
 - Only supports Minecraft versions 1.21 - 1.21.11 .
 
+##### v0.5.0
+- Only supports Minecraft versions 1.21.5 - 1.21.11 .
+
 ## Source
 If you don't know much about source code and stuff like that, you can skip this section.
 
 ### Branches
 | Name                         | Description                           | Last Supported version | Supported |
 | ---------------------------- | ------------------------------------- | -----------------------| --------- |
-| `main`                       | The main branch                       | v0.5.0                 | ✔         |
+| `main`                       | The main branch                       | v2.0.0                 | ✔         |
 | `archive/release/mc-1.21.4`  | For Minecraft versions 1.21 to 1.21.4 | v0.4.0                 | ❌        |
 | `develop`                    | The next minor version of HyperGrave  | -                      | -        |
 
