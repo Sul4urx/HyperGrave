@@ -87,11 +87,6 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
 ##> Grave
 function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
 
-## Convert to string
-data modify storage hygrave:common temp.gi.creation_time.day set string storage hygrave:common graves[-1].data.creation_time.day
-data modify storage hygrave:common temp.gi.creation_time.hours set string storage hygrave:common graves[-1].data.creation_time.hours
-data modify storage hygrave:common temp.gi.creation_time.minutes set string storage hygrave:common graves[-1].data.creation_time.minutes
-
 ## Check for type:
 ## AO: Active grave belonging to the player
 ## BO: Destroyed grave belonging to the player

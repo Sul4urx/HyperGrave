@@ -1,0 +1,1 @@
+return run time of minecraft:overworld query minecraft:day

@@ -70,9 +70,12 @@ data modify storage hygrave:common temp.text_display.despawn_time.hours set stri
 execute store result storage hygrave:common temp.text_display.item_count int 1 if data storage hygrave:common temp.grave_data.items[]
 data modify storage hygrave:common temp.text_display.item_count set string storage hygrave:common temp.text_display.item_count
 
-data modify storage hygrave:common temp.text_display.xp set string storage hygrave:common temp.grave_data.xp
+data modify storage hygrave:common temp.text_display.xp set from storage hygrave:common temp.grave_data.xp
+data modify storage hygrave:common temp.text_display.xp.after_death.total set string storage hygrave:common temp.text_display.xp.after_death.total
+data modify storage hygrave:common temp.text_display.xp.after_death.levels set string storage hygrave:common temp.text_display.xp.after_death.levels
+data modify storage hygrave:common temp.text_display.xp.after_death.points set string storage hygrave:common temp.text_display.xp.after_death.points
 
-data modify storage hygrave:common temp.text_display.creation_time set string storage hygrave:common temp.grave_data.creation_time
+data modify storage hygrave:common temp.text_display.creation_time set from storage hygrave:common temp.grave_data.creation_time
 
 ## Update current text display
 data modify entity @n[type=minecraft:text_display,distance=..1,tag=hygrave.temp.grave.text_display] text set from storage hygrave:common temp.args.texts

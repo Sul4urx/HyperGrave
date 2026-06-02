@@ -4,11 +4,6 @@
 ## Read the input GID and store it
 execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get @s hygrave.show_grave_info
 
-## Convert to string
-data modify storage hygrave:common temp.gi.creation_time.day set string storage hygrave:common graves[-1].data.creation_time.day
-data modify storage hygrave:common temp.gi.creation_time.hours set string storage hygrave:common graves[-1].data.creation_time.hours
-data modify storage hygrave:common temp.gi.creation_time.minutes set string storage hygrave:common graves[-1].data.creation_time.minutes
-
 ## Check if any graves have been generated yet
 execute unless data storage hygrave:common graves[0] run return run title @s actionbar {\
   "translate": "hygrave.grave_info.fail.grave_none_exist",\
@@ -271,19 +266,19 @@ tellraw @s {\
   },\
   "with": [\
     {\
-      "nbt": "temp.gi.creation_time.day",\
+      "nbt": "graves[-1].data.creation_time.string.day",\
       "color": "gold",\
       "storage": "hygrave:common",\
       "interpret": true\ 
     },\
     {\
-      "nbt": "temp.gi.creation_time.hours",\
+      "nbt": "graves[-1].data.creation_time.string.hours",\
       "color": "gold",\
       "storage": "hygrave:common",\
       "interpret": true\ 
     },\
     {\
-      "nbt": "temp.gi.creation_time.minutes",\
+      "nbt": "graves[-1].data.creation_time.string.minutes",\
       "color": "gold",\
       "storage": "hygrave:common",\
       "interpret": true\ 

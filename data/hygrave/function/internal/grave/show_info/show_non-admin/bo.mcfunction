@@ -311,19 +311,19 @@ execute unless score (graves/show_grave_info/bo/creation_time) hygrave.config ma
   },\
   "with": [\
     {\
-      "nbt": "temp.gi.creation_time.day",\
+      "nbt": "graves[-1].data.creation_time.string.day",\
       "color": "gold",\
       "storage": "hygrave:common",\
       "interpret": true\ 
     },\
     {\
-      "nbt": "temp.gi.creation_time.hours",\
+      "nbt": "graves[-1].data.creation_time.string.hours",\
       "color": "gold",\
       "storage": "hygrave:common",\
       "interpret": true\ 
     },\
     {\
-      "nbt": "temp.gi.creation_time.minutes",\
+      "nbt": "graves[-1].data.creation_time.string.minutes",\
       "color": "gold",\
       "storage": "hygrave:common",\
       "interpret": true\ 
