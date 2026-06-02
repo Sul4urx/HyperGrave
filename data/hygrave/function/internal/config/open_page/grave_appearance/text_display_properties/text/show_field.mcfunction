@@ -48,6 +48,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -64,6 +65,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -84,7 +86,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -105,7 +108,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -159,6 +163,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -175,6 +180,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -195,7 +201,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -216,7 +223,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -270,6 +278,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -286,6 +295,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -306,7 +316,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -327,7 +338,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -381,6 +393,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -397,6 +410,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -417,7 +431,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -438,7 +453,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -492,6 +508,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -508,6 +525,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -528,7 +546,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -549,7 +568,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -603,6 +623,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -619,6 +640,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -639,7 +661,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -660,7 +683,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -714,6 +738,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
               "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.translate",\
               "storage": "hygrave:common",\
               "color": "dark_gray",\
+              "plain": true\
             }],\
           }\
         },\
@@ -730,6 +755,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
             "nbt": "configs.value.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.color",\
             "storage": "hygrave:common",\
             "color": "white",\
+            "plain": true\
           }\
         ],\
         "hover_event": {\
@@ -750,7 +776,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.bold",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -771,7 +798,8 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
         "with": [\
           {\
             "nbt": "configs.text.grave_appearance.text_display_properties.text.line_$(line_idx).text_$(text_idx).text.italic",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\

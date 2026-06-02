@@ -49,6 +49,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.item_distribution.grave_generation_fail.operation",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -85,6 +86,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.item_distribution.grave_generation_fail.naturalize_drop_acceleration",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -146,7 +148,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.graves.item_distribution.grave_generation_success.remove_items",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\
@@ -215,7 +218,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.graves.item_distribution.grave_generation_success.remove_enchs",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\
@@ -299,7 +303,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.graves.item_distribution.grave_generation_success.keep_items",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\
@@ -368,7 +373,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.graves.item_distribution.grave_generation_success.keep_enchs",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\

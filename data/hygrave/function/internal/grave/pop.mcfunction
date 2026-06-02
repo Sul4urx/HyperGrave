@@ -40,6 +40,7 @@ execute unless score .check_requirements.xp hygrave.temp_var matches 1 run retur
     {\
       "nbt": "configs.text.requirements.grave_looting_requirements.owners.xp.levels",\
       "storage": "hygrave:common",\
+      "interpret": true,\
       "color": "red"\
     }\
   ]\

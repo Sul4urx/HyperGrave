@@ -4,6 +4,11 @@
 ## Read the input bid and store it
 $data modify storage hygrave:common temp.args.bid set value $(bid)
 
+## Convert to string
+data modify storage hygrave:common temp.bi.creation_time.day set string storage hygrave:common backups[-1].data.creation_time.day
+data modify storage hygrave:common temp.bi.creation_time.hours set string storage hygrave:common backups[-1].data.creation_time.hours
+data modify storage hygrave:common temp.bi.creation_time.minutes set string storage hygrave:common backups[-1].data.creation_time.minutes
+
 ## Check if any backups have been generated yet
 execute unless data storage hygrave:common backups[0] run return run title @s actionbar {\
   "translate": "hygrave.backup_info.fail.backup_none_exist",\
@@ -21,7 +26,8 @@ execute if score .backup_exists hygrave.temp_var matches 0 run return run title 
     {\
       "nbt": "temp.args.bid",\
       "storage": "hygrave:common",\
-      "color": "red"\
+      "color": "red",\
+      "plain": true\
     }\
   ]\
 }
@@ -42,7 +48,8 @@ tellraw @s [\
       {\  
         "nbt": "backups[-1].data.bid",\
         "storage": "hygrave:common",\
-        "color": "gold"\
+        "color": "gold",\
+        "plain": true\
       }\
     ]\
   }\
@@ -63,7 +70,8 @@ tellraw @s {\
     {\
       "nbt": "backups[-1].data.owner.name",\
       "color": "green",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -83,7 +91,8 @@ execute if data storage hygrave:common backups[-1].data.relevant_grave run tellr
     {\  
       "nbt": "backups[-1].data.relevant_grave.data.gid",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     }\
   ]\
 }
@@ -101,19 +110,22 @@ tellraw @s {\
   },\
   "with": [\
     {\
-      "nbt": "backups[-1].data.creation_time.day",\
+      "nbt": "temp.bi.creation_time.day",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     },\
     {\
-      "nbt": "backups[-1].data.creation_time.hours",\
+      "nbt": "temp.bi.creation_time.hours",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     },\
     {\
-      "nbt": "backups[-1].data.creation_time.minutes",\
+      "nbt": "temp.bi.creation_time.minutes",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }

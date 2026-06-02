@@ -25,7 +25,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.dropped_contents.invulnerable_items",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -60,7 +61,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.dropped_contents.invulnerable_xp",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -96,7 +98,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.dropped_contents.no_gravity_items",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -131,7 +134,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.dropped_contents.no_gravity_xp",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -170,7 +174,8 @@ tellraw @s [\
           {\
             "nbt": "configs.text.dropped_contents.item.despawn_time",\
             "storage": "hygrave:common",\
-            "color": "aqua"\
+            "color": "aqua",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -190,7 +195,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.dropped_contents.freeze_item_despawn_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -231,7 +237,8 @@ tellraw @s [\
           {\
             "nbt": "configs.text.dropped_contents.xp.despawn_time",\
             "storage": "hygrave:common",\
-            "color": "aqua"\
+            "color": "aqua",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -251,7 +258,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.dropped_contents.freeze_xp_despawn_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\

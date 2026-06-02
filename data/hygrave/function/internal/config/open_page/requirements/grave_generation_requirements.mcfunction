@@ -42,7 +42,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.requirements.grave_generation_requirements.with_item.item_ids",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\
@@ -116,6 +117,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.requirements.grave_generation_requirements.with_item.xp.levels",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -154,7 +156,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_generation_requirements.with_item.gamemodes.survival",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -174,7 +177,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_generation_requirements.with_item.gamemodes.adventure",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -194,7 +198,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_generation_requirements.with_item.gamemodes.creative",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -247,6 +252,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.requirements.grave_generation_requirements.no_item.xp.levels",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -285,7 +291,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_generation_requirements.no_item.gamemodes.survival",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -305,7 +312,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_generation_requirements.no_item.gamemodes.adventure",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -325,7 +333,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_generation_requirements.no_item.gamemodes.creative",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\

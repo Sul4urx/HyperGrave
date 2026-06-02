@@ -34,6 +34,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.icd_properties.activate_for",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -70,6 +71,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.icd_properties.item_cycle_cooldown",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -106,6 +108,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.icd_properties.revert_sneaking_behavior",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -142,6 +145,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.icd_properties.switch_text_display",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\

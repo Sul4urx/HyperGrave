@@ -29,7 +29,8 @@ tellraw @s [\
       {\
         "nbt": "graves[-1].data.gid",\
         "storage": "hygrave:common",\
-        "color": "gold"\
+        "color": "gold",\
+        "plain": true\
       }\
     ]\
   }\
@@ -50,7 +51,8 @@ execute unless score (graves/show_grave_info/ao/owner) hygrave.config matches 0 
     {\
       "nbt": "graves[-1].data.owner.name", \
       "color": "green", \
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -71,12 +73,14 @@ execute unless score (graves/show_grave_info/ao/location.xyz) hygrave.config mat
       "nbt": "graves[-1].data.pos_integer[]",\
       "color": "gold",\
       "storage": "hygrave:common",\
-      "separator": "§7, "\
+      "separator": "§7, ",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].data.dimension.name",\
       "color": "green",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -96,7 +100,8 @@ execute unless score (graves/show_grave_info/ao/location.xyz) hygrave.config mat
       "nbt": "graves[-1].data.pos_integer[]",\
       "color": "gold",\
       "storage": "hygrave:common",\
-      "separator": "§7, "\
+      "separator": "§7, ",\
+      "plain": true\
     },\
   ]\
 }
@@ -115,7 +120,8 @@ execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches
     {\
       "nbt": "graves[-1].data.dimension.name",\
       "color": "green",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -135,32 +141,38 @@ execute unless score (graves/show_grave_info/ao/xp/after_death) hygrave.config m
       {\
         "nbt": "graves[-1].contents.xp.before_death.total",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.before_death.levels",\
         "color": "gold", \
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }, \
       {\
         "nbt": "graves[-1].contents.xp.before_death.points",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.total",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.levels",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.points",\
         "color": "gold", \
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }\
     ]\
   }
@@ -180,27 +192,32 @@ execute unless score (graves/show_grave_info/ao/xp/after_death) hygrave.config m
       {\
         "nbt": "graves[-1].contents.xp.before_death.levels",\
         "color": "gold", \
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }, \
       {\
         "nbt": "graves[-1].contents.xp.before_death.points",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.total",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.levels",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.points",\
         "color": "gold", \
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }\
     ]\
   }
@@ -220,17 +237,20 @@ execute if score (graves/show_grave_info/ao/xp/after_death) hygrave.config match
       {\
         "nbt": "graves[-1].contents.xp.before_death.total",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.before_death.levels",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.before_death.points",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }\
     ]\
   }
@@ -250,12 +270,14 @@ execute if score (graves/show_grave_info/ao/xp/after_death) hygrave.config match
       {\
         "nbt": "graves[-1].contents.xp.before_death.levels",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.before_death.points",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }\
     ]\
   }
@@ -275,17 +297,20 @@ execute unless score (graves/show_grave_info/ao/xp/after_death) hygrave.config m
       {\
         "nbt": "graves[-1].contents.xp.after_death.total",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.levels",\
         "color": "gold",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       },\
       {\
         "nbt": "graves[-1].contents.xp.after_death.points",\
         "color": "gold", \
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "plain": true\
       }\
     ]\
   }
@@ -333,19 +358,22 @@ execute unless score (graves/show_grave_info/ao/creation_time) hygrave.config ma
   },\
   "with": [\
     {\
-      "nbt": "graves[-1].data.creation_time.day",\
+      "nbt": "temp.gi.creation_time.day",\
       "color": "gold",\
-      "storage": "hygrave:common"\ 
+      "storage": "hygrave:common",\
+      "interpret": true\ 
     },\
     {\
-      "nbt": "graves[-1].data.creation_time.hours",\
+      "nbt": "temp.gi.creation_time.hours",\
       "color": "gold",\
-      "storage": "hygrave:common"\ 
+      "storage": "hygrave:common",\
+      "interpret": true\ 
     },\
     {\
-      "nbt": "graves[-1].data.creation_time.minutes",\
+      "nbt": "temp.gi.creation_time.minutes",\
       "color": "gold",\
-      "storage": "hygrave:common"\ 
+      "storage": "hygrave:common",\
+      "interpret": true\ 
     }\
   ]\
 }

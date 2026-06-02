@@ -47,7 +47,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.render",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -82,7 +83,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.render_icd",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -118,7 +120,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.glowing",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -154,6 +157,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.vertical_position",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -190,6 +194,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.horizontal_position",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -226,6 +231,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.rotation_speed",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -262,6 +268,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.player_head.shadow_strength",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\

@@ -53,7 +53,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.9",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -73,7 +74,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.10",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -93,7 +95,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.11",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -113,7 +116,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.12",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -133,7 +137,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.13",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -153,7 +158,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.14",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -173,7 +179,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.15",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -193,7 +200,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.16",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -213,7 +221,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.17",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -233,7 +242,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.103",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -261,7 +271,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.18",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -281,7 +292,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.19",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -301,7 +313,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.20",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -321,7 +334,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.21",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -341,7 +355,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.22",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -361,7 +376,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.23",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -381,7 +397,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.24",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -401,7 +418,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.25",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -421,7 +439,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.26",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -441,7 +460,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.102",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -469,7 +489,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.27",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -489,7 +510,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.28",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -509,7 +531,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.29",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -529,7 +552,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.30",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -549,7 +573,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.31",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -569,7 +594,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.32",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -589,7 +615,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.33",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -609,7 +636,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.34",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -629,7 +657,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.35",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -649,7 +678,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.101",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -677,7 +707,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.-106",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -697,7 +728,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.0",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -717,7 +749,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.1",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -737,7 +770,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.2",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -757,7 +791,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.3",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -777,7 +812,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.4",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -797,7 +833,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.5",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -817,7 +854,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.6",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -837,7 +875,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.7",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -857,7 +896,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.8",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -877,7 +917,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.slot_distribution.grave_generation_success.100",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\

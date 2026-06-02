@@ -25,7 +25,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.general.change_gamerules",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -60,7 +61,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.general.mod_compatibility_mode",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -96,6 +98,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.general.'mod_compatibility_mode/item_collection_distance'",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\

@@ -4,6 +4,11 @@
 ## Read the input GID and store it
 execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get @s hygrave.show_grave_info
 
+## Convert to string
+data modify storage hygrave:common temp.gi.creation_time.day set string storage hygrave:common graves[-1].data.creation_time.day
+data modify storage hygrave:common temp.gi.creation_time.hours set string storage hygrave:common graves[-1].data.creation_time.hours
+data modify storage hygrave:common temp.gi.creation_time.minutes set string storage hygrave:common graves[-1].data.creation_time.minutes
+
 ## Check if any graves have been generated yet
 execute unless data storage hygrave:common graves[0] run return run title @s actionbar {\
   "translate": "hygrave.grave_info.fail.grave_none_exist",\
@@ -21,7 +26,8 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
     {\
       "nbt": "temp.args.gid",\
       "storage": "hygrave:common",\
-      "color": "red"\
+      "color": "red",\
+      "plain": true\
     }\
   ]\
 }
@@ -61,7 +67,8 @@ tellraw @s [\
       {\
         "nbt": "graves[-1].data.gid",\
         "storage": "hygrave:common",\
-        "color": "gold"\
+        "color": "gold",\
+        "plain": true\
       }\
     ]\
   }\
@@ -82,7 +89,8 @@ tellraw @s {\
     {\
       "nbt": "graves[-1].data.owner.name", \
       "color": "green", \
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -103,12 +111,14 @@ tellraw @s {\
       "nbt": "graves[-1].data.pos_integer[]",\
       "color": "gold",\
       "storage": "hygrave:common",\
-      "separator": "§7, "\
+      "separator": "§7, ",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].data.dimension.name",\
       "color": "green",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -141,17 +151,20 @@ execute unless data storage hygrave:common graves[-1].contents.xp.before_death{t
     {\
       "nbt": "graves[-1].contents.xp.before_death.total",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].contents.xp.before_death.levels",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].contents.xp.before_death.points",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     }\
   ]\
 }
@@ -171,12 +184,14 @@ execute if data storage hygrave:common graves[-1].contents.xp.before_death{total
     {\
       "nbt": "graves[-1].contents.xp.before_death.levels",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     },\ 
     {\
       "nbt": "graves[-1].contents.xp.before_death.points",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     }\
   ]\
 }
@@ -196,17 +211,20 @@ tellraw @s {\
     {\
       "nbt": "graves[-1].contents.xp.after_death.total",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].contents.xp.after_death.levels",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].contents.xp.after_death.points",\
       "color": "gold",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "plain": true\
     }\
   ]\ 
 }
@@ -253,19 +271,22 @@ tellraw @s {\
   },\
   "with": [\
     {\
-      "nbt": "graves[-1].data.creation_time.day",\
+      "nbt": "temp.gi.creation_time.day",\
       "color": "gold",\
-      "storage": "hygrave:common"\ 
+      "storage": "hygrave:common",\
+      "interpret": true\ 
     },\
     {\
-      "nbt": "graves[-1].data.creation_time.hours",\
+      "nbt": "temp.gi.creation_time.hours",\
       "color": "gold",\
-      "storage": "hygrave:common"\ 
+      "storage": "hygrave:common",\
+      "interpret": true\ 
     },\
     {\
-      "nbt": "graves[-1].data.creation_time.minutes",\
+      "nbt": "temp.gi.creation_time.minutes",\
       "color": "gold",\
-      "storage": "hygrave:common"\ 
+      "storage": "hygrave:common",\
+      "interpret": true\ 
     }\
   ]\
 }
@@ -290,7 +311,8 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
       {\
       "nbt": "graves[-1].data.status.destroyer.name",\
       "color": "red",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -303,7 +325,8 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
     {\
       "nbt": "graves[-1].data.status.destroyer.name",\
       "color": "red",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }
@@ -316,7 +339,8 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
     {\
       "nbt": "graves[-1].data.status.destroyer.name",\
       "color": "red",\
-      "storage": "hygrave:common"\
+      "storage": "hygrave:common",\
+      "interpret": true\
     }\
   ]\
 }

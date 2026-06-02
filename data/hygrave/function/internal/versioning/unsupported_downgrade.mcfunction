@@ -8,17 +8,20 @@ tellraw @a {\
     {\
       "nbt": "data.schema_version_1.hygrave.data_version.version.form.string",\
       "storage": "hygrave:common",\
-      "color": "red"\
+      "color": "red",\
+      "interpret": true\
     },\
     {\
       "nbt": "data.schema_version_1.hygrave.data_version.version.form.string",\
       "storage": "hygrave:common",\
-      "color": "red"\
+      "color": "red",\
+      "interpret": true\
     },\
     {\
       "nbt": "data.schema_version_1.hygrave.data_version.version.form.string",\
       "storage": "hygrave:common",\
-      "color": "gold"\
+      "color": "gold",\
+      "interpret": true\
     },\
   ]\
 }

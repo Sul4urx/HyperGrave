@@ -11,23 +11,27 @@ execute if score (graves/show_grave_info/an/location.xyz) hygrave.config matches
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "red"\
+      "color": "red",\
+      "interpret": true\
     },\
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "gold"\
+      "color": "gold",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].data.pos_integer[]",\
       "storage": "hygrave:common",\
       "color": "gold",\
-      "separator": "§7, "\
+      "separator": "§7, ",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].data.dimension.name",\
       "storage": "hygrave:common",\
-      "color": "green"\
+      "color": "green",\
+      "interpret": true\
     }\
   ]\
 }
@@ -39,18 +43,21 @@ execute if score (graves/show_grave_info/an/location.xyz) hygrave.config matches
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "red"\
+      "color": "red",\
+      "interpret": true\
     },\
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "gold"\
+      "color": "gold",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].data.pos_integer[]",\
       "storage": "hygrave:common",\
       "color": "gold",\
-      "separator": "§7, "\
+      "separator": "§7, ",\
+      "plain": true\
     }\
   ]\
 }
@@ -62,17 +69,20 @@ execute unless score (graves/show_grave_info/an/location.xyz) hygrave.config mat
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "red"\
+      "color": "red",\
+      "interpret": true\
     },\
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "gold"\
+      "color": "gold",\
+      "plain": true\
     },\
     {\
       "nbt": "graves[-1].data.dimension.name",\
       "storage": "hygrave:common",\
-      "color": "green"\
+      "color": "green",\
+      "interpret": true\
     }\
   ]\
 }
@@ -84,12 +94,14 @@ execute unless score (graves/show_grave_info/an/location.xyz) hygrave.config mat
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "red"\
+      "color": "red",\
+      "interpret": true\
     },\
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
-      "color": "gold"\
+      "color": "gold",\
+      "plain": true\
     }\
   ]\
 }
