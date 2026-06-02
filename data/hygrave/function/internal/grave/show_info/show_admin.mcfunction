@@ -54,419 +54,52 @@ scoreboard players operation .despawn_time.hours hygrave.temp_var = .despawn_tim
 scoreboard players operation .despawn_time.hours hygrave.temp_var /= (3600) hygrave.var
 
 ## Title
-tellraw @s [\
-  {\
-    "translate": "hygrave.grave_info.title",\
-    "fallback": "\nGrave §6#%s info",\
-    "with": [\
-      {\
-        "nbt": "graves[-1].data.gid",\
-        "storage": "hygrave:common",\
-        "color": "gold",\
-        "plain": true\
-      }\
-    ]\
-  }\
-]
+function hygrave:internal/grave/show_info/fields/show_title
 
 ## Owner
-tellraw @s {\
-  "translate": "hygrave.grave_info.owner",\
-  "fallback": "  §bOwner: %s",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.owner.description",\
-      "fallback": "The player who generated the grave."\
-    }\
-  },\
-  "with": [\
-    {\
-      "nbt": "graves[-1].data.owner.name", \
-      "color": "green", \
-      "storage": "hygrave:common",\
-      "interpret": true\
-    }\
-  ]\
-}
+function hygrave:internal/grave/show_info/fields/show_owner
 
 ## Location
-tellraw @s {\
-  "translate": "hygrave.grave_info.location", \
-  "fallback": "  §bLocation: %s §7(%s§7)",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.location.all.description",\
-      "fallback": "The exact location the grave was generated in (NOT where the player died, that can be different sometimes)."\
-    }\
-  },\
-  "with": [\
-    {\
-      "nbt": "graves[-1].data.pos_integer[]",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "separator": "§7, ",\
-      "plain": true\
-    },\
-    {\
-      "nbt": "graves[-1].data.dimension.name",\
-      "color": "green",\
-      "storage": "hygrave:common",\
-      "interpret": true\
-    }\
-  ]\
-}
+function hygrave:internal/grave/show_info/fields/show_location/all
 
 ## XP
-tellraw @s {\
-  "translate": "hygrave.grave_info.xp",\
-  "fallback": "  §bExperience:",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.xp.description",\
-      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
-    }\
-  }\
-}
+execute unless data storage hygrave:common graves[-1].contents.xp.before_death{total:30970} run function hygrave:internal/grave/show_info/fields/show_xp/both
 
-##> XP before death
-execute unless data storage hygrave:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
-  "translate": "hygrave.grave_info.xp.before_death",\
-  "fallback": "    §eBefore death: %s (%s levels §7+ %s points)",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.xp.description",\
-      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
-    }\
-  },\
-  "with": [\
-    {\
-      "nbt": "graves[-1].contents.xp.before_death.total",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    },\
-    {\
-      "nbt": "graves[-1].contents.xp.before_death.levels",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    },\
-    {\
-      "nbt": "graves[-1].contents.xp.before_death.points",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    }\
-  ]\
-}
-
-##>> If total is too big, get rid of it
-execute if data storage hygrave:common graves[-1].contents.xp.before_death{total:30970} run tellraw @s {\
-  "translate": "hygrave.grave_info.xp.before_death.total_too_big",\
-  "fallback": "    §eBefore death: %s levels §7+ %s points",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.xp.before_death_total_too_big.description",\
-      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
-    }\
-  },\
-  "with": [\
-    {\
-      "nbt": "graves[-1].contents.xp.before_death.levels",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    },\ 
-    {\
-      "nbt": "graves[-1].contents.xp.before_death.points",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    }\
-  ]\
-}
-
-##> XP after death
-tellraw @s {\
-  "translate": "hygrave.grave_info.xp.after_death",\
-  "fallback": "    §eAfter death: %s (%s levels §7+ %s points)",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.xp.description",\
-      "fallback": "The amount of XP. Not all of the player's XP goes into the grave, so it gets divided into two subfields: Before death (The amount of XP the player had before generating the grave) and After death (The amount of XP stored in the grave)."\
-    }\
-  },\
-  "with": [\
-    {\
-      "nbt": "graves[-1].contents.xp.after_death.total",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    },\
-    {\
-      "nbt": "graves[-1].contents.xp.after_death.levels",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    },\
-    {\
-      "nbt": "graves[-1].contents.xp.after_death.points",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "plain": true\
-    }\
-  ]\ 
-}
+execute if data storage hygrave:common graves[-1].contents.xp.before_death{total:30970} run function hygrave:internal/grave/show_info/fields/show_xp/both/total_too_big
 
 ## Despawn time
-execute unless data storage hygrave:common graves[-1].status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.despawn_time",\
-  "fallback": "  §bDespawn time: %s hours§7, %s minutes§7, %s seconds",\
-  "with": [\
-    {\
-      "score": {\
-        "name": ".despawn_time.hours",\
-        "objective": "hygrave.temp_var"\
-      },\
-      "color": "gold"\
-    }, \
-    {\
-      "score": {\
-        "name": ".despawn_time.minutes",\
-        "objective": "hygrave.temp_var"\
-      },\
-      "color": "gold"\
-    },\
-    {\
-      "score": {\
-        "name": ".despawn_time.seconds",\
-        "objective": "hygrave.temp_var"\
-      },\
-      "color": "gold"\
-    }\
-  ]\
-}
+execute unless data storage hygrave:common graves[-1].status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_despawn_time
 
 ## Creation time
-tellraw @s {\
-  "translate": "hygrave.grave_info.creation_time",\
-  "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
-  "hover_event": {\
-    "action": "show_text",\
-    "value": {\
-      "translate": "hygrave.grave_info.creation_time.description",\
-      "fallback": "The in-game time the grave was generated at."\
-    }\
-  },\
-  "with": [\
-    {\
-      "nbt": "graves[-1].data.creation_time.string.day",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "interpret": true\ 
-    },\
-    {\
-      "nbt": "graves[-1].data.creation_time.string.hours",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "interpret": true\ 
-    },\
-    {\
-      "nbt": "graves[-1].data.creation_time.string.minutes",\
-      "color": "gold",\
-      "storage": "hygrave:common",\
-      "interpret": true\ 
-    }\
-  ]\
-}
+function hygrave:internal/grave/show_info/fields/show_creation_time
 
 ## Items
-function hygrave:internal/grave/show_info/show_items with storage hygrave:common graves[-1].data
+function hygrave:internal/grave/show_info/fields/show_items with storage hygrave:common graves[-1].data
 
 ##
 tellraw @s ""
 
 ## Status
-execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.status.active",\
-  "fallback": "  §bStatus: §aActive"\
-}
+execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_status/active
 
 execute if data storage hygrave:common graves[-1].data.status{destruction_type:"unpacked"\
-} run tellraw @s {\
-  "translate": "hygrave.grave_info.status.unpacked_by",\
-  "fallback": "  §bStatus: §cLooted by %s",\
-  "with": [\
-      {\
-      "nbt": "graves[-1].data.status.destroyer.name",\
-      "color": "red",\
-      "storage": "hygrave:common",\
-      "interpret": true\
-    }\
-  ]\
-}
+} run function hygrave:internal/grave/show_info/fields/show_status/unpacked_by
 
 execute if data storage hygrave:common graves[-1].data.status{destruction_type:"remote_unpacked"\
-} run tellraw @s {\
-  "translate": "hygrave.grave_info.status.remote_unpacked_by",\
-  "fallback": "  §bStatus: §cRemotely looted by %s",\
-  "with": [\
-    {\
-      "nbt": "graves[-1].data.status.destroyer.name",\
-      "color": "red",\
-      "storage": "hygrave:common",\
-      "interpret": true\
-    }\
-  ]\
-}
+} run function hygrave:internal/grave/show_info/fields/show_status/remote_unpacked_by
 
 execute if data storage hygrave:common graves[-1].data.status{destruction_type:"popped"\
-} run tellraw @s {\
-  "translate": "hygrave.grave_info.status.popped_by",\
-  "fallback": "  §bStatus: §cLooted by %s",\
-  "with": [\
-    {\
-      "nbt": "graves[-1].data.status.destroyer.name",\
-      "color": "red",\
-      "storage": "hygrave:common",\
-      "interpret": true\
-    }\
-  ]\
-}
+} run function hygrave:internal/grave/show_info/fields/show_status/popped_by
 
 execute if data storage hygrave:common graves[-1].data.status{destruction_type:"despawned"\
-} run tellraw @s {\
-  "translate": "hygrave.grave_info.status.despawned",\
-  "fallback": "  §bStatus: §cDespawned"\
-}
+} run function hygrave:internal/grave/show_info/fields/show_status/despawned
 
 ##
 tellraw @s ""
 
 ## Menu
-$execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.menu",\
-  "fallback": "§7[%s§7|%s§7|%s§7|%s§7]",\
-  "with": [\
-    {\
-      "translate": "hygrave.grave_info.menu.back",\
-      "fallback": "§b< ",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.back",\
-          "fallback": "Click to view info about previous grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/function hygrave:internal/grave/show_info/show_admin/view_previous {gid: $(gid)}"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.grave_info.menu.remote_unpack",\
-      "fallback": " §bLoot ",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.remote_unpack",\
-          "fallback": "Click to remotely loot this grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "suggest_command",\
-        "command": "/function hygrave:run/grave/admin/remote_loot {gid: $(gid)}"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.grave_info.menu.search",\
-      "fallback": " §b\U0001f50d Search ",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.search",\
-          "fallback": "Click to show a list of GIDs of all graves."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/function hygrave:run/grave/admin/show_grave_list"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.grave_info.menu.back",\
-      "fallback": " §b>",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.back",\
-          "fallback": "Click to view info about next grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/function hygrave:internal/grave/show_info/show_admin/view_next {gid: $(gid)}"\
-      }\
-    }\
-  ]\
-}
-$execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run tellraw @s {\
-  "translate": "hygrave.grave_info.menu_grayed_remote_unpack",\
-  "fallback": "§7[%s§7| Loot |%s§7|%s§7]",\
-  "with": [\
-    {\
-      "translate": "hygrave.grave_info.menu.back",\
-      "fallback": "§b< ",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.back",\
-          "fallback": "Click to view info about previous grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/function hygrave:internal/grave/show_info/show_admin/view_previous {gid: $(gid)}"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.grave_info.menu.search",\
-      "fallback": " §b\U0001f50d Search ",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.search",\
-          "fallback": "Click to show a list of GIDs of all graves."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/function hygrave:run/grave/admin/show_grave_list"\
-      }\
-    },\
-    {\
-      "translate": "hygrave.grave_info.menu.back",\
-      "fallback": " §b>",\
-      "hover_event": {\
-        "action": "show_text",\
-        "value": {\
-          "translate": "hygrave.grave_info.menu_description.back",\
-          "fallback": "Click to view info about next grave."\
-        }\
-      },\
-      "click_event": {\
-        "action": "run_command",\
-        "command": "/function hygrave:internal/grave/show_info/show_admin/view_next {gid: $(gid)}"\
-      }\
-    }\
-  ]\
-}
+$execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_menu/active {gid: $(gid)}
+$execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_menu/broken {gid: $(gid)}
 
 ##
 tellraw @s ""

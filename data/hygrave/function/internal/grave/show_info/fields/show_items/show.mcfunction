@@ -1,5 +1,5 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/show_info/show_items
+#@>   function hygrave:internal/grave/show_info/fields/show_items
 
 tellraw @s {"translate": "hygrave.grave_info.items", "fallback": "  §bItems:"}
 $tellraw @s [\

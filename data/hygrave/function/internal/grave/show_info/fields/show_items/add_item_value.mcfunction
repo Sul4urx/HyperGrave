@@ -1,5 +1,5 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/show_info/show_items
+#@>   function hygrave:internal/grave/show_info/fields/show_items
 
 # Define an item for this slot
 
@@ -15,4 +15,4 @@ $data modify storage hygrave:common temp.args1.slot_id set value "$(slot_id)"
 $data modify storage hygrave:common temp.args1.slot_text set value "$(slot_text)"
 $data modify storage hygrave:common temp.args1.slot_number set value $(slot_number)
 
-execute as @n[tag=hygrave.temp.grave_info_item_manipulator] at @s run function hygrave:internal/grave/show_info/show_items/change_text_to_show_value with storage hygrave:common temp.args1
+execute as @n[tag=hygrave.temp.grave_info_item_manipulator] at @s run function hygrave:internal/grave/show_info/fields/show_items/change_text_to_show_value with storage hygrave:common temp.args1
