@@ -53,7 +53,7 @@ execute if data storage hygrave:common temp.args.texts[1] if data storage hygrav
 ## Aliases
 data modify storage hygrave:common temp.text_display.owner set from storage hygrave:common temp.grave_data.owner
 
-data modify storage hygrave:common temp.text_display.gid set from storage hygrave:common temp.grave_data.gid
+data modify storage hygrave:common temp.text_display.gid set string storage hygrave:common temp.grave_data.gid
 
 execute store result storage hygrave:common temp.text_display.despawn_time.seconds int 1 run scoreboard players get .despawn_time.seconds hygrave.temp_var
 execute store result storage hygrave:common temp.text_display.despawn_time.fseconds int 1 run scoreboard players get @s hygrave.despawn_time
@@ -61,15 +61,22 @@ execute store result storage hygrave:common temp.text_display.despawn_time.minut
 execute store result storage hygrave:common temp.text_display.despawn_time.fminutes int 0.0166666666666666666666 run scoreboard players get @s hygrave.despawn_time
 execute store result storage hygrave:common temp.text_display.despawn_time.hours int 1 run scoreboard players get .despawn_time.hours hygrave.temp_var
 
+data modify storage hygrave:common temp.text_display.despawn_time.seconds set string storage hygrave:common temp.text_display.despawn_time.seconds
+data modify storage hygrave:common temp.text_display.despawn_time.fseconds set string storage hygrave:common temp.text_display.despawn_time.fseconds
+data modify storage hygrave:common temp.text_display.despawn_time.minutes set string storage hygrave:common temp.text_display.despawn_time.minutes
+data modify storage hygrave:common temp.text_display.despawn_time.fminutes set string storage hygrave:common temp.text_display.despawn_time.fminutes
+data modify storage hygrave:common temp.text_display.despawn_time.hours set string storage hygrave:common temp.text_display.despawn_time.hours
+
 execute store result storage hygrave:common temp.text_display.item_count int 1 if data storage hygrave:common temp.grave_data.items[]
+data modify storage hygrave:common temp.text_display.item_count set string storage hygrave:common temp.text_display.item_count
 
-data modify storage hygrave:common temp.text_display.xp set from storage hygrave:common temp.grave_data.xp
+data modify storage hygrave:common temp.text_display.xp set string storage hygrave:common temp.grave_data.xp
 
-data modify storage hygrave:common temp.text_display.creation_time set from storage hygrave:common temp.grave_data.creation_time
+data modify storage hygrave:common temp.text_display.creation_time set string storage hygrave:common temp.grave_data.creation_time
 
 ##> Prepare info about item being displayed
 data modify storage hygrave:common temp.text_display.icd.item set from storage hygrave:common temp.grave_data.items[0]
-
+data modify storage hygrave:common temp.text_display.icd.item.count set string storage hygrave:common temp.text_display.icd.item.count
 data modify storage hygrave:common temp.text_display.icd.item.slot_name set value 'Unknown'
 
 execute if data storage hygrave:common temp.text_display.icd.item{Slot:0b} run data modify storage hygrave:common temp.text_display.icd.item.slot_name set value "Hotbar 1"

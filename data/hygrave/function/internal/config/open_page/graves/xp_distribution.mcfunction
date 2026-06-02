@@ -57,6 +57,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_fail.remove",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -93,6 +94,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_fail.keep",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -129,6 +131,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_fail.total",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -176,6 +179,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_success.remove",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -212,6 +216,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_success.keep",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -248,6 +253,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_success.take",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -284,6 +290,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.graves.xp_distribution.grave_generation_success.total",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\

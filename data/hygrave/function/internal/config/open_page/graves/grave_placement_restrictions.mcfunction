@@ -34,7 +34,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.on_air",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -70,7 +71,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.on_water",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -105,7 +107,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.in_water",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -141,7 +144,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.on_lava",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -176,7 +180,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.in_lava",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -212,7 +217,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.on_non_solid_blocks",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -247,7 +253,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.in_solid_blocks",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -283,7 +290,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.above_build_height_limit",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -318,7 +326,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.grave_placement_restrictions.below_build_height_limit",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\

@@ -42,7 +42,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.requirements.grave_remote_looting_requirements.owners.item_ids",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\
@@ -116,6 +117,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.requirements.grave_remote_looting_requirements.owners.item_remove_count",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -152,6 +154,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.requirements.grave_remote_looting_requirements.owners.xp.levels",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -190,7 +193,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_remote_looting_requirements.owners.gamemodes.survival",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -210,7 +214,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_remote_looting_requirements.owners.gamemodes.adventure",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -230,7 +235,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_remote_looting_requirements.owners.gamemodes.creative",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -278,7 +284,8 @@ tellraw @s [\
           {\
             "nbt": "configs.value.requirements.grave_remote_looting_requirements.non_owners.item_ids",\
             "storage": "hygrave:common",\
-            "color": "dark_gray"\
+            "color": "dark_gray",\
+            "plain": true\
           }\
         ]\
       }\
@@ -352,6 +359,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.requirements.grave_remote_looting_requirements.non_owners.item_remove_count",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -388,6 +396,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.requirements.grave_remote_looting_requirements.non_owners.xp.levels",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -426,7 +435,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_remote_looting_requirements.non_owners.gamemodes.survival",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -446,7 +456,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_remote_looting_requirements.non_owners.gamemodes.adventure",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -466,7 +477,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.requirements.grave_remote_looting_requirements.non_owners.gamemodes.creative",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\

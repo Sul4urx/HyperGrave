@@ -49,6 +49,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.click_behavior.icd_is_not_active.attack",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -85,6 +86,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.click_behavior.icd_is_not_active.use",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -136,6 +138,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.click_behavior.icd_is_active.attack",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -172,6 +175,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_interaction.click_behavior.icd_is_active.use",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\

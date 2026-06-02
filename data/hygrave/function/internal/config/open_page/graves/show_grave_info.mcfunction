@@ -76,7 +76,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.all",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -96,7 +97,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.all",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -116,7 +118,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.all",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -136,7 +139,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.all",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -177,7 +181,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.owner",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -197,7 +202,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.owner",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -217,7 +223,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.owner",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -237,7 +244,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.owner",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -278,7 +286,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.location.xyz",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -298,7 +307,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.location.xyz",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -318,7 +328,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.location.xyz",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -338,7 +349,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.location.xyz",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -379,7 +391,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.location.dim",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -399,7 +412,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.location.dim",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -419,7 +433,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.location.dim",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -439,7 +454,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.location.dim",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -480,7 +496,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.despawn_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -500,7 +517,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.despawn_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -541,7 +559,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.creation_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -561,7 +580,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.creation_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -581,7 +601,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.creation_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -601,7 +622,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.creation_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -642,7 +664,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.items",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -662,7 +685,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.items",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -682,7 +706,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.items",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -702,7 +727,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.items",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -743,7 +769,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.xp.before_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -763,7 +790,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.xp.before_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -783,7 +811,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.xp.before_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -803,7 +832,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.xp.before_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -844,7 +874,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.xp.after_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -864,7 +895,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.xp.after_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -884,7 +916,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.xp.after_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -904,7 +937,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.xp.after_death",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -945,7 +979,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.destruction_type",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -965,7 +1000,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.destruction_type",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -1006,7 +1042,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.destroyer",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -1026,7 +1063,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.destroyer",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -1070,7 +1108,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.ao.grave_list_display",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -1090,7 +1129,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bo.grave_list_display",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -1110,7 +1150,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.an.grave_list_display",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -1130,7 +1171,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.show_grave_info.bn.grave_list_display",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\

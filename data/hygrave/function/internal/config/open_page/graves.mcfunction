@@ -25,7 +25,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.drop_contents_on_despawn",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\
@@ -64,6 +65,7 @@ tellraw @s [\
           {\
             "nbt": "configs.text.graves.despawn_time",\
             "storage": "hygrave:common",\
+            "interpret": true,\
             "color": "aqua",\
           }\
         ],\
@@ -84,7 +86,8 @@ tellraw @s [\
         "with": [\
           {\
             "nbt": "configs.text.graves.freeze_grave_despawn_time",\
-            "storage": "hygrave:common"\
+            "storage": "hygrave:common",\
+            "interpret": true\
           }\
         ],\
         "hover_event": {\
@@ -237,7 +240,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.graves.tell_grave_mini_info",\
-        "storage": "hygrave:common" \
+        "storage": "hygrave:common",\
+        "interpret": true \
       }\
     ],\
     "hover_event": {\

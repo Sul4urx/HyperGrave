@@ -91,7 +91,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.decoration_2.render",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -126,7 +127,8 @@ tellraw @s [\
     "with": [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.decoration_2.render_icd",\
-        "storage": "hygrave:common"\
+        "storage": "hygrave:common",\
+        "interpret": true\
       }\
     ],\
     "hover_event": {\
@@ -162,6 +164,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.decoration_2.shape",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -198,6 +201,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.decoration_2.position",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
@@ -234,6 +238,7 @@ tellraw @s [\
       {\
         "nbt": "configs.text.grave_appearance.grave_model.decoration_2.texture",\
         "storage": "hygrave:common",\
+        "interpret": true,\
         "color": "aqua"\
       }\
     ],\
