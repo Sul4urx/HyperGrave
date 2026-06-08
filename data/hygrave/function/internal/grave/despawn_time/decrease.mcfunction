@@ -7,11 +7,11 @@ scoreboard players remove @s hygrave.despawn_time 1
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Grave
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
 function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ##> Player (Owner)
 function hygrave:internal/database/players/lookup with entity @s item.components.minecraft:custom_data.hygrave:common.owner
-data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
 
 ## If despawn time reaches 0, delete grave
 execute if score @s hygrave.despawn_time matches ..0 run return run function hygrave:internal/grave/despawn_time/delete_grave
