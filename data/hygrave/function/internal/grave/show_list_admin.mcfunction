@@ -13,9 +13,9 @@ execute unless data storage hygrave:common graves[] run return run title @s acti
 data modify storage hygrave:common temp.grave_list set value {ao: [], bo: [], an: [], bn: []}
 
 scoreboard players operation .show_grave_list.gid hygrave.temp_var = (first_gid) hygrave.var
-execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get .show_grave_list.gid hygrave.temp_var
+execute store result storage hygrave:common temp.mcargs.'grave/show_list_admin/fill_list'.gid int 1 run scoreboard players get .show_grave_list.gid hygrave.temp_var
 
-function hygrave:internal/grave/show_list_admin/fill_list with storage hygrave:common temp.args
+function hygrave:internal/grave/show_list_admin/fill_list with storage hygrave:common temp.mcargs.'grave/show_list_admin/fill_list'
 
 execute \
   unless data storage hygrave:common temp.grave_list.ao[] \

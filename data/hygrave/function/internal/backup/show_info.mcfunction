@@ -2,7 +2,8 @@
 #@>   function hygrave:run/backup/show_backup_info
 
 ## Read the input bid and store it
-$data modify storage hygrave:common temp.args.bid set value $(bid)
+$data modify storage hygrave:common temp.mcargs.'backup/show_info/check_if_backup_exists'.bid set value $(bid)
+$data modify storage hygrave:common temp.mcargs.'database/backups/lookup'.bid set value $(bid)
 
 ## Convert to string
 data modify storage hygrave:common temp.bi.creation_time.day set string storage hygrave:common backups[-1].data.creation_time.day
@@ -16,26 +17,19 @@ execute unless data storage hygrave:common backups[0] run return run title @s ac
 }
 
 ## Check if the backup has ever existed before
-execute store result score .backup_exists hygrave.temp_var run function hygrave:internal/backup/show_info/check_if_backup_exists with storage hygrave:common temp.args
+execute store result score .backup_exists hygrave.temp_var run function hygrave:internal/backup/show_info/check_if_backup_exists with storage hygrave:common temp.mcargs.'backup/show_info/check_if_backup_exists'
 
 ## If not, tell error to player
-execute if score .backup_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
+$execute if score .backup_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
   "translate": "hygrave.backup_info.fail.bid_no_exist",\
   "fallback": "§cBackup #%s§c does not exist.",\
-  "with": [\
-    {\
-      "nbt": "temp.args.bid",\
-      "storage": "hygrave:common",\
-      "color": "red",\
-      "plain": true\
-    }\
-  ]\
+  "with": ["§c$(bid)"]\
 }
 
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Backup
-function hygrave:internal/database/backups/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/backups/lookup with storage hygrave:common temp.mcargs.'database/backups/lookup'
 
 tellraw @s ""
 

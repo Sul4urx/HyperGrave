@@ -2,7 +2,8 @@
 #@>   function hygrave:run/grave/admin/show_grave_info
 
 ## Read the input GID and store it
-execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get @s hygrave.show_grave_info
+execute store result storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_exists'.gid int 1 run scoreboard players get @s hygrave.show_grave_info
+execute store result storage hygrave:common temp.mcargs.'database/graves/lookup'.gid int 1 run scoreboard players get @s hygrave.show_grave_info
 
 ## Check if any graves have been generated yet
 execute unless data storage hygrave:common graves[0] run return run title @s actionbar {\
@@ -11,7 +12,7 @@ execute unless data storage hygrave:common graves[0] run return run title @s act
 }
 
 ## Check if the grave has ever existed before
-execute store result score .grave_exists hygrave.temp_var run function hygrave:internal/grave/show_info/check_if_grave_exists with storage hygrave:common temp.args
+execute store result score .grave_exists hygrave.temp_var run function hygrave:internal/grave/show_info/check_if_grave_exists with storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_exists'
 
 ## If not, tell error to player
 execute if score .grave_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
@@ -19,10 +20,10 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
   "fallback": "§cGrave #%s§c does not exist.",\
   "with": [\
     {\
-      "nbt": "temp.args.gid",\
-      "storage": "hygrave:common",\
-      "color": "red",\
-      "plain": true\
+      "score": {\
+        "name": "@s",\
+        "objective": "hygrave.show_grave_info"\
+      }\
     }\
   ]\
 }
@@ -31,7 +32,7 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Grave
-function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ## Prevent loop
 scoreboard players set @s hygrave.show_grave_info 0

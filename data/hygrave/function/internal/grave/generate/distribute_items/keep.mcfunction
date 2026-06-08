@@ -14,8 +14,8 @@ data remove storage hygrave:common temp.item.Slot
 data modify entity @s Item set from storage hygrave:common temp.item
 
 ## Check if item should be kept
-execute store result storage hygrave:common temp.args.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].Slot
-execute store result score .slot_operation hygrave.temp_var run function hygrave:internal/helper/config/graves/slot_distribution/get_slot_operation with storage hygrave:common temp.args
+execute store result storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].Slot
+execute store result score .slot_operation hygrave.temp_var run function hygrave:internal/helper/config/graves/slot_distribution/get_slot_operation with storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'
 
 scoreboard players set .keep_item hygrave.temp_var 0
 
@@ -38,6 +38,6 @@ data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:cus
 scoreboard players remove .loop_count hygrave.temp_var 1
 
 data remove storage hygrave:common temp.item
-data remove storage hygrave:common temp.args
+data remove storage hygrave:common temp.mcargs
 
 execute if score .loop_count hygrave.temp_var matches 1.. if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/distribute_items/keep with storage hygrave:common configs

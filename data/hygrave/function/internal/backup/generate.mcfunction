@@ -4,8 +4,8 @@
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Player
-execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @s hygrave.pid 
-function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
+execute store result storage hygrave:common temp.mcargs.'database/players/lookup'.pid int 1 run scoreboard players get @s hygrave.pid 
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.mcargs.'database/players/lookup'
 
 ## Add backup data
 data modify storage hygrave:common backups append value {}
