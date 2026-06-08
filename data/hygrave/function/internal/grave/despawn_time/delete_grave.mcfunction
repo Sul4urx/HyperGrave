@@ -8,10 +8,10 @@ execute if data entity @s item.components.minecraft:custom_data.hygrave:common.i
 function hygrave:internal/grave/despawn_time/delete_grave/drop_xp
 
 ## Delete grave
-data modify storage hygrave:common temp.args.destruction_type set value "despawned"
-data modify storage hygrave:common temp.args.destroyer set value {}
+data modify storage hygrave:common temp.mcargs.'database/graves/delete'.destruction_type set value "despawned"
+data modify storage hygrave:common temp.mcargs.'database/graves/delete'.destroyer set value {}
 
-function hygrave:internal/database/graves/delete with storage hygrave:common temp.args
+function hygrave:internal/database/graves/delete with storage hygrave:common temp.mcargs.'database/graves/delete'
 
 ## Remove grave entity
 function hygrave:internal/grave/remove_grave_entity

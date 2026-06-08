@@ -10,9 +10,9 @@ $execute unless data storage hygrave:common graves[-1].data.items[{Slot:$(slot_n
 $data modify entity @n[tag=hygrave.temp.grave_info_item_manipulator] Item set from storage hygrave:common graves[-1].data.items[{Slot:$(slot_number)b}]
 
 ## Mark the square representing the item and add a tooltip for the item
-data modify storage hygrave:common temp.args1 set from entity @n[tag=hygrave.temp.grave_info_item_manipulator] Item
-$data modify storage hygrave:common temp.args1.slot_id set value "$(slot_id)"
-$data modify storage hygrave:common temp.args1.slot_text set value "$(slot_text)"
-$data modify storage hygrave:common temp.args1.slot_number set value $(slot_number)
+data modify storage hygrave:common temp.mcargs.'grave/show_info/fields/show_items/change_text_to_show_value' set from entity @n[tag=hygrave.temp.grave_info_item_manipulator] Item
+$data modify storage hygrave:common temp.mcargs.'grave/show_info/fields/show_items/change_text_to_show_value'.slot_id set value "$(slot_id)"
+$data modify storage hygrave:common temp.mcargs.'grave/show_info/fields/show_items/change_text_to_show_value'.slot_text set value "$(slot_text)"
+$data modify storage hygrave:common temp.mcargs.'grave/show_info/fields/show_items/change_text_to_show_value'.slot_number set value $(slot_number)
 
-execute as @n[tag=hygrave.temp.grave_info_item_manipulator] at @s run function hygrave:internal/grave/show_info/fields/show_items/change_text_to_show_value with storage hygrave:common temp.args1
+execute as @n[tag=hygrave.temp.grave_info_item_manipulator] at @s run function hygrave:internal/grave/show_info/fields/show_items/change_text_to_show_value with storage hygrave:common temp.mcargs.'grave/show_info/fields/show_items/change_text_to_show_value'

@@ -8,16 +8,17 @@
 data remove storage hygrave:common players[].temp
 
 ##> Grave
-data modify storage hygrave:common temp.args.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
-function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ##> Player (Owner)
 function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
 ##> Player (Interactor)
-execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @p[tag=hygrave.temp.grave.interactor] hygrave.pid
-function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
+execute store result storage hygrave:common temp.mcargs.'database/players/lookup'.pid int 1 run scoreboard players get @p[tag=hygrave.temp.grave.interactor] hygrave.pid
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.mcargs.'database/players/lookup'
+data modify storage hygrave:common players[-1].temp.interactor set value 1b
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 
@@ -56,10 +57,10 @@ execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/g
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
 ## Delete grave
-data modify storage hygrave:common temp.args.destruction_type set value "popped"
-data modify storage hygrave:common temp.args.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
+data modify storage hygrave:common temp.mcargs.'database/graves/delete'.destruction_type set value "popped"
+data modify storage hygrave:common temp.mcargs.'database/graves/delete'.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
 
-function hygrave:internal/database/graves/delete with storage hygrave:common temp.args
+function hygrave:internal/database/graves/delete with storage hygrave:common temp.mcargs.'database/graves/delete'
 
 ## Remove grave entity
 function hygrave:internal/grave/remove_grave_entity

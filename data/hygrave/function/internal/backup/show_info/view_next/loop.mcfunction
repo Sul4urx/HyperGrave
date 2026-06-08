@@ -10,10 +10,10 @@ $data modify storage hygrave:common temp.bid set value $(bid)
 
 execute store result score .bid hygrave.temp_var run data get storage hygrave:common temp.bid
 
-## Save BID + 1 in `temp.args1.bid` and add 1 to `.bid` temp score
+## Save BID + 1 in `temp.mcargs.'backup/show_info/view_next/loop'.bid` and add 1 to `.bid` temp score
 scoreboard players add .bid hygrave.temp_var 1
 execute if score .bid hygrave.temp_var > (last_bid) hygrave.var run scoreboard players operation .bid hygrave.temp_var = (first_bid) hygrave.var
-execute store result storage hygrave:common temp.args1.bid int 1 run scoreboard players get .bid hygrave.temp_var
+execute store result storage hygrave:common temp.mcargs.'backup/show_info/view_next/loop'.bid int 1 run scoreboard players get .bid hygrave.temp_var
 
 ## Prevent infinite loop
 scoreboard players remove .loop_count hygrave.temp_var 1
@@ -24,7 +24,7 @@ $execute if data storage hygrave:common backups[{data:{bid:$(bid)}}] run return 
 
 ## Add 1 to BID each time
 ## until the backup with that BID can be shown to player
-return run function hygrave:internal/backup/show_info/view_next/loop with storage hygrave:common temp.args1
+return run function hygrave:internal/backup/show_info/view_next/loop with storage hygrave:common temp.mcargs.'backup/show_info/view_next/loop'
 
 
 

@@ -15,8 +15,8 @@ execute if score (grave_appearance/grave_model/player_head/glowing) hygrave.conf
 
 ##> Rotate
 scoreboard players add @n[tag=hygrave.temp.grave.player_head] hygrave.rotation_cooldown 1
-execute if score @n[tag=hygrave.temp.grave.player_head] hygrave.rotation_cooldown matches 20.. run data modify storage hygrave:common temp.args.rotation_speed set from storage hygrave:common configs.value.grave_appearance.grave_model.player_head.rotation_speed
-execute as @n[tag=hygrave.temp.grave.player_head] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate with storage hygrave:common temp.args
+execute if score @n[tag=hygrave.temp.grave.player_head] hygrave.rotation_cooldown matches 20.. run data modify storage hygrave:common temp.mcargs.'grave/rotate'.rotation_speed set from storage hygrave:common configs.value.grave_appearance.grave_model.player_head.rotation_speed
+execute as @n[tag=hygrave.temp.grave.player_head] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate with storage hygrave:common temp.mcargs.'grave/rotate'
 execute if score (grave_appearance/grave_model/player_head/rotation_speed) hygrave.config matches 0 as @n[tag=hygrave.temp.grave.player_head] at @s run rotate @s 180 0
 
 ##> Adjust position
@@ -101,8 +101,8 @@ execute unless data storage hygrave:common temp.grave_data.items[0] run data mod
 
 ##> Rotate
 scoreboard players add @n[tag=hygrave.temp.grave.icd] hygrave.rotation_cooldown 1
-execute if score @n[tag=hygrave.temp.grave.icd] hygrave.rotation_cooldown matches 20.. run data modify storage hygrave:common temp.args.rotation_speed set from storage hygrave:common configs.value.grave_appearance.grave_model.icd_item.rotation_speed
-execute as @n[tag=hygrave.temp.grave.icd] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate with storage hygrave:common temp.args
+execute if score @n[tag=hygrave.temp.grave.icd] hygrave.rotation_cooldown matches 20.. run data modify storage hygrave:common temp.mcargs.'grave/rotate'.rotation_speed set from storage hygrave:common configs.value.grave_appearance.grave_model.icd_item.rotation_speed
+execute as @n[tag=hygrave.temp.grave.icd] at @s if score @s hygrave.rotation_cooldown matches 20.. run function hygrave:internal/grave/rotate with storage hygrave:common temp.mcargs.'grave/rotate'
 execute if score (grave_appearance/grave_model/icd_item/rotation_speed) hygrave.config matches 0 as @n[tag=hygrave.temp.grave.icd] at @s run rotate @s 0 ~
 
 ##> Adjust position

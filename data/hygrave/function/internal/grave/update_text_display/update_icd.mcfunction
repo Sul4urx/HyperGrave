@@ -14,41 +14,41 @@ scoreboard players operation .despawn_time.hours hygrave.temp_var /= (3600) hygr
 
 
 ## Prepare text
-data modify storage hygrave:common temp.args.texts set value ["", [""], [""], [""]]
+data modify storage hygrave:common temp.texts set value ["", [""], [""], [""]]
 
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_1{type: nothing} run data modify storage hygrave:common temp.args.texts[1] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_1.text
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[1] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_2.text
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[1] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_3.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_1{type: nothing} run data modify storage hygrave:common temp.texts[1] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_1.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_2{type: nothing} run data modify storage hygrave:common temp.texts[1] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_2.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_3{type: nothing} run data modify storage hygrave:common temp.texts[1] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_1.text_3.text
 
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_1{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_1.text
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_2.text
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[2] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_3.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_1{type: nothing} run data modify storage hygrave:common temp.texts[2] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_1.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_2{type: nothing} run data modify storage hygrave:common temp.texts[2] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_2.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_3{type: nothing} run data modify storage hygrave:common temp.texts[2] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_2.text_3.text
 
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_1{type: nothing} run data modify storage hygrave:common temp.args.texts[3] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_1.text
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_2{type: nothing} run data modify storage hygrave:common temp.args.texts[3] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_2.text
-execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_3{type: nothing} run data modify storage hygrave:common temp.args.texts[3] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_3.text
-
-
-execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.args.texts[][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_1{type: nothing} run data modify storage hygrave:common temp.texts[3] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_1.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_2{type: nothing} run data modify storage hygrave:common temp.texts[3] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_2.text
+execute unless data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_3{type: nothing} run data modify storage hygrave:common temp.texts[3] append from storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_3.text_3.text
 
 
-execute if data storage hygrave:common temp.args.texts[1][3] run data modify storage hygrave:common temp.args.texts[1] insert 3 value " "
-execute if data storage hygrave:common temp.args.texts[1][2] run data modify storage hygrave:common temp.args.texts[1] insert 2 value " "
-
-execute if data storage hygrave:common temp.args.texts[2][3] run data modify storage hygrave:common temp.args.texts[2] insert 3 value " "
-execute if data storage hygrave:common temp.args.texts[2][2] run data modify storage hygrave:common temp.args.texts[2] insert 2 value " "
-
-execute if data storage hygrave:common temp.args.texts[3][3] run data modify storage hygrave:common temp.args.texts[3] insert 3 value " "
-execute if data storage hygrave:common temp.args.texts[3][2] run data modify storage hygrave:common temp.args.texts[3] insert 2 value " "
+execute if score (graves/freeze_grave_despawn_time) hygrave.config matches 1 run data remove storage hygrave:common temp.texts[][{with: [{nbt: "temp.text_display.despawn_time.seconds"}]}]
 
 
-execute unless data storage hygrave:common temp.args.texts[3][1] run data remove storage hygrave:common temp.args.texts[3]
-execute unless data storage hygrave:common temp.args.texts[2][1] run data remove storage hygrave:common temp.args.texts[2]
-execute unless data storage hygrave:common temp.args.texts[1][1] run data remove storage hygrave:common temp.args.texts[1]
+execute if data storage hygrave:common temp.texts[1][3] run data modify storage hygrave:common temp.texts[1] insert 3 value " "
+execute if data storage hygrave:common temp.texts[1][2] run data modify storage hygrave:common temp.texts[1] insert 2 value " "
+
+execute if data storage hygrave:common temp.texts[2][3] run data modify storage hygrave:common temp.texts[2] insert 3 value " "
+execute if data storage hygrave:common temp.texts[2][2] run data modify storage hygrave:common temp.texts[2] insert 2 value " "
+
+execute if data storage hygrave:common temp.texts[3][3] run data modify storage hygrave:common temp.texts[3] insert 3 value " "
+execute if data storage hygrave:common temp.texts[3][2] run data modify storage hygrave:common temp.texts[3] insert 2 value " "
 
 
-execute if data storage hygrave:common temp.args.texts[2] if data storage hygrave:common temp.args.texts[3] run data modify storage hygrave:common temp.args.texts insert 3 value "\n"
-execute if data storage hygrave:common temp.args.texts[1] if data storage hygrave:common temp.args.texts[2] run data modify storage hygrave:common temp.args.texts insert 2 value "\n"
+execute unless data storage hygrave:common temp.texts[3][1] run data remove storage hygrave:common temp.texts[3]
+execute unless data storage hygrave:common temp.texts[2][1] run data remove storage hygrave:common temp.texts[2]
+execute unless data storage hygrave:common temp.texts[1][1] run data remove storage hygrave:common temp.texts[1]
+
+
+execute if data storage hygrave:common temp.texts[2] if data storage hygrave:common temp.texts[3] run data modify storage hygrave:common temp.texts insert 3 value "\n"
+execute if data storage hygrave:common temp.texts[1] if data storage hygrave:common temp.texts[2] run data modify storage hygrave:common temp.texts insert 2 value "\n"
 
 ## Aliases
 data modify storage hygrave:common temp.text_display.owner set from storage hygrave:common temp.grave_data.owner
@@ -128,4 +128,4 @@ execute unless data storage hygrave:common temp.text_display.icd.item.Slot run d
 
 
 ## Update current text display
-data modify entity @n[type=minecraft:text_display,distance=..1,tag=hygrave.temp.grave.text_display] text set from storage hygrave:common temp.args.texts
+data modify entity @n[type=minecraft:text_display,distance=..1,tag=hygrave.temp.grave.text_display] text set from storage hygrave:common temp.texts

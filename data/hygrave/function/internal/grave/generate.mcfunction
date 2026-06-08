@@ -5,12 +5,12 @@
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Player
-execute store result storage hygrave:common temp.args.pid int 1 run scoreboard players get @s hygrave.pid 
-function hygrave:internal/database/players/lookup with storage hygrave:common temp.args
+execute store result storage hygrave:common temp.mcargs.'database/players/lookup'.pid int 1 run scoreboard players get @s hygrave.pid 
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.mcargs.'database/players/lookup'
 
 ##> Last Backup
-execute store result storage hygrave:common temp.args.bid int 1 run scoreboard players get (last_bid) hygrave.var
-function hygrave:internal/database/backups/lookup with storage hygrave:common temp.args.bid
+execute store result storage hygrave:common temp.mcargs.'database/backups/lookup'.bid int 1 run scoreboard players get (last_bid) hygrave.var
+function hygrave:internal/database/backups/lookup with storage hygrave:common temp.mcargs.'database/backups/lookup'.bid
 
 ## Reset death count
 scoreboard players set @s hygrave.death_count 0
@@ -41,8 +41,8 @@ item modify entity @n[tag=hygrave.temp.grave.player_head] contents {function:"mi
 
 ## Copy items from player to grave
 execute if score (general/mod_compatibility_mode) hygrave.config matches 0 run function hygrave:internal/grave/generate/copy_items
-execute if score (general/mod_compatibility_mode) hygrave.config matches 1 run data modify storage hygrave:common temp.args.distance set from storage hygrave:common configs.value.general.'mod_compatibility_mode/item_collection_distance'
-execute if score (general/mod_compatibility_mode) hygrave.config matches 1 as @e[type=item,distance=..16] at @s run function hygrave:internal/grave/generate/collect_items with storage hygrave:common temp.args
+execute if score (general/mod_compatibility_mode) hygrave.config matches 1 run data modify storage hygrave:common temp.mcargs.'grave/generate/collect_items'.distance set from storage hygrave:common configs.value.general.'mod_compatibility_mode/item_collection_distance'
+execute if score (general/mod_compatibility_mode) hygrave.config matches 1 as @e[type=item,distance=..16] at @s run function hygrave:internal/grave/generate/collect_items with storage hygrave:common temp.mcargs.'grave/generate/collect_items'
 
 data modify storage hygrave:common temp.grave_contents.all_items set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items
 

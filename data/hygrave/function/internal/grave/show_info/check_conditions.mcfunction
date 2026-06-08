@@ -62,10 +62,12 @@ execute if score @s hygrave.show_grave_info matches 1..128 if score .gid hygrave
 execute if score @s hygrave.show_grave_info matches 1..128 run scoreboard players operation @s hygrave.show_grave_info = .gid hygrave.temp_var
 
 ## Read the input GID and store it
-execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get @s hygrave.show_grave_info
+execute store result storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_exists'.gid int 1 run scoreboard players get @s hygrave.show_grave_info
+execute store result storage hygrave:common temp.mcargs.'database/graves/lookup'.gid int 1 run scoreboard players get @s hygrave.show_grave_info
+execute store result storage hygrave:common temp.mcargs.'grave/show_info/show_non-admin/??'.gid int 1 run scoreboard players get @s hygrave.show_grave_info
 
 ## Check if the grave has ever existed before
-execute store result score .grave_exists hygrave.temp_var run function hygrave:internal/grave/show_info/check_if_grave_exists with storage hygrave:common temp.args
+execute store result score .grave_exists hygrave.temp_var run function hygrave:internal/grave/show_info/check_if_grave_exists with storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_exists'
 
 ##> If not, tell error to player
 execute if score .grave_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
@@ -73,10 +75,10 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
   "fallback": "§cGrave #%s§c does not exist.",\
   "with": [\
     {\
-      "nbt": "temp.args.gid",\
-      "storage": "hygrave:common",\
-      "color": "red",\
-      "plain": true\
+      "score": {\
+        "name": "@s",\
+        "objective": "hygrave.show_grave_info"\
+      }\
     }\
   ]\
 }
@@ -85,7 +87,7 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
 ## Bring the nessecary elements of databases to last index so that we can work with thems
 
 ##> Grave
-function hygrave:internal/database/graves/lookup with storage hygrave:common temp.args
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ## Check for type:
 ## AO: Active grave belonging to the player
@@ -95,7 +97,7 @@ function hygrave:internal/database/graves/lookup with storage hygrave:common tem
 execute store result score .stored_pid hygrave.temp_var run data get storage hygrave:common graves[-1].data.owner.pid
 
 ##> AO
-execute if score .stored_pid hygrave.temp_var = @s hygrave.pid unless data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/ao) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/ao with storage hygrave:common temp.args
+execute if score .stored_pid hygrave.temp_var = @s hygrave.pid unless data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/ao) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/ao with storage hygrave:common temp.mcargs.'grave/show_info/show_non-admin/??'
 
 execute if score .stored_pid hygrave.temp_var = @s hygrave.pid unless data storage hygrave:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/ao) hygrave.config matches 0 run title @s actionbar {\
     "translate": "hygrave.grave_info.fail.cannot_view_contents",\
@@ -103,7 +105,7 @@ execute if score .stored_pid hygrave.temp_var = @s hygrave.pid unless data stora
   }
 
 ##> BO
-execute if score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bo) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/bo with storage hygrave:common temp.args
+execute if score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bo) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/bo with storage hygrave:common temp.mcargs.'grave/show_info/show_non-admin/??'
 
 execute if score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage hygrave:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bo) hygrave.config matches 0 run title @s actionbar {\
     "translate": "hygrave.grave_info.fail.cannot_view_contents",\
@@ -111,7 +113,7 @@ execute if score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage h
   }
 
 ##> AN
-execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid unless data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/an) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/an with storage hygrave:common temp.args
+execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid unless data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/an) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/an with storage hygrave:common temp.mcargs.'grave/show_info/show_non-admin/??'
 
 execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid unless data storage hygrave:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/an) hygrave.config matches 0 run title @s actionbar {\
     "translate": "hygrave.grave_info.fail.cannot_view_contents",\
@@ -119,7 +121,7 @@ execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid unless data s
   }
 
 ##> BN
-execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bn) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/bn with storage hygrave:common temp.args
+execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage hygrave:common graves[-1].data.status{destroyed:1b} unless score (graves/show_grave_info/bn) hygrave.config matches 0 run function hygrave:internal/grave/show_info/show_non-admin/bn with storage hygrave:common temp.mcargs.'grave/show_info/show_non-admin/??'
 
 execute unless score .stored_pid hygrave.temp_var = @s hygrave.pid if data storage hygrave:common graves[-1].data.status{destroyed:1b} if score (graves/show_grave_info/bn) hygrave.config matches 0 run title @s actionbar {\
     "translate": "hygrave.grave_info.fail.cannot_view_contents",\

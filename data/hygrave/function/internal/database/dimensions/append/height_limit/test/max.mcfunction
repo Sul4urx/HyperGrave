@@ -16,5 +16,5 @@ execute if score .condition_1 hygrave.temp_var matches 0 if score .condition_2 h
 ## Once `~ $(height) ~` goes above minimum build height limit,
 ## then we can determine the minimum build height limit for this dimension
 $execute if score .conditions hygrave.temp_var matches 1 run return run scoreboard players set .max_height hygrave.temp_var $(height)
-execute store result storage hygrave:common temp.args.height int 1 run scoreboard players remove .height hygrave.temp_var 16
-execute unless score .height hygrave.temp_var matches ..-2031 run function hygrave:internal/database/dimensions/append/height_limit/test/max with storage hygrave:common temp.args
+execute store result storage hygrave:common temp.mcargs.'database/dimensions/append/height_limit/test/max'.height int 1 run scoreboard players remove .height hygrave.temp_var 16
+execute unless score .height hygrave.temp_var matches ..-2031 run function hygrave:internal/database/dimensions/append/height_limit/test/max with storage hygrave:common temp.mcargs.'database/dimensions/append/height_limit/test/max'

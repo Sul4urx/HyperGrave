@@ -37,9 +37,9 @@ execute if score (graves/grave_placement_restrictions_restrictions/in_lava) hygr
 ## If all y positions between min and max build height limit
 ## have been occupied and grave cannot generate in any of them,
 ## generate the grave on the max build height limit instead
-execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run data modify storage hygrave:common temp.args.y_pos set from storage hygrave:common dimensions."$(Dimension)".build_height_limit.max
+execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run data modify storage hygrave:common temp.mcargs.'grave/generate/grave_placement_restrictions/teleport'.y_pos set from storage hygrave:common dimensions."$(Dimension)".build_height_limit.max
 
-execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/generate/grave_placement_restrictions/teleport with storage hygrave:common temp.args
+execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/generate/grave_placement_restrictions/teleport with storage hygrave:common temp.mcargs.'grave/generate/grave_placement_restrictions/teleport'
 
 execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run tp @s ~ ~1 ~
 

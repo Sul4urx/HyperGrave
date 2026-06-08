@@ -20,8 +20,8 @@ function hygrave:internal/database/players/lookup with storage hygrave:common gr
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
 ##> Player (Interactor)
-execute store result storage hygrave:common temp.args1.pid int 1 run scoreboard players get @s hygrave.pid
-function hygrave:internal/database/players/lookup with storage hygrave:common temp.args1
+execute store result storage hygrave:common temp.mcargs.'database/players/lookup'.pid int 1 run scoreboard players get @s hygrave.pid
+function hygrave:internal/database/players/lookup with storage hygrave:common temp.mcargs.'database/players/lookup'
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 ## Add temp tags
@@ -57,18 +57,18 @@ execute unless score .check_requirements.xp hygrave.temp_var matches 1 run retur
 function hygrave:internal/grave/remote_unpack/give_items/main
 
 ## Give XP
-data modify storage hygrave:common temp.args.value set from storage hygrave:common graves[-1].contents.xp.after_death.total
+data modify storage hygrave:common temp.mcargs.'helper/xp_add'.value set from storage hygrave:common graves[-1].contents.xp.after_death.total
 
-execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:internal/helper/xp_add with storage hygrave:common temp.args
+execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:internal/helper/xp_add with storage hygrave:common temp.mcargs.'helper/xp_add'
 
 ## Play sound
 playsound minecraft:entity.item_frame.remove_item master @a ~ ~ ~ 1 1
 
 ## Delete grave
-data modify storage hygrave:common temp.args.destruction_type set value "remote_unpacked"
-data modify storage hygrave:common temp.args.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
+data modify storage hygrave:common temp.mcargs.'database/graves/delete'.destruction_type set value "remote_unpacked"
+data modify storage hygrave:common temp.mcargs.'database/graves/delete'.destroyer set from storage hygrave:common players[{temp:{interactor:1b}}].player
 
-function hygrave:internal/database/graves/delete with storage hygrave:common temp.args
+function hygrave:internal/database/graves/delete with storage hygrave:common temp.mcargs.'database/graves/delete'
 
 ## Remove temp tag
 tag @s remove hygrave.temp.grave.interactor

@@ -76,6 +76,6 @@ $execute unless score @s hygrave.pid = .show_grave_list.owner_pid hygrave.temp_v
 execute if score .show_grave_list.gid hygrave.temp_var >= (last_gid) hygrave.var run return 1
 
 scoreboard players add .show_grave_list.gid hygrave.temp_var 1
-execute store result storage hygrave:common temp.args.gid int 1 run scoreboard players get .show_grave_list.gid hygrave.temp_var
+execute store result storage hygrave:common temp.mcargs.'grave/show_list_admin/fill_list'.gid int 1 run scoreboard players get .show_grave_list.gid hygrave.temp_var
 
-function hygrave:internal/grave/show_list_admin/fill_list with storage hygrave:common temp.args
+function hygrave:internal/grave/show_list_admin/fill_list with storage hygrave:common temp.mcargs.'grave/show_list_admin/fill_list'
