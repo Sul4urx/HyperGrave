@@ -105,6 +105,7 @@ data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:cus
 
 ##> Store relevant BID
 data modify storage hygrave:common backups[-1].data.relevant_grave.data.gid set from storage hygrave:common graves[-1].data.gid
+data modify storage hygrave:common graves[-1].data.relevant_backup.data.bid set from storage hygrave:common backups[-1].data.bid
 
 ##> Store owner
 data modify storage hygrave:common graves[-1].data.owner set from storage hygrave:common players[-1].player
