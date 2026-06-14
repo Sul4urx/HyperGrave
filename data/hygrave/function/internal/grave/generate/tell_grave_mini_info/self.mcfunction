@@ -38,7 +38,7 @@ execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches
 
 ## Location only
 execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches 1 unless score (graves/show_grave_info/ao/location.dim) hygrave.config matches 1 run tellraw @s {\
-  "translate": "\n§c☠ %s §6#%s §7—§r %s\n",\
+  "translate": "\n§c☠ %s §6#%s §7|§r %s\n",\
   "with": [\
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
@@ -64,7 +64,7 @@ execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches
 
 ## Dimension only
 execute unless score (graves/show_grave_info/ao/location.xyz) hygrave.config matches 1 if score (graves/show_grave_info/ao/location.dim) hygrave.config matches 1 run tellraw @s {\
-  "translate": "\n§c☠ %s §6#%s §7—§r %s\n",\
+  "translate": "\n§c☠ %s §6#%s §7|§r %s\n",\
   "with": [\
     {\
       "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
