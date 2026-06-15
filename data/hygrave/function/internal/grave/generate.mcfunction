@@ -134,3 +134,4 @@ tag @e[tag=hygrave.temp.grave.model.decoration_2] remove hygrave.temp.grave.mode
 tag @e[tag=hygrave.temp.grave.text_display] remove hygrave.temp.grave.text_display
 tag @e[tag=hygrave.temp.grave.icd] remove hygrave.temp.grave.icd
 tag @e[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
+tag @a[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner

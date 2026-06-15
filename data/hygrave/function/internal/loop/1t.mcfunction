@@ -96,6 +96,7 @@ execute if score (general/mod_compatibility_mode) hygrave.config matches 1.. as 
 ## Remove temp tags
 tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
 tag @e[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
+tag @a[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
 tag @e[tag=hygrave.temp.grave.interaction] remove hygrave.temp.grave.interaction
 tag @e[tag=hygrave.temp.grave.interactor] remove hygrave.temp.grave.interactor
 tag @e[tag=hygrave.temp.grave.item_to_give_back] remove hygrave.temp.grave.item_to_give_back

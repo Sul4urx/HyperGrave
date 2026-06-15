@@ -71,6 +71,7 @@ data remove entity @n[type=minecraft:interaction,distance=..1,tag=hygrave.grave.
 ## Remove temp tags
 tag @e[distance=..1,tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
 tag @e[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
+tag @a[tag=hygrave.temp.grave.owner] remove hygrave.temp.grave.owner
 tag @e[distance=..1,tag=hygrave.temp.grave.player_head] remove hygrave.temp.grave.player_head
 tag @e[distance=..1,tag=hygrave.temp.grave.text_display] remove hygrave.temp.grave.text_display
 tag @e[distance=..1,tag=hygrave.temp.grave.model.decoration_1] remove hygrave.temp.grave.model.decoration_1
