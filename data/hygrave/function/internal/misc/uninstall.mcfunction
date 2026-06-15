@@ -68,5 +68,5 @@ scoreboard objectives remove sgrave2.death_count
 ## Show success message
 execute unless data storage hygrave:common temp{uninstall_confirm:"UNINSTALL_NO_OUTPUT_MESSAGE"} run tellraw @s {\
   "translate": "hygrave.uninstall.success",\
-  "fallback": "\n§6§lSuccessfully uninstalled HyperGrave.\n\n§bℹ Reloading this world will cause HyperGrave to be reinstalled automatically. To prevent that, use the §6/datapack disable§b command to disable HyperGrave. To reinstall HyperGrave, use §6/reload§b.\n\n§bℹ You might also want to disable the §6keep_inventory§b gamerule.\n",\
+  "fallback": "\n§6§lSuccessfully uninstalled HyperGrave.\n\n§bℹ Reloading this world will cause HyperGrave to be reinstalled automatically. To prevent that, use the §6/datapack disable§b command to disable HyperGrave. To reinstall HyperGrave, use §6/reload§b.\n\n§bℹ You might also want to disable the §6Keep Inventory§b gamerule.\n",\
 }
