@@ -12,6 +12,7 @@ schedule clear hygrave:internal/loop/1t
 schedule clear hygrave:internal/loop/1s
 
 ##> Remove all stored data
+data remove storage hygrave:common backups
 data remove storage hygrave:common graves
 data remove storage hygrave:common active_graves
 data remove storage hygrave:common players
@@ -39,6 +40,7 @@ scoreboard objectives remove hygrave.help
 scoreboard objectives remove hygrave.death_count
 
 ##> Remove all old stored data
+data remove storage sgrave2:common backups
 data remove storage sgrave2:common graves
 data remove storage sgrave2:common active_graves
 data remove storage sgrave2:common unobstructed_graves
