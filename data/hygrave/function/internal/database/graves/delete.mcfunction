@@ -5,7 +5,6 @@
 #@>   function hygrave:internal/grave/remote_unpack
 #@>   function hygrave:internal/grave/despawn_time/delete_grave
 
-
 ## Clear all items
 data modify storage hygrave:common graves[-1].contents.items set value []
 

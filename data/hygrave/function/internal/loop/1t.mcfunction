@@ -86,6 +86,10 @@ execute as @a[scores={hygrave.remote_loot_grave=1000..}] at @s run function hygr
 scoreboard players set @a hygrave.remote_loot_grave 0
 scoreboard players enable @a hygrave.remote_loot_grave
 
+## Limit loaded active graves to 16
+execute store result score (loaded_active_grave_count) hygrave.var if entity @e[tag=hygrave.grave.base]
+execute if score (loaded_active_grave_count) hygrave.var matches 17.. run function hygrave:internal/grave/limit/loaded_active_graves
+
 ## Grave management
 execute as @e[tag=hygrave.grave.base] at @s run function hygrave:internal/grave/main
 
