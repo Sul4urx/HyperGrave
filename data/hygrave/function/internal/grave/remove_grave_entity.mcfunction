@@ -4,6 +4,12 @@
 #@>   function hygrave:internal/grave/unpack
 #@>   function hygrave:internal/grave/despawn_time/delete_grave
 
+## Bring the nessecary elements of databases to last index so that we can work with them
+
+##> Grave
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
+
 ## Drop items
 execute if data storage hygrave:common graves[-1].drop_queued_contents.items[0] run function hygrave:internal/grave/despawn_time/delete_grave/drop_items
 
