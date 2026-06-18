@@ -31,9 +31,9 @@ execute if score .global hygrave.gid matches 1129.. run scoreboard players remov
 execute unless score .global hygrave.bid matches 2000.. run scoreboard players set .global hygrave.bid 2000
 
 ##> First BID
-execute if score .global hygrave.bid matches ..2127 run scoreboard players set (first_bid) hygrave.var 2001
-execute if score .global hygrave.bid matches 2128.. run scoreboard players operation (first_bid) hygrave.var = .global hygrave.bid
-execute if score .global hygrave.bid matches 2128.. run scoreboard players remove (first_bid) hygrave.var 126
+execute if score .global hygrave.bid matches ..2192 run scoreboard players set (first_bid) hygrave.var 2001
+execute if score .global hygrave.bid matches 2193.. run scoreboard players operation (first_bid) hygrave.var = .global hygrave.bid
+execute if score .global hygrave.bid matches 2193.. run scoreboard players remove (first_bid) hygrave.var 191
 
 ## Change game rules so that HyperGrave can work properly
 function hygrave:internal/misc/change_gamerules
@@ -99,6 +99,9 @@ execute as @e[tag=hygrave.grave.base] at @s run function hygrave:internal/grave/
 ## Player database management (The functions inside only need to be run
 ## if Mod Compatibility Mode is enabled)
 execute if score (general/mod_compatibility_mode) hygrave.config matches 1.. as @a at @s run function hygrave:internal/database/players/main
+
+## Limit backups to 192
+data remove storage hygrave:common backups[-193]
 
 ## Remove temp tags
 tag @e[tag=hygrave.temp.grave.base] remove hygrave.temp.grave.base
