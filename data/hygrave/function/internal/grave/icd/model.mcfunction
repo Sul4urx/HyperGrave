@@ -20,8 +20,8 @@ execute if score (grave_appearance/grave_model/player_head/rotation_speed) hygra
 ##> Adjust position
 data modify storage hygrave:common temp.transformation set from entity @n[tag=hygrave.temp.grave.player_head] transformation
 
-execute if score (grave_appearance/grave_model/player_head/horizontal_position) hygrave.config matches 0 run data modify storage hygrave:common temp.transformation.translation set value [0f, 0f, 0f]
-execute if score (grave_appearance/grave_model/player_head/horizontal_position) hygrave.config matches 1 run data modify storage hygrave:common temp.transformation.translation set value [0f, 0f, 0.125f]
+execute if score (grave_appearance/grave_model/player_head/horizontal_position) hygrave.config matches 0 run data modify storage hygrave:common temp.transformation.translation[2] set value 0f
+execute if score (grave_appearance/grave_model/player_head/horizontal_position) hygrave.config matches 1 run data modify storage hygrave:common temp.transformation.translation[2] set value 0.125f
 
 execute if score (grave_appearance/grave_model/player_head/vertical_position) hygrave.config matches 0 run data modify storage hygrave:common temp.transformation.translation[1] set value 0.75f
 execute if score (grave_appearance/grave_model/player_head/vertical_position) hygrave.config matches 1 run data modify storage hygrave:common temp.transformation.translation[1] set value 0.625f
