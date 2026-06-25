@@ -65,6 +65,14 @@ execute store result storage hygrave:common configs.value.general.change_gamerul
 execute if data storage hygrave:common configs.value.general{change_gamerules:0b} run data modify storage hygrave:common configs.text.general.change_gamerules set value "§c❌"
 execute if data storage hygrave:common configs.value.general{change_gamerules:1b} run data modify storage hygrave:common configs.text.general.change_gamerules set value "§a✔"
 
+## Annoying Mode
+execute unless score (general/annoying_mode) hygrave.config matches 0..1 run scoreboard players set (general/annoying_mode) hygrave.config 0
+
+execute store result storage hygrave:common configs.value.general.annoying_mode byte 1 run scoreboard players get (general/annoying_mode) hygrave.config
+
+execute if data storage hygrave:common configs.value.general{annoying_mode:0b} run data modify storage hygrave:common configs.text.general.annoying_mode set value "§c❌"
+execute if data storage hygrave:common configs.value.general{annoying_mode:1b} run data modify storage hygrave:common configs.text.general.annoying_mode set value "§a✔"
+
 ## Drop grave contents on despawn
 execute unless score (graves/drop_contents_on_despawn) hygrave.config matches 0..1 run scoreboard players set (graves/drop_contents_on_despawn) hygrave.config 1
 

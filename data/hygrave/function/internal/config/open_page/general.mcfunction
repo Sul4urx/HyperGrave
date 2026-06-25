@@ -104,15 +104,22 @@ tellraw @s [\
     ],\
     "hover_event": {\
       "action": "show_text",\
-      "value": {\
-        "translate": "hygrave.config_change_description.replace_value",\
-        "fallback": "Click to change the config's value. \nReplace §o?§r with the value you want to change the config to."\
-      }\
+      "value": [\
+        {\
+          "translate": "hygrave.config_change_description.replace_value",\
+          "fallback": "Click to change the config's value. \nReplace §o?§r with the value you want to change the config to."\
+        }, "\n\n", \
+        {\
+          "translate": "hygrave.config_change_description.shift_clicking_bad_idea",\
+          "fallback": "§7Remember that I said click, not shift-click!\nShift-clicking will summon a curiosity demon!"\
+        },\
+      ]\
     },\
     "click_event": {\
       "action": "suggest_command",\
       "command": "/function hygrave:internal/config/change/general/mod_compatibility_mode/item_collection_distance {value: ?}"\
-    }\
+    },\
+    "insertion": "I wonder what happens if I set this config to the number 4!" \
   }\
 ]
 
