@@ -19,6 +19,11 @@ execute store result storage hygrave:common temp.mcargs.'database/players/lookup
 function hygrave:internal/database/players/lookup with storage hygrave:common temp.mcargs.'database/players/lookup'
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
+## Annoy
+execute if score (general/annoying_mode) hygrave.config matches 1 unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} store result score .loot hygrave.temp_var run function hygrave:internal/grave/annoying_mode/annoy
+execute if score (general/annoying_mode) hygrave.config matches 1 if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} store result score .loot hygrave.temp_var run function hygrave:internal/grave/annoying_mode/annoy_icd
+execute if score (general/annoying_mode) hygrave.config matches 1 if score .loot hygrave.temp_var matches -1 run return -1
+
 ## Pop or Unpack the grave
 execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_not_active/use) hygrave.config matches 1 run function hygrave:internal/grave/pop
 execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_not_active/use) hygrave.config matches 2 run function hygrave:internal/grave/unpack
