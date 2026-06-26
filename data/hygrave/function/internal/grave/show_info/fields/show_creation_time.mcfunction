@@ -6,8 +6,8 @@
 #@>   function hygrave:internal/grave/show_info/show_non-admin/bo
 
 tellraw @s {\
-  "translate": "hygrave.grave_info.creation_time",\
-  "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
+  "translate": "hygrave.grave_info.creation_time--2",\
+  "fallback": "  §bCreation time: §rDay %s§r (%s§7 : %s§r)",\
   "hover_event": {\
     "action": "show_text",\
     "value": {\
