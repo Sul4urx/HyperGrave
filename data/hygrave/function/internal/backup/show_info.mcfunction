@@ -90,11 +90,10 @@ execute if data storage hygrave:common backups[-1].data.relevant_grave run tellr
     }\
   ]\
 }
-
 ## Creation time
 tellraw @s {\
-  "translate": "hygrave.backup_info.creation_time",\
-  "fallback": "  §bCreation time: §rDay %s§7, %s hours §7: %s minutes",\
+  "translate": "hygrave.backup_info.creation_time--2",\
+  "fallback": "  §bCreation time: §rDay %s§r (%s§7 : %s§r)",\
   "hover_event": {\
     "action": "show_text",\
     "value": {\
