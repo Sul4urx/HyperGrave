@@ -78,7 +78,8 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
       "score": {\
         "name": "@s",\
         "objective": "hygrave.show_grave_info"\
-      }\
+      },\
+      "color": "red"\
     }\
   ]\
 }

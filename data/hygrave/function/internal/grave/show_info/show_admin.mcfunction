@@ -18,7 +18,7 @@ execute store result score .grave_exists hygrave.temp_var run function hygrave:i
 $execute if score .grave_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
   "translate": "hygrave.grave_info.fail.gid_no_exist",\
   "fallback": "§cGrave #%s§c does not exist.",\
-  "with": ["$(gid)"]\
+  "with": ["§c$(gid)"]\
 }
 
 
