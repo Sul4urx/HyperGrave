@@ -25,9 +25,9 @@ scoreboard players set (24000) hygrave.var 24000
 execute unless score .global hygrave.gid matches 1000.. run scoreboard players set .global hygrave.gid 1000
 
 ##> First GID
-execute if score .global hygrave.gid matches ..1128 run scoreboard players set (first_gid) hygrave.var 1001
-execute if score .global hygrave.gid matches 1129.. run scoreboard players operation (first_gid) hygrave.var = .global hygrave.gid
-execute if score .global hygrave.gid matches 1129.. run scoreboard players remove (first_gid) hygrave.var 127
+execute if score .global hygrave.gid matches ..1100 run scoreboard players set (first_gid) hygrave.var 1001
+execute if score .global hygrave.gid matches 1101.. run scoreboard players operation (first_gid) hygrave.var = .global hygrave.gid
+execute if score .global hygrave.gid matches 1101.. run scoreboard players remove (first_gid) hygrave.var 99
 
 ##> Start BIDs from 2000
 execute unless score .global hygrave.bid matches 2000.. run scoreboard players set .global hygrave.bid 2000
@@ -92,7 +92,11 @@ scoreboard players enable @a hygrave.remote_loot_grave
 execute store result score (loaded_active_grave_count) hygrave.var if entity @e[tag=hygrave.grave.base]
 execute if score (loaded_active_grave_count) hygrave.var matches 17.. run function hygrave:internal/grave/limit/loaded_active_graves
 
-## Limit graves to 128
+## Limit graves to 100
+## The actual limit is 128, because it will only delete graves from the database
+## if the size of the database reaches 128
+## This is done so that after 128 graves, HyperGrave wouldn't have to
+## delete a grave from the database every time a grave is generated
 execute if data storage hygrave:common graves[-129] run function hygrave:internal/grave/limit/grave_database_too_big
 
 ## Grave management
