@@ -1,7 +1,7 @@
 #@> Executed from:
 #@>   function hygrave:internal/load
-#@>   function hygrave:internal/versioning/upgrade/*
 #@>   function hygrave:internal/versioning/downgrade
+#@>   function hygrave:internal/versioning/upgrade/*
 
 ## Store Data version
 ##> It stores the version of HyperGrave

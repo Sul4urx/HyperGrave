@@ -1,6 +1,8 @@
 #@> Executed from:
 #@>   function hygrave:internal/load
 #@>   function hygrave:internal/loop/1t
+#@>   function hygrave:internal/versioning/downgrade
+#@>   function hygrave:internal/versioning/upgrade/from_0_5_0
 
 ## Schedule function to run again
 schedule function hygrave:internal/loop/1t 1t

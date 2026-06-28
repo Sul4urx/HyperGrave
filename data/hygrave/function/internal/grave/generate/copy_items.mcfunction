@@ -1,6 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/generate
 #@>   function hygrave:internal/grave/force_generate
+#@>   function hygrave:internal/grave/generate
 
 ## For players, the offhand and armor slots are
 ## stored in a compound, not an array

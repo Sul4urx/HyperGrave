@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/loop/1t
+
 ## Get the grave with the least despawn time
 execute as @e[tag=hygrave.grave.base] at @s run function hygrave:internal/grave/limit/loaded_active_graves/search_min_score
 

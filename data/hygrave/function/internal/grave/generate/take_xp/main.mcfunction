@@ -1,6 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/generate
 #@>   function hygrave:internal/grave/force_generate
+#@>   function hygrave:internal/grave/generate
 
 ## Calculate total XP
 execute store result score .xp.levels hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.levels

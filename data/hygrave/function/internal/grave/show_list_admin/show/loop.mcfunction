@@ -1,5 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/show_list_admin/fill_list
+#@>   function hygrave:internal/grave/show_list_admin
+#@>   function hygrave:internal/grave/show_list_admin/show/loop
 
 $data modify storage hygrave:common temp.mcargs.'grave/show_list_admin/show/?'.text0 set from storage hygrave:common temp.grave_list.$(type)[0].text
 $data modify storage hygrave:common temp.mcargs.'grave/show_list_admin/show/?'.text1 set from storage hygrave:common temp.grave_list.$(type)[1].text

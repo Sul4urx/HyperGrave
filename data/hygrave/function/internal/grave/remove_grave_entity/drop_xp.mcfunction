@@ -1,5 +1,4 @@
-#@> Executed from:
-#@>   function hygrave:internal/grave/remove_grave_entity
+#@> Unused
 
 ## Spawn XP orb
 summon minecraft:experience_orb ~ ~ ~ {Tags: ["hygrave.temp.grave.xp_to_drop", "hygrave.grave.xp"], Age: -32768s}

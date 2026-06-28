@@ -1,5 +1,6 @@
 #@> Executed from:
 #@>   function hygrave:internal/grave/generate/grave_placement_restrictions
+#@>   function hygrave:internal/grave/generate/grave_placement_restrictions/in_solid_blocks
 
 scoreboard players remove .loop_count hygrave.temp_var 1
 execute if block ~ ~ ~ #hygrave:grave_replaceable run return run tp @s ~ ~ ~

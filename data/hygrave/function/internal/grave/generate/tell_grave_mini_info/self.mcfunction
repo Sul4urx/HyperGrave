@@ -1,6 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/generate
 #@>   function hygrave:internal/grave/force_generate
+#@>   function hygrave:internal/grave/generate
 
 ## Tell grave mini-info
 

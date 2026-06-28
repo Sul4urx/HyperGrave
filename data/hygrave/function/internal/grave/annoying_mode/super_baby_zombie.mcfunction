@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/grave/annoying_mode/annoy
+
 summon minecraft:zombie ~ ~ ~ {CustomName: {"translate": "hygrave.super_baby_zombie", "fallback": "Super Baby Zombie"}, Tags: ["hygrave.super_baby_zombie", "hygrave.temp.super_baby_zombie"], IsBaby: 1b, CustomNameVisible: 1b, DeathLootTable: ""}
 
 attribute @n[type=minecraft:zombie,tag=hygrave.temp.super_baby_zombie] minecraft:max_health base set 60

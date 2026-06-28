@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/grave/annoying_mode/annoy_icd
+
 execute store result score .rand_1_2 hygrave.temp_var run random value 1..2
 execute store result score .rand_1_4 hygrave.temp_var run random value 1..4
 

@@ -1,3 +1,7 @@
+#@> Executed from:
+#@>   function hygrave:internal/event/player/player_attacked_grave
+#@>   function hygrave:internal/event/player/player_interacted_with_grave
+
 execute store result score .rand_0_3 hygrave.temp_var run random value 0..3
 
 execute if score .rand_0_3 hygrave.temp_var matches 0 run function hygrave:internal/grave/annoying_mode/vote_mobs
