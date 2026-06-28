@@ -42,6 +42,21 @@ tellraw @s {\
       }\
     },\
     {\
+      "translate": "hygrave.info.links.pmc",\
+      "fallback": "§aP§6M§bC",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.info_menu_button_description.pmc",\
+          "fallback": "Click to open the HyperGrave Planet Minecraft page."\
+        }\
+      },\
+      "click_event": {\
+        "action": "open_url",\
+        "url": "https://www.planetminecraft.com/data-pack/hypergrave"\
+      }\
+    },\
+    {\
       "translate": "hygrave.info.links.sgrp",\
       "fallback": "§dSGRP",\
       "hover_event": {\
