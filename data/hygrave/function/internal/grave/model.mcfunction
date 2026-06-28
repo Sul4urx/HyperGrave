@@ -1,7 +1,7 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/main
-#@>   function hygrave:internal/grave/generate
 #@>   function hygrave:internal/grave/force_generate
+#@>   function hygrave:internal/grave/generate
+#@>   function hygrave:internal/grave/main
 
 # Stylize grave if ICD is not activated
 

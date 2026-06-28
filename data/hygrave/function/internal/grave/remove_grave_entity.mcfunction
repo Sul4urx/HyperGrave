@@ -1,6 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/pop
 #@>   function hygrave:internal/grave/main
+#@>   function hygrave:internal/grave/pop
 #@>   function hygrave:internal/grave/unpack
 #@>   function hygrave:internal/grave/despawn_time/delete_grave
 

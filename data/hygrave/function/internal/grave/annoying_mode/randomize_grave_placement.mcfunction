@@ -1,3 +1,7 @@
+#@> Executed from:
+#@>   function hygrave:internal/grave/annoying_mode/annoy
+#@>   function hygrave:internal/grave/annoying_mode/annoy_icd
+
 execute store result score .pos_x hygrave.temp_var run data get entity @s Pos[0]
 execute store result score .pos_z hygrave.temp_var run data get entity @s Pos[2]
 

@@ -1,6 +1,6 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/generate
 #@>   function hygrave:internal/grave/force_generate
+#@>   function hygrave:internal/grave/generate
 
 ## Store data
 execute store result entity @s item.components.minecraft:custom_data.hygrave:common.creation_time.day int 1 run function hygrave:internal/helper/time/current/query_day_count

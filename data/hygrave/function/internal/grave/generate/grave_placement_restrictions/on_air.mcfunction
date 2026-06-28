@@ -1,5 +1,6 @@
 #@> Executed from:
 #@>   function hygrave:internal/grave/generate/grave_placement_restrictions
+#@>   function hygrave:internal/grave/generate/grave_placement_restrictions/on_air
 
 scoreboard players remove .loop_count hygrave.temp_var 1
 execute unless block ~ ~-1 ~ #minecraft:air run return run tp @s ~ ~ ~

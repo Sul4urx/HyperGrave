@@ -1,5 +1,5 @@
 #@> Executed from:
-#@>   function hygrave:internal/config/toggle/grave_appearance/grave_model/*_expanded
+#@>   function hygrave:internal/config/open_page/grave_appearance/grave_model/*_expanded
 
 ## Insert a newline before the menu
 tellraw @s ""

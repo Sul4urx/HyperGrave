@@ -1,9 +1,10 @@
 #@> Executed from:
 #@>   function hygrave:internal/grave/pop
-#@>   function hygrave:internal/grave/main
-#@>   function hygrave:internal/grave/unpack
 #@>   function hygrave:internal/grave/remote_unpack
+#@>   function hygrave:internal/grave/unpack
 #@>   function hygrave:internal/grave/despawn_time/delete_grave
+#@>   function hygrave:internal/grave/limit/grave_database_too_big
+#@>   function hygrave:internal/grave/limit/loaded_active_graves/delete_chosen_grave
 
 ## Clear all items
 data modify storage hygrave:common graves[-1].contents.items set value []

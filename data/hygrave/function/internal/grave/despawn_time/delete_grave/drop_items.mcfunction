@@ -1,4 +1,5 @@
 #@> Executed from:
+#@>   function hygrave:internal/grave/remove_grave_entity
 #@>   function hygrave:internal/grave/despawn_time/delete_grave
 #@>   function hygrave:internal/grave/despawn_time/delete_grave/drop_items
 

@@ -1,5 +1,5 @@
 #@> Executed from:
-#@>   function hygrave:internal/loop/1t
+#@>   function hygrave:run/grave/admin/show_grave_list
 
 ## If there are no active graves,
 ## Tell the player and return

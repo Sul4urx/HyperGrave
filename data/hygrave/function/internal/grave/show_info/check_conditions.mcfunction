@@ -1,7 +1,7 @@
 #@> Executed from:
-#@>   function hygrave:internal/loop/1t
 #@>   function hygrave:internal/grave/show_info/show_non-admin/view_next
 #@>   function hygrave:internal/grave/show_info/show_non-admin/view_previous
+#@>   function hygrave:internal/loop/1t
 
 # Check conditions to see if grave info should be shown to player
 

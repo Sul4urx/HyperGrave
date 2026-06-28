@@ -1,4 +1,5 @@
 #@> Executed from:
+#@>   function hygrave:internal/misc/reinstall
 #@>   function hygrave:run/uninstall
 
 ## Check if the confirmation code was entered correctly
