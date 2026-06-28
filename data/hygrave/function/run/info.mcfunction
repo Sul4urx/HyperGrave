@@ -24,16 +24,16 @@ tellraw @s {\
 
 tellraw @s {\
   "translate": "hygrave.info.links",\
-  "fallback": "\n§fWeb: §7[%s §7| %s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
+  "fallback": "\n§fWeb: §7[%s §7| %s §7| %s §7| %s §7| %s§7]\n§fGame: §7[%s §7| %s §7| %s§7]",\
   "with": [\
     {\
-      "translate": "hygrave.info.links.doc",\
-      "fallback": "§aDocumentation",\
+      "translate": "hygrave.info.links.modrinth",\
+      "fallback": "§aModrinth",\
       "hover_event": {\
         "action": "show_text",\
         "value": {\
-          "translate": "hygrave.info_menu_button_description.doc",\
-          "fallback": "Click to open the HyperGrave documentation."\
+          "translate": "hygrave.info_menu_button_description.modrinth",\
+          "fallback": "Click to open the HyperGrave Modrinth page."\
         }\
       },\
       "click_event": {\
