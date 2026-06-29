@@ -1,4 +1,6 @@
-#@> Unused
+#@> Executed from:
+#@>   function hygrave:internal/grave/show_info/fields/show_menu/admin/active
+#@>   function hygrave:internal/grave/show_info/fields/show_menu/admin/broken
 
 ## Save GID in `temp.gid` data in storage and in `.gid` temp score
 $data modify storage hygrave:common temp.gid set value $(gid)

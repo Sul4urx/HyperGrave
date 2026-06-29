@@ -1,6 +1,5 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/show_info/show_non-admin/bn
-#@>   function hygrave:internal/grave/show_info/show_non-admin/bo
+#@>   function hygrave:internal/grave/show_info/show_admin
 
 $tellraw @s {\
   "translate": "hygrave.grave_info.menu_no_remote_unpack",\
@@ -18,7 +17,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info.view_previous set $(gid)"\
+        "command": "/function hygrave:internal/grave/show_info/show_admin/view_previous {gid: $(gid)}"\
       }\
     },\
     {\
@@ -33,7 +32,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_list"\
+        "command": "/function hygrave:run/grave/admin/show_grave_list"\
       }\
     },\
     {\
@@ -48,7 +47,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info.view_next set $(gid)"\
+        "command": "/function hygrave:internal/grave/show_info/show_admin/view_next {gid: $(gid)}"\
       }\
     }\
   ]\
