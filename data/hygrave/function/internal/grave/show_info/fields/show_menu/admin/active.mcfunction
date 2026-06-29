@@ -1,10 +1,9 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/show_info/show_non-admin/bn
-#@>   function hygrave:internal/grave/show_info/show_non-admin/bo
+#@>   function hygrave:internal/grave/show_info/show_admin
 
 $tellraw @s {\
-  "translate": "hygrave.grave_info.menu_no_remote_unpack",\
-  "fallback": "§7[%s§7| Loot |%s§7|%s§7]",\
+  "translate": "hygrave.grave_info.menu",\
+  "fallback": "§7[%s§7|%s§7|%s§7|%s§7]",\
   "with": [\
     {\
       "translate": "hygrave.grave_info.menu.back",\
@@ -18,7 +17,22 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info.view_previous set $(gid)"\
+        "command": "/function hygrave:internal/grave/show_info/show_admin/view_previous {gid: $(gid)}"\
+      }\
+    },\
+    {\
+      "translate": "hygrave.grave_info.menu.remote_unpack",\
+      "fallback": " §bLoot ",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.grave_info.menu_description.remote_unpack",\
+          "fallback": "Click to remotely loot this grave."\
+        }\
+      },\
+      "click_event": {\
+        "action": "suggest_command",\
+        "command": "/function hygrave:run/grave/admin/remote_loot {gid: $(gid)}"\
       }\
     },\
     {\
@@ -33,7 +47,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_list"\
+        "command": "/function hygrave:run/grave/admin/show_grave_list"\
       }\
     },\
     {\
@@ -48,7 +62,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info.view_next set $(gid)"\
+        "command": "/function hygrave:internal/grave/show_info/show_admin/view_next {gid: $(gid)}"\
       }\
     }\
   ]\

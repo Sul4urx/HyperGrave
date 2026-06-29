@@ -89,8 +89,8 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
 tellraw @s ""
 
 ## Menu
-$execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_menu/active {gid: $(gid)}
-$execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_menu/broken {gid: $(gid)}
+$execute unless data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_menu/admin/active {gid: $(gid)}
+$execute if data storage hygrave:common graves[-1].data.status{destroyed:1b} run function hygrave:internal/grave/show_info/fields/show_menu/admin/broken {gid: $(gid)}
 
 ##
 tellraw @s ""
