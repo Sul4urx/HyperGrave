@@ -13,6 +13,11 @@ $data modify storage hygrave:common temp.text_to_show.slots.$(slot_id)."hover_ev
     "fallback": "§6§lItem info"\
   }
 $data modify storage hygrave:common temp.text_to_show.slots.$(slot_id)."hover_event"."components"."minecraft:lore" append value {\
+    "translate": "hygrave.grave_info.items.id", \
+    "fallback": "§7ID: %s", \
+    "with": ["§a$(id)"]\
+  }
+$data modify storage hygrave:common temp.text_to_show.slots.$(slot_id)."hover_event"."components"."minecraft:lore" append value {\
     "translate": "hygrave.grave_info.items.count", \
     "fallback": "§7Count: %s", \
     "with": ["§a$(count)"]\
@@ -20,6 +25,4 @@ $data modify storage hygrave:common temp.text_to_show.slots.$(slot_id)."hover_ev
 $data modify storage hygrave:common temp.text_to_show.slots.$(slot_id)."hover_event"."components"."minecraft:lore" append value {\
     "translate": "hygrave.grave_info.items.slot.$(slot_id)", \
     "fallback": "§7Slot: §a$(slot_text)"\
-  }\
-
-  
+  }
