@@ -8,8 +8,38 @@ tellraw @s ""
 
 tellraw @s {\
   "translate": "hygrave.help_menu",\
-  "fallback": "§l§bHyper§l§6Grave§r §7help menu\n§fIf you found a bug, please try to replicate the bug (i.e. see how the bug happens). Either way, report it in §7[%s§7]§f.\n\nIf you have a question, please read the FAQ first, and if you didn't find your question, ask it in §7[%s§7]§f.\n\n§bFAQ: §7<%s§7|%s§7|%s§7>",\
+  "fallback": "§l§bHyper§l§6Grave§r §7help menu\n§fIf you want a list of all commands for HyperGrave, here they are:\n§7• [%s§7]\n§7• [%s§7]\n\n§fIf you found a bug, please try to replicate the bug (i.e. see how the bug happens). Either way, report it in §7[%s§7]§f.\n\nIf you have a question, please read the FAQ first, and if you didn't find your question, ask it in §7[%s§7]§f.\n\n§bFAQ: §7<%s§7|%s§7|%s§7>",\
   "with": [\
+    {\
+      "translate": "hygrave.help.trigger_commands",\
+      "fallback": "§bList of all trigger commands",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.help_menu_button_description.trigger_commands",\
+          "fallback": "Click to view a list of some useful trigger commands for HyperGrave in-game.\n\nTrigger commands are commands that start with '§o/trigger hygrave.§f' and can be run by any player, even if they don't have cheats enabled.\n\nThis only lists trigger commands that are useful. The description of other trigger commands is available in the Modrinth page of HyperGrave."\
+        }\
+      },\
+      "click_event": {\
+        "action": "run_command",\
+        "command": "/trigger hygrave.help set 4001"\
+      }\
+    },\
+    {\
+      "translate": "hygrave.help.admin_commands",\
+      "fallback": "§bList of all admin commands",\
+      "hover_event": {\
+        "action": "show_text",\
+        "value": {\
+          "translate": "hygrave.help_menu_button_description.admin_commands",\
+          "fallback": "Click to view a list of some useful admin commands for HyperGrave in-game.\n\nAdmin commands are commands that start with '§o/function hygrave:run/§f' and can only be run by players with cheats enabled.\n\nThis only lists admin commands that are useful. The description of other admin commands is available in the Modrinth page of HyperGrave."\
+        }\
+      },\
+      "click_event": {\
+        "action": "run_command",\
+        "command": "/trigger hygrave.help set 4007"\
+      }\
+    },\
     {\
       "translate": "hygrave.help.issues",\
       "fallback": "§cIssues",\
