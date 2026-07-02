@@ -55,6 +55,11 @@ execute as @a at @s unless score @s hygrave.info matches 0 run function hygrave:
 scoreboard players set @a hygrave.info 0
 scoreboard players enable @a hygrave.info
 
+## Show HyperGrave help pages 
+## (numbers like 4001 and 4007 are called HIDs (Help page ID))
+execute as @a[scores={hygrave.help=4001}] at @s run function hygrave:internal/menu/help/4001
+execute as @a[scores={hygrave.help=4007}] at @s run function hygrave:internal/menu/help/4007
+
 ## Show HyperGrave help menu
 execute as @a at @s if score @s hygrave.help matches 1.. run function hygrave:run/help
 scoreboard players set @a hygrave.help 0
