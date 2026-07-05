@@ -1,5 +1,4 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/force_generate
 #@>   function hygrave:internal/grave/generate
 
 ##> Spawn an item, which is used to check whether

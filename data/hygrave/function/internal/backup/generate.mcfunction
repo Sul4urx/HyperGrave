@@ -1,6 +1,5 @@
 #@> Executed from:
 #@>   function hygrave:internal/event/player/player_died
-#@>   function hygrave:run/grave/admin/generate
 
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
