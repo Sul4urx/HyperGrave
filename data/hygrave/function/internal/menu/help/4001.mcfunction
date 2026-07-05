@@ -1,4 +1,5 @@
-#@> Executed by the player
+#@> Executed from:
+#@>   function hygrave:internal/loop/1t
 
 # HID trigger_commands: List of trigger commands
 
