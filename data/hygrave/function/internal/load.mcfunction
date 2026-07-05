@@ -83,9 +83,10 @@ execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.
 execute if data storage hygrave:common data.latest_schema_version unless data storage hygrave:common data{latest_schema_version:1} run return run function hygrave:internal/versioning/unsupported_unknown_version_change
 
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 0, minor: 5, patch: 0} run return run function hygrave:internal/versioning/upgrade/from_0_5_0
+execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 0, patch: 0} run return run function hygrave:internal/versioning/upgrade/from_2_0_0
 
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches 3.. run return run function hygrave:internal/versioning/unsupported_downgrade
-execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version matches 1.. run return run function hygrave:internal/versioning/unsupported_downgrade
+execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version matches 2.. run return run function hygrave:internal/versioning/unsupported_downgrade
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=patch,schema_version=1) hygrave.data_version matches 1.. run return run function hygrave:internal/versioning/downgrade
 
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches ..1 run return run function hygrave:internal/versioning/unsupported_upgrade
