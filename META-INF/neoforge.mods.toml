@@ -6,9 +6,9 @@ showAsDataPack = true
 
 [[mods]]
 modId = "hygrave"
-version = "2.1.0-alpha"
+version = "2.1.0"
 displayName = "HyperGrave"
-description = "An extremely sophisticated grave mod"
+description = "A very high-quality grave mod"
 logoFile = "pack.png"
 authors = "Sul4ur"
 displayURL = "https://modrinth.com/datapack/hypergrave"
