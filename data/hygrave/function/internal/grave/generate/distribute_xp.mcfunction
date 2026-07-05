@@ -1,5 +1,4 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/force_generate
 #@>   function hygrave:internal/grave/generate
 
 ## If total weight is 0, reset all weights

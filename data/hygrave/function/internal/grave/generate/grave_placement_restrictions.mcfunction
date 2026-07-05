@@ -1,5 +1,4 @@
 #@> Executed from:
-#@>   function hygrave:internal/grave/force_generate
 #@>   function hygrave:internal/grave/generate
 
 ## If min and max build height limits have not been
