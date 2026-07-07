@@ -79,7 +79,31 @@ Git commits follow [conventional commits v1.0.0](https://conventionalcommits.org
     - Commits between these two commits are for the new version.
     - Messages of these commits are only the new version that is being worked on. They are usually (but not nessecarily) the same version.
     - For example, commits between `version(initial): 2.3.2` and `version(final): 2.3.2` are commits for version 2.3.2.
+    - There is also a **version(semifinal)** commit type, which always appears between these two commits and commits of this type indicate that the version is being finished. In this commit, all "current version" instances are updated and upgrading and downgrading are implemented for this version.
 - **chore**: Miscellaneous commits.
+
+### Scopes
+Here are the most common scopes that have been used:
+- **backup**: Item backups
+- **bi**: Backup Info Display
+- **bug-report-yml**: `.github/ISSUE_TEMPLATE/bug_report.yml` file
+- **comment**: Used with the `doc` commit type
+- **config**: Usually used with the `feat` commit type
+- **database**
+- **final**, **semifinal**, **initial**: Used with the `version` commit type
+- **gi**: Grave Info Display
+- **github**
+- **glimit**: Grave limit
+- **gmdl**: Grave model
+- **grave**
+- **help**: Help menu
+- **info**: Info menu
+- **pack-png** or **packpng**
+- **pcomments**: Parent function comments
+- **readme**
+- **suggestion-yml**: `.github/ISSUE_TEMPLATE/suggestion.yml` file
+- **uninstall**, **reinstall**
+- **versioning**
 
 ## Versioning
 HyperGrave uses a special versioning scheme. It is in the format of X.Y.Z (Three non-negative integers X, Y and Z seperated by dots).
