@@ -18,19 +18,12 @@ body:
         - Other
     validations:
       required: true
-  - type: dropdown
+  - type: input
     id: mc_version
     attributes:
       label: "Minecraft version(s):"
       description: "Please select the version(s) of Minecraft you've been able to reproduce this issue on."
-      multiple: true
-      options:
-        - '26.1.x'
-        - '1.21.11'
-        - '1.21.9 - 1.21.10'
-        - '1.21.6 - 1.21.8'
-        - '1.21.5'
-        - Other
+      placeholder: "e.g. 1.21.11, 26.2.1, 26.1"
     validations:
       required: true
   - type: textarea
