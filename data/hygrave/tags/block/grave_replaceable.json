@@ -129,10 +129,6 @@
       "required": false
     },
     {
-      "id": "minecraft:ice",
-      "required": false
-    },
-    {
       "id": "minecraft:kelp",
       "required": false
     },
