@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: Grave Interaction
-tellraw @s {"translate": "hygrave.config_category.grave_interaction","fallback": " §lGrave Interaction:"}
+tellraw @s {"translate": "hygrave.config_category.grave_interaction","fallback": " §lGrave Interaction"}
 
 ##> ICD Properties
 tellraw @s [\

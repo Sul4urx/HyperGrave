@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.item_distribution.",\
-    "fallback": " Graves §7/ §r§lItem Distribution:"\
+    "fallback": " Graves §7/ §r§lItem Distribution"\
   }\
 ]
 

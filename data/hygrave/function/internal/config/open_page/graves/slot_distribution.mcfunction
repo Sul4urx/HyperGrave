@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.slot_distribution.",\
-    "fallback": " Graves §7/ §r§lSlot Distribution:"\
+    "fallback": " Graves §7/ §r§lSlot Distribution"\
   }\
 ]
 

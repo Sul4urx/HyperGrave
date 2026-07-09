@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: Graves
-tellraw @s {"translate": "hygrave.config_category.graves","fallback": " §lGraves:"}
+tellraw @s {"translate": "hygrave.config_category.graves","fallback": " §lGraves"}
 
 ##> Drop Contents On Despawn
 tellraw @s [\

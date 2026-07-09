@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.text_display_properties.icd_text",\
-    "fallback": " Graves §7/§r Text Display Properties §7/ §r§lICD Text:"\
+    "fallback": " Graves §7/§r Text Display Properties §7/ §r§lICD Text"\
   },\
   {\
     "text": " §bℹ",\

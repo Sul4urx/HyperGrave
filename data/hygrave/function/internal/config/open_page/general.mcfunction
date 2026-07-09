@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: General
-tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral:"}
+tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral"}
 
 ##> Change Game Rules
 tellraw @s [\

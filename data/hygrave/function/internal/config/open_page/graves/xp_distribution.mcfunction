@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.xp_distribution.",\
-    "fallback": " Graves §7/ §r§lXP Distribution:"\
+    "fallback": " Graves §7/ §r§lXP Distribution"\
   },\
   {\
     "text": " §bℹ",\

@@ -10,7 +10,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_model",\
-    "fallback": " Grave Appearance §7/ §r§lGrave Model:"\
+    "fallback": " Grave Appearance §7/ §r§lGrave Model"\
   }\
 ]
 

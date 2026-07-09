@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.show_grave_info",\
-    "fallback": " Graves §7/ §r§lShow Grave Info:"\
+    "fallback": " Graves §7/ §r§lShow Grave Info"\
   },\
   "\n\n            ",\
   {\

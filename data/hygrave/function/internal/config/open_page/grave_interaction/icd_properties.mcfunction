@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.icd",\
-    "fallback": " Grave Interaction §7/ §r§lICD Properties:"\
+    "fallback": " Grave Interaction §7/ §r§lICD Properties"\
   }\
 ]
 
