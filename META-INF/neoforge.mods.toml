@@ -1,5 +1,5 @@
 
-modLoader = "lowcodefml"
+modLoader = "javafml"
 loaderVersion = "[1,)"
 license = "GPL-3.0"
 showAsDataPack = true
