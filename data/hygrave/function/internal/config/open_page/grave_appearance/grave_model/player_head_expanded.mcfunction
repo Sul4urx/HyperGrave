@@ -258,7 +258,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_model.player_head.shadow_strength",\
-        "fallback": "The strength of the shadow cast by the player head. Must be a value between 0 and 10000 (inclusive).\n§8Default: 750"\
+        "fallback": "The strength of the shadow cast by the player head. Must be a value between 0 and 10000 (inclusive).\n§8Default: 7500"\
       }\
     }\
   },\
