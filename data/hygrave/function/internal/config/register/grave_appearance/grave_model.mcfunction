@@ -61,6 +61,7 @@ execute unless score (grave_appearance/grave_model/player_head/shadow_strength) 
 execute store result storage hygrave:common configs.value.grave_appearance.grave_model.player_head.shadow_strength double 0.0001 run scoreboard players get (grave_appearance/grave_model/player_head/shadow_strength) hygrave.config
 
 execute store result storage hygrave:common configs.text.grave_appearance.grave_model.player_head.shadow_strength int 1 run data get storage hygrave:common configs.value.grave_appearance.grave_model.player_head.shadow_strength 10000
+data modify storage hygrave:common configs.text.grave_appearance.grave_model.player_head.shadow_strength set string storage hygrave:common configs.text.grave_appearance.grave_model.player_head.shadow_strength
 
 ## Decoration 1
 
