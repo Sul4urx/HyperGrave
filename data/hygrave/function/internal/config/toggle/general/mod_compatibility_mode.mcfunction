@@ -2,7 +2,7 @@
 #@>   function hygrave:internal/config/open_page/general
 
 ## Change game rules
-gamerule minecraft:keep_inventory false
+function hygrave:internal/helper/gamerule/keep_inventory/disable
 
 ## Toggle value
 scoreboard players add (general/mod_compatibility_mode) hygrave.config 1
