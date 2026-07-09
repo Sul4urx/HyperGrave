@@ -16,7 +16,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.annoying_mode",\
-        "fallback": "If I were you, I wouldn't enable this config. It's a really bad idea.\n§8Default: ❌"\
+        "fallback": "If I were you, I wouldn't enable this config. It's a really bad idea.\n\n§8Default: ❌"\
       }\
     }\
   },\

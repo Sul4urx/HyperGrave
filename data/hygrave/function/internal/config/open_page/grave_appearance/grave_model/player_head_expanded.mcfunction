@@ -111,7 +111,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_model.player_head.glowing",\
-        "fallback": "Whether the player's head should have a glow outline, as if they had the glowing status effect.\n§8Default: ✔"\
+        "fallback": "Whether the player's head should have a glow outline, as if they had the glowing status effect.\n\n§8Default: ✔"\
       }\
     }\
   },\
@@ -258,7 +258,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_model.player_head.shadow_strength",\
-        "fallback": "The strength of the shadow cast by the player head. Must be a value between 0 and 10000 (inclusive).\n§8Default: 7500"\
+        "fallback": "The strength of the shadow cast by the player head. Must be a value between 0 and 10000 (inclusive).\n\n§8Default: 7500"\
       }\
     }\
   },\

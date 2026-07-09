@@ -25,7 +25,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.on_air",\
-        "fallback": "§a❌ §7→§r Graves can generate on air.\n§c✔ §7→§r Graves will sink to the ground.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate on air.\n§c✔ §7→§r Graves will sink to the ground.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -62,7 +62,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.on_water",\
-        "fallback": "§a❌ §7→§r Graves can generate on water.\n§c✔ §7→§r Graves will sink down the water.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate on water.\n§c✔ §7→§r Graves will sink down the water.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -98,7 +98,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.in_water",\
-        "fallback": "§a❌ §7→§r Graves can generate in water.\n§c✔ §7→§r Graves will attempt to generate on top of the water.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate in water.\n§c✔ §7→§r Graves will attempt to generate on top of the water.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -135,7 +135,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.on_lava",\
-        "fallback": "§a❌ §7→§r Graves can generate on lava.\n§c✔ §7→§r Graves will sink down the lava.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate on lava.\n§c✔ §7→§r Graves will sink down the lava.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -171,7 +171,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.in_lava",\
-        "fallback": "§a❌ §7→§r Graves can generate in lava.\n§c✔ §7→§r Graves will attempt to generate on top of the lava.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate in lava.\n§c✔ §7→§r Graves will attempt to generate on top of the lava.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -208,7 +208,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.on_non_solid_blocks",\
-        "fallback": "§a❌ §7→§r Graves can generate on non-solid blocks.\n§c✔ §7→§r Graves will attempt to generate inside the non-solid block.\n§bℹ All modded blocks are treated as fully solid blocks, regardless of whether they're actually solid or not.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate on non-solid blocks.\n§c✔ §7→§r Graves will attempt to generate inside the non-solid block.\n\n§bℹ All modded blocks are treated as fully solid blocks, regardless of whether they're actually solid or not.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -244,7 +244,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.in_solid_blocks",\
-        "fallback": "§a❌ §7→§r Graves can generate in solid blocks.\n§c✔ §7→§r Graves will attempt to generate on top of the solid block.\n§bℹ All modded blocks are treated as fully solid blocks, regardless of whether they're actually solid or not.\n§8Default: ❌"\
+        "fallback": "§a❌ §7→§r Graves can generate in solid blocks.\n§c✔ §7→§r Graves will attempt to generate on top of the solid block.\n\n§bℹ All modded blocks are treated as fully solid blocks, regardless of whether they're actually solid or not.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -281,7 +281,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.above_build_height_limit",\
-        "fallback": "§a❌ §7→§r Graves can generate above the maximum build height limit §7(which is Y=319 for Overworld, Y=255 for The Nether and The End)§r.\n§c✔ §7→§r Graves will attempt to generate one block above the maximum build height limit.\n§8Default: ✔"\
+        "fallback": "§a❌ §7→§r Graves can generate above the maximum build height limit §7(which is Y=319 for Overworld, Y=255 for The Nether and The End)§r.\n§c✔ §7→§r Graves will attempt to generate one block above the maximum build height limit.\n\n§8Default: ✔"\
       }\
     }\
   },\
@@ -317,7 +317,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions.below_build_height_limit",\
-        "fallback": "§a❌ §7→§r Graves can generate below the minimum build height limit §7(which is Y=-64 for Overworld, Y=0 for The Nether and The End)§r.\n§c✔ §7→§r Graves will attempt to generate one block below the minimum build height limit.\n§bℹ Be careful! Graves cannot survive 64 blocks below the minimum build height limit.\n§8Default: ✔"\
+        "fallback": "§a❌ §7→§r Graves can generate below the minimum build height limit §7(which is Y=-64 for Overworld, Y=0 for The Nether and The End)§r.\n§c✔ §7→§r Graves will attempt to generate one block below the minimum build height limit.\n\n§bℹ Be careful! Graves cannot survive 64 blocks below the minimum build height limit.\n\n§8Default: ✔"\
       }\
     }\
   },\

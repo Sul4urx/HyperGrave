@@ -107,7 +107,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_requirements.with_item.xp",\
-        "fallback": "The amount of XP levels required to generate a grave\n§8Default: 0"\
+        "fallback": "The amount of XP levels required to generate a grave\n\n§8Default: 0"\
       }\
     }\
   },\
@@ -242,7 +242,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_requirements.no_item.xp",\
-        "fallback": "The amount of XP levels required to generate a grave\n§8Default: 0"\
+        "fallback": "The amount of XP levels required to generate a grave\n\n§8Default: 0"\
       }\
     }\
   },\

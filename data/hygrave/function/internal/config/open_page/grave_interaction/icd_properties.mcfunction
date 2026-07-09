@@ -24,7 +24,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.icd.activate_for",\
-        "fallback": "The players whom ICD should be activated for\n§cN §7→§f No one §7(Disables ICD)\n§eO §7→§f The owner\n§aE §7→§r Anyone\n§bℹ This doesn't change who can take items from the grave. To change that, use other configs.\n§8Default: N"\
+        "fallback": "The players whom ICD should be activated for\n§cN §7→§f No one §7(Disables ICD)\n§eO §7→§f The owner\n§aE §7→§r Anyone\n\n§bℹ This doesn't change who can take items from the grave. To change that, use other configs.\n\n§8Default: N"\
       }\
     }\
   },\
@@ -61,7 +61,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.icd.item_cycle_cooldown",\
-        "fallback": "The amount of time (in ticks, i.e. 1/20 second) it takes for ICD to cycle through the next item.\n§8Default: 20 ticks (1 second)"\
+        "fallback": "The amount of time (in ticks, i.e. 1/20 second) it takes for ICD to cycle through the next item.\n\n§8Default: 20 ticks (1 second)"\
       }\
     }\
   },\
@@ -98,7 +98,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.icd.revert_sneaking_behavior",\
-        "fallback": "§a✔ §7→§r ICD is only activated if the player is sneaking\n§c❌ §7→§r ICD is only activated if the player is not sneaking.\n§8Default: ✔"\
+        "fallback": "§a✔ §7→§r ICD is only activated if the player is sneaking\n§c❌ §7→§r ICD is only activated if the player is not sneaking.\n\n§8Default: ✔"\
       }\
     }\
   },\
@@ -135,7 +135,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.icd.switch_text_display",\
-        "fallback": "§a✔ §7→§r The text display will change to show properties about the item §7(Recommended)§r.\n§c❌ §7→§r The text display will remain the same.\n§8Default: ✔"\
+        "fallback": "§a✔ §7→§r The text display will change to show properties about the item §7(Recommended)§r.\n§c❌ §7→§r The text display will remain the same.\n\n§8Default: ✔"\
       }\
     }\
   },\

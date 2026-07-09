@@ -47,7 +47,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.xp_distribution.grave_generation_fail.remove",\
-        "fallback": "The weight of the 'remove' operation, which fully removes the player's XP.\n§8Default: 1"\
+        "fallback": "The weight of the 'remove' operation, which fully removes the player's XP.\n\n§8Default: 1"\
       }\
     }\
   },\
@@ -84,7 +84,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.xp_distribution.grave_generation_fail.keep",\
-        "fallback": "The weight of the 'keep' operation, which keeps the XP in the player's inventory.\n§8Default: 2"\
+        "fallback": "The weight of the 'keep' operation, which keeps the XP in the player's inventory.\n\n§8Default: 2"\
       }\
     }\
   },\
@@ -169,7 +169,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.xp_distribution.grave_generation_success.remove",\
-        "fallback": "The weight of the 'remove' operation, which fully removes the player's XP.\n§8Default: 1"\
+        "fallback": "The weight of the 'remove' operation, which fully removes the player's XP.\n\n§8Default: 1"\
       }\
     }\
   },\
@@ -206,7 +206,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.xp_distribution.grave_generation_success.keep",\
-        "fallback": "The weight of the 'keep' operation, which keeps the XP in the player's inventory.\n§8Default: 0"\
+        "fallback": "The weight of the 'keep' operation, which keeps the XP in the player's inventory.\n\n§8Default: 0"\
       }\
     }\
   },\
@@ -243,7 +243,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config.xp_distribution.grave_generation_success.take",\
-        "fallback": "The weight of the 'take' operation, which gives the XP to the grave.\n§8Default: 11"\
+        "fallback": "The weight of the 'take' operation, which gives the XP to the grave.\n\n§8Default: 11"\
       }\
     }\
   },\

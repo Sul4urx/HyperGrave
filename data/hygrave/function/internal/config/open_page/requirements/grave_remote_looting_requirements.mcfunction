@@ -144,7 +144,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_remote_looting_requirements.owners.xp",\
-        "fallback": "The amount of XP levels required to remotely loot the grave\n§6ℹ The XP §nwill be consumed§r§6."\
+        "fallback": "The amount of XP levels required to remotely loot the grave\n\n§6ℹ The XP §nwill be consumed§r§6."\
       }\
     }\
   },\
@@ -162,7 +162,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_change_description.grave_remote_looting_requirements.owners.xp",\
-        "fallback": "Click to change the config.\n§7ℹ Format: {value:§olevels§r§7}\nFor example: {value: 6}."\
+        "fallback": "Click to change the config.\n\n§7ℹ Format: {value:§olevels§r§7}\n\nFor example: {value: 6}."\
       }\
     },\
     "click_event": {\
@@ -386,7 +386,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_remote_looting_requirements.non_owners.xp",\
-        "fallback": "The amount of XP levels required to remotely loot the grave\n§6ℹ The XP §nwill be consumed§r§6."\
+        "fallback": "The amount of XP levels required to remotely loot the grave\n\n§6ℹ The XP §nwill be consumed§r§6."\
       }\
     }\
   },\
@@ -404,7 +404,7 @@ tellraw @s [\
       "action": "show_text",\
       "value": {\
         "translate": "hygrave.config_change_description.grave_remote_looting_requirements.non_owners.xp",\
-        "fallback": "Click to change the config.\n§7ℹ Format: {value:§olevels§r§7}\nFor example: {value:6}."\
+        "fallback": "Click to change the config.\n\n§7ℹ Format: {value:§olevels§r§7}\n\nFor example: {value:6}."\
       }\
     },\
     "click_event": {\

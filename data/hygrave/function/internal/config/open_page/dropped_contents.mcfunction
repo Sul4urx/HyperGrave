@@ -16,7 +16,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.invulnerable_items",\
-        "fallback": "Whether items dropped from graves should be invulnerable (except to despawning, void damage and /kill).\n§8Default: ✔"\
+        "fallback": "Whether items dropped from graves should be invulnerable (except to despawning, void damage and /kill).\n\n§8Default: ✔"\
       }\
     }\
   },\
@@ -52,7 +52,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.invulnerable_xp",\
-        "fallback": "Whether XP orbs dropped from graves should be invulnerable (except to despawning, void damage and /kill).\n§8Default: ❌"\
+        "fallback": "Whether XP orbs dropped from graves should be invulnerable (except to despawning, void damage and /kill).\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -89,7 +89,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.no_gravity_items",\
-        "fallback": "Whether items dropped from graves should not be affected by gravity.\n§8Default: ❌"\
+        "fallback": "Whether items dropped from graves should not be affected by gravity.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -125,7 +125,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.no_gravity_xp",\
-        "fallback": "Whether XP orbs dropped from graves should not be affected by gravity.\n§8Default: ❌"\
+        "fallback": "Whether XP orbs dropped from graves should not be affected by gravity.\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -161,7 +161,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.despawn_time.item",\
-        "fallback": "The amount of time (in seconds) that it takes for items dropped from graves to despawn.\n§8Default: 2700"\
+        "fallback": "The amount of time (in seconds) that it takes for items dropped from graves to despawn.\n\n§8Default: 2700"\
       }\
     }\
   },\
@@ -224,7 +224,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.despawn_time.xp",\
-        "fallback": "The amount of time (in seconds) that it takes for XP orbs dropped from graves to despawn.\n§8Default: 1200"\
+        "fallback": "The amount of time (in seconds) that it takes for XP orbs dropped from graves to despawn.\n\n§8Default: 1200"\
       }\
     }\
   },\
