@@ -16,7 +16,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.change_gamerules",\
-        "fallback": "§a✔ §7→§r (Recommended) Keep Inventory and Respawn Immediately game rules are autmatically set to true and false, respectively. Keep Inventory won't be affected if Mod Compatibility Mode is set to true.\n§c❌ §7→§r Keep Inventory and Respawn Immediately game rules are not affected by HyperGrave.\n\n§bℹ HyperGrave won't work properly if at least one of the gamerules are not set to their approprtiate values.\n§8Default: ✔"\
+        "fallback": "§a✔ §7→§r (Recommended) Keep Inventory and Respawn Immediately game rules are autmatically set to true and false, respectively. Keep Inventory won't be affected if Mod Compatibility Mode is set to true.\n§c❌ §7→§r Keep Inventory and Respawn Immediately game rules are not affected by HyperGrave.\n\n§bℹ HyperGrave won't work properly if at least one of the gamerules are not set to their approprtiate values.\n\n§8Default: ✔"\
       }\
     }\
   },\
@@ -52,7 +52,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.mod_compatibility_mode",\
-        "fallback": "§a✔ §7→§r Keep Inventory game rule is set to false (can be rechanged later) and graves collect dropped items\n§c❌ §7→§r Keep Inventory is set to true (can't be rechanged if Change Game Rules config is set to true) and graves take items from player's inventory.\n\n§6ℹ For now, I wouldn't recommend using this feature. It's very outdated, has not been tested probably and it just has a lot of disadvantages.\n\n§bPros:\n  §7•§f Better compatibility (especially with mods that add custom slots)\n§cCons:\n  §7•§f Increased risk of item loss\n  §7•§f Most configs related to items or slots (e.g. Graves / Item Distribution) won't work. If you really want these configs to be usable, you should use mods that can do what these configs can.\n  §7•§f Items won't be put in appropriate slots and will instead be dropped.\n  §7•§f May cause significant TPS drop (A TPS drop is what causes lag).\n§3ℹ This is an experimental config!\n\n§8Default: ❌"\
+        "fallback": "§a✔ §7→§r Keep Inventory game rule is set to false (can be rechanged later) and graves collect dropped items\n§c❌ §7→§r Keep Inventory is set to true (can't be rechanged if Change Game Rules config is set to true) and graves take items from player's inventory.\n\n§6ℹ For now, I wouldn't recommend using this feature. It's very outdated, has not been tested probably and it just has a lot of disadvantages.\n\n§bPros:\n  §7•§f Better compatibility (especially with mods that add custom slots)\n§cCons:\n  §7•§f Increased risk of item loss\n  §7•§f Most configs related to items or slots (e.g. Graves / Item Distribution) won't work. If you really want these configs to be usable, you should use mods that can do what these configs can.\n  §7•§f Items won't be put in appropriate slots and will instead be dropped.\n  §7•§f May cause significant TPS drop (A TPS drop is what causes lag).\n\n§3ℹ This is an experimental config!\n\n§8Default: ❌"\
       }\
     }\
   },\
@@ -88,7 +88,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.mod_compatibility_mode.item_collection_distance",\
-        "fallback": "The distance (in blocks) an item must be from the grave in order to be collected by the grave.\nThe bigger the value, the lower the risk of losing items, but the more likely to collect additional dropped items.\n§8Default: 4"\
+        "fallback": "The distance (in blocks) an item must be from the grave in order to be collected by the grave.\nThe bigger the value, the lower the risk of losing items, but the more likely to collect additional dropped items.\n\n§8Default: 4"\
       }\
     }\
   },\

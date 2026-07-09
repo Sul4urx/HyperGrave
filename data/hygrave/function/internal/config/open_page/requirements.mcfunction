@@ -74,7 +74,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_generation_requirements",\
-        "fallback": "The requirements to generate a grave\n§bℹ This doesn't change the amount of XP or item that should be deleted or kept. For that use other configs such as Item Distribution and XP Distribution"\
+        "fallback": "The requirements to generate a grave\n\n§bℹ This doesn't change the amount of XP or item that should be deleted or kept. For that use other configs such as Item Distribution and XP Distribution"\
       }\
     }\
   },\

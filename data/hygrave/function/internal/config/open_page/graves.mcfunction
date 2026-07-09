@@ -16,7 +16,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.drop_grave_contents_on_despawn",\
-        "fallback": "Whether graves should drop their contents (i.e. items and XP) when they despawn.\n§8Default: ✔"\
+        "fallback": "Whether graves should drop their contents (i.e. items and XP) when they despawn.\n\n§8Default: ✔"\
       }\
     }\
   },\
@@ -52,7 +52,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.despawn_time.grave",\
-        "fallback": "The amount of time (in seconds) that it takes for a grave to despawn.\n§8Default: 5400"\
+        "fallback": "The amount of time (in seconds) that it takes for a grave to despawn.\n\n§8Default: 5400"\
       }\
     }\
   },\
@@ -115,7 +115,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_placement_restrictions",\
-        "fallback": "The blocks that a grave cannot generate on or generate in.\n§bℹ This config might be a bit confusing. Remember that if a condition is set to false, that would mean that graves will not be restricted to generate in that condition, meaning graves can generate in that condition."\
+        "fallback": "The blocks that a grave cannot generate on or generate in.\n\n§bℹ This config might be a bit confusing. Remember that if a condition is set to false, that would mean that graves will not be restricted to generate in that condition, meaning graves can generate in that condition."\
       }\
     }\
   },\
@@ -202,7 +202,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.slot_distribution",\
-        "fallback": "The slots to remove, keep or take.\n§bℹ This config has a higher priority than the Graves / Item Distribution config."\
+        "fallback": "The slots to remove, keep or take.\n\n§bℹ This config has a higher priority than the Graves / Item Distribution config."\
       }\
     }\
   },\
@@ -231,7 +231,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.tell_grave_mini_info",\
-        "fallback": "Whether the mini-info of graves should be shown to players when they die. It looks something like this:\n\n§c☠ Sul4ur §6#1001 §7| §6810§7, §665§7, §6-198 §7| §aThe Overworld\n\n§cN §7→ §r§fWill not be shown.\n§eO §7→§r Will only be shown to the owner.\n§aE §7→§r Will be shown to everyone.\n\n§bℹ It's highly recommended not to set this to N, since players must know the GID of their own graves.\n§bℹ Whether the location of the grave should be shown is determined by what is set in the Show Grave Info config. ALL and OWN options are not affective though.\n§8Default: O"\
+        "fallback": "Whether the mini-info of graves should be shown to players when they die. It looks something like this:\n\n§c☠ Sul4ur §6#1001 §7| §6810§7, §665§7, §6-198 §7| §aThe Overworld\n\n§cN §7→ §r§fWill not be shown.\n§eO §7→§r Will only be shown to the owner.\n§aE §7→§r Will be shown to everyone.\n\n§bℹ It's highly recommended not to set this to N, since players must know the GID of their own graves.\n\n§bℹ Whether the location of the grave should be shown is determined by what is set in the Show Grave Info config. ALL and OWN options are not affective though.\n\n§8Default: O"\
       }\
     }\
   },\
