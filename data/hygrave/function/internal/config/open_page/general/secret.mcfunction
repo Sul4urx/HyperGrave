@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: General / Very Secret Page
-tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral / §c§lVery Secret Page:"}
+tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral / §c§lVery Secret Page"}
 
 ##> Annoying Mode
 tellraw @s [\

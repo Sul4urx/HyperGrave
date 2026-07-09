@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: Dropped Contents
-tellraw @s {"translate": "hygrave.config_category.dropped_contents","fallback": " §lDropped Contents:"}
+tellraw @s {"translate": "hygrave.config_category.dropped_contents","fallback": " §lDropped Contents"}
 
 ##> Invulnerable Items
 tellraw @s [\

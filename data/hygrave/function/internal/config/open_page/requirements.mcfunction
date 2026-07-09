@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: Requirements
-tellraw @s {"translate": "hygrave.config_category.requirements","fallback": " §lRequirements:"}
+tellraw @s {"translate": "hygrave.config_category.requirements","fallback": " §lRequirements"}
 
 ##> Looting Graves
 tellraw @s [\

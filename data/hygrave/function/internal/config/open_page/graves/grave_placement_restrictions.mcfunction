@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_placement_restrictions",\
-    "fallback": " Graves §7/ §r§lGrave Placement Restrictions:"\
+    "fallback": " Graves §7/ §r§lGrave Placement Restrictions"\
   }\
 ]
 

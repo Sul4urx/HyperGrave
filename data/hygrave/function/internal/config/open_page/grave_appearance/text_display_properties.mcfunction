@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.text_display_properties",\
-    "fallback": " Grave Appearance §7/ §r§lText Display Properties:"\
+    "fallback": " Grave Appearance §7/ §r§lText Display Properties"\
   }\
 ]
 

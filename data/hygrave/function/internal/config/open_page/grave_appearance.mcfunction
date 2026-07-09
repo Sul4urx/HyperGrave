@@ -5,7 +5,7 @@
 tellraw @s ""
 
 ## Category: Grave Appearance
-tellraw @s {"translate": "hygrave.config_category.grave_appearance","fallback": " §lGrave Appearance:"}
+tellraw @s {"translate": "hygrave.config_category.grave_appearance","fallback": " §lGrave Appearance"}
 
 ##> Grave Model
 tellraw @s [\

@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.click_behavior",\
-    "fallback": " Grave Interaction §7/ §r§lClick Behavior:"\
+    "fallback": " Grave Interaction §7/ §r§lClick Behavior"\
   }\
 ]
 
