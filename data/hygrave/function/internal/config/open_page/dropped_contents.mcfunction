@@ -5,13 +5,13 @@
 tellraw @s ""
 
 ## Category: Dropped Contents
-tellraw @s {"translate": "hygrave.config_category.dropped_contents","fallback": " §lDropped Contents"}
+tellraw @s {"translate": "hygrave.config_category.dropped_contents","fallback": "§lDropped Contents"}
 
 ##> Invulnerable Items
 tellraw @s [\
   {\
     "translate": "hygrave.config.invulnerable_items",\
-    "fallback": "   Invulnerable Items: ",\
+    "fallback": "  Invulnerable Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -47,7 +47,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.invulnerable_xp",\
-    "fallback": "   Invulnerable XP: ",\
+    "fallback": "  Invulnerable XP: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -84,7 +84,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.no_gravity_items",\
-    "fallback": "   No Gravity Items: ",\
+    "fallback": "  No Gravity Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -120,7 +120,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.no_gravity_xp",\
-    "fallback": "   No Gravity XP: ",\
+    "fallback": "  No Gravity XP: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -156,7 +156,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.despawn_time.item",\
-    "fallback": "   Item Despawn Time: ",\
+    "fallback": "  Item Despawn Time: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -219,7 +219,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.despawn_time.xp",\
-    "fallback": "   XP Despawn Time: ",\
+    "fallback": "  XP Despawn Time: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

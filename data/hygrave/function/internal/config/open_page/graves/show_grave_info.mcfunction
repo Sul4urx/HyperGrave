@@ -9,9 +9,9 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.show_grave_info",\
-    "fallback": " Graves §7/ §r§lShow Grave Info"\
+    "fallback": "Graves §7/ §r§lShow Grave Info"\
   },\
-  "\n\n            ",\
+  "\n\n           ",\
   {\
     "text":"AO§l §r",\
     "hover_event": {\
@@ -59,7 +59,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.all",\
-    "fallback": "   ALL:§l   ",\
+    "fallback": "  ALL:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -164,7 +164,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.owner",\
-    "fallback": "   OWN:§l   ",\
+    "fallback": "  OWN:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -269,7 +269,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.location_xyz",\
-    "fallback": "   LOC:§l   ",\
+    "fallback": "  LOC:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -374,7 +374,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.location_dim",\
-    "fallback": "   LOD:§l   ",\
+    "fallback": "  LOD:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -479,7 +479,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.despawn_time",\
-    "fallback": "   DST:§l   ",\
+    "fallback": "  DST:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -542,7 +542,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.creation_time",\
-    "fallback": "   CRT:§l   ",\
+    "fallback": "  CRT:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -647,7 +647,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.items",\
-    "fallback": "   ITM:§l §r   ",\
+    "fallback": "  ITM:§l §r   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -752,7 +752,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.xp_before_death",\
-    "fallback": "   XPB:§l   ",\
+    "fallback": "  XPB:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -857,7 +857,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.xp_after_death",\
-    "fallback": "   XPA:§l   ",\
+    "fallback": "  XPA:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -962,7 +962,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.destruction_type",\
-    "fallback": "   DTP:§l   ",\
+    "fallback": "  DTP:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -1025,7 +1025,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.destroyer",\
-    "fallback": "   DER:§l   ",\
+    "fallback": "  DER:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -1091,7 +1091,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.show_grave_info.grave_list_display",\
-    "fallback": "   GLD:§l   ",\
+    "fallback": "  GLD:§l   ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

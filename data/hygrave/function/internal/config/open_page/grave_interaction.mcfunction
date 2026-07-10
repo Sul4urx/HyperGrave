@@ -5,13 +5,13 @@
 tellraw @s ""
 
 ## Category: Grave Interaction
-tellraw @s {"translate": "hygrave.config_category.grave_interaction","fallback": " §lGrave Interaction"}
+tellraw @s {"translate": "hygrave.config_category.grave_interaction","fallback": "§lGrave Interaction"}
 
 ##> ICD Properties
 tellraw @s [\
   {\
     "translate": "hygrave.config.icd",\
-    "fallback": "   ICD Properties: ",\
+    "fallback": "  ICD Properties: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -40,7 +40,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior",\
-    "fallback": "   Click Behavior: ",\
+    "fallback": "  Click Behavior: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

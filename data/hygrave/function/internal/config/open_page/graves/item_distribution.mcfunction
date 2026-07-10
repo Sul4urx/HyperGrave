@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.item_distribution.",\
-    "fallback": " Graves §7/ §r§lItem Distribution"\
+    "fallback": "Graves §7/ §r§lItem Distribution"\
   }\
 ]
 
@@ -19,7 +19,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_fail",\
-    "fallback": "   Grave Generation Fail: ",\
+    "fallback": "  Grave Generation Fail: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -34,7 +34,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_fail.operation",\
-    "fallback": "     Operation: ",\
+    "fallback": "    Operation: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -71,7 +71,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_fail.naturalize_drop_acceleration",\
-    "fallback": "     Naturalize Drop Acceleration: ",\
+    "fallback": "    Naturalize Drop Acceleration: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -108,7 +108,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success",\
-    "fallback": "   Grave Generation Success ",\
+    "fallback": "  Grave Generation Success ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -123,7 +123,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success.remove",\
-    "fallback": "     Remove: ",\
+    "fallback": "    Remove: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -138,7 +138,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success.remove.items.ids",\
-    "fallback": "       Items: ",\
+    "fallback": "      Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -208,7 +208,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success.remove.enchs.ids",\
-    "fallback": "       Enchantments: ",\
+    "fallback": "      Enchantments: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -278,7 +278,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success.keep",\
-    "fallback": "     Keep: ",\
+    "fallback": "    Keep: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -293,7 +293,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success.keep.items.ids",\
-    "fallback": "       Items: ",\
+    "fallback": "      Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -363,7 +363,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution.grave_generation_success.keep.enchs.ids",\
-    "fallback": "       Enchantments: ",\
+    "fallback": "      Enchantments: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

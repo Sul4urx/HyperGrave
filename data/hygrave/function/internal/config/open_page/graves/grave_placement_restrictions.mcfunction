@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_placement_restrictions",\
-    "fallback": " Graves §7/ §r§lGrave Placement Restrictions"\
+    "fallback": "Graves §7/ §r§lGrave Placement Restrictions"\
   }\
 ]
 
@@ -20,7 +20,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.grave_placement_restrictions.on_air",\
-    "fallback": "   On Air: ",\
+    "fallback": "  On Air: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -57,7 +57,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.grave_placement_restrictions.on_water",\
-    "fallback": "   On Water: ",\
+    "fallback": "  On Water: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -130,7 +130,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.grave_placement_restrictions.on_lava",\
-    "fallback": "   On Lava: ",\
+    "fallback": "  On Lava: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -203,7 +203,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.grave_placement_restrictions.on_non_solid_blocks",\
-    "fallback": "   On Non-Solid Blocks: ",\
+    "fallback": "  On Non-Solid Blocks: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -276,7 +276,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.grave_placement_restrictions.above_build_height_limit",\
-    "fallback": "   Above Build height limit: ",\
+    "fallback": "  Above Build height limit: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

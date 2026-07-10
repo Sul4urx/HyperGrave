@@ -4,7 +4,7 @@
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: nothing} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7]",\
@@ -31,7 +31,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: custom_text} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -146,7 +146,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: owner_name} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -261,7 +261,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: grave_gid} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -376,7 +376,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: despawn_time} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -491,7 +491,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: creation_time} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -606,7 +606,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: after_death_xp} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -721,7 +721,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: item_count} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\
@@ -836,7 +836,7 @@ $execute if data storage hygrave:common configs.value.grave_appearance.text_disp
 $execute if data storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx){type: icd} run tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx)",\
-    "fallback": "     Text $(text_idx): ",\
+    "fallback": "    Text $(text_idx): ",\
   },\
   {\
     "translate": "§7[%s§7|%s§7|%s§7|%s§7|%s§7]",\

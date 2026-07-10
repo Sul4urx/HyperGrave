@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.text_display_properties.icd_text",\
-    "fallback": " Graves §7/§r Text Display Properties §7/ §r§lICD Text"\
+    "fallback": "Graves §7/§r Text Display Properties §7/ §r§lICD Text"\
   },\
   {\
     "text": " §bℹ",\
@@ -28,7 +28,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_1",\
-    "fallback": "   Line 1:"\
+    "fallback": "  Line 1:"\
   }\
 ]
 function hygrave:internal/config/open_page/grave_appearance/text_display_properties/icd_text/show_field {line_idx: 1, text_idx: 1}
@@ -39,7 +39,7 @@ tellraw @s [\
   "\n",\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_2",\
-    "fallback": "   Line 2:"\
+    "fallback": "  Line 2:"\
   }\
 ]
 function hygrave:internal/config/open_page/grave_appearance/text_display_properties/icd_text/show_field {line_idx: 2, text_idx: 1}
@@ -50,7 +50,7 @@ tellraw @s [\
   "\n",\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text.line_3",\
-    "fallback": "   Line 3:"\
+    "fallback": "  Line 3:"\
   }\
 ]
 function hygrave:internal/config/open_page/grave_appearance/text_display_properties/icd_text/show_field {line_idx: 3, text_idx: 1}
