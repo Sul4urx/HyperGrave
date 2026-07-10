@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.xp_distribution.",\
-    "fallback": " Graves §7/ §r§lXP Distribution"\
+    "fallback": "Graves §7/ §r§lXP Distribution"\
   },\
   {\
     "text": " §bℹ",\
@@ -27,7 +27,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_fail",\
-    "fallback": "   Grave Generation Fail: ",\
+    "fallback": "  Grave Generation Fail: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -42,7 +42,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_fail.remove",\
-    "fallback": "     Remove: ",\
+    "fallback": "    Remove: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -79,7 +79,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_fail.keep",\
-    "fallback": "     Keep: ",\
+    "fallback": "    Keep: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -116,7 +116,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config_info.xp_distribution.grave_generation_fail.total",\
-    "fallback": "     §eTotal: ",\
+    "fallback": "    §eTotal: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -149,7 +149,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_success",\
-    "fallback": "   Grave Generation Success ",\
+    "fallback": "  Grave Generation Success ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -164,7 +164,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_success.remove",\
-    "fallback": "     Remove: ",\
+    "fallback": "    Remove: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -201,7 +201,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_success.keep",\
-    "fallback": "     Keep: ",\
+    "fallback": "    Keep: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -238,7 +238,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution.grave_generation_success.take",\
-    "fallback": "     Take: ",\
+    "fallback": "    Take: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -275,7 +275,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config_info.xp_distribution.grave_generation_success.total",\
-    "fallback": "     §eTotal: ",\
+    "fallback": "    §eTotal: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

@@ -10,7 +10,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_model",\
-    "fallback": " Grave Appearance §7/ §r§lGrave Model"\
+    "fallback": "Grave Appearance §7/ §r§lGrave Model"\
   }\
 ]
 
@@ -18,7 +18,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head",\
-    "fallback": "   Player Head: ",\
+    "fallback": "  Player Head: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -33,7 +33,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.render",\
-    "fallback": "      Render: ",\
+    "fallback": "    Render: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -69,7 +69,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.render_icd",\
-    "fallback": "      Render (ICD): ",\
+    "fallback": "    Render (ICD): ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -106,7 +106,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.glowing",\
-    "fallback": "      Glowing: ",\
+    "fallback": "    Glowing: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -142,7 +142,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.vertical_position",\
-    "fallback": "      Vertical Position: ",\
+    "fallback": "    Vertical Position: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -179,7 +179,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.horizontal_position",\
-    "fallback": "      Horizontal Position: ",\
+    "fallback": "    Horizontal Position: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -216,7 +216,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.rotation_speed",\
-    "fallback": "      Rotation Speed: ",\
+    "fallback": "    Rotation Speed: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -253,7 +253,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.player_head.shadow_strength",\
-    "fallback": "      Shadow Strength: ",\
+    "fallback": "    Shadow Strength: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -290,7 +290,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.decoration_1",\
-    "fallback": "   Decoration 1: "\
+    "fallback": "  Decoration 1: "\
   },\
   {\
     "text": "§7[§b⏷§7]",\
@@ -312,7 +312,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.decoration_2",\
-    "fallback": "   Decoration 2: "\
+    "fallback": "  Decoration 2: "\
   },\
   {\
     "text": "§7[§b⏷§7]",\
@@ -334,7 +334,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model.icd_item",\
-    "fallback": "   ICD Item: "\
+    "fallback": "  ICD Item: "\
   },\
   {\
     "text": "§7[§b⏷§7]",\

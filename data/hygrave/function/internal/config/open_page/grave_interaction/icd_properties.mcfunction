@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.icd",\
-    "fallback": " Grave Interaction §7/ §r§lICD Properties"\
+    "fallback": "Grave Interaction §7/ §r§lICD Properties"\
   }\
 ]
 
@@ -19,7 +19,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.icd.activate_for",\
-    "fallback": "   Activate for: ",\
+    "fallback": "  Activate for: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -56,7 +56,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.icd.item_cycle_cooldown",\
-    "fallback": "   Item Cycle Cooldown: ",\
+    "fallback": "  Item Cycle Cooldown: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -93,7 +93,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.icd.revert_sneaking_behavior",\
-    "fallback": "   Revert Sneaking Behavior: ",\
+    "fallback": "  Revert Sneaking Behavior: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -130,7 +130,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.icd.switch_text_display",\
-    "fallback": "   Switch Text Display: ",\
+    "fallback": "  Switch Text Display: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

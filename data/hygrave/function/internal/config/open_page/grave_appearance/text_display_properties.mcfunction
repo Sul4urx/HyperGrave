@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.text_display_properties",\
-    "fallback": " Grave Appearance §7/ §r§lText Display Properties"\
+    "fallback": "Grave Appearance §7/ §r§lText Display Properties"\
   }\
 ]
 
@@ -17,7 +17,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.text",\
-    "fallback": "   Text: ",\
+    "fallback": "  Text: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -46,7 +46,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties.icd_text",\
-    "fallback": "   ICD Text: ",\
+    "fallback": "  ICD Text: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

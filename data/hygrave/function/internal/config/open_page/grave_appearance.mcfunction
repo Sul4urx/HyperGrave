@@ -5,13 +5,13 @@
 tellraw @s ""
 
 ## Category: Grave Appearance
-tellraw @s {"translate": "hygrave.config_category.grave_appearance","fallback": " §lGrave Appearance"}
+tellraw @s {"translate": "hygrave.config_category.grave_appearance","fallback": "§lGrave Appearance"}
 
 ##> Grave Model
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_model",\
-    "fallback": "   Grave Model: ",\
+    "fallback": "  Grave Model: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -41,7 +41,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.text_display_properties",\
-    "fallback": "   Text Display Properties: ",\
+    "fallback": "  Text Display Properties: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_generation_requirements",\
-    "fallback": " Requirements §7/ §r§lGenerating Graves"\
+    "fallback": "Requirements §7/ §r§lGenerating Graves"\
   }\
 ]
 
@@ -17,7 +17,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.with_item",\
-    "fallback": "   With Items: ",\
+    "fallback": "  With Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -32,7 +32,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.with_item.items.ids",\
-    "fallback": "      Items: ",\
+    "fallback": "    Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -102,7 +102,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.with_item.xp",\
-    "fallback": "      XP: ",\
+    "fallback": "    XP: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -139,7 +139,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.with_item.gamemodes",\
-    "fallback": "      Game Modes: ",\
+    "fallback": "    Game Modes: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -222,7 +222,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.no_item",\
-    "fallback": "   Without Item: ",\
+    "fallback": "  Without Item: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -237,7 +237,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.no_item.xp",\
-    "fallback": "      XP: ",\
+    "fallback": "    XP: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -274,7 +274,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements.no_item.gamemodes",\
-    "fallback": "      Game Modes: ",\
+    "fallback": "    Game Modes: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

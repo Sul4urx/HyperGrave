@@ -5,13 +5,13 @@
 tellraw @s ""
 
 ## Category: General
-tellraw @s {"translate": "hygrave.config_category.general","fallback": " §lGeneral"}
+tellraw @s {"translate": "hygrave.config_category.general","fallback": "§lGeneral"}
 
 ##> Change Game Rules
 tellraw @s [\
   {\
     "translate": "hygrave.config.change_gamerules",\
-    "fallback": "   Change Game Rules: ",\
+    "fallback": "  Change Game Rules: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -47,7 +47,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.mod_compatibility_mode",\
-    "fallback": "   §3Mod Compatibility Mode: ",\
+    "fallback": "  §3Mod Compatibility Mode: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -83,7 +83,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.mod_compatibility_mode.item_collection_distance",\
-    "fallback": "     Item Collection Distance: ",\
+    "fallback": "    Item Collection Distance: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

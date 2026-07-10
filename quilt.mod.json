@@ -22,7 +22,7 @@
             {
                 "id": "quilt_resource_loader",
                 "versions": "*",
-                "unless": "fabric-resource-loader-v0"    
+                "unless": "fabric-resource-loader-v0"
             },
             {
                 "id": "minecraft",

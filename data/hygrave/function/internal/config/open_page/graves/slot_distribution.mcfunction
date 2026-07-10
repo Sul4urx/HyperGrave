@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.slot_distribution.",\
-    "fallback": " Graves §7/ §r§lSlot Distribution"\
+    "fallback": "Graves §7/ §r§lSlot Distribution"\
   }\
 ]
 
@@ -19,7 +19,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.slot_distribution.slots",\
-    "fallback": "   Slots: ",\
+    "fallback": "  Slots: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

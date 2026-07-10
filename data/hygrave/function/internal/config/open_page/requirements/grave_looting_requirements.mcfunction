@@ -9,7 +9,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.grave_looting_requirements",\
-    "fallback": " Requirements §7/ §r§lLooting Graves"\
+    "fallback": "Requirements §7/ §r§lLooting Graves"\
   }\
 ]
 
@@ -17,7 +17,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.owners",\
-    "fallback": "   Owners: ",\
+    "fallback": "  Owners: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -32,7 +32,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.owners.items.ids",\
-    "fallback": "      Items: ",\
+    "fallback": "    Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -102,7 +102,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.owners.item_remove_count",\
-    "fallback": "        Remove Count: ",\
+    "fallback": "      Remove Count: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -139,7 +139,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.owners.xp",\
-    "fallback": "      XP: ",\
+    "fallback": "    XP: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -176,7 +176,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.owners.gamemodes",\
-    "fallback": "      Game Modes: ",\
+    "fallback": "    Game Modes: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -259,7 +259,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.non_owners",\
-    "fallback": "   Non-Owners: ",\
+    "fallback": "  Non-Owners: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -274,7 +274,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.non_owners.items.ids",\
-    "fallback": "      Items: ",\
+    "fallback": "    Items: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -344,7 +344,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.non_owners.item_remove_count",\
-    "fallback": "        Remove Count: ",\
+    "fallback": "      Remove Count: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -381,7 +381,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.non_owners.xp",\
-    "fallback": "      XP: ",\
+    "fallback": "    XP: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -418,7 +418,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements.non_owners.gamemodes",\
-    "fallback": "      Game Modes: ",\
+    "fallback": "    Game Modes: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

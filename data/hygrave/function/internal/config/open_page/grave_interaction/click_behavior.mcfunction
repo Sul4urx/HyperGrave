@@ -11,7 +11,7 @@ tellraw @s [\
   "",\
   {\
     "translate": "hygrave.config_category.click_behavior",\
-    "fallback": " Grave Interaction §7/ §r§lClick Behavior"\
+    "fallback": "Grave Interaction §7/ §r§lClick Behavior"\
   }\
 ]
 
@@ -19,7 +19,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior.icd_is_not_active",\
-    "fallback": "   While ICD is not activated: ",\
+    "fallback": "  While ICD is not activated: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -34,7 +34,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior.icd_is_not_active.attack",\
-    "fallback": "      Left-click: ",\
+    "fallback": "    Left-click: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -71,7 +71,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior.icd_is_not_active.use",\
-    "fallback": "      Right-click: ",\
+    "fallback": "    Right-click: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -108,7 +108,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior.icd_is_not_active",\
-    "fallback": "   While ICD is activated: ",\
+    "fallback": "  While ICD is activated: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -123,7 +123,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior.icd_is_active.attack",\
-    "fallback": "      Left-click: ",\
+    "fallback": "    Left-click: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -160,7 +160,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.click_behavior.icd_is_active.use",\
-    "fallback": "      Right-click: ",\
+    "fallback": "    Right-click: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

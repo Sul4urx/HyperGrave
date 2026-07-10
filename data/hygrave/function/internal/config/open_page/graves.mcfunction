@@ -5,13 +5,13 @@
 tellraw @s ""
 
 ## Category: Graves
-tellraw @s {"translate": "hygrave.config_category.graves","fallback": " §lGraves"}
+tellraw @s {"translate": "hygrave.config_category.graves","fallback": "§lGraves"}
 
 ##> Drop Contents On Despawn
 tellraw @s [\
   {\
     "translate": "hygrave.config.drop_grave_contents_on_despawn",\
-    "fallback": "   Drop Contents On Despawn: ",\
+    "fallback": "  Drop Contents On Despawn: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -47,7 +47,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.despawn_time.grave",\
-    "fallback": "   Grave Despawn Time: ",\
+    "fallback": "  Grave Despawn Time: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -110,7 +110,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_placement_restrictions",\
-    "fallback": "   Grave Placement Restrictions: ",\
+    "fallback": "  Grave Placement Restrictions: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -139,7 +139,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.item_distribution",\
-    "fallback": "   Item Distribution: ",\
+    "fallback": "  Item Distribution: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -168,7 +168,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.show_grave_info",\
-    "fallback": "   Show Grave Info: ",\
+    "fallback": "  Show Grave Info: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -197,7 +197,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.slot_distribution",\
-    "fallback": "   Slot Distribution: ",\
+    "fallback": "  Slot Distribution: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -226,7 +226,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.tell_grave_mini_info",\
-    "fallback": "   Tell Grave Mini-Info: ",\
+    "fallback": "  Tell Grave Mini-Info: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -262,7 +262,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.xp_distribution",\
-    "fallback": "   XP Distribution: ",\
+    "fallback": "  XP Distribution: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\

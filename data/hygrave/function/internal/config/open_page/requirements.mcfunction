@@ -5,13 +5,13 @@
 tellraw @s ""
 
 ## Category: Requirements
-tellraw @s {"translate": "hygrave.config_category.requirements","fallback": " §lRequirements"}
+tellraw @s {"translate": "hygrave.config_category.requirements","fallback": "§lRequirements"}
 
 ##> Looting Graves
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_looting_requirements",\
-    "fallback": "   Looting Graves: ",\
+    "fallback": "  Looting Graves: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -40,7 +40,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_remote_looting_requirements",\
-    "fallback": "   Remotely Looting Graves: ",\
+    "fallback": "  Remotely Looting Graves: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
@@ -69,7 +69,7 @@ tellraw @s [\
 tellraw @s [\
   {\
     "translate": "hygrave.config.grave_generation_requirements",\
-    "fallback": "   Generating Graves: ",\
+    "fallback": "  Generating Graves: ",\
     "hover_event": {\
       "action":"show_text",\
       "value": {\
