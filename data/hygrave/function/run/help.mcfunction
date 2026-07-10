@@ -8,7 +8,7 @@ tellraw @s ""
 
 tellraw @s {\
   "translate": "hygrave.help_menu",\
-  "fallback": "§l§bHyper§l§6Grave§r §7help menu\n§fIf you want a list of all commands for HyperGrave, here they are:\n§7• [%s§7]\n§7• [%s§7]\n\n§fIf you found a bug, please try to replicate the bug (i.e. see how the bug happens). Either way, report it in §7[%s§7]§f.\n\nIf you have a question, please read the FAQ first, and if you didn't find your question, ask it in §7[%s§7]§f.\n\n§bFAQ: §7<%s§7|%s§7|%s§7>",\
+  "fallback": "§b§lHyper§6§lGrave§r §7help menu\n§fIf you want a list of all commands for HyperGrave, here they are:\n§7• [%s§7]\n§7• [%s§7]\n\n§fIf you found a bug, please try to replicate the bug (i.e. see how the bug happens). Either way, report it in §7[%s§7]§f.\n\nIf you have a question, please read the FAQ first, and if you didn't find your question, ask it in §7[%s§7]§f.\n\n§bFAQ: §7<%s§7|%s§7|%s§7>",\
   "with": [\
     {\
       "translate": "hygrave.help.trigger_commands",\
