@@ -8,7 +8,7 @@ tellraw @s ""
 
 tellraw @s {\
   "translate": "hygrave.info.title",\
-  "fallback": "§l§bHyper§l§6Grave§r §fversion %s §8| §fMade By §bSul4ur",\
+  "fallback": "§b§lHyper§6§lGrave§r §fversion %s §8| §fMade By §bSul4ur",\
   "with": ["§72.1.1-alpha"]\
 }
 

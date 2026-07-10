@@ -11,7 +11,7 @@ tellraw @s ""
 
 tellraw @s {\
   "translate": "hygrave.help_menu.trigger_commands",\
-  "fallback": "§l§bHyper§l§6Grave§r §7trigger commands\n§fHere is a list of commands, which can be run by any player:\n§7(Hover over any command to show its description)",\
+  "fallback": "§b§lHyper§6§lGrave§r §7trigger commands\n§fHere is a list of commands, which can be run by any player:\n§7(Hover over any command to show its description)",\
 }
 
 ##
