@@ -31,7 +31,7 @@ run return run tellraw @s {\
 tellraw @s ""
 tellraw @s {\
   "translate": "hygrave.grave_list_display.title",\
-  "fallback": " §lGrave GIDs:",\
+  "fallback": "§lGrave GIDs:",\
   "hover_event": {\
     "action": "show_text",\
     "value": {\
@@ -42,33 +42,33 @@ tellraw @s {\
 }
 
 ##> AO
-execute if data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "   Your active graves:"}
+execute if data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "  Your active graves:"}
 
-execute unless data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "   §7Your active graves: None"}
+execute unless data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao.none","fallback": "  §7Your active graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.ao[]
 execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list_admin/show/loop {type: "ao"}
 
 ##> BO
-execute if data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "   Your broken graves:"}
+execute if data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "  Your broken graves:"}
 
-execute unless data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "   §7Your broken graves: None"}
+execute unless data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo.none","fallback": "  §7Your broken graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.bo[]
 execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list_admin/show/loop {type: "bo"}
 
 ##> AN
-execute if data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "   Others' active graves:"}
+execute if data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "  Others' active graves:"}
 
-execute unless data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "   §7Others' active graves: None"}
+execute unless data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an.none","fallback": "  §7Others' active graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.an[]
 execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list_admin/show/loop {type: "an"}
 
 ##> BN
-execute if data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "   Others' broken graves:"}
+execute if data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "  Others' broken graves:"}
 
-execute unless data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "   §7Others' broken graves: None"}
+execute unless data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn.none","fallback": "  §7Others' broken graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.bn[]
 execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list_admin/show/loop {type: "bn"}
