@@ -42,7 +42,7 @@ run return run tellraw @s {\
 tellraw @s ""
 tellraw @s {\
   "translate": "hygrave.grave_list_display.title",\
-  "fallback": " §lGrave GIDs:",\
+  "fallback": "§lGrave GIDs:",\
   "hover_event": {\
     "action": "show_text",\
     "value": {\
@@ -53,41 +53,41 @@ tellraw @s {\
 }
 
 ##> AO
-execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "   Your active graves:"}
+execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "  Your active graves:"}
 
-execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "   §7Your active graves: None"}
+execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.ao[] run tellraw @s {"translate": "hygrave.grave_list_display.category.ao.none","fallback": "  §7Your active graves: None"}
 
-execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.ao","fallback": "   §7Your active graves: None"}
+execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.ao.none","fallback": "  §7Your active graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.ao[]
 execute if score (graves/show_grave_info/ao/grave_list_display) hygrave.config matches 1 if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list/show/loop {type: "ao"}
 
 ##> BO
-execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "   Your broken graves:"}
+execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "  Your broken graves:"}
 
-execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "   §7Your broken graves: None"}
+execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.bo[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bo.none","fallback": "  §7Your broken graves: None"}
 
-execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.bo","fallback": "   §7Your broken graves: None"}
+execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.bo.none","fallback": "  §7Your broken graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.bo[]
 execute if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 1 if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list/show/loop {type: "bo"}
 
 ##> AN
-execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "   Others' active graves:"}
+execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "  Others' active graves:"}
 
-execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "   §7Others' active graves: None"}
+execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.an[] run tellraw @s {"translate": "hygrave.grave_list_display.category.an.none","fallback": "  §7Others' active graves: None"}
 
-execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.an","fallback": "   §7Others' active graves: None"}
+execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.an.none","fallback": "  §7Others' active graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.an[]
 execute if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 1 if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list/show/loop {type: "an"}
 
 ##> BN
-execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "   Others' broken graves:"}
+execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 1 if data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "  Others' broken graves:"}
 
-execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "   §7Others' broken graves: None"}
+execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 1 unless data storage hygrave:common temp.grave_list.bn[] run tellraw @s {"translate": "hygrave.grave_list_display.category.bn.none","fallback": "  §7Others' broken graves: None"}
 
-execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.bn","fallback": "   §7Others' broken graves: None"}
+execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 0 run tellraw @s {"translate": "hygrave.grave_list_display.category.bn.none","fallback": "  §7Others' broken graves: None"}
 
 execute store result score .loop_count hygrave.temp_var if data storage hygrave:common temp.grave_list.bn[]
 execute if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 1 if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/show_list/show/loop {type: "bn"}
