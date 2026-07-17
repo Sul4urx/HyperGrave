@@ -19,7 +19,7 @@ execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.
 
 tellraw @s {\
   "translate": "hygrave.info.description",\
-  "fallback": "§fA very sophisticated grave data pack with many features and a lot of customizability"\
+  "fallback": "A very high-quality, customizable, sophisticated and simple-to-use grave data pack / mod"\
 }
 
 tellraw @s {\
