@@ -9,7 +9,7 @@ tellraw @s ""
 tellraw @s {\
   "translate": "hygrave.info.title",\
   "fallback": "§b§lHyper§6§lGrave§r §fversion %s §8| §fMade By §bSul4ur",\
-  "with": ["§72.1.1-alpha"]\
+  "with": ["§72.1.1"]\
 }
 
 execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 run tellraw @s {\

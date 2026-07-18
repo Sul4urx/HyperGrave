@@ -75,7 +75,7 @@ scoreboard objectives add hygrave.info trigger
 scoreboard objectives add hygrave.help trigger
 
 ## Alpha version
-scoreboard players set (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version 1
+scoreboard players set (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version 0
 
 ## Handle upgrades and downgrades
 execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 1, patch: 1} run return run function hygrave:internal/versioning/unsupported_version_change_to_alpha
