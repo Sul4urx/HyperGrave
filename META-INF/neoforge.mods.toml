@@ -6,7 +6,7 @@ showAsDataPack = true
 
 [[mods]]
 modId = "hygrave"
-version = "2.1.1-alpha"
+version = "2.1.1"
 displayName = "HyperGrave"
 description = "A very high-quality, customizable, sophisticated and simple-to-use grave mod"
 logoFile = "pack.png"

@@ -3,7 +3,7 @@
     "quilt_loader": {
         "group": "com.sul4ur",
         "id": "hygrave",
-        "version": "2.1.1-alpha",
+        "version": "2.1.1",
         "metadata": {
             "name": "HyperGrave",
             "description": "A very high-quality, customizable, sophisticated and simple-to-use grave mod",

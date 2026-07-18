@@ -17,11 +17,11 @@ data modify storage hygrave:common data.schema_version_1.hygrave.data_version se
         minor: 1,\
         patch: 1,\
         prerelease: { \
-            alpha: true \
+            alpha: false \
         }, \
         form: {\
             array: [2, 1, 1],\
-            string: "2.1.1-alpha",\
+            string: "2.1.1",\
             single_int: 1_0002_0001_0001L \
         }\
     }\
