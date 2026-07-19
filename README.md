@@ -8,9 +8,10 @@ You don't need any resource packs to use HyperGrave.
 
 ## Downloads
 These are the download(s) for the latest version(s) of HyperGrave:
-- HyperGrave v2.1.0 (MC 1.21.5 - 26.2.x): 
-  - [Data pack](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv2.1.0%2Fmc-25.1-26.2/HyperGrave.v2.1.0.zip) version
-  - [Mod](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv2.1.0%2Fmc-25.1-26.2/HyperGrave.v2.1.0.jar) version
+- HyperGrave v2.1.1 (MC 1.21.5 - 26.2.x): 
+  - [Data pack](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv2.1.1%2Fmc-25.1-26.2/HyperGrave-v2.1.1-MC-1.21.5-26.2.x-DATAPACK.zip) version
+  - [Mod](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv2.1.1%2Fmc-25.1-26.2/HyperGrave-v2.1.1-MC-1.21.5-26.2.x-NEOFORGE.jar) version (Neoforge)
+  - [Mod](https://github.com/Sul4urx/HyperGrave/releases/download/release%2Fv2.1.1%2Fmc-25.1-26.2/HyperGrave-v2.1.1-MC-1.21.5-26.2.x-FABRIC-QUILT.jar) version (Fabric and Quilt)
 
 ### Upgrading and downgrading
 - If you are upgrading from a version older than 0.5.0, **remember to first uninstall HyperGrave from the older version** and then you can replace the older version with the newer version. **This will remove all data from HyperGrave**.
@@ -48,13 +49,17 @@ If you want to try out older versions of HyperGrave (which is not recommended), 
 - Only supports Minecraft versions 1.21.5 - 26.1.x .
 - This version is slightly broken on Minecraft 26.1.x.
 
+##### v2.1.0
+- Only supports Minecraft versions 1.21.5 - 26.2.x .
+- The mod version of this version has an issue with Neoforge, which is fixed in 2.1.1 .
+
 ## Source
 If you don't know much about source code and stuff like that, you can skip this section.
 
 ### Branches
 | Name                         | Description                           | Last Supported version | Supported |
 | ---------------------------- | ------------------------------------- | -----------------------| --------- |
-| `main`                       | The main branch                       | v2.1.0                 | ✔         |
+| `main`                       | The main branch                       | v2.1.1                 | ✔         |
 | `archive/release/mc-1.21.4`  | For Minecraft versions 1.21 to 1.21.4 | v0.4.0                 | ❌        |
 | `develop`                    | The next minor version of HyperGrave  | -                      | -         |
 | `patch`                      | The next hotfix version of HyperGrave | -                      | -         |
