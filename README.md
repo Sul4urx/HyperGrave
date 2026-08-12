@@ -84,6 +84,8 @@ Git commits follow [conventional commits v1.0.0](https://conventionalcommits.org
     - Messages of these commits are only the new version that is being worked on. They are usually (but not nessecarily) the same version.
     - For example, commits between `version(initial): 2.3.2` and `version(final): 2.3.2` are commits for version 2.3.2.
     - There is also a **version(semifinal)** commit type, which always appears between these two commits and commits of this type indicate that the version is being finished. In this commit, all "current version" instances are updated and upgrading and downgrading are implemented for this version.
+- **dev**: Commits of this type should not be cherry-picked to the main branch.
+    - These commits are usually for deleting unnessecary files for development like README.md and files of .github folder.
 - **chore**: Miscellaneous commits.
 
 ### Scopes
