@@ -59,10 +59,9 @@ If you don't know much about source code and stuff like that, you can skip this 
 ### Branches
 | Name                         | Description                           | Last Supported version | Supported |
 | ---------------------------- | ------------------------------------- | -----------------------| --------- |
-| `main`                       | The main branch                       | v2.1.1                 | ✔         |
-| `archive/release/mc-1.21.4`  | For Minecraft versions 1.21 to 1.21.4 | v0.4.0                 | ❌        |
-| `develop`                    | The next minor version of HyperGrave  | -                      | -         |
-| `patch`                      | The next hotfix version of HyperGrave | -                      | -         |
+| `main`                       | The main branch                       | 2.1.1                  | ✔         |
+| `archive/release/mc-1.21.4`  | For Minecraft versions 1.21 to 1.21.4 | 0.4.0                  | ❌        |
+| `dev/x.y.z/main`             | HyperGrave upcoming version x.y.z     | x.y.z                  | ❌        |
 
 ## Commits
 Git commits follow [conventional commits v1.0.0](https://conventionalcommits.org/en/v1.0.0).
