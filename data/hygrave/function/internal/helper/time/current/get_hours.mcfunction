@@ -1,3 +1,5 @@
+#@> !NO_PCOMMENT
+
 execute store result score .helper.time.get_hours.result hygrave.temp_var run function hygrave:internal/helper/time/current/query_day_time
 
 scoreboard players operation .helper.time.get_hours.result hygrave.temp_var /= (1000) hygrave.var

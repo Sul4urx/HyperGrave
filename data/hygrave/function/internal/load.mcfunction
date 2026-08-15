@@ -1,3 +1,5 @@
+#@> Executed on load
+
 # This data pack is made by Sul4ur
 
 # About parent comments:
@@ -11,14 +13,13 @@
 #
 # These comments do not nessecarily show all parent function. For example,
 # the parent comment in function 'hygrave:internal/config/register' only lists one function, 
-# despite the fact that this function has 150 parent functions!
+# despite the fact that this function has over 150 parent functions!
 #
-# Some functions do not have a parent comment. That doesn't mean that they're unused, that just
+# Some functions have a parent comment like "#@> !NO_PCOMMENT". That doesn't mean that they're unused, that just
 # means I don't want those functions to show its parent functions,
-# For example, functions in 'hygrave:internal/helper/**/*' don't have parent comments, because
-# they're supposed to and can be used anywhere as helper functions.
-
-#@> Executed on load
+# For example, functions in 'hygrave:internal/helper/**/*' have this parent comment, because
+# they're supposed to and can be used anywhere as helper functions
+# and it also tells the script that this function should not have a parent comment
 
 ## Internal scores
 

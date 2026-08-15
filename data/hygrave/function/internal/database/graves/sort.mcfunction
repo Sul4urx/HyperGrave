@@ -1,3 +1,5 @@
+#@> !NO_PCOMMENT
+
 ## Sort all graves
 
 execute unless data storage hygrave:common graves[0] run return -1
