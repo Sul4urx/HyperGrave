@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "holding_in_main_hand": {
+      "trigger": "tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "hygrave:is_holding_grave_locator/mainhand"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["holding_in_main_hand"]],
+  "rewards": {
+    "function": "hygrave:internal/item/grave_locator/tick/mainhand"
+  }
+}

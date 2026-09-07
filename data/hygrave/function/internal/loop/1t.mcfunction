@@ -8,6 +8,8 @@
 schedule function hygrave:internal/loop/1t 1t
 
 ## Define variables
+scoreboard players set (-1) hygrave.var -1
+scoreboard players set (2) hygrave.var 2
 scoreboard players set (6) hygrave.var 6
 scoreboard players set (10) hygrave.var 10
 scoreboard players set (25) hygrave.var 25

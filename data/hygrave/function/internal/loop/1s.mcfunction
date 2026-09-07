@@ -15,3 +15,7 @@ execute unless score (dropped_contents/freeze_item_despawn_time) hygrave.config 
 execute unless score (dropped_contents/freeze_xp_despawn_time) hygrave.config matches 1 as @e[tag=hygrave.grave.xp] at @s run function hygrave:internal/grave/dropped_contents/despawn_time/decrease
 
 execute as @e[tag=hygrave.backup.restored_item] at @s run function hygrave:internal/backup/dropped_contents/despawn_time/decrease
+
+## Revoke advancements if they somehow didn't get revoked
+advancement revoke @a only hygrave:grave_compass/tick/mainhand
+advancement revoke @a only hygrave:grave_compass/tick/offhand
