@@ -55,6 +55,9 @@ scoreboard objectives add hygrave.rotation_cooldown dummy
 ##> Text display update cooldown (used to update text displays of graves)
 scoreboard objectives add hygrave.text_display_update_cooldown dummy
 
+##> Grave Locator
+scoreboard objectives add hygrave.item.grave_locator.actionbar_pause_ticks dummy
+
 
 ## Trigger scores
 
@@ -70,6 +73,9 @@ scoreboard objectives add hygrave.show_grave_info.view_previous trigger
 
 ##> Remotely loot graves
 scoreboard objectives add hygrave.remote_loot_grave trigger
+
+##> Locate grave
+scoreboard objectives add hygrave.locate trigger
 
 ##> Info and Help
 scoreboard objectives add hygrave.info trigger

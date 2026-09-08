@@ -48,6 +48,9 @@ function hygrave:internal/config/register
 ## Add a player to player database, if they don't exist there
 execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/database/players/append
 
+## Decrease 1 from tick counts
+scoreboard players remove @a[scores={hygrave.item.grave_locator.actionbar_pause_ticks=1..}] hygrave.item.grave_locator.actionbar_pause_ticks 1
+
 ## Player died
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died
 scoreboard players set @a hygrave.death_count 0
@@ -94,6 +97,11 @@ scoreboard players enable @a hygrave.show_grave_info.view_previous
 execute as @a[scores={hygrave.remote_loot_grave=1000..}] at @s run function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
 scoreboard players set @a hygrave.remote_loot_grave 0
 scoreboard players enable @a hygrave.remote_loot_grave
+
+##> Locate Grave
+execute as @a[scores={hygrave.locate=1000..}] at @s run function hygrave:internal/item/grave_locator/relocate/from_trigger
+scoreboard players set @a hygrave.locate 0
+scoreboard players enable @a hygrave.locate
 
 ## Limit loaded active graves to 16
 execute store result score (loaded_active_grave_count) hygrave.var if entity @e[tag=hygrave.grave.base]
