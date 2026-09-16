@@ -56,7 +56,18 @@ scoreboard objectives add hygrave.rotation_cooldown dummy
 scoreboard objectives add hygrave.text_display_update_cooldown dummy
 
 ##> Grave Locator
+
+##>> Actionbar pause ticks (Used to display messages without the little ui
+##>> interrupting the message)
 scoreboard objectives add hygrave.item.grave_locator.actionbar_pause_ticks dummy
+
+##>> Ticks using grave locator
+##>> Used to stop repeating use action
+scoreboard objectives add hygrave.item.grave_locator.ticks_using_item dummy
+
+##>> Previous value of hygrave.item.grave_locator.ticks_using_item
+##>> Used to detect if the player isn't using the item anymore
+scoreboard objectives add hygrave.previous.item.grave_locator.ticks_using_item dummy
 
 
 ## Trigger scores

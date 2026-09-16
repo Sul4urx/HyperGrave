@@ -51,6 +51,12 @@ execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave
 ## Decrease 1 from tick counts
 scoreboard players remove @a[scores={hygrave.item.grave_locator.actionbar_pause_ticks=1..}] hygrave.item.grave_locator.actionbar_pause_ticks 1
 
+## Check if the player stopped using grave locator
+## and also update tick count for players using grave locators
+execute as @a unless score @s hygrave.item.grave_locator.ticks_using_item > @s hygrave.previous.item.grave_locator.ticks_using_item run scoreboard players set @s hygrave.item.grave_locator.ticks_using_item 0
+scoreboard players set @a[scores={hygrave.item.grave_locator.ticks_using_item=..0}] hygrave.previous.item.grave_locator.ticks_using_item 0
+execute as @a[scores={hygrave.item.grave_locator.ticks_using_item=1..}] run scoreboard players operation @s hygrave.previous.item.grave_locator.ticks_using_item = @s hygrave.item.grave_locator.ticks_using_item
+
 ## Player died
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died
 scoreboard players set @a hygrave.death_count 0

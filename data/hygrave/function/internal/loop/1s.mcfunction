@@ -19,3 +19,4 @@ execute as @e[tag=hygrave.backup.restored_item] at @s run function hygrave:inter
 ## Revoke advancements if they somehow didn't get revoked
 advancement revoke @a only hygrave:grave_locator/tick/mainhand
 advancement revoke @a only hygrave:grave_locator/tick/offhand
+advancement revoke @a only hygrave:grave_locator/used
