@@ -145,8 +145,9 @@ function hygrave:internal/config/register/graves/xp_distribution
 
 function hygrave:internal/config/register/grave_appearance/text_display_properties/text
 function hygrave:internal/config/register/grave_appearance/text_display_properties/icd_text
+function hygrave:internal/config/register/grave_appearance/grave_model
 
 function hygrave:internal/config/register/grave_interaction/icd_properties
 function hygrave:internal/config/register/grave_interaction/click_behavior
 
-function hygrave:internal/config/register/grave_appearance/grave_model
+function hygrave:internal/config/register/items/grave_locator

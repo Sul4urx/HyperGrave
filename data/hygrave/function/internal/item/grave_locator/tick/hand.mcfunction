@@ -15,7 +15,7 @@ function hygrave:internal/item/grave_locator/get_arrow_direction
 data modify storage hygrave:common temp.grave_locator.gid set string storage hygrave:common graves[-1].data.gid
 
 ## Show to player
-execute unless score @s hygrave.item.grave_locator.actionbar_pause_ticks matches 1.. if score .grave_locator.distance hygrave.temp_var matches 1.. run title @s actionbar {\
+execute if score (items/grave_locator/show_distance) hygrave.config matches 1 unless score @s hygrave.item.grave_locator.actionbar_pause_ticks matches 1.. if score .grave_locator.distance hygrave.temp_var matches 1.. run title @s actionbar {\
   "translate": "hygrave.item.grave_locator.tick.mainhand.actionbar",\
   "fallback": "§6#%s §7|| %s §7|| %s§em",\
   "with": [\
@@ -39,7 +39,25 @@ execute unless score @s hygrave.item.grave_locator.actionbar_pause_ticks matches
   ]\
 }
 
-execute unless score @s hygrave.item.grave_locator.actionbar_pause_ticks matches 1.. unless score .grave_locator.distance hygrave.temp_var matches 1.. run title @s actionbar {\
+execute if score (items/grave_locator/show_distance) hygrave.config matches 1 unless score @s hygrave.item.grave_locator.actionbar_pause_ticks matches 1.. unless score .grave_locator.distance hygrave.temp_var matches 1.. run title @s actionbar {\
+  "translate": "hygrave.item.grave_locator.tick.mainhand.actionbar.no_distance",\
+  "fallback": "§6#%s §7|| %s",\
+  "with": [\
+    {\
+      "nbt": "temp.grave_locator.gid",\
+      "storage": "hygrave:common",\
+      "color": "gold",\
+      "interpret": true\
+    },\
+    {\
+      "nbt": "temp.grave_locator.dir_arrow",\
+      "storage": "hygrave:common",\
+      "interpret": true\
+    }\
+  ]\
+}
+
+execute unless score (items/grave_locator/show_distance) hygrave.config matches 1 unless score @s hygrave.item.grave_locator.actionbar_pause_ticks matches 1.. run title @s actionbar {\
   "translate": "hygrave.item.grave_locator.tick.mainhand.actionbar.no_distance",\
   "fallback": "§6#%s §7|| %s",\
   "with": [\
