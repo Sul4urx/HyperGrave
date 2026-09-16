@@ -1,5 +1,5 @@
 ## Reset advancement
-advancement revoke @s only hygrave:grave_compass/tick/offhand
+advancement revoke @s only hygrave:grave_locator/tick/offhand
 
 ## Prevent locators from working if the player has one of each in each of their hands
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{\
