@@ -100,6 +100,7 @@ scoreboard players enable @a hygrave.remote_loot_grave
 
 ##> Locate Grave
 execute as @a[scores={hygrave.locate=1000..}] at @s run function hygrave:internal/item/grave_locator/relocate/from_trigger
+execute as @a[scores={hygrave.locate=1..128}] at @s run function hygrave:internal/item/grave_locator/show_grave_list
 scoreboard players set @a hygrave.locate 0
 scoreboard players enable @a hygrave.locate
 
