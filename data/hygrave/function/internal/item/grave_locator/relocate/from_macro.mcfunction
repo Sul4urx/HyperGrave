@@ -50,6 +50,7 @@ $function hygrave:internal/database/graves/lookup {gid: $(gid)}
 execute store result score .grave_locator.grave.owner.pid hygrave.temp_var run data get storage hygrave:common graves[-1].data.owner.pid
 execute store result score .grave_locator.grave.is_destroyed hygrave.temp_var run data get storage hygrave:common graves[-1].data.status.destroyed
 
+## Check if player can locate grave
 $execute if score .grave_locator.grave.is_destroyed hygrave.temp_var matches 0 if score .grave_locator.grave.owner.pid hygrave.temp_var = @s hygrave.pid unless score (items/grave_locator/locatable_grave_types/ao) hygrave.config matches 1 run return run function hygrave:internal/item/grave_locator/warn {text: {\
 \
   "translate": "hygrave.locate.not_allowed.ao",\

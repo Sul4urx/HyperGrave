@@ -1,3 +1,12 @@
+## Check if the player is still allowed to locate the grave
+execute store result score .grave_locator.grave.owner.pid hygrave.temp_var run data get storage hygrave:common graves[-1].data.owner.pid
+execute store result score .grave_locator.grave.is_destroyed hygrave.temp_var run data get storage hygrave:common graves[-1].data.status.destroyed
+
+execute if score .grave_locator.grave.is_destroyed hygrave.temp_var matches 0 if score .grave_locator.grave.owner.pid hygrave.temp_var = @s hygrave.pid unless score (items/grave_locator/locatable_grave_types/ao) hygrave.config matches 1 run return run function hygrave:internal/item/grave_locator/break
+execute unless score .grave_locator.grave.is_destroyed hygrave.temp_var matches 0 if score .grave_locator.grave.owner.pid hygrave.temp_var = @s hygrave.pid unless score (items/grave_locator/locatable_grave_types/bo) hygrave.config matches 1 run return run function hygrave:internal/item/grave_locator/break
+execute if score .grave_locator.grave.is_destroyed hygrave.temp_var matches 0 unless score .grave_locator.grave.owner.pid hygrave.temp_var = @s hygrave.pid unless score (items/grave_locator/locatable_grave_types/an) hygrave.config matches 1 run return run function hygrave:internal/item/grave_locator/break
+execute unless score .grave_locator.grave.is_destroyed hygrave.temp_var matches 0 unless score .grave_locator.grave.owner.pid hygrave.temp_var = @s hygrave.pid unless score (items/grave_locator/locatable_grave_types/bn) hygrave.config matches 1 run return run function hygrave:internal/item/grave_locator/break
+
 ## Make sure the player and the grave are in the same dimension
 data modify storage hygrave:common temp.grave_locator.dimension set from entity @s Dimension
 execute store success score .grave_locator.not_same_dimension hygrave.temp_var run data modify storage hygrave:common temp.grave_locator.dimension set from storage hygrave:common graves[-1].data.dimension.id
