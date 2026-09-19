@@ -28,10 +28,10 @@ execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{\
 
 ## If there are no active graves,
 ## Tell the player and return
-execute unless data storage hygrave:common graves[] run return run title @s actionbar {\
+execute unless data storage hygrave:common graves[] run return run function hygrave:internal/item/grave_locator/warn {text: {\
   "translate": "hygrave.grave_locator.show_grave_list.fail.grave_none_exist",\
   "fallback": "§cNo graves have been generated yet."\
-}
+}}
 
 ## If the admin disabled showing grave lists, tell the player and return
 execute \
@@ -39,10 +39,10 @@ execute \
   if score (items/grave_locator/locatable_grave_types/bo) hygrave.config matches 0 \
   if score (items/grave_locator/locatable_grave_types/an) hygrave.config matches 0 \
   if score (items/grave_locator/locatable_grave_types/bn) hygrave.config matches 0 \
-run return run title @s actionbar {\
+run return run function hygrave:internal/item/grave_locator/warn {text: {\
   "translate": "hygrave.grave_locator.grave_locator.grave_list_display.fail.not_allowed_to_use",\
   "fallback": "§cYou're not allowed to use grave locators."\
-}
+}}
 
 ## Partition GIDs into 4 types: AO, BO, AN, BN
 ## And also store their text components

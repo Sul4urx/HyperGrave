@@ -40,6 +40,6 @@ execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{\
 }}
 
 ## Show a convenient list allowing the player to quickly locate a grave
-scoreboard players set @s hygrave.locate 1
-scoreboard players set @s hygrave.item.grave_locator.use_cooldown 120
-playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 1
+execute store result score .grave_locator.show_grave_list.function_result hygrave.temp_var run function hygrave:internal/item/grave_locator/show_grave_list
+execute unless score .grave_locator.show_grave_list.function_result hygrave.temp_var matches 0 run scoreboard players set @s hygrave.item.grave_locator.use_cooldown 120
+execute unless score .grave_locator.show_grave_list.function_result hygrave.temp_var matches 0 run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 1
