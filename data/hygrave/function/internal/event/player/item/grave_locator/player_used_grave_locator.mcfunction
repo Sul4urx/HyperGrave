@@ -42,3 +42,4 @@ execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{\
 ## Show a convenient list allowing the player to quickly locate a grave
 scoreboard players set @s hygrave.locate 1
 scoreboard players set @s hygrave.item.grave_locator.use_cooldown 120
+playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 1

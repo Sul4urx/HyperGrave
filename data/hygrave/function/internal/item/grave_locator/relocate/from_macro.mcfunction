@@ -87,3 +87,5 @@ $execute if items entity @s weapon.offhand *[minecraft:custom_data~{\
     "grave_locator": {}\
   }\
 }] run function hygrave:internal/item/grave_locator/relocate/from_macro/offhand {gid: $(gid)}
+
+playsound minecraft:ui.button.click player @s ~ ~ ~ 1 1

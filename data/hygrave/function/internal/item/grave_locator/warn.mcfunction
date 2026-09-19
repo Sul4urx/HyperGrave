@@ -1,5 +1,6 @@
 ## Show the warning message, while making sure the locator's actionbar
 ## doesn't immediately replace this message so that the player can see the message
+## and also play a sound
 
-$title @s actionbar $(text)
-scoreboard players set @s hygrave.item.grave_locator.actionbar_pause_ticks 60
+$function hygrave:internal/item/grave_locator/warn_no_sound {text: $(text)}
+playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 0
