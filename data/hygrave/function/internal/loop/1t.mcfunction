@@ -57,6 +57,9 @@ execute as @a unless score @s hygrave.item.grave_locator.ticks_using_item > @s h
 scoreboard players set @a[scores={hygrave.item.grave_locator.ticks_using_item=..0}] hygrave.previous.item.grave_locator.ticks_using_item 0
 execute as @a[scores={hygrave.item.grave_locator.ticks_using_item=1..}] run scoreboard players operation @s hygrave.previous.item.grave_locator.ticks_using_item = @s hygrave.item.grave_locator.ticks_using_item
 
+## Manage use cooldowns
+scoreboard players remove @a[scores={hygrave.item.grave_locator.use_cooldown=1..}] hygrave.item.grave_locator.use_cooldown 1
+
 ## Player died
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died
 scoreboard players set @a hygrave.death_count 0

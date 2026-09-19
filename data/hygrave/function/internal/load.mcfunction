@@ -67,7 +67,10 @@ scoreboard objectives add hygrave.item.grave_locator.ticks_using_item dummy
 
 ##>> Previous value of hygrave.item.grave_locator.ticks_using_item
 ##>> Used to detect if the player isn't using the item anymore
-scoreboard objectives add hygrave.previous.item.grave_locator.ticks_using_item dummy
+scoreboard objectives add hygrave.previous.item.grave_locator.ticks_using_item dummy\
+
+##>> Grave locator use cooldown
+scoreboard objectives add hygrave.item.grave_locator.use_cooldown dummy
 
 
 ## Trigger scores
