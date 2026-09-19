@@ -1,6 +1,7 @@
 give @s minecraft:music_disc_blocks[\
   !minecraft:jukebox_playable,\
   minecraft:enchantment_glint_override=true,\
+  minecraft:item_name="Grave Locator",\
   minecraft:custom_model_data={\
     strings: ["hygrave.item.grave_locator", "tracking=false"]\
   },\
