@@ -14,3 +14,11 @@ item modify entity @s weapon.mainhand {\
     }\
   }\
 }
+item modify entity @s weapon.mainhand {\
+  function: "minecraft:set_custom_model_data",\
+  strings: {\
+    mode: "replace_section",\
+    offset: 1,\
+    values: ["tracking=false"]\
+  }\
+}
