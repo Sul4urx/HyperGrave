@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": "minecraft:redstone",
+    "#": "minecraft:copper_ingot" 
+  },
+  "pattern": [
+    " # ",
+    "#R#",
+    " # "
+  ],
+  "result": {
+    "id": "minecraft:music_disc_blocks",
+    "components": {
+      "!minecraft:jukebox_playable": {},
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:custom_model_data": {
+        "strings": ["hygrave.item.grave_locator", "tracking=false"]
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 8916100448256,
+        "animation": "none",
+        "has_consume_particles": false,
+        "sound": {"sound_id": ""}
+      },
+      "minecraft:custom_data": {
+        "hygrave:common": {
+          "grave_locator": {
+            "tracking": false,
+            "target_grave": {}
+          }
+        }
+      }
+    }
+  }
+}
