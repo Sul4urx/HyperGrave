@@ -30,4 +30,4 @@ execute unless score (graves/xp_distribution/grave_generation_fail/total) hygrav
 }
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/xp_distribution
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/xp_distribution"}

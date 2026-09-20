@@ -1,0 +1,1 @@
+$function hygrave:internal/config/open_page_with_sound {page: "$(page)", sound: "minecraft:ui.button.click"}

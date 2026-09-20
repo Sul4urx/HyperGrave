@@ -15,4 +15,4 @@ function hygrave:internal/config/change/requirements/grave_looting_requirements/
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/requirements/grave_looting_requirements
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "requirements/grave_looting_requirements"}

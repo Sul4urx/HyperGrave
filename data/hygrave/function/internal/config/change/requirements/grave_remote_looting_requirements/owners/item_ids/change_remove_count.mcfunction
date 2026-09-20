@@ -24,4 +24,4 @@ execute store result score (requirements/grave_remote_looting_requirements/owner
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/requirements/grave_remote_looting_requirements
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "requirements/grave_remote_looting_requirements"}

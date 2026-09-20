@@ -31,7 +31,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/grave_interaction/icd_properties"\
+      "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_interaction/icd_properties'}"\
     }\
   }\
 ]
@@ -60,7 +60,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/grave_interaction/click_behavior"\
+      "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_interaction/click_behavior'}"\
     }\
   }\
 ]
@@ -84,7 +84,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/main"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'main'}"\
         }\
       },\
       {\
@@ -98,7 +98,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_interaction"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_interaction'}"\
         }\
       }\
     ]\

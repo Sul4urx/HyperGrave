@@ -39,7 +39,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/requirements"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'requirements'}"\
         }\
       },\
       {\
@@ -54,7 +54,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/general"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'general'}"\
         }\
       },\
       {\
@@ -69,7 +69,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'graves'}"\
         }\
       }\
     ]\
@@ -93,7 +93,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/dropped_contents"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'dropped_contents'}"\
         }\
       },\
       {\
@@ -108,7 +108,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_interaction"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_interaction'}"\
         }\
       }\
     ]\
@@ -132,7 +132,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_appearance"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance'}"\
         }\
       },\
       {\
@@ -147,7 +147,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/items"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'items'}"\
         }\
       }\
     ]\

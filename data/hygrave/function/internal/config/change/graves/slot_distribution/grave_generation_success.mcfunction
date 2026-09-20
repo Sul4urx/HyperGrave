@@ -26,4 +26,4 @@ execute if data storage hygrave:common temp.config{value:{}} if score .is_valid 
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/slot_distribution
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/slot_distribution"}

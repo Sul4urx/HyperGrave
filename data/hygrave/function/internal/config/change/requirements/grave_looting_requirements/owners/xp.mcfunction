@@ -24,4 +24,4 @@ execute store result score (requirements/grave_looting_requirements/owners/xp) h
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/requirements/grave_looting_requirements
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "requirements/grave_looting_requirements"}

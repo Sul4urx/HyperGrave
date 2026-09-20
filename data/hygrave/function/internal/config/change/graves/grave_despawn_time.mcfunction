@@ -24,4 +24,4 @@ execute store result score (graves/despawn_time) hygrave.config run data get sto
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves"}

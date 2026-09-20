@@ -5,11 +5,8 @@
 scoreboard players add (graves/show_grave_info/an/xp/before_death) hygrave.config 1
 execute if score (graves/show_grave_info/an/xp/before_death) hygrave.config matches 2.. run scoreboard players set (graves/show_grave_info/an/xp/before_death) hygrave.config 0
 
-## Play sound
-playsound minecraft:ui.button.click
-
 ## Update configs
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/show_grave_info
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/show_grave_info"}

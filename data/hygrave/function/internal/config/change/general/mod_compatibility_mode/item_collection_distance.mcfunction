@@ -31,4 +31,4 @@ execute store result score (general/mod_compatibility_mode/item_collection_dista
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/general
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "general"}

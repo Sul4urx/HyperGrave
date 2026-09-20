@@ -36,4 +36,4 @@ $title @s actionbar {\
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "grave_appearance/text_display_properties/text"}

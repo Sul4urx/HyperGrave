@@ -18,4 +18,4 @@ execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run data modi
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/requirements/grave_generation_requirements
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "requirements/grave_generation_requirements"}

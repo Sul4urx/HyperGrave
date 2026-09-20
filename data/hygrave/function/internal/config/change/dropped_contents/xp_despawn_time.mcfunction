@@ -24,4 +24,4 @@ execute store result score (dropped_contents/xp_despawn_time) hygrave.config run
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/dropped_contents
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "dropped_contents"}

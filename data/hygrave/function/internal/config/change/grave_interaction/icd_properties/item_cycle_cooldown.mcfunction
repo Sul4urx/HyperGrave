@@ -27,4 +27,4 @@ execute store result score (grave_interaction/icd_properties/item_cycle_cooldown
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/grave_interaction/icd_properties
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "grave_interaction/icd_properties"}

@@ -173,7 +173,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/items"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'items'}"\
         }\
       },\
       {\
@@ -187,7 +187,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/items/grave_locator"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'items/grave_locator'}"\
         }\
       }\
     ]\
