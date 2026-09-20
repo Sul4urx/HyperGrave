@@ -25,6 +25,11 @@ run return run title @s actionbar {\
   "fallback": "§cInvalid value."\
 }
 
+## If GID is in 10000..19999 schedule to play sound
+scoreboard players set .show_grave_info.play_click_sound hygrave.temp_var 0
+execute if score @s hygrave.show_grave_info matches 10000..19999 run scoreboard players set .show_grave_info.play_click_sound hygrave.temp_var 1
+execute if score @s hygrave.show_grave_info matches 10000..19999 run scoreboard players remove @s hygrave.show_grave_info 10000
+
 ## If GID is from -128 to -1, show GIDth grave
 execute if score @s hygrave.show_grave_info matches -128..-1 run scoreboard players operation .gid hygrave.temp_var = (first_gid) hygrave.var
 execute if score @s hygrave.show_grave_info matches -128..-1 run scoreboard players operation .gid hygrave.temp_var -= @s hygrave.show_grave_info

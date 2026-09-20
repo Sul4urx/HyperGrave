@@ -22,8 +22,10 @@ execute store result score .loop_count hygrave.temp_var if data storage hygrave:
 execute store result score .return_value hygrave.temp_var run function hygrave:internal/grave/show_info/show_non-admin/view_next/loop with storage hygrave:common temp.mcargs.'grave/show_info/show_non-admin/view_next/loop'
 
 scoreboard players operation @s hygrave.show_grave_info = .return_value hygrave.temp_var
+scoreboard players add @s hygrave.show_grave_info 10000
 
 function hygrave:internal/grave/show_info/check_conditions
+
 
 scoreboard players set @s hygrave.show_grave_info 0
 

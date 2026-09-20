@@ -20,6 +20,6 @@ execute store result score .loop_count hygrave.temp_var if data storage hygrave:
 ## until the grave with that GID can be shown to player
 execute store result score .return_value hygrave.temp_var run function hygrave:internal/grave/show_info/show_admin/view_next/loop with storage hygrave:common temp.mcargs.'grave/show_info/show_admin/view_next/loop'
 
-execute store result storage hygrave:common temp.mcargs.'grave/admin/show_grave_info'.gid int 1 run scoreboard players get .return_value hygrave.temp_var
+execute store result storage hygrave:common temp.mcargs.'grave/show_info/show_admin/with_click_sound'.gid int 1 run scoreboard players get .return_value hygrave.temp_var
 
-function hygrave:run/grave/admin/show_grave_info with storage hygrave:common temp.mcargs.'grave/admin/show_grave_info'
+function hygrave:internal/grave/show_info/show_admin/with_click_sound with storage hygrave:common temp.mcargs.'grave/show_info/show_admin/with_click_sound'

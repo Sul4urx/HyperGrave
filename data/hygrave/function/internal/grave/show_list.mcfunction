@@ -111,12 +111,15 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/trigger hygrave.show_grave_list"\
+          "command": "/trigger hygrave.show_grave_list set 10001"\
         }\
       }\
     ]\
   }\
 ]
+
+##> Play sound
+execute if score @s hygrave.show_grave_list matches 10000.. run playsound minecraft:ui.button.click ui @s ~ ~ ~ 1 1
 
 ##>
 tellraw @s ""

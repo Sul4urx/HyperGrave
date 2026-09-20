@@ -73,3 +73,6 @@ $function hygrave:internal/grave/show_info/fields/show_menu/active {gid: $(gid)}
 
 ##
 tellraw @s ""
+
+## Play sound
+execute if score .show_grave_info.play_click_sound hygrave.temp_var matches 1.. run playsound minecraft:ui.button.click ui @s ~ ~ ~ 1 1

@@ -115,7 +115,7 @@ tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.help"\
+        "command": "/trigger hygrave.help set 10001"\
       }\
     },\
     {\
@@ -130,7 +130,7 @@ tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info"\
+        "command": "/trigger hygrave.show_grave_info set 10001"\
       }\
     },\
     {\

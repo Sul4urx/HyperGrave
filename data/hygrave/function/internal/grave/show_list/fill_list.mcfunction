@@ -18,7 +18,7 @@ $execute if score @s hygrave.pid = .show_grave_list.owner_pid hygrave.temp_var i
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/trigger hygrave.show_grave_info set $(gid)"\
+      "command": "/trigger hygrave.show_grave_info set 1$(gid)"\
     }\
   }}
 
@@ -35,7 +35,7 @@ $execute if score @s hygrave.pid = .show_grave_list.owner_pid hygrave.temp_var i
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/trigger hygrave.show_grave_info set $(gid)"\
+      "command": "/trigger hygrave.show_grave_info set 1$(gid)"\
     }\
   }}
 
@@ -52,7 +52,7 @@ $execute unless score @s hygrave.pid = .show_grave_list.owner_pid hygrave.temp_v
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/trigger hygrave.show_grave_info set $(gid)"\
+      "command": "/trigger hygrave.show_grave_info set 1$(gid)"\
     }\
   }}
 
@@ -69,7 +69,7 @@ $execute unless score @s hygrave.pid = .show_grave_list.owner_pid hygrave.temp_v
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/trigger hygrave.show_grave_info set $(gid)"\
+      "command": "/trigger hygrave.show_grave_info set 1$(gid)"\
     }\
   }}
 
