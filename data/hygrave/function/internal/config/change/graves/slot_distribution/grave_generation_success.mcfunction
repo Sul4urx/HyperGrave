@@ -4,7 +4,7 @@
 $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not a compound
-execute unless data storage hygrave:common temp.config{value:{}} run function hygrave:internal/helper/message/error {text: {\
+execute unless data storage hygrave:common temp.config{value:{}} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.slot_distribution.grave_generation_success.fail",\
   "fallback": "§cThe value must be a compound."\
 }}
@@ -26,4 +26,5 @@ execute if data storage hygrave:common temp.config{value:{}} if score .is_valid 
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/slot_distribution"}
+execute if score .is_valid hygrave.temp_var matches 1 run function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/slot_distribution"}
+execute unless score .is_valid hygrave.temp_var matches 1 run function hygrave:internal/config/open_page/graves/slot_distribution

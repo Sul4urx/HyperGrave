@@ -18,4 +18,5 @@ execute if score .ench_id_list_is_valid hygrave.temp_var matches 1 run data modi
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/item_distribution"}
+execute if score .ench_id_list_is_valid hygrave.temp_var matches 1 run function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/item_distribution"}
+execute unless score .ench_id_list_is_valid hygrave.temp_var matches 1 run function hygrave:internal/config/open_page/graves/item_distribution

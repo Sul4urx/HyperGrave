@@ -24,10 +24,10 @@ execute store result score (graves/xp_distribution/grave_generation_fail/remove)
 function hygrave:internal/config/register
 
 ## Warning if total weight is 0
-execute unless score (graves/xp_distribution/grave_generation_fail/total) hygrave.config matches 1.. run function hygrave:internal/helper/message/error {text: {\
+execute unless score (graves/xp_distribution/grave_generation_fail/total) hygrave.config matches 1.. run title @s actionbar {\
   "translate": "hygrave.change_config_message.graves.xp_distribution.grave_generation_fail.total.warning.is_0",\
   "fallback": "§6Be careful, the total weight must not be 0!"\
-}}
+}
 
 ## Refresh page
 function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/xp_distribution"}
