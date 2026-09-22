@@ -2,10 +2,10 @@
 #@>   function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
 
 ## If Grave doesn't exist, throw error
-$execute unless score (is_active,gid=$(gid)) hygrave.var matches 1 run return run title @s actionbar {\
+$execute unless score (is_active,gid=$(gid)) hygrave.var matches 1 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.remote_unpack_grave.fail.grave_destroyed",\
   "fallback": "§cGrave #$(gid) either does not exist or has been destroyed.",\
-}
+}}
 
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
@@ -32,15 +32,15 @@ function hygrave:internal/grave/tag_owner with storage hygrave:common graves[-1]
 execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_requirements/owners
 execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/remote_unpack/check_requirements/non_owners
 
-execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run title @s actionbar {\
+execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave.remote_unpack.fail.does_not_meet_requirements.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave."\
-}
-execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run title @s actionbar {\
+}}
+execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave.remote_unpack.fail.does_not_meet_requirements.items",\
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave."\
-}
-execute unless score .check_requirements.xp hygrave.temp_var matches 1 run return run title @s actionbar {\
+}}
+execute unless score .check_requirements.xp hygrave.temp_var matches 1 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave.remote_unpack.fail.does_not_meet_requirements.xp",\
   "fallback": "§cYou do not have the nessecary requirements to remotely loot this grave.",\
   "with": [\
@@ -51,7 +51,7 @@ execute unless score .check_requirements.xp hygrave.temp_var matches 1 run retur
       "color": "red"\
     }\
   ]\
-}
+}}
 
 ## Give items
 function hygrave:internal/grave/remote_unpack/give_items/main

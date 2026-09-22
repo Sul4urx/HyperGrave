@@ -3,10 +3,10 @@
 
 ## If there are no active graves,
 ## Tell the player and return
-execute unless data storage hygrave:common graves[] run return run title @s actionbar {\
+execute unless data storage hygrave:common graves[] run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_list_display.fail.grave_none_exist",\
   "fallback": "§cNo graves have been generated yet."\
-}
+}}
 
 ## If the admin disabled showing grave lists, tell the player and return
 execute \
@@ -14,10 +14,10 @@ execute \
   if score (graves/show_grave_info/bo/grave_list_display) hygrave.config matches 0 \
   if score (graves/show_grave_info/an/grave_list_display) hygrave.config matches 0 \
   if score (graves/show_grave_info/bn/grave_list_display) hygrave.config matches 0 \
-run return run title @s actionbar {\
+run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_list_display.fail.not_allowed_to_use",\
   "fallback": "§cYou're not allowed to use the grave list display feature."\
-}
+}}
 
 ## Partition GIDs into 4 types: AO, BO, AN, BN
 ## And also store their text components

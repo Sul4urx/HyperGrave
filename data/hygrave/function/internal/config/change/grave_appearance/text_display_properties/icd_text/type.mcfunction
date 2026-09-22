@@ -12,10 +12,10 @@ $execute \
   unless data storage hygrave:common temp.config{value: "creation_time"} \
   unless data storage hygrave:common temp.config{value: "after_death_xp"} \
   unless data storage hygrave:common temp.config{value: "item_count"} \
-run return run title @s actionbar {\
+run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx).type.fail",\
   "fallback": "§cInvalid type."\
-}
+}}
 
 $data modify storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx).type set from storage hygrave:common temp.config.value
 

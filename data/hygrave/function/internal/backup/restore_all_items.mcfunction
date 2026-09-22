@@ -7,7 +7,7 @@
 $function hygrave:internal/database/backups/lookup {bid: $(bid)}
 
 ## If backup doesn't exist, throw error
-$execute unless data storage hygrave:common backups[{data:{bid:$(bid)}}] run return run title @s actionbar {\
+$execute unless data storage hygrave:common backups[{data:{bid:$(bid)}}] run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.backup.restore_all_items.fail.bid_no_exist",\
   "fallback": "§cBackup #%s§c does not exist.",\
   "with": [\
@@ -16,7 +16,7 @@ $execute unless data storage hygrave:common backups[{data:{bid:$(bid)}}] run ret
         "color": "red"\
     }\
   ]\
-}
+}}
 
 ## Store the backup in a temporary location
 data modify storage hygrave:common temp.backup set from storage hygrave:common backups[-1]

@@ -6,10 +6,10 @@ $data modify storage hygrave:common temp.config.value set value $(value)
 ## Error if list is not valid
 $function hygrave:internal/config/change/requirements/grave_looting_requirements/non_owners/item_ids/check_item_ids {item_ids:$(value)}
 
-execute unless score .item_id_list_is_valid hygrave.temp_var matches 1 run title @s actionbar {\
+execute unless score .item_id_list_is_valid hygrave.temp_var matches 1 run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.grave_looting_requirements.non_owners.item_ids.change_list.fail.not_valid",\
   "fallback": "§cIncorrect format: At least one of the item IDs is invalid."\
-}
+}}
 
 ## If success, change value
 execute if score .item_id_list_is_valid hygrave.temp_var matches 1 run data modify storage hygrave:common configs.value.requirements.grave_looting_requirements.non_owners.item_ids set from storage hygrave:common temp.config.value

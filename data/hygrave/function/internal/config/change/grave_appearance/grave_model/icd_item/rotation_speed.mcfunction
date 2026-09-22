@@ -15,10 +15,10 @@ execute unless predicate {\
     min: -179,\
     max: 179\
   }\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.icd_item.rotation_speed.fail",\
   "fallback": "§cThe value must be an integer between -180 and 180 (non-inclusive)."\
-}
+}}
 
 ## If success, change value
 execute store result score (grave_appearance/grave_model/icd_item/rotation_speed) hygrave.config run data get storage hygrave:common temp.config.value

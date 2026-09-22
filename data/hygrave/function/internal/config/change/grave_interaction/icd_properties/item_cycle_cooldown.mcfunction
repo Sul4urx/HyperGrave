@@ -15,10 +15,10 @@ execute unless predicate {\
     min: 0,\
     max: 160\
   }\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.icd.item_cycle_cooldown.fail",\
   "fallback": "§cThe value must be an integer between 0 and 160 (inclusive)."\
-}
+}}
 
 ## If success, change value
 execute store result score (grave_interaction/icd_properties/item_cycle_cooldown) hygrave.config run data get storage hygrave:common temp.config.value

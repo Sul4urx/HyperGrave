@@ -10,20 +10,20 @@ execute store result score .grave_count hygrave.temp_var if data storage hygrave
 
 
 ## Check if any graves have been generated yet
-execute unless score .grave_count hygrave.temp_var matches 1.. run return run title @s actionbar {\
+execute unless score .grave_count hygrave.temp_var matches 1.. run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.grave_none_exist",\
   "fallback": "§cNo graves have been generated yet."\
-}
+}}
 
 ## Check is value is valid
 execute \
   unless score @s hygrave.show_grave_info matches 1..128 \
   unless score @s hygrave.show_grave_info matches -128..-1 \
   unless score @s hygrave.show_grave_info matches 1000.. \
-run return run title @s actionbar {\
+run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.invalid_value",\
   "fallback": "§cInvalid value."\
-}
+}}
 
 ## If GID is in 10000..19999 schedule to play sound
 scoreboard players set .show_grave_info.play_click_sound hygrave.temp_var 0
@@ -35,7 +35,7 @@ execute if score @s hygrave.show_grave_info matches -128..-1 run scoreboard play
 execute if score @s hygrave.show_grave_info matches -128..-1 run scoreboard players operation .gid hygrave.temp_var -= @s hygrave.show_grave_info
 execute if score @s hygrave.show_grave_info matches -128..-1 run scoreboard players remove .gid hygrave.temp_var 1
 
-execute if score @s hygrave.show_grave_info matches -128..-1 if score .gid hygrave.temp_var > (last_gid) hygrave.var run return run title @s actionbar {\
+execute if score @s hygrave.show_grave_info matches -128..-1 if score .gid hygrave.temp_var > (last_gid) hygrave.var run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.value_out_of_bound",\
   "fallback": "§cThe value is out of bounds; there are only %s§c graves.",\
   "with": [\
@@ -44,7 +44,7 @@ execute if score @s hygrave.show_grave_info matches -128..-1 if score .gid hygra
        "color": "red"\
     }\
   ]\
-}
+}}
 
 execute if score @s hygrave.show_grave_info matches -128..-1 run scoreboard players operation @s hygrave.show_grave_info = .gid hygrave.temp_var
 
@@ -53,7 +53,7 @@ execute if score @s hygrave.show_grave_info matches 1..128 run scoreboard player
 execute if score @s hygrave.show_grave_info matches 1..128 run scoreboard players operation .gid hygrave.temp_var -= @s hygrave.show_grave_info
 execute if score @s hygrave.show_grave_info matches 1..128 run scoreboard players add .gid hygrave.temp_var 1
 
-execute if score @s hygrave.show_grave_info matches 1..128 if score .gid hygrave.temp_var < (first_gid) hygrave.var run return run title @s actionbar {\
+execute if score @s hygrave.show_grave_info matches 1..128 if score .gid hygrave.temp_var < (first_gid) hygrave.var run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.value_out_of_bound",\
   "fallback": "§cThe value is out of bounds; there are only %s§c graves.",\
   "with": [\
@@ -62,7 +62,7 @@ execute if score @s hygrave.show_grave_info matches 1..128 if score .gid hygrave
        "color": "red"\
     }\
   ]\
-}
+}}
 
 execute if score @s hygrave.show_grave_info matches 1..128 run scoreboard players operation @s hygrave.show_grave_info = .gid hygrave.temp_var
 
@@ -75,7 +75,7 @@ execute store result storage hygrave:common temp.mcargs.'grave/show_info/show_no
 execute store result score .grave_exists hygrave.temp_var run function hygrave:internal/grave/show_info/check_if_grave_exists with storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_exists'
 
 ##> If not, tell error to player
-execute if score .grave_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
+execute if score .grave_exists hygrave.temp_var matches 0 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.gid_no_exist",\
   "fallback": "§cGrave #%s§c does not exist.",\
   "with": [\
@@ -87,7 +87,7 @@ execute if score .grave_exists hygrave.temp_var matches 0 run return run title @
       "color": "red"\
     }\
   ]\
-}
+}}
 
 
 ## Bring the nessecary elements of databases to last index so that we can work with thems

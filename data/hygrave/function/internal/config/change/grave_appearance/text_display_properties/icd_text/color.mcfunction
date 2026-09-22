@@ -20,10 +20,10 @@ $execute \
   unless data storage hygrave:common temp.config.value{color: "light_purple"} \
   unless data storage hygrave:common temp.config.value{color: "yellow"} \
   unless data storage hygrave:common temp.config.value{color: "white"} \
-run return run title @s actionbar {\
+run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx).color.fail",\
   "fallback": "§cInvalid color."\
-}
+}}
 
 $data modify storage hygrave:common configs.value.grave_appearance.text_display_properties.icd_text.line_$(line_idx).text_$(text_idx).text.color set from storage hygrave:common temp.config.value.color
 

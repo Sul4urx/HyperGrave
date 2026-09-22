@@ -12,10 +12,10 @@ execute unless predicate {\
     path: "temp.config.value"\
   },\
   range: {min: 0, max: 25}\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.graves.xp_distribution.grave_generation_success.keep.fail",\
   "fallback": "§cThe value must be an integer between 0 and 25 (inclusive)."\
-}
+}}
 
 ## If success, change value
 execute store result score (graves/xp_distribution/grave_generation_success/keep) hygrave.config run data get storage hygrave:common temp.config.value
