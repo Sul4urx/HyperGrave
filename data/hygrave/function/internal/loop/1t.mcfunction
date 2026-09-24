@@ -48,14 +48,19 @@ function hygrave:internal/config/register
 ## Add a player to player database, if they don't exist there
 execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/database/players/append
 
-## Decrease 1 from tick counts
+## Manage Tick counts and timers
 scoreboard players remove @a[scores={hygrave.item.grave_locator.actionbar_pause_ticks=1..}] hygrave.item.grave_locator.actionbar_pause_ticks 1
+scoreboard players add @a[scores={hygrave.item.grave_locator.ticks_not_holding_item=..12}] hygrave.item.grave_locator.ticks_not_holding_item 1
 
 ## Check if the player stopped using grave locator
 ## and also update tick count for players using grave locators
 execute as @a unless score @s hygrave.item.grave_locator.ticks_using_item > @s hygrave.previous.item.grave_locator.ticks_using_item run scoreboard players set @s hygrave.item.grave_locator.ticks_using_item 0
 scoreboard players set @a[scores={hygrave.item.grave_locator.ticks_using_item=..0}] hygrave.previous.item.grave_locator.ticks_using_item 0
 execute as @a[scores={hygrave.item.grave_locator.ticks_using_item=1..}] run scoreboard players operation @s hygrave.previous.item.grave_locator.ticks_using_item = @s hygrave.item.grave_locator.ticks_using_item
+
+## Check if the player stopped holding grave locators
+## and if so, clear actionbar in the first tick
+title @a[scores={hygrave.item.grave_locator.ticks_not_holding_item=2}] actionbar ""
 
 ## Manage use cooldowns
 scoreboard players remove @a[scores={hygrave.item.grave_locator.use_cooldown=1..}] hygrave.item.grave_locator.use_cooldown 1

@@ -83,3 +83,6 @@ execute unless score (items/grave_locator/show_distance) hygrave.config matches 
     }\
   ]\
 }
+
+## Manage scores
+scoreboard players set @s hygrave.item.grave_locator.ticks_not_holding_item 0
