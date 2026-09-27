@@ -21,42 +21,42 @@
                     "when": "block=minecraft:dirt",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_top_rounded_square_shape/dirt"
+                      "model": "hygrave:grave/decoration/slightly_top_rounded_square_shape/dirt"
                     }
                   },
                   {
                     "when": "block=minecraft:stone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_top_rounded_square_shape/stone"
+                      "model": "hygrave:grave/decoration/slightly_top_rounded_square_shape/stone"
                     }
                   },
                   {
                     "when": "block=minecraft:cobblestone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_top_rounded_square_shape/cobblestone"
+                      "model": "hygrave:grave/decoration/slightly_top_rounded_square_shape/cobblestone"
                     }
                   },
                   {
                     "when": "block=minecraft:mossy_cobblestone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_top_rounded_square_shape/mossy_cobblestone"
+                      "model": "hygrave:grave/decoration/slightly_top_rounded_square_shape/mossy_cobblestone"
                     }
                   },
                   {
                     "when": "block=minecraft:stone_bricks",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_top_rounded_square_shape/stone_bricks"
+                      "model": "hygrave:grave/decoration/slightly_top_rounded_square_shape/stone_bricks"
                     }
                   },
                   {
                     "when": "block=minecraft:mossy_stone_bricks",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_top_rounded_square_shape/mossy_stone_bricks"
+                      "model": "hygrave:grave/decoration/slightly_top_rounded_square_shape/mossy_stone_bricks"
                     }
                   }
                 ]
@@ -73,42 +73,42 @@
                     "when": "block=minecraft:dirt",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/top_rounded_square_shape/dirt"
+                      "model": "hygrave:grave/decoration/top_rounded_square_shape/dirt"
                     }
                   },
                   {
                     "when": "block=minecraft:stone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/top_rounded_square_shape/stone"
+                      "model": "hygrave:grave/decoration/top_rounded_square_shape/stone"
                     }
                   },
                   {
                     "when": "block=minecraft:cobblestone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/top_rounded_square_shape/cobblestone"
+                      "model": "hygrave:grave/decoration/top_rounded_square_shape/cobblestone"
                     }
                   },
                   {
                     "when": "block=minecraft:mossy_cobblestone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/top_rounded_square_shape/mossy_cobblestone"
+                      "model": "hygrave:grave/decoration/top_rounded_square_shape/mossy_cobblestone"
                     }
                   },
                   {
                     "when": "block=minecraft:stone_bricks",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/top_rounded_square_shape/stone_bricks"
+                      "model": "hygrave:grave/decoration/top_rounded_square_shape/stone_bricks"
                     }
                   },
                   {
                     "when": "block=minecraft:mossy_stone_bricks",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/top_rounded_square_shape/mossy_stone_bricks"
+                      "model": "hygrave:grave/decoration/top_rounded_square_shape/mossy_stone_bricks"
                     }
                   }
                 ]
@@ -125,42 +125,42 @@
                     "when": "block=minecraft:dirt",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_rounded_square_shape/dirt"
+                      "model": "hygrave:grave/decoration/slightly_rounded_square_shape/dirt"
                     }
                   },
                   {
                     "when": "block=minecraft:stone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_rounded_square_shape/stone"
+                      "model": "hygrave:grave/decoration/slightly_rounded_square_shape/stone"
                     }
                   },
                   {
                     "when": "block=minecraft:cobblestone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_rounded_square_shape/cobblestone"
+                      "model": "hygrave:grave/decoration/slightly_rounded_square_shape/cobblestone"
                     }
                   },
                   {
                     "when": "block=minecraft:mossy_cobblestone",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_rounded_square_shape/mossy_cobblestone"
+                      "model": "hygrave:grave/decoration/slightly_rounded_square_shape/mossy_cobblestone"
                     }
                   },
                   {
                     "when": "block=minecraft:stone_bricks",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_rounded_square_shape/stone_bricks"
+                      "model": "hygrave:grave/decoration/slightly_rounded_square_shape/stone_bricks"
                     }
                   },
                   {
                     "when": "block=minecraft:mossy_stone_bricks",
                     "model": {
                       "type": "minecraft:model",
-                      "model": "minecraft:hygrave/grave/decoration/slightly_rounded_square_shape/mossy_stone_bricks"
+                      "model": "hygrave:grave/decoration/slightly_rounded_square_shape/mossy_stone_bricks"
                     }
                   }
                 ]
