@@ -13,11 +13,15 @@ data modify storage hygrave:common temp.item set from entity @n[tag=hygrave.temp
 data remove storage hygrave:common temp.item.Slot
 data modify entity @s Item set from storage hygrave:common temp.item
 
+scoreboard players set .keep_item hygrave.temp_var 0
+
+## Check if item is a grave locator
+## and if enabled in the configs, keep it
+execute if score (items/grave_locator/keep_after_death) hygrave.config matches 1 if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].components.minecraft:custom_data.hygrave:common.grave_locator run scoreboard players set .keep_item hygrave.temp_var 1
+
 ## Check if item should be kept
 execute store result storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].Slot
 execute store result score .slot_operation hygrave.temp_var run function hygrave:internal/helper/config/graves/slot_distribution/get_slot_operation with storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'
-
-scoreboard players set .keep_item hygrave.temp_var 0
 
 ##> See the function that returned to .slot_operation for more info on what it returned
 execute if score .slot_operation hygrave.temp_var matches 11 run scoreboard players set .keep_item hygrave.temp_var 1

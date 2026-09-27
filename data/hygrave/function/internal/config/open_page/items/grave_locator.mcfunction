@@ -13,6 +13,42 @@ tellraw @s [\
   }\
 ]
 
+##> Keep After Death
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.grave_locator.keep_after_death",\
+    "fallback": "  Keep After Death: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.grave_locator.keep_after_death",\
+        "fallback": "If true, the item is kept inside the player's inventory even after death. Overrides Graves / Item Distribution configs."\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.items.grave_locator.keep_after_death",\
+        "storage": "hygrave:common",\
+        "interpret": true\
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/toggle/items/grave_locator/keep_after_death"\
+    }\
+  }\
+]
+
 ##> Show Distance
 tellraw @s [\
   {\
