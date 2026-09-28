@@ -22,7 +22,7 @@ tellraw @s [\
       "action":"show_text",\
       "value": {\
         "translate": "hygrave.config_description.grave_locator.keep_after_death",\
-        "fallback": "If true, the item is kept inside the player's inventory even after death. Overrides Graves / Item Distribution configs."\
+        "fallback": "If true, the item is kept inside the player's inventory even after death."\
       }\
     }\
   },\
