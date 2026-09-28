@@ -9,7 +9,7 @@ execute unless score (graves/xp_distribution/grave_generation_success/total) hyg
 execute unless score (graves/xp_distribution/grave_generation_success/total) hygrave.config matches 1.. run function hygrave:internal/config/register
 
 ## Initialize variables
-execute store result score .xp.total.before_death hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.total
+execute store result score .xp.total.before_death hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.before_death.total
 
 ## Calculate take XP
 ########################################
@@ -35,14 +35,14 @@ scoreboard players operation .xt hygrave.temp_var = .v1 hygrave.temp_var
 scoreboard players operation .xt hygrave.temp_var /= .v2 hygrave.temp_var
 
 ## Apply operation 'take'
-execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.total int 1 run scoreboard players get .xt hygrave.temp_var
+execute store result entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.after_death.total int 1 run scoreboard players get .xt hygrave.temp_var
 
 ## Calculate take XP levels and points
 execute store result storage hygrave:common temp.mcargs.'helper/xp_add'.value int 1 run scoreboard players get .xt hygrave.temp_var
 function hygrave:internal/helper/xp_add with storage hygrave:common temp.mcargs.'helper/xp_add'
 
-execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.levels int 1 run xp query @s levels
-execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.points int 1 run xp query @s points
+execute store result entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.after_death.levels int 1 run xp query @s levels
+execute store result entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.after_death.points int 1 run xp query @s points
 
 xp set @s 0 levels
 xp set @s 0 points

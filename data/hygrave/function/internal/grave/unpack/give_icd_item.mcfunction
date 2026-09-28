@@ -9,7 +9,7 @@ execute if items entity @s weapon.mainhand * run return -1
 item replace entity @s weapon.mainhand from entity @n[tag=hygrave.temp.grave.icd] contents
 
 ## Remove item from grave
-data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0]
+data remove entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[0]
 
 ## Immediately switch to next item
 scoreboard players set @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown 0

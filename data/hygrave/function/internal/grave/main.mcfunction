@@ -2,7 +2,7 @@
 #@>   function hygrave:internal/loop/1t
 
 ## Store grave data in a storage for performance
-data modify storage hygrave:common temp.grave_data set from entity @s item.components.minecraft:custom_data.hygrave:common
+data modify storage hygrave:common temp.grave_data set from entity @s data.hygrave:common
 
 ## Check if the grave is marked active
 ## If not, delete the grave
@@ -51,7 +51,7 @@ execute if data storage hygrave:common temp.grave_data{icd_activated:1b} run fun
 execute unless data storage hygrave:common temp.grave_data{icd_activated:1b} run function hygrave:internal/grave/model
 
 ## Dump grave data
-data modify entity @s item.components.minecraft:custom_data.hygrave:common set from storage hygrave:common temp.grave_data
+data modify entity @s data.hygrave:common set from storage hygrave:common temp.grave_data
 
 ## If player both interacted and attacked grave, prioritize interaction
 execute as @n[type=minecraft:interaction,distance=..1,tag=hygrave.temp.grave.interaction] at @s if data entity @s interaction run data remove entity @s attack

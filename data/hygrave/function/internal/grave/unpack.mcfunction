@@ -8,11 +8,11 @@
 data remove storage hygrave:common players[].temp
 
 ##> Grave
-data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s data.hygrave:common.gid
 function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ##> Player (Owner)
-function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
+function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
 ##> Player (Interactor)
@@ -50,7 +50,7 @@ execute unless score .check_requirements.xp hygrave.temp_var matches 1 as @p[tag
 function hygrave:internal/grave/unpack/give_items/main
 
 ## Give XP
-data modify storage hygrave:common temp.mcargs.'helper/xp_add'.value set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.after_death.total
+data modify storage hygrave:common temp.mcargs.'helper/xp_add'.value set from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.after_death.total
 
 execute as @p[tag=hygrave.temp.grave.interactor] at @s run function hygrave:internal/helper/xp_add with storage hygrave:common temp.mcargs.'helper/xp_add'
 

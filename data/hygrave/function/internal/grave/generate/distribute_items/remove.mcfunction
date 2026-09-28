@@ -8,12 +8,12 @@
 # remove the item from grave so that it doesn't get taken
 
 ## Manipulate current item
-data modify storage hygrave:common temp.item set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1]
+data modify storage hygrave:common temp.item set from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1]
 data remove storage hygrave:common temp.item.Slot
 data modify entity @s Item set from storage hygrave:common temp.item
 
 ## Check if item should be removed
-execute store result storage hygrave:common temp.mcargs.'config/graves/slot_distribution/get_slot_operation'.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].Slot
+execute store result storage hygrave:common temp.mcargs.'config/graves/slot_distribution/get_slot_operation'.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1].Slot
 execute store result score .slot_operation hygrave.temp_var run function hygrave:internal/helper/config/graves/slot_distribution/get_slot_operation with storage hygrave:common temp.mcargs.'config/graves/slot_distribution/get_slot_operation'
 
 scoreboard players set .remove_item hygrave.temp_var 0
@@ -27,10 +27,10 @@ scoreboard players set .slot_operation hygrave.temp_var 0
 
 ## .remove_item = 1 ⭢ Remove item in player's inventory
 ## .remove_item = 0 ⭢ Pass the item to the next operation
-execute if score .remove_item hygrave.temp_var matches 1 run data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].components.minecraft:custom_data.hygrave:common.delete_item set value 1b
-data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items prepend from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1]
+execute if score .remove_item hygrave.temp_var matches 1 run data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1].components.minecraft:custom_data.hygrave:common.delete_item set value 1b
+data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items prepend from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1]
 
-data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1]
+data remove entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1]
 
 ## Remove 1 from iterator count
 ## If the iterator count is not 0,
@@ -40,4 +40,4 @@ scoreboard players remove .loop_count hygrave.temp_var 1
 data remove storage hygrave:common temp.item
 data remove storage hygrave:common temp.mcargs
 
-execute if score .loop_count hygrave.temp_var matches 1.. if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/distribute_items/remove with storage hygrave:common configs
+execute if score .loop_count hygrave.temp_var matches 1.. if data entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[0] run function hygrave:internal/grave/generate/distribute_items/remove with storage hygrave:common configs

@@ -8,7 +8,7 @@ execute unless score (graves/xp_distribution/grave_generation_fail/total) hygrav
 execute unless score (graves/xp_distribution/grave_generation_fail/total) hygrave.config matches 1.. run function hygrave:internal/config/register
 
 ## Initialize variables
-execute store result score .xp.total.before_death hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.total
+execute store result score .xp.total.before_death hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.before_death.total
 
 ## Calculate keep XP
 ########################################
