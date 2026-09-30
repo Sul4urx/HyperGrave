@@ -9,3 +9,6 @@ data remove storage hygrave:common temp.grave_data.items[0]
 
 ## Reset cooldown
 scoreboard players set @n[tag=hygrave.temp.grave.icd] hygrave.icd.cooldown 0
+
+## Play sound
+execute if data storage hygrave:common temp.grave_data{icd_activated:1b} run playsound minecraft:block.note_block.hat ui @a ~ ~ ~ 1 2
