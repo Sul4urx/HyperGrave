@@ -126,6 +126,43 @@ tellraw @s [\
   }\
 ]
 
+## Silent
+tellraw @s [\
+  {\
+    "translate": "hygrave.config.icd.silent",\
+    "fallback": "  Silent: ",\
+    "hover_event": {\
+      "action":"show_text",\
+      "value": {\
+        "translate": "hygrave.config_description.icd.silent",\
+        "fallback": "If false, graves will play a little sound everytime an ICD item cycle happens\n§8Default: ❌"\
+      }\
+    }\
+  },\
+  {\
+    "translate": "§7[%s§7]",\
+    "with": [\
+      {\
+        "nbt": "configs.text.grave_interaction.icd_properties.silent",\
+        "storage": "hygrave:common",\
+        "interpret": true,\
+        "color": "aqua"\
+      }\
+    ],\
+    "hover_event": {\
+      "action": "show_text",\
+      "value": {\
+        "translate": "hygrave.config_change_description.toggle",\
+        "fallback": "Click to toggle the config's value."\
+      }\
+    },\
+    "click_event": {\
+      "action": "run_command",\
+      "command": "/function hygrave:internal/config/toggle/grave_interaction/icd_properties/silent"\
+    }\
+  }\
+]
+
 ## Switch Text Display
 tellraw @s [\
   {\
