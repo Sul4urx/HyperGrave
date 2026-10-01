@@ -61,6 +61,10 @@
       "required": false
     },
     {
+      "id": "#minecraft:wooden_shelves",
+      "required": false
+    },
+    {
       "id": "#minecraft:wool_carpets",
       "required": false
     },
@@ -190,6 +194,10 @@
     },
     {
       "id": "minecraft:red_mushroom",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_shrub",
       "required": false
     },
     {
