@@ -99,15 +99,17 @@ scoreboard objectives add hygrave.info trigger
 scoreboard objectives add hygrave.help trigger
 
 ## Alpha version
-scoreboard players set (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version 1
+scoreboard players set (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version 0
 
 ## Handle upgrades and downgrades
-execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 2, patch: 0} run return run function hygrave:internal/versioning/unsupported_version_change_to_alpha
+execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 3, patch: 0} run return run function hygrave:internal/versioning/unsupported_version_change_to_alpha
 
 execute if data storage hygrave:common data.latest_schema_version unless data storage hygrave:common data{latest_schema_version:1} run return run function hygrave:internal/versioning/unsupported_unknown_version_change
 
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 0, minor: 5, patch: 0} run return run function hygrave:internal/versioning/upgrade/from_0_5_0
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 0, patch: 0} run return run function hygrave:internal/versioning/upgrade/from_2_0_0
+execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 1, patch: 0} run return run function hygrave:internal/versioning/upgrade/from_2_1_0
+execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 1, patch: 1} run return run function hygrave:internal/versioning/upgrade/from_2_1_1
 
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches 3.. run return run function hygrave:internal/versioning/unsupported_downgrade
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version matches 4.. run return run function hygrave:internal/versioning/unsupported_downgrade
@@ -119,16 +121,7 @@ execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygr
 function hygrave:internal/misc/store_data_version
 
 ## Determine command versions
-
-##> Determine which commands should be used to query day count and day time:
-##> '/time of minecraft:overworld query minecraft:day [repetition]' (1) (Minecraft 26.1+)
-##> or '/time query day[time]' (0) (Minecraft pre-26.1)
-execute store result score (command_version/time) hygrave.var run function hygrave:internal/versioning/determine_command/time/is_post_26_1
-
-##> Determine which commands should be used to change game rules:
-##> '/gamerule minecraft:keep_inventory' (1) (Minecraft 1.21.11+)
-##> or '/gamerule keepInventory' (0) (Minecraft pre-1.21.11)
-execute store result score (command_version/gamerule) hygrave.var run function hygrave:internal/versioning/determine_command/gamerule/is_post_25_4
+function hygrave:internal/misc/determine_commands
 
 ## Run loop functions
 function hygrave:internal/loop/1s
