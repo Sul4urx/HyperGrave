@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   advancement hygrave:grave_locator/used
+
 ## Reset advancement
 advancement revoke @s only hygrave:grave_locator/used
 

@@ -1,3 +1,8 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/tick/mainhand
+#@>   function hygrave:internal/item/grave_locator/tick/offhand
+
+
 ## Check if the player is still allowed to locate the grave
 execute store result score .grave_locator.grave.owner.pid hygrave.temp_var run data get storage hygrave:common graves[-1].data.owner.pid
 execute store result score .grave_locator.grave.is_destroyed hygrave.temp_var run data get storage hygrave:common graves[-1].data.status.destroyed

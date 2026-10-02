@@ -1,3 +1,7 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/relocate/from_macro
+
+
 item modify entity @s weapon.mainhand {\
   function: "minecraft:set_item",\
   item: "minecraft:music_disc_far"\

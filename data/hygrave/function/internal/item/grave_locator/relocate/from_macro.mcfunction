@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/relocate/from_trigger
+
 ## Don't allow grave locator in both hands
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{\
   "hygrave:common": {\

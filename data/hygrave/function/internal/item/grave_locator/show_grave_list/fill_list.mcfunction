@@ -1,3 +1,7 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/show_grave_list/fill_list
+#@>   function hygrave:internal/item/grave_locator/show_grave_list
+
 $execute store result score .grave_locator.show_grave_list.owner_pid hygrave.temp_var run data get storage hygrave:common graves[{data:{gid:$(gid)}}].data.owner.pid
 $execute store result score .grave_locator.show_grave_list.grave_is_active hygrave.temp_var unless data storage hygrave:common graves[{data:{gid:$(gid)}}].data.status{destroyed:1b}
 

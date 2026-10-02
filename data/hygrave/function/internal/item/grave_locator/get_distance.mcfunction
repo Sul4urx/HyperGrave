@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/tick/hand
+
 ## Set distance to 0 if the player is not in the same dimension as the grave
 execute unless score .grave_locator.not_same_dimension hygrave.temp_var matches 0 run return run scoreboard players set .grave_locator.distance hygrave.temp_var 0
 

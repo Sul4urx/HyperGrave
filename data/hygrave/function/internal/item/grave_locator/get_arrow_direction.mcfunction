@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/tick/hand
+
 ## If the player is not in the same dimension as the grave
 execute unless score .grave_locator.not_same_dimension hygrave.temp_var matches 0 run return run data modify storage hygrave:common temp.grave_locator.dir_arrow set value "§c➖"
 

@@ -1,4 +1,5 @@
 #@> Executed from:
+#@>   function hygrave:internal/grave/show_info/show_admin/with_click_sound
 #@>   function hygrave:run/grave/admin/show_grave_info
 
 ## Read the input GID and store it

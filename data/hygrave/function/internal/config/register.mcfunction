@@ -1,3 +1,4 @@
+#@> !NO_PCOMMENT
 #@> Executed from:
 #@>   function hygrave:internal/loop/1t
 

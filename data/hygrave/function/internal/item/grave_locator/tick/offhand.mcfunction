@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   advancement hygrave:grave_locator/tick/offhand
+
 ## Reset advancement
 advancement revoke @s only hygrave:grave_locator/tick/offhand
 

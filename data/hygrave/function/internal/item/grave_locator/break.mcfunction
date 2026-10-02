@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/tick/hand
+
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{\
   "hygrave:common": {\
     "grave_locator": {}\

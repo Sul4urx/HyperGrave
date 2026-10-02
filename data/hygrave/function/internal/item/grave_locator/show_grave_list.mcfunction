@@ -1,3 +1,7 @@
+#@> Executed from:
+#@>   function hygrave:internal/event/player/item/grave_locator/player_used_grave_locator
+#@>   function hygrave:internal/loop/1t
+
 ## Don't allow grave locator in both hands
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{\
   "hygrave:common": {\

@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/break
+
 ## Break locator and stop it from working
 item modify entity @s weapon.offhand {\
   function: "minecraft:set_item",\

@@ -1,3 +1,6 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/warn
+
 ## Show the warning message, while making sure the locator's actionbar
 ## doesn't immediately replace this message so that the player can see the message
 

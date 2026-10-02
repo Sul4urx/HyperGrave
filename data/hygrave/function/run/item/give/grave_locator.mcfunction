@@ -1,3 +1,5 @@
+#@> Executed by the player
+
 give @s minecraft:music_disc_blocks[\
   !minecraft:jukebox_playable,\
   minecraft:item_name="Grave Locator",\

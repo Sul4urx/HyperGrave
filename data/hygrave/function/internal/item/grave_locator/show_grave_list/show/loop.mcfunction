@@ -1,3 +1,7 @@
+#@> Executed from:
+#@>   function hygrave:internal/item/grave_locator/show_grave_list/show/loop
+#@>   function hygrave:internal/item/grave_locator/show_grave_list
+
 $data modify storage hygrave:common temp.mcargs.'item/grave_locator/show_grave_list/show/?'.text0 set from storage hygrave:common temp.grave_locator.grave_list.$(type)[0].text
 $data modify storage hygrave:common temp.mcargs.'item/grave_locator/show_grave_list/show/?'.text1 set from storage hygrave:common temp.grave_locator.grave_list.$(type)[1].text
 $data modify storage hygrave:common temp.mcargs.'item/grave_locator/show_grave_list/show/?'.text2 set from storage hygrave:common temp.grave_locator.grave_list.$(type)[2].text

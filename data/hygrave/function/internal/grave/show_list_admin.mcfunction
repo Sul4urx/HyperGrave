@@ -1,4 +1,5 @@
 #@> Executed from:
+#@>   function hygrave:internal/grave/show_list_admin/with_click_sound
 #@>   function hygrave:run/grave/admin/show_grave_list
 
 ## If there are no active graves,
