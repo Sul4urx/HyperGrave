@@ -1,13 +1,15 @@
 #@> Executed from:
-#@>   function hygrave:internal/load
 #@>   function hygrave:internal/loop/1t
+#@>   function hygrave:internal/versioning/upgrade/*
 #@>   function hygrave:internal/versioning/downgrade
-#@>   function hygrave:internal/versioning/upgrade/from_0_5_0
+#@>   function hygrave:internal/load
 
 ## Schedule function to run again
 schedule function hygrave:internal/loop/1t 1t
 
 ## Define variables
+scoreboard players set (-1) hygrave.var -1
+scoreboard players set (2) hygrave.var 2
 scoreboard players set (6) hygrave.var 6
 scoreboard players set (10) hygrave.var 10
 scoreboard players set (25) hygrave.var 25
@@ -46,6 +48,23 @@ function hygrave:internal/config/register
 ## Add a player to player database, if they don't exist there
 execute as @a at @s unless score @s hygrave.pid matches 1.. run function hygrave:internal/database/players/append
 
+## Manage Tick counts and timers
+scoreboard players remove @a[scores={hygrave.item.grave_locator.actionbar_pause_ticks=1..}] hygrave.item.grave_locator.actionbar_pause_ticks 1
+scoreboard players add @a[scores={hygrave.item.grave_locator.ticks_not_holding_item=..12}] hygrave.item.grave_locator.ticks_not_holding_item 1
+
+## Check if the player stopped using grave locator
+## and also update tick count for players using grave locators
+execute as @a unless score @s hygrave.item.grave_locator.ticks_using_item > @s hygrave.previous.item.grave_locator.ticks_using_item run scoreboard players set @s hygrave.item.grave_locator.ticks_using_item 0
+scoreboard players set @a[scores={hygrave.item.grave_locator.ticks_using_item=..0}] hygrave.previous.item.grave_locator.ticks_using_item 0
+execute as @a[scores={hygrave.item.grave_locator.ticks_using_item=1..}] run scoreboard players operation @s hygrave.previous.item.grave_locator.ticks_using_item = @s hygrave.item.grave_locator.ticks_using_item
+
+## Check if the player stopped holding grave locators
+## and if so, clear actionbar in the first tick
+title @a[scores={hygrave.item.grave_locator.ticks_not_holding_item=2}] actionbar ""
+
+## Manage use cooldowns
+scoreboard players remove @a[scores={hygrave.item.grave_locator.use_cooldown=1..}] hygrave.item.grave_locator.use_cooldown 1
+
 ## Player died
 execute as @a[scores={hygrave.death_count=1..}] at @s run function hygrave:internal/event/player/player_died
 scoreboard players set @a hygrave.death_count 0
@@ -55,7 +74,7 @@ execute as @a at @s unless score @s hygrave.info matches 0 run function hygrave:
 scoreboard players set @a hygrave.info 0
 scoreboard players enable @a hygrave.info
 
-## Show HyperGrave help pages 
+## Show HyperGrave help pages
 ## (numbers like 4001 and 4007 are called HIDs (Help page ID))
 execute as @a[scores={hygrave.help=4001}] at @s run function hygrave:internal/menu/help/4001
 execute as @a[scores={hygrave.help=4007}] at @s run function hygrave:internal/menu/help/4007
@@ -92,6 +111,12 @@ scoreboard players enable @a hygrave.show_grave_info.view_previous
 execute as @a[scores={hygrave.remote_loot_grave=1000..}] at @s run function hygrave:internal/event/player/player_tried_to_remotely_unpack_grave
 scoreboard players set @a hygrave.remote_loot_grave 0
 scoreboard players enable @a hygrave.remote_loot_grave
+
+##> Locate Grave
+execute as @a[scores={hygrave.locate=1000..}] at @s run function hygrave:internal/item/grave_locator/relocate/from_trigger
+execute as @a[scores={hygrave.locate=1..128}] at @s run function hygrave:internal/item/grave_locator/show_grave_list
+scoreboard players set @a hygrave.locate 0
+scoreboard players enable @a hygrave.locate
 
 ## Limit loaded active graves to 16
 execute store result score (loaded_active_grave_count) hygrave.var if entity @e[tag=hygrave.grave.base]

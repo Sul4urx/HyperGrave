@@ -17,11 +17,11 @@ execute if score (dropped_contents/invulnerable_xp) hygrave.config matches 1 run
 execute if score (dropped_contents/no_gravity_xp) hygrave.config matches 1 run data modify entity @n[tag=hygrave.temp.grave.xp_to_drop] NoGravity set value 1b
 
 ## Set XP value
-data modify entity @n[tag=hygrave.temp.grave.xp_to_drop] Value set from entity @s item.components.minecraft:custom_data.hygrave:common.xp.after_death.total
+data modify entity @n[tag=hygrave.temp.grave.xp_to_drop] Value set from entity @s data.hygrave:common.xp.after_death.total
 
 
 ## If the XP orb doesn't store any XP, get rid of it
-execute store result score .dropped_xp_total hygrave.temp_var run data get entity @s item.components.minecraft:custom_data.hygrave:common.xp.after_death.total
+execute store result score .dropped_xp_total hygrave.temp_var run data get entity @s data.hygrave:common.xp.after_death.total
 execute unless score .dropped_xp_total hygrave.temp_var matches 1.. run kill @e[tag=hygrave.temp.grave.xp_to_drop]
 
 ## Remove temp tag

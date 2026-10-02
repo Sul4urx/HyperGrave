@@ -1,4 +1,5 @@
 #@> Executed from:
+#@>   function hygrave:internal/grave/show_info/show_admin/with_click_sound
 #@>   function hygrave:run/grave/admin/show_grave_info
 
 ## Read the input GID and store it
@@ -6,20 +7,20 @@ $data modify storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_
 $data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set value $(gid)
 
 ## Check if any graves have been generated yet
-execute unless data storage hygrave:common graves[0] run return run title @s actionbar {\
+execute unless data storage hygrave:common graves[0] run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.grave_none_exist",\
   "fallback": "§cNo graves have been generated yet."\
-}
+}}
 
 ## Check if the grave has ever existed before
 execute store result score .grave_exists hygrave.temp_var run function hygrave:internal/grave/show_info/check_if_grave_exists with storage hygrave:common temp.mcargs.'grave/show_info/check_if_grave_exists'
 
 ## If not, tell error to player
-$execute if score .grave_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
+$execute if score .grave_exists hygrave.temp_var matches 0 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_info.fail.gid_no_exist",\
   "fallback": "§cGrave #%s§c does not exist.",\
   "with": ["§c$(gid)"]\
-}
+}}
 
 
 ## Bring the nessecary elements of databases to last index so that we can work with them

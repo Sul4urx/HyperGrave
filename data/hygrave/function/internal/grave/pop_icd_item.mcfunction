@@ -8,11 +8,11 @@
 data remove storage hygrave:common players[].temp
 
 ##> Grave
-data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s data.hygrave:common.gid
 function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ##> Player (Owner)
-function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
+function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
 ##> Player (Interactor)
@@ -25,15 +25,15 @@ data modify storage hygrave:common players[-1].temp.interactor set value 1b
 execute as @p[tag=hygrave.temp.grave.interactor,tag=hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_requirements/owners
 execute as @p[tag=hygrave.temp.grave.interactor,tag=!hygrave.temp.grave.owner] at @s run function hygrave:internal/grave/pop/check_requirements/non_owners
 
-execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
+execute unless score .check_requirements.gamemodes hygrave.temp_var matches 1 as @p[tag=hygrave.temp.grave.interactor] at @s run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave.pop.fail.does_not_meet_requirements.gamemodes",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave."\
-}
-execute unless score .check_requirements.items hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
+}}
+execute unless score .check_requirements.items hygrave.temp_var matches 1 as @p[tag=hygrave.temp.grave.interactor] at @s run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave.pop.fail.does_not_meet_requirements.items",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave."\
-}
-execute unless score .check_requirements.xp hygrave.temp_var matches 1 run return run title @p[tag=hygrave.temp.grave.interactor] actionbar {\
+}}
+execute unless score .check_requirements.xp hygrave.temp_var matches 1 as @p[tag=hygrave.temp.grave.interactor] at @s run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave.pop.fail.does_not_meet_requirements.xp",\
   "fallback": "§cYou do not have the nessecary requirements to loot this grave.",\
   "with": [\
@@ -44,7 +44,7 @@ execute unless score .check_requirements.xp hygrave.temp_var matches 1 run retur
       "color": "red"\
     }\
   ]\
-}
+}}
 
 ## Drop items
 function hygrave:internal/grave/pop/drop_icd_item

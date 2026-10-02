@@ -32,13 +32,21 @@ scoreboard objectives remove hygrave.data_version
 scoreboard objectives remove hygrave.despawn_time
 scoreboard objectives remove hygrave.icd.cooldown
 scoreboard objectives remove hygrave.rotation_cooldown
+scoreboard objectives remove hygrave.text_display_update_cooldown
 scoreboard objectives remove hygrave.show_grave_info
 scoreboard objectives remove hygrave.show_grave_info.view_next
 scoreboard objectives remove hygrave.show_grave_info.view_previous
+scoreboard objectives remove hygrave.show_grave_list
 scoreboard objectives remove hygrave.remote_loot_grave
 scoreboard objectives remove hygrave.info
 scoreboard objectives remove hygrave.help
 scoreboard objectives remove hygrave.death_count
+scoreboard objectives remove hygrave.item.grave_locator.actionbar_pause_ticks
+scoreboard objectives remove hygrave.item.grave_locator.ticks_not_holding_item
+scoreboard objectives remove hygrave.item.grave_locator.ticks_using_item
+scoreboard objectives remove hygrave.item.grave_locator.use_cooldown
+scoreboard objectives remove hygrave.previous.item.grave_locator.ticks_using_item
+scoreboard objectives remove hygrave.locate
 
 ##> Remove all old stored data
 data remove storage sgrave2:common backups

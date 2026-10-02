@@ -5,11 +5,8 @@
 scoreboard players add (graves/item_distribution/grave_generation_fail/operation) hygrave.config 1
 execute if score (graves/item_distribution/grave_generation_fail/operation) hygrave.config matches 3.. run scoreboard players set (graves/item_distribution/grave_generation_fail/operation) hygrave.config 0
 
-## Play sound
-playsound minecraft:ui.button.click
-
 ## Update configs
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/item_distribution
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/item_distribution"}

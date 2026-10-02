@@ -1,12 +1,13 @@
 #@> Executed from:
+#@>   function hygrave:internal/grave/show_list_admin/with_click_sound
 #@>   function hygrave:run/grave/admin/show_grave_list
 
 ## If there are no active graves,
 ## Tell the player and return
-execute unless data storage hygrave:common graves[] run return run title @s actionbar {\
+execute unless data storage hygrave:common graves[] run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.grave_list_display.fail.grave_none_exist",\
   "fallback": "§cNo graves have been generated yet."\
-}
+}}
 
 ## Partition GIDs into 4 types: AO, BO, AN, BN
 ## And also store their text components
@@ -92,7 +93,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:run/grave/admin/show_grave_list"\
+          "command": "/function hygrave:internal/grave/show_list_admin/with_click_sound"\
         }\
       }\
     ]\

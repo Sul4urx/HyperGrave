@@ -77,7 +77,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance/text_display_properties'}"\
         }\
       },\
       {\
@@ -91,7 +91,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_appearance/text_display_properties/text"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance/text_display_properties/text'}"\
         }\
       }\
     ]\

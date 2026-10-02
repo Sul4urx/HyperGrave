@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "holding_in_off_hand": {
+      "trigger": "tick",
+      "conditions": {
+        "player": "hygrave:is_holding_grave_locator/offhand"
+      }
+    }
+  },
+  "requirements": [["holding_in_off_hand"]],
+  "rewards": {
+    "function": "hygrave:internal/item/grave_locator/tick/offhand"
+  }
+}

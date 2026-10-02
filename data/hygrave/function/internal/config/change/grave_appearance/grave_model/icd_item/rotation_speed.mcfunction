@@ -5,20 +5,20 @@ $data modify storage hygrave:common temp.config.value set value $(value)
 
 ## Error if value is not valid
 execute unless predicate {\
-  condition: "minecraft:value_check",\
+  type: "minecraft:int_value_check",\
   value: {\
     type: "minecraft:storage",\
     storage: "hygrave:common",\
     path: "temp.config.value"\
   },\
-  range: {\
+  test: {\
     min: -179,\
     max: 179\
   }\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.icd_item.rotation_speed.fail",\
   "fallback": "§cThe value must be an integer between -180 and 180 (non-inclusive)."\
-}
+}}
 
 ## If success, change value
 execute store result score (grave_appearance/grave_model/icd_item/rotation_speed) hygrave.config run data get storage hygrave:common temp.config.value
@@ -27,4 +27,4 @@ execute store result score (grave_appearance/grave_model/icd_item/rotation_speed
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/grave_appearance/grave_model/icd_item_expanded
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "grave_appearance/grave_model/icd_item_expanded"}

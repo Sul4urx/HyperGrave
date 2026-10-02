@@ -117,6 +117,3 @@ function hygrave:internal/grave/show_info/fields/show_items/show with storage hy
 
 ## Get rid of the temp manipulator item
 kill @n[tag=hygrave.temp.grave_info_item_manipulator]
-
-
-

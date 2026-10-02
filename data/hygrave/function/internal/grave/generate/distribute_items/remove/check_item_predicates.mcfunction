@@ -7,10 +7,10 @@ data remove storage hygrave:common temp.mcargs
 ## Check if item passes provided predicate
 ## and if it does, mark the item for the operation to be applied later
 $execute if predicate {\
-  condition: "minecraft:any_of",\
+  type: "minecraft:any_of",\
   terms: [\
     {\
-      condition: "minecraft:entity_properties",\
+      type: "minecraft:entity_properties",\
       entity: "this",\
       predicate: {\
         slots: {\
@@ -21,7 +21,7 @@ $execute if predicate {\
       }\
     },\
     {\
-      condition: "minecraft:entity_properties",\
+      type: "minecraft:entity_properties",\
       entity: "this",\
       predicate: {\
         slots: {\

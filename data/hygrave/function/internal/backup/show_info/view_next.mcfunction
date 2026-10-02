@@ -6,7 +6,7 @@ $data modify storage hygrave:common temp.bid set value $(bid)
 
 execute store result score .bid hygrave.temp_var run data get storage hygrave:common temp.bid
 
-## Save BID + 1 in `temp.mcargs.'backup/show_info/view_next/loop'.bid` 
+## Save BID + 1 in `temp.mcargs.'backup/show_info/view_next/loop'.bid`
 ## and add 1 to `.bid` temp score
 scoreboard players add .bid hygrave.temp_var 1
 execute if score .bid hygrave.temp_var > (last_bid) hygrave.var run scoreboard players operation .bid hygrave.temp_var = (first_bid) hygrave.var

@@ -217,5 +217,3 @@ data remove storage hygrave:common temp.config.value2{offhand: 'default'}.offhan
 execute store result score .tag_count hygrave.temp_var run data get storage hygrave:common temp.config.value2
 execute if score .tag_count hygrave.temp_var matches 1.. run return fail
 return 1
-
-

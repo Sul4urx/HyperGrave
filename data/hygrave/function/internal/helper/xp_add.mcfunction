@@ -1,3 +1,5 @@
+#@> !NO_PCOMMENT
+
 ## Add XP
 $xp add @s $(value)
 

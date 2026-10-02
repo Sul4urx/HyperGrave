@@ -448,7 +448,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'graves'}"\
         }\
       },\
       {\
@@ -462,7 +462,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves/item_distribution"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'graves/item_distribution'}"\
         }\
       }\
     ]\

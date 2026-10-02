@@ -11,20 +11,20 @@ data modify storage hygrave:common temp.bi.creation_time.hours set string storag
 data modify storage hygrave:common temp.bi.creation_time.minutes set string storage hygrave:common backups[-1].data.creation_time.minutes
 
 ## Check if any backups have been generated yet
-execute unless data storage hygrave:common backups[0] run return run title @s actionbar {\
+execute unless data storage hygrave:common backups[0] run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.backup_info.fail.backup_none_exist",\
   "fallback": "§cNo backups have been generated yet."\
-}
+}}
 
 ## Check if the backup has ever existed before
 execute store result score .backup_exists hygrave.temp_var run function hygrave:internal/backup/show_info/check_if_backup_exists with storage hygrave:common temp.mcargs.'backup/show_info/check_if_backup_exists'
 
 ## If not, tell error to player
-$execute if score .backup_exists hygrave.temp_var matches 0 run return run title @s actionbar {\
+$execute if score .backup_exists hygrave.temp_var matches 0 run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.backup_info.fail.bid_no_exist",\
   "fallback": "§cBackup #%s§c does not exist.",\
   "with": ["§c$(bid)"]\
-}
+}}
 
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
@@ -39,7 +39,7 @@ tellraw @s [\
     "translate": "hygrave.backup_info.title",\
     "fallback": "Backup §6#%s info", \
     "with": [\
-      {\  
+      {\
         "nbt": "backups[-1].data.bid",\
         "storage": "hygrave:common",\
         "color": "gold",\
@@ -82,7 +82,7 @@ execute if data storage hygrave:common backups[-1].data.relevant_grave run tellr
     }\
   },\
   "with": [\
-    {\  
+    {\
       "nbt": "backups[-1].data.relevant_grave.data.gid",\
       "color": "gold",\
       "storage": "hygrave:common",\

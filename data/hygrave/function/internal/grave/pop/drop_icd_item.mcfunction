@@ -5,10 +5,10 @@
 summon minecraft:item ~ ~ ~ {Item: {id: "minecraft:clock", components: {"minecraft:custom_data": {"hygrave:common": {temp_item: 1b}}}}, Tags: ["hygrave.temp.grave.item_to_give_back","hygrave.grave.item"],Age:-32768s}
 
 ## Set item
-data modify entity @n[tag=hygrave.temp.grave.item_to_give_back] Item set from entity @s item.components.minecraft:custom_data.hygrave:common.items[0]
+data modify entity @n[tag=hygrave.temp.grave.item_to_give_back] Item set from entity @s data.hygrave:common.items[0]
 
 ## Remove item from grave
-data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0]
+data remove entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[0]
 
 ## If failed to set item, get rid of the item
 kill @e[nbt={Item: {components: {"minecraft:custom_data": {"hygrave:common": {temp_item: 1b}}}}}]

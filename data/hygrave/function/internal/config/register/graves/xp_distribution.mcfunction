@@ -62,5 +62,3 @@ execute store result storage hygrave:common configs.value.graves.xp_distribution
 execute if score (graves/xp_distribution/grave_generation_success/total) hygrave.config matches 1.. run data modify storage hygrave:common configs.text.graves.xp_distribution.grave_generation_success.total set string storage hygrave:common configs.value.graves.xp_distribution.grave_generation_success.total
 
 execute unless score (graves/xp_distribution/grave_generation_success/total) hygrave.config matches 1.. run data modify storage hygrave:common configs.text.graves.xp_distribution.grave_generation_success.total set value "§c0"
-
-

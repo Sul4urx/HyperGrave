@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "predicates": {
+          "minecraft:custom_data": {
+            "hygrave:common": {
+              "grave_locator": {
+                "tracking": true,
+                "target_grave": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

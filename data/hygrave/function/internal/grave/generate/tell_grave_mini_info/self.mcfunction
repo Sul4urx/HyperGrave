@@ -8,13 +8,13 @@ execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches
   "translate": "\n§c☠ %s §6#%s §7|§r %s §7|§r %s\n",\
   "with": [\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
+      "nbt": "data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "red",\
       "interpret": true\
     },\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
+      "nbt": "data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "gold",\
       "plain": true\
@@ -40,13 +40,13 @@ execute if score (graves/show_grave_info/ao/location.xyz) hygrave.config matches
   "translate": "\n§c☠ %s §6#%s §7|§r %s\n",\
   "with": [\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
+      "nbt": "data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "red",\
       "interpret": true\
     },\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
+      "nbt": "data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "gold",\
       "plain": true\
@@ -66,13 +66,13 @@ execute unless score (graves/show_grave_info/ao/location.xyz) hygrave.config mat
   "translate": "\n§c☠ %s §6#%s §7|§r %s\n",\
   "with": [\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
+      "nbt": "data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "red",\
       "interpret": true\
     },\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
+      "nbt": "data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "gold",\
       "plain": true\
@@ -91,13 +91,13 @@ execute unless score (graves/show_grave_info/ao/location.xyz) hygrave.config mat
   "translate": "\n§c☠ %s §6#%s\n",\
   "with": [\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.owner.name",\
+      "nbt": "data.hygrave:common.owner.name",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "red",\
       "interpret": true\
     },\
     {\
-      "nbt": "item.components.minecraft:custom_data.hygrave:common.gid",\
+      "nbt": "data.hygrave:common.gid",\
       "entity": "@n[tag=hygrave.temp.grave.base]",\
       "color": "gold",\
       "plain": true\

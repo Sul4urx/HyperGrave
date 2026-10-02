@@ -3,7 +3,7 @@
 #@>   function hygrave:internal/config/change/graves/item_distribution/grave_generation_success/remove/item_ids/change_list
 
 $execute if predicate {\
-  condition: "minecraft:entity_properties",\
+  type: "minecraft:entity_properties",\
   entity: "this",\
   predicate: {\
     slots: {\
@@ -14,7 +14,7 @@ $execute if predicate {\
   }\
 } run scoreboard players set .item_id_list_is_valid hygrave.temp_var 1
 $execute unless predicate {\
-  condition: "minecraft:entity_properties",\
+  type: "minecraft:entity_properties",\
   entity: "this",\
   predicate: {\
     slots: {\

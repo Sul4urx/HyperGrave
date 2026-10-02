@@ -41,6 +41,3 @@ execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp
 execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/grave/generate/grave_placement_restrictions/teleport with storage hygrave:common temp.mcargs.'grave/generate/grave_placement_restrictions/teleport'
 
 execute if score .loop_count hygrave.temp_var matches ..0 as @n[tag=hygrave.temp.grave.base] at @s run tp @s ~ ~1 ~
-
-
-

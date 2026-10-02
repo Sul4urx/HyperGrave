@@ -12,6 +12,14 @@ execute if data storage hygrave:common configs.value.grave_interaction.icd_prope
 execute if data storage hygrave:common configs.value.grave_interaction.icd_properties{activate_for:1b} run data modify storage hygrave:common configs.text.grave_interaction.icd_properties.activate_for set value "§eO"
 execute if data storage hygrave:common configs.value.grave_interaction.icd_properties{activate_for:2b} run data modify storage hygrave:common configs.text.grave_interaction.icd_properties.activate_for set value "§aE"
 
+## Silent
+execute unless score (grave_interaction/icd_properties/silent) hygrave.config matches 0..1 run scoreboard players set (grave_interaction/icd_properties/silent) hygrave.config 0
+
+execute store result storage hygrave:common configs.value.grave_interaction.icd_properties.silent byte 1 run scoreboard players get (grave_interaction/icd_properties/silent) hygrave.config
+
+execute if data storage hygrave:common configs.value.grave_interaction.icd_properties{silent:0b} run data modify storage hygrave:common configs.text.grave_interaction.icd_properties.silent set value "§c❌"
+execute if data storage hygrave:common configs.value.grave_interaction.icd_properties{silent:1b} run data modify storage hygrave:common configs.text.grave_interaction.icd_properties.silent set value "§a✔"
+
 ## Switch Text Display
 execute unless score (grave_interaction/icd_properties/switch_text_display) hygrave.config matches 0..1 run scoreboard players set (grave_interaction/icd_properties/switch_text_display) hygrave.config 1
 

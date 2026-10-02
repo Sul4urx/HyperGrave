@@ -20,4 +20,3 @@ execute unless data storage hygrave:common temp{reinstall_confirm:"REINSTALL_NO_
   "translate": "hygrave.uninstall.success",\
   "fallback": "§6Successfully reinstalled HyperGrave.\n",\
 }
-

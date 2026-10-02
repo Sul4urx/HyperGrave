@@ -2,6 +2,14 @@
 #@>   function hygrave:internal/grave/generate/cancel
 #@>   function hygrave:internal/grave/generate/cancel/drop_items
 
+## Add a special case for grave locators
+scoreboard players set .grave_gen.cancel.drop_items.item_is_locator hygrave.temp_var 0
+
+execute store result score .grave_gen.cancel.drop_items.item_is_locator hygrave.temp_var if score (items/grave_locator/keep_after_death) hygrave.config matches 1 if data storage hygrave:common temp.grave_contents.all_items[0].components.minecraft:custom_data.hygrave:common.grave_locator
+
+execute if score .grave_gen.cancel.drop_items.item_is_locator hygrave.temp_var matches 1 run data remove storage hygrave:common temp.grave_contents.all_items[0]
+execute if score .grave_gen.cancel.drop_items.item_is_locator hygrave.temp_var matches 1 run return run function hygrave:internal/grave/generate/cancel/drop_items
+
 ## Spawn item
 execute as @p[tag=hygrave.temp.grave.owner] at @s anchored eyes run summon minecraft:item ^ ^ ^ {Item:{id:"minecraft:clock",components:{"minecraft:custom_data":{"hygrave:common":{temp_item:1b}}}},Tags:["hygrave.temp.grave.item_to_drop","hygrave.grave.item"],Age:-32768s}
 

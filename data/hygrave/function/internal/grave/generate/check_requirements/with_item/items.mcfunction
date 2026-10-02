@@ -7,10 +7,10 @@
 ## If the predicate doesn't pass,
 ## .check_requirements.items score will remain false
 $execute if predicate {\
-  condition: "minecraft:any_of",\
+  type: "minecraft:any_of",\
   terms: [\
     {\
-      condition: "minecraft:entity_properties",\
+      type: "minecraft:entity_properties",\
       entity: "this",\
       predicate: {\
         slots: {\
@@ -21,7 +21,7 @@ $execute if predicate {\
       }\
     },\
     {\
-      condition: "minecraft:entity_properties",\
+      type: "minecraft:entity_properties",\
       entity: "this",\
       predicate: {\
         slots: {\
@@ -32,7 +32,7 @@ $execute if predicate {\
       }\
     },\
     {\
-      condition: "minecraft:entity_properties",\
+      type: "minecraft:entity_properties",\
       entity: "this",\
       predicate: {\
         slots: {\

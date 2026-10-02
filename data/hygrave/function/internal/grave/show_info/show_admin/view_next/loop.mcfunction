@@ -25,6 +25,3 @@ $execute if data storage hygrave:common graves[{data:{gid:$(gid)}}] run return $
 ## Add 1 to GID each time
 ## until the grave with that GID can be shown to player
 return run function hygrave:internal/grave/show_info/show_admin/view_next/loop with storage hygrave:common temp.mcargs.'grave/show_info/show_admin/view_next/loop'
-
-
-

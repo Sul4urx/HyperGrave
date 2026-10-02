@@ -15,5 +15,5 @@ scoreboard players set .check_requirements.xp hygrave.temp_var 0
 
 execute store result score .xp_requirement_levels hygrave.temp_var run data get storage hygrave:common configs.value.requirements.grave_generation_requirements.no_item.xp.levels
 
-execute store result score .player_xp hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.levels
+execute store result score .player_xp hygrave.temp_var run data get entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.before_death.levels
 execute if score .player_xp hygrave.temp_var >= .xp_requirement_levels hygrave.temp_var run scoreboard players set .check_requirements.xp hygrave.temp_var 1
