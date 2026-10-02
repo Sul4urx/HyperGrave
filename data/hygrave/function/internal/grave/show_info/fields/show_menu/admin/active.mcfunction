@@ -47,7 +47,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/function hygrave:run/grave/admin/show_grave_list"\
+        "command": "/function hygrave:internal/grave/show_list_admin/with_click_sound"\
       }\
     },\
     {\

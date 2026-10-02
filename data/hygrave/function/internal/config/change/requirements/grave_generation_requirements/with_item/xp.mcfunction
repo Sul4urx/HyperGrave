@@ -12,10 +12,10 @@ execute unless predicate {\
     path: "temp.config.value"\
   },\
   range: {min: 0, max: 100}\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.grave_generation_requirements.with_item.xp.fail",\
   "fallback": "§cThe value must be an integer between 0 and 100 (inclusive)."\
-}
+}}
 
 ## Otherwise change values
 execute store result score (requirements/grave_generation_requirements/with_item/xp) hygrave.config run data get storage hygrave:common temp.config.value
@@ -24,4 +24,4 @@ execute store result score (requirements/grave_generation_requirements/with_item
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/requirements/grave_generation_requirements
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "requirements/grave_generation_requirements"}

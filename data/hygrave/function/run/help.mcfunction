@@ -1,5 +1,8 @@
 #@> Executed by the player
 
+## Play sound
+execute if score @s hygrave.help matches 10000.. run playsound minecraft:ui.button.click ui @s ~ ~ ~ 1 1
+
 ## Prevent loop
 scoreboard players set @s hygrave.help 0
 

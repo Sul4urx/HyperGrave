@@ -363,7 +363,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'graves'}"\
         }\
       },\
       {\
@@ -377,7 +377,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves/grave_placement_restrictions"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'graves/grave_placement_restrictions'}"\
         }\
       }\
     ]\

@@ -6,7 +6,7 @@
 summon minecraft:item ~ ~32767 ~ {Invulnerable:1b,Tags:["hygrave.temp.item_manipulator"],Item:{id:"minecraft:clock",count:1}}
 
 ## Loop through items of grave and give them to the player
-execute store result score .loop_count hygrave.temp_var if data entity @s item.components.minecraft:custom_data.hygrave:common.items[]
+execute store result score .loop_count hygrave.temp_var if data entity @s data.hygrave:common.items[]
 
 execute if score .loop_count hygrave.temp_var matches 1.. run function hygrave:internal/grave/unpack/give_items/loop
 

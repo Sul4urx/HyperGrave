@@ -15,10 +15,10 @@ execute unless predicate {\
     min: 0,\
     max: 10000\
   }\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.player_head.shadow_strength.fail",\
   "fallback": "§cThe value must be an integer between 0 and 10000 (inclusive)."\
-}
+}}
 
 ## If success, change value
 execute store result score (grave_appearance/grave_model/player_head/shadow_strength) hygrave.config run data get storage hygrave:common temp.config.value
@@ -27,4 +27,4 @@ execute store result score (grave_appearance/grave_model/player_head/shadow_stre
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/grave_appearance/grave_model/player_head_expanded
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "grave_appearance/grave_model/player_head_expanded"}

@@ -1,3 +1,5 @@
+#@> !NO_PCOMMENT
+
 ## Add player to player database
 data modify storage hygrave:common players append value {player:{uuid:[I;],name:"not defined"}}
 

@@ -4,10 +4,10 @@
 ## Error if item does not exist
 $execute if data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_enchs[$(index)] run scoreboard players set .ench_id_list_is_valid hygrave.temp_var 1
 
-execute unless score .ench_id_list_is_valid hygrave.temp_var matches 1 run title @s actionbar {\
+execute unless score .ench_id_list_is_valid hygrave.temp_var matches 1 run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.item_distribution.grave_generation_success.remove.remove_ench_index.fail.no_exist",\
   "fallback": "§cThe list is either empty or index is out of range."\
-}
+}}
 
 ## If success, change value
 $execute if score .ench_id_list_is_valid hygrave.temp_var matches 1 run data remove storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.remove_enchs[$(index)]

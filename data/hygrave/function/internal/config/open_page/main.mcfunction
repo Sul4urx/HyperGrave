@@ -39,7 +39,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/requirements"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'requirements'}"\
         }\
       },\
       {\
@@ -54,7 +54,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/general"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'general'}"\
         }\
       },\
       {\
@@ -69,7 +69,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/graves"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'graves'}"\
         }\
       }\
     ]\
@@ -93,7 +93,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/dropped_contents"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'dropped_contents'}"\
         }\
       },\
       {\
@@ -108,7 +108,7 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_interaction"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_interaction'}"\
         }\
       }\
     ]\
@@ -118,11 +118,11 @@ tellraw @s [\
 tellraw @s [\
   "\n",\
   {\
-    "translate": "§7[%s§7]",\
+    "translate": "§7[%s§7|%s§7]",\
     "with": [\
       {\
         "translate": "hygrave.config.main_menu.grave_appearance",\
-        "fallback": "        §bGrave Style & Appearance        ",\
+        "fallback": " §l §r§bGrave Style & Appearance §l ",\
         "hover_event": {\
           "action": "show_text",\
           "value": {\
@@ -132,7 +132,22 @@ tellraw @s [\
           },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_appearance"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance'}"\
+        }\
+      },\
+      {\
+        "translate": "hygrave.config.main_menu.items",\
+        "fallback": " §l §r§bItems §l ",\
+        "hover_event": {\
+          "action": "show_text",\
+          "value": {\
+            "translate": "hygrave.config_page_open_description.grave_appearance",\
+            "fallback": "All configs about custom items that this data pack adds\nClick to open page 'Items'."\
+            }\
+          },\
+        "click_event": {\
+          "action": "run_command",\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'items'}"\
         }\
       }\
     ]\

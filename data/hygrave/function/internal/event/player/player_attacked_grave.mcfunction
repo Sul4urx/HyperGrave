@@ -7,11 +7,11 @@
 data remove storage hygrave:common players[].temp
 
 ##> Grave
-data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s data.hygrave:common.gid
 function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ##> Player (Owner)
-function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner
+function hygrave:internal/database/players/lookup with entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.owner
 data modify storage hygrave:common players[-1].temp.owner set value 1b
 
 ##> Player (Interactor)
@@ -20,19 +20,19 @@ function hygrave:internal/database/players/lookup with storage hygrave:common te
 data modify storage hygrave:common players[-1].temp.interactor set value 1b
 
 ## Annoy
-execute if score (general/annoying_mode) hygrave.config matches 1 unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} store result score .loot hygrave.temp_var run function hygrave:internal/grave/annoying_mode/annoy
-execute if score (general/annoying_mode) hygrave.config matches 1 if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} store result score .loot hygrave.temp_var run function hygrave:internal/grave/annoying_mode/annoy_icd
+execute if score (general/annoying_mode) hygrave.config matches 1 unless data entity @s data.hygrave:common{icd_activated:1b} store result score .loot hygrave.temp_var run function hygrave:internal/grave/annoying_mode/annoy
+execute if score (general/annoying_mode) hygrave.config matches 1 if data entity @s data.hygrave:common{icd_activated:1b} store result score .loot hygrave.temp_var run function hygrave:internal/grave/annoying_mode/annoy_icd
 execute if score (general/annoying_mode) hygrave.config matches 1 if score .loot hygrave.temp_var matches -1 run return -1
 
 ## Pop or Unpack the grave
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_not_active/attack) hygrave.config matches 1 run function hygrave:internal/grave/pop
-execute unless data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_not_active/attack) hygrave.config matches 2 run function hygrave:internal/grave/unpack
+execute unless data entity @s data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_not_active/attack) hygrave.config matches 1 run function hygrave:internal/grave/pop
+execute unless data entity @s data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_not_active/attack) hygrave.config matches 2 run function hygrave:internal/grave/unpack
 
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 1 run function hygrave:internal/grave/pop
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 2 run function hygrave:internal/grave/unpack
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 3 run function hygrave:internal/grave/pop_icd_item
-execute if data entity @s item.components.minecraft:custom_data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 4 run function hygrave:internal/grave/unpack_icd_item
+execute if data entity @s data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 1 run function hygrave:internal/grave/pop
+execute if data entity @s data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 2 run function hygrave:internal/grave/unpack
+execute if data entity @s data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 3 run function hygrave:internal/grave/pop_icd_item
+execute if data entity @s data.hygrave:common{icd_activated:1b} if score (grave_interaction/click_behavior/icd_is_active/attack) hygrave.config matches 4 run function hygrave:internal/grave/unpack_icd_item
 
 ## Sync items
-data modify storage hygrave:common graves[-1].contents.items set from entity @s item.components.minecraft:custom_data.hygrave:common.items
+data modify storage hygrave:common graves[-1].contents.items set from entity @s data.hygrave:common.items
 execute unless entity @s run data modify storage hygrave:common graves[-1].contents.items set value []

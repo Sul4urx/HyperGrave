@@ -6,6 +6,9 @@
 ## Prevent loop
 scoreboard players set @s hygrave.help 0
 
+## Play sound
+playsound minecraft:ui.button.click ui @s ~ ~ ~ 1 1
+
 ## Menu
 tellraw @s ""
 
@@ -93,7 +96,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/trigger hygrave.help"\
+          "command": "/trigger hygrave.help set 10001"\
         }\
       }\
     ]\

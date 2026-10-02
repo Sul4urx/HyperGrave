@@ -1,2 +1,4 @@
+#@> !NO_PCOMMENT
+
 execute if score (command_version/time) hygrave.var matches 1 run return run function hygrave:internal/helper/time/current/query_day_count/v1
 execute if score (command_version/time) hygrave.var matches 0 run return run function hygrave:internal/helper/time/current/query_day_count/v0

@@ -108,6 +108,3 @@ function hygrave:internal/backup/show_info/show_items/show with storage hygrave:
 
 ## Get rid of the temp manipulator item
 kill @n[tag=hygrave.temp.backup_info_item_manipulator]
-
-
-

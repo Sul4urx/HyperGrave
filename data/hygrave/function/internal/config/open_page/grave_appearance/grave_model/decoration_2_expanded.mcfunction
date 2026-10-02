@@ -37,7 +37,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/grave_appearance/grave_model/player_head_expanded"\
+      "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance/grave_model/player_head_expanded'}"\
     }\
   }\
 ]
@@ -60,7 +60,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/grave_appearance/grave_model/decoration_1_expanded"\
+      "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance/grave_model/decoration_1_expanded'}"\
     }\
   }\
 ]
@@ -273,7 +273,7 @@ tellraw @s [\
     },\
     "click_event": {\
       "action": "run_command",\
-      "command": "/function hygrave:internal/config/open_page/grave_appearance/grave_model/icd_item_expanded"\
+      "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance/grave_model/icd_item_expanded'}"\
     }\
   }\
 ]
@@ -297,7 +297,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_appearance"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance'}"\
         }\
       },\
       {\
@@ -311,7 +311,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/grave_appearance/grave_model/decoration_2_expanded"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'grave_appearance/grave_model/decoration_2_expanded'}"\
         }\
       }\
     ]\

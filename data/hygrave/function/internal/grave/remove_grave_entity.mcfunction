@@ -6,13 +6,13 @@
 
 ## Check if grave exists in database
 ## If not, skip to ##( Get rid of grave parts )##
-data modify storage hygrave:common temp.mcargs.'database/graves/contains_gid'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+data modify storage hygrave:common temp.mcargs.'database/graves/contains_gid'.gid set from entity @s data.hygrave:common.gid
 execute store result score .grave_exists_in_database hygrave.temp_var run function hygrave:internal/database/graves/contains_gid with storage hygrave:common temp.mcargs.'database/graves/contains_gid'
 
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Grave
-data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s item.components.minecraft:custom_data.hygrave:common.gid
+data modify storage hygrave:common temp.mcargs.'database/graves/lookup'.gid set from entity @s data.hygrave:common.gid
 execute if score .grave_exists_in_database hygrave.temp_var matches 1 run function hygrave:internal/database/graves/lookup with storage hygrave:common temp.mcargs.'database/graves/lookup'
 
 ## Drop items

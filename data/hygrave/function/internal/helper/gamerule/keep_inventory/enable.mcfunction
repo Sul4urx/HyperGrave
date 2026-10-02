@@ -1,2 +1,4 @@
+#@> !NO_PCOMMENT
+
 execute if score (command_version/gamerule) hygrave.var matches 1 run function hygrave:internal/helper/gamerule/keep_inventory/enable/v1
 execute if score (command_version/gamerule) hygrave.var matches 0 run function hygrave:internal/helper/gamerule/keep_inventory/enable/v0

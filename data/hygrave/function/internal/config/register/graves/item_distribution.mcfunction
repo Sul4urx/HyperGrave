@@ -31,5 +31,3 @@ execute unless data storage hygrave:common configs.value.graves.item_distributio
 ##> Keep
 execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_items[0] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_items set value []
 execute unless data storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_enchs[0] run data modify storage hygrave:common configs.value.graves.item_distribution.grave_generation_success.keep_enchs set value []
-
-

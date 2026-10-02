@@ -12,10 +12,10 @@ execute unless predicate {\
     path: "temp.config.value"\
   },\
   range: {min: 0}\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.grave_looting_requirements.non_owners.item_remove_count.fail",\
   "fallback": "§cValue must be a non-negative integer."\
-}
+}}
 
 ## Otherwise change values
 execute store result score (requirements/grave_looting_requirements/non_owners/item_remove_count) hygrave.config run data get storage hygrave:common temp.config.value
@@ -24,4 +24,4 @@ execute store result score (requirements/grave_looting_requirements/non_owners/i
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/requirements/grave_looting_requirements
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "requirements/grave_looting_requirements"}

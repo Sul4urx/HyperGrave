@@ -1,0 +1,37 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "cases": [
+      {
+        "when": "hygrave.item.grave_locator",
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:custom_model_data",
+          "index": 1,
+          "cases": [
+            {
+              "when": "tracking=true",
+              "model": {
+                "type": "minecraft:model",
+                "model": "hygrave:item/grave_locator/tracking"
+              }
+            },
+            {
+              "when": "tracking=false",
+              "model": {
+                "type": "minecraft:model",
+                "model": "hygrave:item/grave_locator/not_tracking"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/music_disc_blocks"
+    }
+  }
+}

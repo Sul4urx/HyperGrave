@@ -8,11 +8,8 @@ execute if score (graves/grave_placement_restrictions_restrictions/on_lava) hygr
 ## In Lava and On Lava sub-configs must not be both true
 execute if score (graves/grave_placement_restrictions_restrictions/on_lava) hygrave.config matches 1 if score (graves/grave_placement_restrictions_restrictions/in_lava) hygrave.config matches 1 run scoreboard players set (graves/grave_placement_restrictions_restrictions/in_lava) hygrave.config 0
 
-## Play sound
-playsound minecraft:ui.button.click
-
 ## Update configs
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/grave_placement_restrictions
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/grave_placement_restrictions"}

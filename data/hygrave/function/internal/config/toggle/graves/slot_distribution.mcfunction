@@ -12,11 +12,8 @@ $execute if data storage hygrave:common configs.value.graves.slot_distribution.g
 $execute if data storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success{'$(slot)': 'k'} run data modify storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success.'$(slot)' set value 'keep'
 $execute if data storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success{'$(slot)': 't'} run data modify storage hygrave:common configs.value.graves.slot_distribution.grave_generation_success.'$(slot)' set value 'take'
 
-## Play sound
-playsound minecraft:ui.button.click
-
 ## Update configs
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/graves/slot_distribution
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "graves/slot_distribution"}

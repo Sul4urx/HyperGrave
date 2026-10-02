@@ -9,7 +9,7 @@ tellraw @s ""
 tellraw @s {\
   "translate": "hygrave.info.title",\
   "fallback": "§b§lHyper§6§lGrave§r §fversion %s §8| §fMade By §bSul4ur",\
-  "with": ["§72.1.1"]\
+  "with": ["§72.3.0"]\
 }
 
 execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 run tellraw @s {\
@@ -115,7 +115,7 @@ tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.help"\
+        "command": "/trigger hygrave.help set 10001"\
       }\
     },\
     {\
@@ -130,7 +130,7 @@ tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_info"\
+        "command": "/trigger hygrave.show_grave_info set 10001"\
       }\
     },\
     {\
@@ -145,10 +145,10 @@ tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/function hygrave:run/config"\
+        "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'main'}"\
       }\
     },\
   ]\
 }
 
-tellraw @s "" 
+tellraw @s ""

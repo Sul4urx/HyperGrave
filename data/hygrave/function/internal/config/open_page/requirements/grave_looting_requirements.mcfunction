@@ -516,7 +516,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/requirements"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'requirements'}"\
         }\
       },\
       {\
@@ -530,7 +530,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/requirements/grave_looting_requirements"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'requirements/grave_looting_requirements'}"\
         }\
       }\
     ]\

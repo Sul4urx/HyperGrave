@@ -33,7 +33,7 @@ $tellraw @s {\
       },\
       "click_event": {\
         "action": "run_command",\
-        "command": "/trigger hygrave.show_grave_list"\
+        "command": "/trigger hygrave.show_grave_list set 10001"\
       }\
     },\
     {\

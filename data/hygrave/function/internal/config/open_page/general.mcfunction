@@ -142,7 +142,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/main"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'main'}"\
         }\
       },\
       {\
@@ -156,7 +156,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "run_command",\
-          "command": "/function hygrave:internal/config/open_page/general"\
+          "command": "/function hygrave:internal/config/open_page_with_sound/click_sound {page: 'general'}"\
         }\
       }\
     ]\

@@ -12,10 +12,10 @@ execute unless predicate {\
     path: "temp.config.value"\
   },\
   range: {min: 0}\
-} run return run title @s actionbar {\
+} run return run function hygrave:internal/helper/message/error {text: {\
   "translate": "hygrave.change_config_message.despawn_time.xp.fail",\
   "fallback": "§cThe value must be a non-negative integer."\
-}
+}}
 
 ## If success, change value
 execute store result score (dropped_contents/xp_despawn_time) hygrave.config run data get storage hygrave:common temp.config.value
@@ -24,4 +24,4 @@ execute store result score (dropped_contents/xp_despawn_time) hygrave.config run
 function hygrave:internal/config/register
 
 ## Refresh page
-function hygrave:internal/config/open_page/dropped_contents
+function hygrave:internal/config/open_page_with_sound/click_sound {page: "dropped_contents"}

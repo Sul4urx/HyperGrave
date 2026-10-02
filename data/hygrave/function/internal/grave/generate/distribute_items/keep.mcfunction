@@ -3,21 +3,25 @@
 #@>   function hygrave:internal/grave/generate/distribute_items/keep
 
 # Loop through all items stored in the grave
-# and if any of the items match the item predicates 
+# and if any of the items match the item predicates
 # in the config Graves / Item Distribution / Grave Generation Success / Keep,
 # remove the item from grave so that it doesn't get taken
 # and give the item back to the player
 
 ## Manipulate current item
-data modify storage hygrave:common temp.item set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1]
+data modify storage hygrave:common temp.item set from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1]
 data remove storage hygrave:common temp.item.Slot
 data modify entity @s Item set from storage hygrave:common temp.item
 
-## Check if item should be kept
-execute store result storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1].Slot
-execute store result score .slot_operation hygrave.temp_var run function hygrave:internal/helper/config/graves/slot_distribution/get_slot_operation with storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'
-
 scoreboard players set .keep_item hygrave.temp_var 0
+
+## Check if item is a grave locator
+## and if enabled in the configs, keep it
+execute if score (items/grave_locator/keep_after_death) hygrave.config matches 1 if data entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1].components.minecraft:custom_data.hygrave:common.grave_locator run scoreboard players set .keep_item hygrave.temp_var 1
+
+## Check if item should be kept
+execute store result storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'.slot_id int 1 run data get entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1].Slot
+execute store result score .slot_operation hygrave.temp_var run function hygrave:internal/helper/config/graves/slot_distribution/get_slot_operation with storage hygrave:common temp.mcargs.'helper/config/graves/slot_distribution/get_slot_operation'
 
 ##> See the function that returned to .slot_operation for more info on what it returned
 execute if score .slot_operation hygrave.temp_var matches 11 run scoreboard players set .keep_item hygrave.temp_var 1
@@ -28,9 +32,9 @@ scoreboard players set .slot_operation hygrave.temp_var 0
 
 ## .keep_item = 1 ⭢ Keep item in player's inventory
 ## .keep_item = 0 ⭢ Pass the item to the next operation
-execute unless score .keep_item hygrave.temp_var matches 1 run data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items prepend from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1]
+execute unless score .keep_item hygrave.temp_var matches 1 run data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items prepend from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1]
 
-data remove entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[-1]
+data remove entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[-1]
 
 ## Remove 1 from iterator count
 ## If the iterator count is not 0,
@@ -40,4 +44,4 @@ scoreboard players remove .loop_count hygrave.temp_var 1
 data remove storage hygrave:common temp.item
 data remove storage hygrave:common temp.mcargs
 
-execute if score .loop_count hygrave.temp_var matches 1.. if data entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items[0] run function hygrave:internal/grave/generate/distribute_items/keep with storage hygrave:common configs
+execute if score .loop_count hygrave.temp_var matches 1.. if data entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items[0] run function hygrave:internal/grave/generate/distribute_items/keep with storage hygrave:common configs

@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "hygrave:common": {
+                "grave_locator": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [["used"]],
+  "rewards": {
+    "function": "hygrave:internal/event/player/item/grave_locator/player_used_grave_locator"
+  }
+}

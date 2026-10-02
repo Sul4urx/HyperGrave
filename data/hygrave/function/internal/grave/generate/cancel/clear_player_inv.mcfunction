@@ -3,47 +3,47 @@
 
 ## For each item slot in grave, check if it is occupied by an item
 ## and if it is, remove the slot from the player
-item replace entity @s container.0 with minecraft:air
-item replace entity @s container.1 with minecraft:air
-item replace entity @s container.2 with minecraft:air
-item replace entity @s container.3 with minecraft:air
-item replace entity @s container.4 with minecraft:air
-item replace entity @s container.5 with minecraft:air
-item replace entity @s container.6 with minecraft:air
-item replace entity @s container.7 with minecraft:air
-item replace entity @s container.8 with minecraft:air
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.0'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.1'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.2'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.3'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.4'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.5'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.6'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.7'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.8'}
 
-item replace entity @s container.9 with minecraft:air
-item replace entity @s container.10 with minecraft:air
-item replace entity @s container.11 with minecraft:air
-item replace entity @s container.12 with minecraft:air
-item replace entity @s container.13 with minecraft:air
-item replace entity @s container.14 with minecraft:air
-item replace entity @s container.15 with minecraft:air
-item replace entity @s container.16 with minecraft:air
-item replace entity @s container.17 with minecraft:air
-item replace entity @s container.18 with minecraft:air
-item replace entity @s container.19 with minecraft:air
-item replace entity @s container.20 with minecraft:air
-item replace entity @s container.21 with minecraft:air
-item replace entity @s container.22 with minecraft:air
-item replace entity @s container.23 with minecraft:air
-item replace entity @s container.24 with minecraft:air
-item replace entity @s container.25 with minecraft:air
-item replace entity @s container.26 with minecraft:air
-item replace entity @s container.27 with minecraft:air
-item replace entity @s container.28 with minecraft:air
-item replace entity @s container.29 with minecraft:air
-item replace entity @s container.30 with minecraft:air
-item replace entity @s container.31 with minecraft:air
-item replace entity @s container.32 with minecraft:air
-item replace entity @s container.33 with minecraft:air
-item replace entity @s container.34 with minecraft:air
-item replace entity @s container.35 with minecraft:air
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.9'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.10'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.11'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.12'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.13'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.14'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.15'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.16'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.17'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.18'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.19'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.20'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.21'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.22'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.23'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.24'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.25'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.26'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.27'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.28'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.29'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.30'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.31'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.32'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.33'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.34'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'container.35'}
 
-item replace entity @s weapon.offhand with minecraft:air
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'weapon.offhand'}
 
-item replace entity @s armor.head with minecraft:air
-item replace entity @s armor.chest with minecraft:air
-item replace entity @s armor.legs with minecraft:air
-item replace entity @s armor.feet with minecraft:air
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'armor.head'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'armor.chest'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'armor.legs'}
+function hygrave:internal/grave/generate/cancel/clear_slot {slot: 'armor.feet'}

@@ -4,7 +4,7 @@
 ## Bring the nessecary elements of databases to last index so that we can work with them
 
 ##> Player
-execute store result storage hygrave:common temp.mcargs.'database/players/lookup'.pid int 1 run scoreboard players get @s hygrave.pid 
+execute store result storage hygrave:common temp.mcargs.'database/players/lookup'.pid int 1 run scoreboard players get @s hygrave.pid
 function hygrave:internal/database/players/lookup with storage hygrave:common temp.mcargs.'database/players/lookup'
 
 ##> Last Backup
@@ -19,15 +19,15 @@ tag @s add hygrave.temp.grave.owner
 
 ## This item display is the base of the grave
 ## It holds all of the grave data
-execute align xyz run summon minecraft:item_display ~0.5 ~ ~0.5 {Tags:["hygrave.grave.base","hygrave.temp.grave.base"],item:{id:"minecraft:light_blue_dye",components:{"minecraft:custom_data":{"hygrave:common":{}}}},view_range:0}
+execute align xyz run summon minecraft:item_display ~0.5 ~ ~0.5 {Tags: ["hygrave.grave.base", "hygrave.temp.grave.base"], item: {id: "minecraft:light_blue_dye"},view_range: 0}
 
 ## Set despawn time
 scoreboard players operation @n[tag=hygrave.temp.grave.base] hygrave.despawn_time = (graves/despawn_time) hygrave.config
-execute as @n[tag=hygrave.temp.grave.base] at @s store result entity @s item.components.minecraft:custom_data.hygrave:common.despawn_time int 1 run scoreboard players get @s hygrave.despawn_time
+execute as @n[tag=hygrave.temp.grave.base] at @s store result entity @s data.hygrave:common.despawn_time int 1 run scoreboard players get @s hygrave.despawn_time
 
 ## Set XP for before death
-data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.levels set from storage hygrave:common players[-1].pcontents.xp.levels
-data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.xp.before_death.points set from storage hygrave:common players[-1].pcontents.xp.points
+data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.before_death.levels set from storage hygrave:common players[-1].pcontents.xp.levels
+data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.xp.before_death.points set from storage hygrave:common players[-1].pcontents.xp.points
 
 xp set @s 0 levels
 xp set @s 0 points
@@ -43,7 +43,7 @@ execute if score (general/mod_compatibility_mode) hygrave.config matches 0 run f
 execute if score (general/mod_compatibility_mode) hygrave.config matches 1 run data modify storage hygrave:common temp.mcargs.'grave/generate/collect_items'.distance set from storage hygrave:common configs.value.general.'mod_compatibility_mode/item_collection_distance'
 execute if score (general/mod_compatibility_mode) hygrave.config matches 1 as @e[type=item,distance=..16] at @s run function hygrave:internal/grave/generate/collect_items with storage hygrave:common temp.mcargs.'grave/generate/collect_items'
 
-data modify storage hygrave:common temp.grave_contents.all_items set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items
+data modify storage hygrave:common temp.grave_contents.all_items set from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items
 
 ## Distribute items
 function hygrave:internal/grave/generate/distribute_items
@@ -52,7 +52,7 @@ function hygrave:internal/grave/generate/distribute_items
 function hygrave:internal/grave/generate/take_xp/main
 
 ## Check requirements
-data modify storage hygrave:common temp.grave_contents.items set from entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.items
+data modify storage hygrave:common temp.grave_contents.items set from entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.items
 data remove storage hygrave:common temp.grave_contents.items[{components:{'minecraft:custom_data':{'hygrave:common':{delete_item:1b}}}}]
 
 execute unless data storage hygrave:common temp.grave_contents.items[0] run function hygrave:internal/grave/generate/check_requirements/no_item
@@ -99,8 +99,8 @@ function hygrave:internal/grave/generate/grave_placement_restrictions with entit
 execute as @n[tag=hygrave.temp.grave.base] at @s run function hygrave:internal/database/graves/append
 
 ##> Store PID and GID
-execute store result entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner.pid int 1 run scoreboard players get @s hygrave.pid
-data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.gid set from storage hygrave:common graves[-1].data.gid
+execute store result entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.owner.pid int 1 run scoreboard players get @s hygrave.pid
+data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.gid set from storage hygrave:common graves[-1].data.gid
 
 ##> Store relevant BID
 data modify storage hygrave:common backups[-1].data.relevant_grave.data.gid set from storage hygrave:common graves[-1].data.gid
@@ -108,7 +108,7 @@ data modify storage hygrave:common graves[-1].data.relevant_backup.data.bid set 
 
 ##> Store owner
 data modify storage hygrave:common graves[-1].data.owner set from storage hygrave:common players[-1].player
-data modify entity @n[tag=hygrave.temp.grave.base] item.components.minecraft:custom_data.hygrave:common.owner set from storage hygrave:common players[-1].player
+data modify entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.owner set from storage hygrave:common players[-1].player
 
 ## Update last_gid variable
 scoreboard players operation (last_gid) hygrave.var = @n[tag=hygrave.temp.grave.base] hygrave.gid
