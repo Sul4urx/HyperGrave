@@ -33,5 +33,3 @@ execute if score .grave_locator.angle_check.drot hygrave.temp_var matches 166..1
 execute if score .grave_locator.angle_check.drot hygrave.temp_var matches 106..165 run data modify storage hygrave:common temp.grave_locator.dir_arrow set value "§b🡿"
 execute if score .grave_locator.angle_check.drot hygrave.temp_var matches 76..105 run data modify storage hygrave:common temp.grave_locator.dir_arrow set value "§b◀"
 execute if score .grave_locator.angle_check.drot hygrave.temp_var matches 16..75 run data modify storage hygrave:common temp.grave_locator.dir_arrow set value "§b🡼"
-
-

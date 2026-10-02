@@ -39,7 +39,7 @@ tellraw @s [\
     "translate": "hygrave.backup_info.title",\
     "fallback": "Backup §6#%s info", \
     "with": [\
-      {\  
+      {\
         "nbt": "backups[-1].data.bid",\
         "storage": "hygrave:common",\
         "color": "gold",\
@@ -82,7 +82,7 @@ execute if data storage hygrave:common backups[-1].data.relevant_grave run tellr
     }\
   },\
   "with": [\
-    {\  
+    {\
       "nbt": "backups[-1].data.relevant_grave.data.gid",\
       "color": "gold",\
       "storage": "hygrave:common",\

@@ -16,7 +16,7 @@ function hygrave:internal/database/players/lookup with entity @s data.hygrave:co
 ## If despawn time reaches 0, delete grave
 execute if score @s hygrave.despawn_time matches ..0 run return run function hygrave:internal/grave/despawn_time/delete_grave
 
-## Store the despawn time value 
+## Store the despawn time value
 ## in the grave and grave database
 execute store result entity @s data.hygrave:common.despawn_time int 1 run scoreboard players get @s hygrave.despawn_time
 

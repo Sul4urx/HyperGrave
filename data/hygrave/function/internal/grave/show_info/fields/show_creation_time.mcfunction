@@ -20,19 +20,19 @@ tellraw @s {\
       "nbt": "graves[-1].data.creation_time.string.day",\
       "color": "gold",\
       "storage": "hygrave:common",\
-      "interpret": true\ 
+      "interpret": true\
     },\
     {\
       "nbt": "graves[-1].data.creation_time.string.hours",\
       "color": "gold",\
       "storage": "hygrave:common",\
-      "interpret": true\ 
+      "interpret": true\
     },\
     {\
       "nbt": "graves[-1].data.creation_time.string.minutes",\
       "color": "gold",\
       "storage": "hygrave:common",\
-      "interpret": true\ 
+      "interpret": true\
     }\
   ]\
 }

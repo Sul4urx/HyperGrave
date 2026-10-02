@@ -25,6 +25,3 @@ $execute if data storage hygrave:common backups[{data:{bid:$(bid)}}] run return 
 ## Remove 1 from BID each time
 ## until the backup with that BID can be shown to player
 return run function hygrave:internal/backup/show_info/view_previous/loop with storage hygrave:common temp.mcargs.'backup/show_info/view_previous.loop'
-
-
-

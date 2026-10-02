@@ -27,4 +27,3 @@ item modify entity @s weapon.offhand {\
     values: ["tracking=true"]\
   }\
 }
-

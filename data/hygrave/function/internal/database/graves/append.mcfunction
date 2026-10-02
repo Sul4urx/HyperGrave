@@ -29,7 +29,7 @@ data modify storage hygrave:common graves[-1].data.dimension.name set from entit
 ##> because integers don't have a suffix
 ##> and also because graves always generate in a fixed location
 data modify storage hygrave:common graves[-1].data.pos_integer set value [I;]
-data modify storage hygrave:common graves[-1].data.pos_integer append from storage hygrave:common graves[-1].data.pos[0] 
+data modify storage hygrave:common graves[-1].data.pos_integer append from storage hygrave:common graves[-1].data.pos[0]
 data modify storage hygrave:common graves[-1].data.pos_integer append from storage hygrave:common graves[-1].data.pos[1]
 data modify storage hygrave:common graves[-1].data.pos_integer append from storage hygrave:common graves[-1].data.pos[2]
 

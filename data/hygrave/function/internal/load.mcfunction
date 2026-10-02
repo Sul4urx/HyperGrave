@@ -4,7 +4,7 @@
 
 # About parent comments:
 #
-# Most functions have parent comments (comments starting with '#@>'). 
+# Most functions have parent comments (comments starting with '#@>').
 # They show the parent functions of the function.
 # These comments are generated from a custom script (with some manual modifications).
 # Simple shell-style wildcards ('*', '?' and '**') are also used in those comments.
@@ -12,7 +12,7 @@
 # Parent function: All functions that call a function are parent functions of that function.
 #
 # These comments do not nessecarily show all parent function. For example,
-# the parent comment in function 'hygrave:internal/config/register' only lists one function, 
+# the parent comment in function 'hygrave:internal/config/register' only lists one function,
 # despite the fact that this function has over 150 parent functions!
 #
 # Some functions have a parent comment like "#@> !NO_PCOMMENT". That doesn't mean that they're unused, that just

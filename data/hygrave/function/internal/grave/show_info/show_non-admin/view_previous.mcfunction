@@ -27,4 +27,3 @@ scoreboard players add @s hygrave.show_grave_info 10000
 function hygrave:internal/grave/show_info/check_conditions
 
 scoreboard players set @s hygrave.show_grave_info 0
-

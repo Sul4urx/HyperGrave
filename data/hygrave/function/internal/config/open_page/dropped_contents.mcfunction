@@ -187,7 +187,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "suggest_command",\
-          "command": "/function hygrave:internal/config/change/dropped_contents/item_despawn_time {value: ?}"\ 
+          "command": "/function hygrave:internal/config/change/dropped_contents/item_despawn_time {value: ?}"\
         }\
       },\
       {\
@@ -250,7 +250,7 @@ tellraw @s [\
         },\
         "click_event": {\
           "action": "suggest_command",\
-          "command": "/function hygrave:internal/config/change/dropped_contents/xp_despawn_time {value: ?}"\ 
+          "command": "/function hygrave:internal/config/change/dropped_contents/xp_despawn_time {value: ?}"\
         }\
       },\
       {\

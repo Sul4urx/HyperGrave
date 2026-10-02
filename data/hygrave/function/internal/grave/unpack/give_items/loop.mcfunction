@@ -6,7 +6,7 @@
 scoreboard players set .slot hygrave.temp_var -32768
 execute if data entity @s data.hygrave:common.items[-1].Slot store result score .slot hygrave.temp_var run data get entity @s data.hygrave:common.items[-1].Slot 1
 
-## Remove the slot data temporarily so that manipulator item can do its job 
+## Remove the slot data temporarily so that manipulator item can do its job
 data remove entity @s data.hygrave:common.items[-1].Slot
 
 ## Make manipulator item manipulate the item
@@ -23,7 +23,7 @@ execute unless score .slot hygrave.temp_var matches -32768 run function hygrave:
 execute if score .slot_is_full hygrave.temp_var matches 1 run data modify storage hygrave:common temp.items_to_summon_as_entity append from entity @s data.hygrave:common.items[-1]
 execute if score .slot hygrave.temp_var matches -32768 run data modify storage hygrave:common temp.items_to_summon_as_entity append from entity @s data.hygrave:common.items[-1]
 
-## Set .slot_is_full to false, so that it doesn't somehow 
+## Set .slot_is_full to false, so that it doesn't somehow
 ## remain true for the next iteration and break stuff
 scoreboard players set .slot_is_full hygrave.temp_var 0
 

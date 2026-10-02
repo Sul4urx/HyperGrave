@@ -12,4 +12,3 @@ execute store result entity @n[tag=hygrave.temp.grave.base] data.hygrave:common.
 ## Take away all XP
 xp set @s 0 points
 xp set @s 0 levels
-

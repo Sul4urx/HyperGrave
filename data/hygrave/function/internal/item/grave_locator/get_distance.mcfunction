@@ -11,7 +11,7 @@ execute store result score .grave_locator.distance.grave.z hygrave.temp_var run 
 
 scoreboard players operation .grave_locator.distance.dx hygrave.temp_var = .grave_locator.distance.grave.x hygrave.temp_var
 scoreboard players operation .grave_locator.distance.dx hygrave.temp_var -= .grave_locator.distance.player.x hygrave.temp_var
-execute if score .grave_locator.distance.dx hygrave.temp_var matches ..-1 run scoreboard players operation .grave_locator.distance.dx hygrave.temp_var *= (-1) hygrave.var 
+execute if score .grave_locator.distance.dx hygrave.temp_var matches ..-1 run scoreboard players operation .grave_locator.distance.dx hygrave.temp_var *= (-1) hygrave.var
 
 scoreboard players operation .grave_locator.distance.dz hygrave.temp_var = .grave_locator.distance.grave.z hygrave.temp_var
 scoreboard players operation .grave_locator.distance.dz hygrave.temp_var -= .grave_locator.distance.player.z hygrave.temp_var

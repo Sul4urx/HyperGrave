@@ -3,7 +3,7 @@
 #@>   function hygrave:internal/grave/generate/distribute_items/keep
 
 # Loop through all items stored in the grave
-# and if any of the items match the item predicates 
+# and if any of the items match the item predicates
 # in the config Graves / Item Distribution / Grave Generation Success / Keep,
 # remove the item from grave so that it doesn't get taken
 # and give the item back to the player

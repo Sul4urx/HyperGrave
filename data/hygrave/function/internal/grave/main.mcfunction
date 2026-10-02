@@ -62,7 +62,7 @@ execute if data entity @n[type=minecraft:interaction,distance=..1,tag=hygrave.te
 ## On player attack on grave
 execute if data entity @n[type=minecraft:interaction,distance=..1,tag=hygrave.temp.grave.interaction] attack run function hygrave:internal/event/player/player_attacked_grave
 
-## In case grave has not been destroyed after 
+## In case grave has not been destroyed after
 ## being interacted or attacked by player,
 ## Remove interaction and attack tags to prevent loop
 data remove entity @n[type=minecraft:interaction,distance=..1,tag=hygrave.grave.interaction] interaction
