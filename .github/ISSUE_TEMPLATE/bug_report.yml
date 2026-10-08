@@ -7,15 +7,12 @@ body:
   - type: markdown
     attributes:
       value: "Thanks for taking the time to fill out this bug report!"
-  - type: dropdown
+  - type: input
     id: hypergrave_version
     attributes:
       label: "HyperGrave version(s):"
       description: "Please select the version(s) of HyperGrave you've been able to reproduce this issue on."
-      multiple: true
-      options:
-        - 2.1.1
-        - Other
+      placeholder: "e.g. 2.1.1, 2.3.1"
     validations:
       required: true
   - type: input
@@ -59,4 +56,3 @@ body:
       description: "Is there anything else you want to say?"
     validations:
       required: false
-
