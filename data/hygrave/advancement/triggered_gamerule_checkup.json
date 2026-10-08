@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "changed_dimension": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "rewards": {
+    "function": "hygrave:internal/checkup/sync_gamerules"
+  }
+}
