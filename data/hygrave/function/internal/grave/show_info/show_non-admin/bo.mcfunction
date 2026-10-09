@@ -66,6 +66,10 @@ execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config mat
 execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status.destruction_type run function hygrave:internal/grave/show_info/fields/show_status/destroyed
 
 
+
+execute unless data storage hygrave:common graves[-1].data.status.destruction_type run function hygrave:internal/grave/show_info/fields/show_status/destroyed_unknown_reason
+
+
 ##
 tellraw @s ""
 

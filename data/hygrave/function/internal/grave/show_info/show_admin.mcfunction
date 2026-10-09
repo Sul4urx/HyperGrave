@@ -89,6 +89,8 @@ execute if data storage hygrave:common graves[-1].data.status{destruction_type:"
 execute if data storage hygrave:common graves[-1].data.status{destruction_type:"manually"\
 } run function hygrave:internal/grave/show_info/fields/show_status/destroyed_manually
 
+execute unless data storage hygrave:common graves[-1].data.status.destruction_type run function hygrave:internal/grave/show_info/fields/show_status/destroyed_unknown_reason
+
 ##
 tellraw @s ""
 
