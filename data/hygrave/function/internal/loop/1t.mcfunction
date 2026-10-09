@@ -6,6 +6,7 @@
 
 ## Schedule function to run again
 schedule function hygrave:internal/loop/1t 1t
+schedule clear hygrave:internal/loop/safe/1t
 
 ## Define variables
 scoreboard players set (-1) hygrave.var -1
