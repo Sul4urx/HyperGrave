@@ -56,12 +56,14 @@ execute unless score (graves/show_grave_info/bo/destruction_type) hygrave.config
 
 execute unless score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"despawned"} run function hygrave:internal/grave/show_info/fields/show_status/despawned
 
+execute unless score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status{destruction_type:"manually"} run function hygrave:internal/grave/show_info/fields/show_status/destroyed_manually
 
-execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status.destroyer unless score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 run function hygrave:internal/grave/show_info/fields/show_status/looted_by
 
-execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 unless score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 unless data storage hygrave:common graves[-1].data.status.destroyer run function hygrave:internal/grave/show_info/fields/show_status/looted
+execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status.destroyer unless score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status.destruction_type run function hygrave:internal/grave/show_info/fields/show_status/looted_by
 
-execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 run function hygrave:internal/grave/show_info/fields/show_status/destroyed
+execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 unless score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 unless data storage hygrave:common graves[-1].data.status.destroyer if data storage hygrave:common graves[-1].data.status.destruction_type run function hygrave:internal/grave/show_info/fields/show_status/looted
+
+execute if score (graves/show_grave_info/bo/destruction_type) hygrave.config matches 0 if score (graves/show_grave_info/bo/destroyer) hygrave.config matches 0 if data storage hygrave:common graves[-1].data.status.destruction_type run function hygrave:internal/grave/show_info/fields/show_status/destroyed
 
 
 ##
