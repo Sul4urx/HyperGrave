@@ -9,7 +9,7 @@ execute unless data storage hygrave:common temp{reinstall_confirm:"REINSTALL"} u
 function hygrave:internal/misc/uninstall {confirm: "UNINSTALL_NO_OUTPUT_MESSAGE"}
 
 ## Reload to reinstall
-reload
+function hygrave:internal/load
 
 ## Make sure info is shown before success message
 scoreboard objectives add hygrave.info trigger
