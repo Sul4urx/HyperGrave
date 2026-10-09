@@ -102,15 +102,15 @@ scoreboard objectives add hygrave.help trigger
 scoreboard players set (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version 0
 
 ## Handle upgrades and downgrades
-execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 3, patch: 0} run return run function hygrave:internal/versioning/unsupported/alpha_version_change
+execute if score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if data storage hygrave:common data.schema_version_1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 3, patch: 1} run return run function hygrave:internal/versioning/unsupported/alpha_version_change
 
 execute if data storage hygrave:common data.latest_schema_version unless data storage hygrave:common data{latest_schema_version:1} run return run function hygrave:internal/versioning/unsupported/unknown_version
 
-execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 3, patch: 0} run return run function hygrave:internal/versioning/upgrade
+execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 unless data storage hygrave:common data.schema_version_1.hygrave.data_version.version{major: 2, minor: 3, patch: 1} run return run function hygrave:internal/versioning/upgrade
 
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=major,schema_version=1) hygrave.data_version matches 3.. run return run function hygrave:internal/versioning/unsupported/downgrade_not_supported
 execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=minor,schema_version=1) hygrave.data_version matches 4.. run return run function hygrave:internal/versioning/unsupported/downgrade_not_supported
-execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=patch,schema_version=1) hygrave.data_version matches 1.. run return run function hygrave:internal/versioning/downgrade
+execute unless score (namespace=hygrave,property=is_alpha,schema_version=1) hygrave.data_version matches 1 if score (namespace=hygrave,type=patch,schema_version=1) hygrave.data_version matches 2.. run return run function hygrave:internal/versioning/downgrade
 
 ## Data version
 function hygrave:internal/misc/store_data_version
