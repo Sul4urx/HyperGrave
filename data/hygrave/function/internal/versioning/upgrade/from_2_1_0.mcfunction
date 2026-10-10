@@ -9,8 +9,8 @@ function hygrave:internal/misc/store_data_version
 
 ## Success message
 tellraw @a {\
-  "translate": "hygrave.versioning.successful_upgrade.from_2_1_0_to_2_3_0",\
-  "fallback": "\n§aSuccessfully upgraded HyperGrave 2.1.0 to 2.3.0.\n\n§aYou do not need to do anything else. Enjoy!\n"\
+  "translate": "hygrave.versioning.successful_upgrade.from_2_1_0_to_2_3_1",\
+  "fallback": "\n§aSuccessfully upgraded HyperGrave 2.1.0 to 2.3.1.\n\n§aYou do not need to do anything else. Enjoy!\n"\
 }
 
 ## Run loop functions
