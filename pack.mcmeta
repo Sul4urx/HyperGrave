@@ -1,9 +1,8 @@
 {
   "pack": {
-    "pack_format": 94,
-    "supported_formats": [71, 107],
-    "min_format": 71,
-    "max_format": 107,
+    "pack_format": 101,
+    "min_format": 101,
+    "max_format": 101,
     "description": "A very high-quality grave data pack | v2.3.1"
   }
 }
